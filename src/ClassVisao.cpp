@@ -5,6 +5,7 @@ using namespace std;
 
 FILE *out; // variável global para armazenar o local de saída.
 
+// cppcheck-suppress unusedFunction
 void printArquivoClassFile(ClassFile *classFile, FILE *output) {
 
 	out = output;
@@ -103,60 +104,60 @@ void printArquivo_ConstantPool(ClassFile *classFile) {
 
 		if (element.tag == CONSTANT_Class) {
 			CONSTANT_Class_info classInfo = element.info.class_info;
-                        fprintf(out, "\t [%u] CONSTANT_Class_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Class_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Class name: \t\t\t cp_info #%hu <%s>\n", classInfo.name_index,
 					getFormattedConstant(constantPool, classInfo.name_index));
 		} else if (element.tag == CONSTANT_Fieldref) {
 			CONSTANT_Fieldref_info fieldRefInfo = element.info.fieldref_info;
-                        fprintf(out, "\t [%u] CONSTANT_Fieldref_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Fieldref_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", fieldRefInfo.class_index,
 					getFormattedConstant(constantPool, fieldRefInfo.class_index));
 			fprintf(out, "\t\t Name and type: \t\t cp_info #%hu <%s>\n", fieldRefInfo.name_and_type_index,
 					getFormattedConstant(constantPool, fieldRefInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_Methodref) {
 			CONSTANT_Methodref_info methodInfo = element.info.methodref_info;
-                        fprintf(out, "\t [%u] CONSTANT_Methodref_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Methodref_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", methodInfo.class_index,
 					getFormattedConstant(constantPool, methodInfo.class_index));
 			fprintf(out, "\t\t Name and type: \t\t cp_info #%hu <%s>\n", methodInfo.name_and_type_index,
 					getFormattedConstant(constantPool, methodInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_InterfaceMethodref) {
 			CONSTANT_InterfaceMethodref_info interfaceMethodInfo = element.info.interfaceMethodref_info;
-                        fprintf(out, "\t [%u] CONSTANT_InterfaceMethodref_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_InterfaceMethodref_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", interfaceMethodInfo.class_index,
 					getFormattedConstant(constantPool, interfaceMethodInfo.class_index));
 			fprintf(out, "\t\t Name and type: \t\t cp_info #%hu <%s>\n", interfaceMethodInfo.name_and_type_index,
 					getFormattedConstant(constantPool, interfaceMethodInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_String) {
 			CONSTANT_String_info stringInfo = element.info.string_info;
-                        fprintf(out, "\t [%u] CONSTANT_String_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_String_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t String: \t\t\t\t cp_info #%hu <%s>\n", stringInfo.string_index,
 					getFormattedConstant(constantPool, stringInfo.string_index));
 		} else if (element.tag == CONSTANT_Integer) {
 			CONSTANT_Integer_info intInfo = element.info.integer_info;
-                        fprintf(out, "\t [%u] CONSTANT_Integer_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Integer_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t Bytes: \t\t\t\t 0x%.8X\n", intInfo.bytes);
 			fprintf(out, "\t Integer: \t\t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Float) {
 			CONSTANT_Float_info floatInfo = element.info.float_info;
-                        fprintf(out, "\t [%u] CONSTANT_Float_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Float_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Bytes: \t\t\t 0x%.8X\n", floatInfo.bytes);
 			fprintf(out, "\t\t Float: \t\t\t 0x%s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Long) {
 			CONSTANT_Long_info longInfo = element.info.long_info;
-                        fprintf(out, "\t [%u] CONSTANT_Long_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Long_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t High Bytes: \t\t\t 0x%.8X\n", longInfo.high_bytes);
 			fprintf(out, "\t\t Low Bytes: \t\t\t 0x%.8X\n", longInfo.low_bytes);
 			fprintf(out, "\t\t Long: \t\t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Double) {
 			CONSTANT_Double_info doubleInfo = element.info.double_info;
-                        fprintf(out, "\t [%u] CONSTANT_Double_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Double_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t High Bytes: \t\t\t 0x%.8X\n", doubleInfo.high_bytes);
 			fprintf(out, "\t\t Low Bytes: \t\t\t 0x%.8X\n", doubleInfo.low_bytes);
 			fprintf(out, "\t\t Double: \t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_NameAndType) {
 			CONSTANT_NameAndType_info nameAndTypeInfo = element.info.nameAndType_info;
-                        fprintf(out, "\t [%u] CONSTANT_NameAndType_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_NameAndType_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Name: \t\t\t\t cp_info #%hu <%s>\n", nameAndTypeInfo.name_index,
 					getFormattedConstant(constantPool, nameAndTypeInfo.name_index));
 			fprintf(out, "\t\t Descriptor: \t\t\t cp_info #%hu <%s>\n", nameAndTypeInfo.descriptor_index,
@@ -165,12 +166,12 @@ void printArquivo_ConstantPool(ClassFile *classFile) {
 			CONSTANT_Utf8_info utf8Info = element.info.utf8_info;
 			const char *str = getFormattedConstant(constantPool, i + 1);
 
-                        fprintf(out, "\t [%u] CONSTANT_Utf8_info\n", i + 1);
+                        fprintf(out, "\t [%u] CONSTANT_Utf8_info\n", static_cast<unsigned>(i + 1));
 			fprintf(out, "\t\t Length of byte array: \t\t %hu\n", utf8Info.length);
                         fprintf(out, "\t\t Length of string: \t\t %zu\n", strlen(str));
 			fprintf(out, "\t\t String: \t\t\t %s\n", str);
                 } else if (element.tag == CONSTANT_NULL) {
-                        fprintf(out, "\t [%u] (large numeric continued)\n", i + 1);
+                        fprintf(out, "\t [%u] (large numeric continued)\n", static_cast<unsigned>(i + 1));
                 } else {
 			cerr << "Arquivo .class possui uma tag invalida no pool de constantes.." << endl;
 			exit(5);
@@ -187,60 +188,60 @@ void exibe_ConstantPool(ClassFile *classFile) {
 
 		if (element.tag == CONSTANT_Class) {
 			CONSTANT_Class_info classInfo = element.info.class_info;
-                        printf("\t [%u] CONSTANT_Class_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Class_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n", classInfo.name_index,
 					getFormattedConstant(constantPool, classInfo.name_index));
 		} else if (element.tag == CONSTANT_Fieldref) {
 			CONSTANT_Fieldref_info fieldRefInfo = element.info.fieldref_info;
-                        printf("\t [%u] CONSTANT_Fieldref_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Fieldref_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", fieldRefInfo.class_index,
 					getFormattedConstant(constantPool, fieldRefInfo.class_index));
 			printf("\t\t Name and type: \t\t cp_info #%hu <%s>\n", fieldRefInfo.name_and_type_index,
 					getFormattedConstant(constantPool, fieldRefInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_Methodref) {
 			CONSTANT_Methodref_info methodInfo = element.info.methodref_info;
-                        printf("\t [%u] CONSTANT_Methodref_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Methodref_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", methodInfo.class_index,
 					getFormattedConstant(constantPool, methodInfo.class_index));
 			printf("\t\t Name and type: \t\t cp_info #%hu <%s>\n", methodInfo.name_and_type_index,
 					getFormattedConstant(constantPool, methodInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_InterfaceMethodref) {
 			CONSTANT_InterfaceMethodref_info interfaceMethodInfo = element.info.interfaceMethodref_info;
-                        printf("\t [%u] CONSTANT_InterfaceMethodref_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_InterfaceMethodref_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", interfaceMethodInfo.class_index,
 					getFormattedConstant(constantPool, interfaceMethodInfo.class_index));
 			printf("\t\t Name and type: \t\t cp_info #%hu <%s>\n", interfaceMethodInfo.name_and_type_index,
 					getFormattedConstant(constantPool, interfaceMethodInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_String) {
 			CONSTANT_String_info stringInfo = element.info.string_info;
-                        printf("\t [%u] CONSTANT_String_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_String_info\n", static_cast<unsigned>(i + 1));
 			printf("\t String: \t\t\t\t cp_info #%hu <%s>\n", stringInfo.string_index,
 					getFormattedConstant(constantPool, stringInfo.string_index));
 		} else if (element.tag == CONSTANT_Integer) {
 			CONSTANT_Integer_info intInfo = element.info.integer_info;
-                        printf("\t [%u] CONSTANT_Integer_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Integer_info\n", static_cast<unsigned>(i + 1));
 			printf("\t Bytes: \t\t\t\t 0x%.8X\n", intInfo.bytes);
 			printf("\t Integer: \t\t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Float) {
 			CONSTANT_Float_info floatInfo = element.info.float_info;
-                        printf("\t [%u] CONSTANT_Float_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Float_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Bytes: \t\t\t 0x%.8X\n", floatInfo.bytes);
 			printf("\t\t Float: \t\t\t 0x%s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Long) {
 			CONSTANT_Long_info longInfo = element.info.long_info;
-                        printf("\t [%u] CONSTANT_Long_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Long_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t High Bytes: \t\t\t 0x%.8X\n", longInfo.high_bytes);
 			printf("\t\t Low Bytes: \t\t\t 0x%.8X\n", longInfo.low_bytes);
 			printf("\t\t Long: \t\t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Double) {
 			CONSTANT_Double_info doubleInfo = element.info.double_info;
-                        printf("\t [%u] CONSTANT_Double_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Double_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t High Bytes: \t\t\t 0x%.8X\n", doubleInfo.high_bytes);
 			printf("\t\t Low Bytes: \t\t\t 0x%.8X\n", doubleInfo.low_bytes);
 			printf("\t\t Double: \t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_NameAndType) {
 			CONSTANT_NameAndType_info nameAndTypeInfo = element.info.nameAndType_info;
-                        printf("\t [%u] CONSTANT_NameAndType_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_NameAndType_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Name: \t\t\t\t cp_info #%hu <%s>\n", nameAndTypeInfo.name_index,
 					getFormattedConstant(constantPool, nameAndTypeInfo.name_index));
 			printf("\t\t Descriptor: \t\t\t cp_info #%hu <%s>\n", nameAndTypeInfo.descriptor_index,
@@ -249,12 +250,12 @@ void exibe_ConstantPool(ClassFile *classFile) {
 			CONSTANT_Utf8_info utf8Info = element.info.utf8_info;
 			const char *str = getFormattedConstant(constantPool, i + 1);
 
-                        printf("\t [%u] CONSTANT_Utf8_info\n", i + 1);
+                        printf("\t [%u] CONSTANT_Utf8_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Length of byte array: \t\t %hu\n", utf8Info.length);
                         printf("\t\t Length of string: \t\t %zu\n", strlen(str));
 			printf("\t\t String: \t\t\t %s\n", str);
                 } else if (element.tag == CONSTANT_NULL) {
-                        printf("\t [%u] (large numeric continued)\n", i + 1);
+                        printf("\t [%u] (large numeric continued)\n", static_cast<unsigned>(i + 1));
                 } else {
 			cerr << "Arquivo .class possui uma tag invalida no pool de constantes.." << endl;
 			exit(5);
@@ -446,7 +447,7 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 	} else if (constant.tag == CONSTANT_Integer) {
 		CONSTANT_Integer_info intInfo = constant.info.integer_info;
 		int32_t number = intInfo.bytes;
-		char *s = (char*) malloc(sizeof(char) * 100);
+                char *s = static_cast<char*>(malloc(sizeof(char) * 100));
 		sprintf(s, "%d", number);
 		return s;
 	} else if (constant.tag == CONSTANT_Float) {
@@ -457,14 +458,14 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 		int32_t m = (e == 0) ? (floatInfo.bytes & 0x7fffff) << 1 : (floatInfo.bytes & 0x7fffff) | 0x800000;
 		float number = s * m * pow(2, e - 150);
 
-		char *str = (char*) malloc(sizeof(char) * 100);
+                char *str = static_cast<char*>(malloc(sizeof(char) * 100));
 		sprintf(str, "%f", number);
 		return str;
 	} else if (constant.tag == CONSTANT_Long) {
 		CONSTANT_Long_info longInfo = constant.info.long_info;
 		int64_t number = ((int64_t) longInfo.high_bytes << 32) + longInfo.low_bytes;
 
-		char *str = (char*) malloc(sizeof(char) * 100);
+                char *str = static_cast<char*>(malloc(sizeof(char) * 100));
 		sprintf(str, "%lld", (long long) number);
 		return str;
 	} else if (constant.tag == CONSTANT_Double) {
@@ -476,7 +477,7 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 		int64_t m = (e == 0) ? (bytes & 0xfffffffffffffL) << 1 : (bytes & 0xfffffffffffffL) | 0x10000000000000L;
 		double number = s * m * pow(2, e - 1075);
 
-		char *str = (char*) malloc(sizeof(char) * 100);
+                char *str = static_cast<char*>(malloc(sizeof(char) * 100));
 		sprintf(str, "%f", number);
 		return str;
 	} else if (constant.tag == CONSTANT_NameAndType) {
@@ -485,14 +486,14 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 		const char *name = getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
 		const char *descriptor = getFormattedConstant(constantPool, nameAndTypeInfo.descriptor_index);
 
-		char *result = (char*) malloc(sizeof(char) * (strlen(name) + strlen(descriptor)) + 1);
+                char *result = static_cast<char*>(malloc(sizeof(char) * (strlen(name) + strlen(descriptor)) + 1));
 		strcpy(result, name);
 		strcat(result, descriptor);
 
 		return result;
 	} else if (constant.tag == CONSTANT_Utf8) {
 		CONSTANT_Utf8_info utf8_info = constant.info.utf8_info;
-		char *str = (char*) malloc((utf8_info.length + 1) * sizeof(char));
+                char *str = static_cast<char*>(malloc((utf8_info.length + 1) * sizeof(char)));
 
 		uint16_t j = 0;
 		for (uint16_t i = 0; i < utf8_info.length; i++) {
@@ -510,7 +511,7 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 	return NULL;
 }
 
-void print_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation) {
+void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation) {
 	const char *attributeName = getFormattedConstant(constantPool, attributeInfo.attribute_name_index);
 	Utils::imprintTabs(out, indentation);
         fprintf(out, "[%u] %s\n", index, attributeName);
@@ -635,7 +636,7 @@ void print_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *
 	fprintf(out, "\n");
 }
 
-void exibe_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation) {
+void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation) {
 	const char *attributeName = getFormattedConstant(constantPool, attributeInfo.attribute_name_index);
 
 	Utils::exibeTabs(indentation);
@@ -876,11 +877,11 @@ void printArquivoByteCode(const Code_attribute &codeAttribute, cp_info *constant
 				int32_t offset = (code[i + howManyBytes + 4] << 24) | (code[i + howManyBytes + 5] << 16) | (code[i + howManyBytes + 6] << 8)
 						| code[i + howManyBytes + 7];
 				Utils::imprintTabs(out, indentation);
-				fprintf(out, "%d\t\t\t%d: %d (%+d)\n", lineNumber++, match, i + offset, offset);
+                                fprintf(out, "%u\t\t\t%d: %d (%+d)\n", lineNumber++, match, static_cast<int32_t>(i + offset), offset);
 				howManyBytes += 8;
 			}
 			Utils::imprintTabs(out, indentation);
-			fprintf(out, "%d\t\t\tdefault: %d (%+d)\n", lineNumber++, i + defaultbytes, defaultbytes);
+                        fprintf(out, "%u\t\t\tdefault: %d (%+d)\n", lineNumber++, static_cast<int32_t>(i + defaultbytes), defaultbytes);
 
 			i += howManyBytes;
 		} else {
@@ -1005,11 +1006,11 @@ void exibeByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, u
 				int32_t offset = (code[i + howManyBytes + 4] << 24) | (code[i + howManyBytes + 5] << 16) | (code[i + howManyBytes + 6] << 8)
 						| code[i + howManyBytes + 7];
 				Utils::exibeTabs(indentation);
-				printf("%d\t\t\t%d: %d (%+d)\n", lineNumber++, match, i + offset, offset);
+                                printf("%u\t\t\t%d: %d (%+d)\n", lineNumber++, match, static_cast<int32_t>(i + offset), offset);
 				howManyBytes += 8;
 			}
 			Utils::exibeTabs(indentation);
-			printf("%d\t\t\tdefault: %d (%+d)\n", lineNumber++, i + defaultbytes, defaultbytes);
+                        printf("%u\t\t\tdefault: %d (%+d)\n", lineNumber++, static_cast<int32_t>(i + defaultbytes), defaultbytes);
 
 			i += howManyBytes;
 		} else {
