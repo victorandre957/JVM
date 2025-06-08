@@ -42,3 +42,4 @@ int main(int argc, char *argv[]) {
     printf("Resultado salvo em: %s\n", output_name.c_str());
     return 0;
 }
+
