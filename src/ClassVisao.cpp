@@ -471,7 +471,7 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 		CONSTANT_Double_info doubleInfo = constant.info.double_info;
 		int64_t bytes = ((int64_t) doubleInfo.high_bytes << 32) + doubleInfo.low_bytes;
 
-		int32_t s = ((bytes >> 63) == 0) ? 1 : -1;
+                int32_t s = ((static_cast<uint64_t>(bytes) >> 63) == 0) ? 1 : -1;
 		int32_t e = (int32_t) ((bytes >> 52) & 0x7ffL);
 		int64_t m = (e == 0) ? (bytes & 0xfffffffffffffL) << 1 : (bytes & 0xfffffffffffffL) | 0x10000000000000L;
 		double number = s * m * pow(2, e - 1075);
