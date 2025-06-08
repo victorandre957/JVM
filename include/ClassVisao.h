@@ -176,7 +176,7 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index);
  * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  * @param indentation é o número de tabs que deve ser imprimido na linha
  */
-void print_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
+void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
 
 /**
  * Imprime informações básicas dos atributos e as específicas de um dos
@@ -187,7 +187,7 @@ void print_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *
  * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  * @param indentation é o número de tabs que deve ser imprimido na linha
  */
-void exibe_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
+void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
 
 /**
  * Imprime strings que representam instruções através da variável de código 

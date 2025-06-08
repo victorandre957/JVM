@@ -15,6 +15,7 @@ double Utils::verificarVersao(const ClassFile *classFile) {
 	return 5 + (classFile->major_version - 49);
 }
 
+// cppcheck-suppress unusedFunction
 bool Utils::verificarThisClass(string auxFilename, string auxClass) {
 	int auxPos;
 
