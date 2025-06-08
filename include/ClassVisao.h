@@ -18,14 +18,6 @@
 #define UNUSED(x) ((void)(x))
 using namespace std;
 
-/**
- * Imprime os elementos do Leitor/Exibidor de classe
- * em ordem: Informações gerais, pool de constantes,
- * interfaces, campos, métodos e atributos.
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- * @param output é o arquivo exibidor da JVM.
- */
-void printArquivoClassFile(ClassFile *classFile, FILE *output);
 
 /**
  * Imprime os elementos do Leitor/Exibidor de classe
@@ -34,11 +26,7 @@ void printArquivoClassFile(ClassFile *classFile, FILE *output);
  * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibeClassFile(ClassFile *classFile);
-/**
- * Imprime informações gerais do arquivo .class
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- */
-void printArquivo_GeneralInformation(ClassFile *classFile);
+
 /**
  * Imprime informações gerais do arquivo .class
  * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
@@ -52,12 +40,7 @@ void exibe_GeneralInformation(ClassFile *classFile);
  */
 void exibe_ConstantPool(ClassFile *classFile);
 
-/**
- * Imprime pool de constantes e identidifica referências à elementos
- * da própria pool de contantes (cp_info)
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- */
-void printArquivo_ConstantPool(ClassFile *classFile);
+
 
 /**
  * Imprime elementos de interface e suas referẽncias à pool de constantes
@@ -65,38 +48,6 @@ void printArquivo_ConstantPool(ClassFile *classFile);
  */
 void exibe_Interfaces(ClassFile *classFile);
 
-/**
- * Imprime elementos de interface e suas referẽncias à pool de constantes
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- */
-void printArquivo_Interfaces(ClassFile *classFile);
-
-/**
- * Imprime elementos de field, suas referências à pool de constantes e
- * decodifica o valor das flags de acesso, utilizando a seguinte tabela de referência:
- *
- *  ACC_PUBLIC: 0x0001
- *
- *  ACC_SUPER: 0x0020
- *
- *  ACC_PRIVATE: 0x0002
- *
- *  ACC_INTERFACE: 0x0200
- *
- *  ACC_ABSTRACT: 0x0400
- *
- * 	ACC_PROTECTED: 0x0004
- *
- * 	ACC_STATIC: 0x0008
- *
- * 	ACC_FINAL: 0x0010
- *
- * 	ACC_VOLATILE: 0x0040
- *
- * 	ACC_TRANSIENT	: 0x0080
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- */
-void printArquivo_Fields(ClassFile *classFile);
 /**
  * Imprime elementos de field, suas referências à pool de constantes e
  * decodifica o valor das flags de acesso, utilizando a seguinte tabela de referência:
@@ -130,12 +81,7 @@ void exibe_Fields(ClassFile *classFile);
  */
 void exibe_Methods(ClassFile *classFile);
 
-/**
- * Imprime elementos de método, suas referências à pool de constantes e
- * chama função para imprimir os atributos relacionados aos métodos.
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- */
-void printArquivo_Methods(ClassFile *classFile);
+
 
 /**
  * Imprime elementos de atributo, chamando função print_AttributeInfo para 
@@ -143,12 +89,7 @@ void printArquivo_Methods(ClassFile *classFile);
  * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibe_Attributes(ClassFile *classFile);
-/**
- * Imprime elementos de atributo, chamando função print_AttributeInfo para
- * cada um deles
- * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
- */
-void printArquivo_Attributes(ClassFile *classFile);
+
 
 /**
  * Encapsula decriptação das flags de acesso

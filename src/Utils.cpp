@@ -15,45 +15,6 @@ double Utils::verificarVersao(const ClassFile *classFile) {
 	return 5 + (classFile->major_version - 49);
 }
 
-// cppcheck-suppress unusedFunction
-bool Utils::verificarThisClass(string auxFilename, string auxClass) {
-	int auxPos;
-
-	//remove extensao .class
-        auxFilename.erase(auxFilename.size() - 6);
-
-	//remove nomes de pastas no Windows
-	auxPos = auxFilename.find("\\");
-
-	while (auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) {
-		auxFilename = auxFilename.substr(auxPos + 1);
-		auxPos = auxFilename.find("\\");
-	}
-
-	//remove nomes de pastas no Linux
-	auxPos = auxFilename.find("/");
-	while (auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) {
-		auxFilename = auxFilename.substr(auxPos + 1);
-		auxPos = auxFilename.find("/");
-	}
-	//..
-	//remove nomes de pastas no Windows
-	auxPos = auxClass.find("\\");
-
-	while (auxPos >= 0 && (unsigned int) auxPos <= auxClass.size()) {
-		auxClass = auxClass.substr(auxPos + 1);
-		auxPos = auxClass.find("\\");
-	}
-
-	//remove nomes de pastas no Linux
-	auxPos = auxClass.find("/");
-	while (auxPos >= 0 && (unsigned int) auxPos <= auxClass.size()) {
-		auxClass = auxClass.substr(auxPos + 1);
-		auxPos = auxClass.find("/");
-	}
-
-	return (auxClass == auxFilename);
-}
 /**	@fn double Utils::verificarVersaoClass(ClassFile *classFile)
  * Converte os dados de versão obtidos da struct classFile para a convenção encontrada em https://en.wikipedia.org/wiki/Java_class_file#General_layout
  *

@@ -77,7 +77,6 @@ public:
 	void exibeTabs(FILE *out, uint8_t n);
 
         static double verificarVersaoClass(const ClassFile *classFile);
-	static bool verificarThisClass(string auxFilename, string auxClass);
 
 };
 
