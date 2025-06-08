@@ -17,6 +17,6 @@ int main(int argc, char *argv[]) {
     ClassFile *cf = leitor.readClassFile(fp);
     fclose(fp);
 
-    exibeClassFile(cf);          // ou printArquivoClassFile(cf, stdout);
+    exibeClassFile(cf);
     return 0;
 }
