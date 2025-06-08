@@ -167,7 +167,7 @@ void printArquivo_ConstantPool(ClassFile *classFile) {
 
 			fprintf(out, "\t [%d] CONSTANT_Utf8_info\n", i + 1);
 			fprintf(out, "\t\t Length of byte array: \t\t %hu\n", utf8Info.length);
-			fprintf(out, "\t\t Length of string: \t\t %lu\n", strlen(str)); // MUDAR ISSO
+			fprintf(out, "\t\t Length of string: \t\t %lu\n", strlen(str));
 			fprintf(out, "\t\t String: \t\t\t %s\n", str);
 		} else if (element.tag == CONSTANT_NULL) {
 			fprintf(out, "\t [%d] (large numeric continued)\n", i + 1);
@@ -251,7 +251,7 @@ void exibe_ConstantPool(ClassFile *classFile) {
 
 			printf("\t [%d] CONSTANT_Utf8_info\n", i + 1);
 			printf("\t\t Length of byte array: \t\t %hu\n", utf8Info.length);
-			printf("\t\t Length of string: \t\t %lu\n", strlen(str)); // MUDAR ISSO
+			printf("\t\t Length of string: \t\t %lu\n", strlen(str));
 			printf("\t\t String: \t\t\t %s\n", str);
 		} else if (element.tag == CONSTANT_NULL) {
 			printf("\t [%d] (large numeric continued)\n", i + 1);

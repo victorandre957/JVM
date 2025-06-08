@@ -1,5 +1,9 @@
 #ifndef CLASSLOADER_H
 #define CLASSLOADER_H
+
+#pragma once
+
+
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
