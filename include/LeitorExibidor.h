@@ -5,7 +5,6 @@
 #include <cstring>
 #include <cassert>
 #include <cstdbool>
-#include <cstdlib>
 
 #include <iostream>
 #include "BasicTypes.h"

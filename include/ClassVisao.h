@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include <sstream>
-#include <cstdlib>
 #include "BasicTypes.h"
 #include "LeitorExibidor.h"
 #include "ClassFile.h"
