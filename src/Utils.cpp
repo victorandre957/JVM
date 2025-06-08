@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double Utils::verificarVersao(ClassFile *classFile) {
+double Utils::verificarVersao(const ClassFile *classFile) {
 	if (classFile->major_version < 45 || classFile->major_version > 52) {
 		return 0;
 	}
@@ -76,7 +76,7 @@ bool Utils::verificarThisClass(string auxFilename, string auxClass) {
  * @return O valor equivalente à versão lida em *classFile.
  */
 
-double Utils::verificarVersaoClass(ClassFile *classFile) {
+double Utils::verificarVersaoClass(const ClassFile *classFile) {
 	if (classFile->major_version < 45 || classFile->major_version > 52) {
 		return 5 + (classFile->major_version - 49);
 	}

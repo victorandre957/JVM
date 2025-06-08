@@ -108,7 +108,7 @@ void LeitorExibidor::setMagic(FILE *fp, ClassFile *classFile) {
 	classFile->magic = readU4(fp);
 }
 
-bool LeitorExibidor::isMagicValid(ClassFile *classFile) {
+bool LeitorExibidor::isMagicValid(const ClassFile *classFile) {
 	return classFile->magic == 0xCAFEBABE ? true : false;
 }
 
@@ -117,7 +117,7 @@ void LeitorExibidor::setVersion(FILE *fp, ClassFile *classFile) {
 	classFile->major_version = readU2(fp);
 }
 
-bool LeitorExibidor::isVersionValid(ClassFile *classFile, uint16_t major) {
+bool LeitorExibidor::isVersionValid(const ClassFile *classFile, uint16_t major) {
 	return classFile->major_version <= major;
 }
 
