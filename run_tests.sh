@@ -3,7 +3,6 @@
 # Lista de arquivos a serem processados
 arquivos=(
     "./tests/Belote.class"
-    "./tests/Belote.txt"
     "./tests/cafebabe.class"
     "./tests/Carta.class"
     "./tests/double_aritmetica.class"
