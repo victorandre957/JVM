@@ -11,12 +11,16 @@ LeitorExibidor::~LeitorExibidor() {
 }
 
 bool LeitorExibidor::testEndianess() {
-	int n = 1;
-	return (*(char*) &n == 1);
+        union {
+                uint16_t i;
+                uint8_t c[2];
+        } u;
+        u.i = 1;
+        return u.c[0] == 1;
 }
 
 ClassFile* LeitorExibidor::readClassFile(FILE *fp) {
-	ClassFile *classFile = (ClassFile*) malloc(sizeof(ClassFile));
+        ClassFile *classFile = static_cast<ClassFile*>(malloc(sizeof(ClassFile)));
 
 	// magic
 	setMagic(fp, classFile);
@@ -108,7 +112,7 @@ void LeitorExibidor::setMagic(FILE *fp, ClassFile *classFile) {
 	classFile->magic = readU4(fp);
 }
 
-bool LeitorExibidor::isMagicValid(ClassFile *classFile) {
+bool LeitorExibidor::isMagicValid(const ClassFile *classFile) {
 	return classFile->magic == 0xCAFEBABE ? true : false;
 }
 
@@ -117,7 +121,7 @@ void LeitorExibidor::setVersion(FILE *fp, ClassFile *classFile) {
 	classFile->major_version = readU2(fp);
 }
 
-bool LeitorExibidor::isVersionValid(ClassFile *classFile, uint16_t major) {
+bool LeitorExibidor::isVersionValid(const ClassFile *classFile, uint16_t major) {
 	return classFile->major_version <= major;
 }
 
@@ -127,7 +131,7 @@ void LeitorExibidor::setConstantPoolSize(FILE *fp, ClassFile *classFile) {
 
 void LeitorExibidor::setConstantPool(FILE *fp, ClassFile *classFile) {
 	u2 poolSize = classFile->constant_pool_count - 1;
-	classFile->constant_pool = (cp_info*) malloc(sizeof(cp_info) * poolSize);
+        classFile->constant_pool = static_cast<cp_info*>(malloc(sizeof(cp_info) * poolSize));
 
 	cp_info *constant_pool = classFile->constant_pool;
 	for (u2 i = 0; i < poolSize; i++) {
@@ -247,7 +251,7 @@ CONSTANT_NameAndType_info LeitorExibidor::getConstantNameAndTypeInfo(FILE *fp) {
 CONSTANT_Utf8_info LeitorExibidor::getConstantUtf8Info(FILE *fp) {
 	CONSTANT_Utf8_info result;
 	result.length = readU2(fp);
-	result.bytes = (u1*) malloc(sizeof(u1) * result.length);
+        result.bytes = static_cast<u1*>(malloc(sizeof(u1) * result.length));
 
 	for (u2 i = 0; i < result.length; i++) {
 		result.bytes[i] = readU1(fp);
@@ -273,7 +277,7 @@ void LeitorExibidor::setInterfacesCount(FILE *fp, ClassFile *classFile) {
 }
 
 void LeitorExibidor::setInterfaces(FILE *fp, ClassFile *classFile) {
-	classFile->interfaces = (u2*) malloc(sizeof(u2) * classFile->interfaces_count);
+        classFile->interfaces = static_cast<u2*>(malloc(sizeof(u2) * classFile->interfaces_count));
 	for (u2 i = 0; i < classFile->interfaces_count; i++) {
 		classFile->interfaces[i] = readU2(fp);
 	}
@@ -284,7 +288,7 @@ void LeitorExibidor::setFieldsCount(FILE *fp, ClassFile *classFile) {
 }
 
 void LeitorExibidor::setFields(FILE *fp, ClassFile *classFile) {
-	classFile->fields = (field_info*) malloc(sizeof(field_info) * classFile->fields_count);
+        classFile->fields = static_cast<field_info*>(malloc(sizeof(field_info) * classFile->fields_count));
 	for (u2 i = 0; i < classFile->fields_count; i++) {
 		field_info field;
 
@@ -293,7 +297,7 @@ void LeitorExibidor::setFields(FILE *fp, ClassFile *classFile) {
 		field.descriptor_index = readU2(fp);
 		field.attributes_count = readU2(fp);
 
-		field.attributes = (attribute_info*) malloc(sizeof(attribute_info) * field.attributes_count);
+            field.attributes = static_cast<attribute_info*>(malloc(sizeof(attribute_info) * field.attributes_count));
 
 		for (u2 j = 0; j < field.attributes_count; j++) {
 			field.attributes[j] = getAttributeInfo(fp, classFile);
@@ -331,19 +335,19 @@ Code_attribute LeitorExibidor::getAttributeCode(FILE *fp, ClassFile *classFile) 
 
 	result.code_length = readU4(fp);
 
-	result.code = (u1*) malloc(sizeof(u1) * result.code_length);
+        result.code = static_cast<u1*>(malloc(sizeof(u1) * result.code_length));
 	for (u4 i = 0; i < result.code_length; i++) {
 		result.code[i] = readU1(fp);
 	}
 
 	result.exception_table_length = readU2(fp);
-	result.exception_table = (ExceptionTable*) malloc(sizeof(ExceptionTable) * result.exception_table_length);
+        result.exception_table = static_cast<ExceptionTable*>(malloc(sizeof(ExceptionTable) * result.exception_table_length));
 	for (u2 i = 0; i < result.exception_table_length; i++) {
 		result.exception_table[i] = getExceptionTable(fp);
 	}
 
 	result.attributes_count = readU2(fp);
-	result.attributes = (attribute_info*) malloc(sizeof(attribute_info) * result.attributes_count);
+        result.attributes = static_cast<attribute_info*>(malloc(sizeof(attribute_info) * result.attributes_count));
 	for (u2 i = 0; i < result.attributes_count; i++) {
 		result.attributes[i] = getAttributeInfo(fp, classFile);
 	}
@@ -354,7 +358,7 @@ Code_attribute LeitorExibidor::getAttributeCode(FILE *fp, ClassFile *classFile) 
 Exceptions_attribute LeitorExibidor::getAttributeExceptions(FILE *fp) {
 	Exceptions_attribute result;
 	result.number_of_exceptions = readU2(fp);
-	result.exception_index_table = (u2*) malloc(sizeof(u2) * result.number_of_exceptions);
+        result.exception_index_table = static_cast<u2*>(malloc(sizeof(u2) * result.number_of_exceptions));
 	for (u2 i = 0; i < result.number_of_exceptions; i++) {
 		result.exception_index_table[i] = readU2(fp);
 	}
@@ -373,7 +377,7 @@ Class LeitorExibidor::getClass(FILE *fp) {
 InnerClasses_attribute LeitorExibidor::getAttributeInnerClasses(FILE *fp) {
 	InnerClasses_attribute result;
 	result.number_of_classes = readU2(fp);
-	result.classes = (Class*) malloc(sizeof(Class) * result.number_of_classes);
+        result.classes = static_cast<Class*>(malloc(sizeof(Class) * result.number_of_classes));
 	for (u2 i = 0; i < result.number_of_classes; i++) {
 		result.classes[i] = getClass(fp);
 	}
@@ -401,7 +405,7 @@ LineNumberTable LeitorExibidor::getLineNumberTable(FILE *fp) {
 LineNumberTable_attribute LeitorExibidor::getAttributeLineNumberTable(FILE *fp) {
 	LineNumberTable_attribute result;
 	result.line_number_table_length = readU2(fp);
-	result.line_number_table = (LineNumberTable*) malloc(sizeof(LineNumberTable) * result.line_number_table_length);
+        result.line_number_table = static_cast<LineNumberTable*>(malloc(sizeof(LineNumberTable) * result.line_number_table_length));
 	for (u2 i = 0; i < result.line_number_table_length; i++) {
 		result.line_number_table[i] = getLineNumberTable(fp);
 	}
@@ -421,7 +425,7 @@ LocalVariableTable LeitorExibidor::getLocalVariableTable(FILE *fp) {
 LocalVariableTable_attribute LeitorExibidor::getAttributeLocalVariable(FILE *fp) {
 	LocalVariableTable_attribute result;
 	result.local_variable_table_length = readU2(fp);
-	result.localVariableTable = (LocalVariableTable*) malloc(sizeof(LocalVariableTable) * result.local_variable_table_length);
+        result.localVariableTable = static_cast<LocalVariableTable*>(malloc(sizeof(LocalVariableTable) * result.local_variable_table_length));
 	for (u2 i = 0; i < result.local_variable_table_length; i++) {
 		result.localVariableTable[i] = getLocalVariableTable(fp);
 	}
@@ -477,14 +481,14 @@ void LeitorExibidor::setMethodsCount(FILE *fp, ClassFile *classFile) {
 }
 
 void LeitorExibidor::setMethods(FILE *fp, ClassFile *classFile) {
-	classFile->methods = (method_info*) malloc(sizeof(method_info) * classFile->methods_count);
+        classFile->methods = static_cast<method_info*>(malloc(sizeof(method_info) * classFile->methods_count));
 	for (u2 i = 0; i < classFile->methods_count; i++) {
 		classFile->methods[i].access_flags = readU2(fp);
 		classFile->methods[i].name_index = readU2(fp);
 		classFile->methods[i].descriptor_index = readU2(fp);
 		classFile->methods[i].attributes_count = readU2(fp);
 
-		classFile->methods[i].attributes = (attribute_info*) malloc(sizeof(attribute_info) * classFile->methods[i].attributes_count);
+            classFile->methods[i].attributes = static_cast<attribute_info*>(malloc(sizeof(attribute_info) * classFile->methods[i].attributes_count));
 		for (u2 j = 0; j < classFile->methods[i].attributes_count; j++) {
 			classFile->methods[i].attributes[j] = getAttributeInfo(fp, classFile);
 		}
@@ -496,7 +500,7 @@ void LeitorExibidor::setAttributesCount(FILE *fp, ClassFile *classFile) {
 }
 
 void LeitorExibidor::setAttributes(FILE *fp, ClassFile *classFile) {
-	classFile->attributes = (attribute_info*) malloc(sizeof(attribute_info) * classFile->attributes_count);
+        classFile->attributes = static_cast<attribute_info*>(malloc(sizeof(attribute_info) * classFile->attributes_count));
 	for (u2 i = 0; i < classFile->attributes_count; i++) {
 		classFile->attributes[i] = getAttributeInfo(fp, classFile);
 	}

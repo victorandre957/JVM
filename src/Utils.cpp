@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double Utils::verificarVersao(ClassFile *classFile) {
+double Utils::verificarVersao(const ClassFile *classFile) {
 	if (classFile->major_version < 45 || classFile->major_version > 52) {
 		return 0;
 	}
@@ -19,7 +19,7 @@ bool Utils::verificarThisClass(string auxFilename, string auxClass) {
 	int auxPos;
 
 	//remove extensao .class
-	auxFilename = auxFilename.substr(0, auxFilename.size() - 6);
+        auxFilename.erase(auxFilename.size() - 6);
 
 	//remove nomes de pastas no Windows
 	auxPos = auxFilename.find("\\");
@@ -76,7 +76,7 @@ bool Utils::verificarThisClass(string auxFilename, string auxClass) {
  * @return O valor equivalente à versão lida em *classFile.
  */
 
-double Utils::verificarVersaoClass(ClassFile *classFile) {
+double Utils::verificarVersaoClass(const ClassFile *classFile) {
 	if (classFile->major_version < 45 || classFile->major_version > 52) {
 		return 5 + (classFile->major_version - 49);
 	}
@@ -113,7 +113,7 @@ void Utils::exibeTabs(uint8_t n) {
 }
 const char* Utils::converterStreamToCString(const stringstream &ss) {
 	string tmp = ss.str();
-	char *result = (char*) malloc(sizeof(char) * (tmp.size() + 1));
+        char *result = static_cast<char*>(malloc(sizeof(char) * (tmp.size() + 1)));
 	tmp.copy(result, tmp.size());
 	result[tmp.size()] = '\0';
 
