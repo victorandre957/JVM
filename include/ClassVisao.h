@@ -198,7 +198,7 @@ void exibe_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *
  * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  * @param indentation é o número de tabs que deve ser imprimido na linha
  */
-void printArquivoByteCode(Code_attribute codeAttribute, cp_info *constantPool, uint8_t indentation);
+void printArquivoByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, uint8_t indentation);
 /**
  * Imprime strings que representam instruções através da variável de código
  * do atributo. O valor do código em hexa é decriptado na função getFormattedConstant().
@@ -208,7 +208,7 @@ void printArquivoByteCode(Code_attribute codeAttribute, cp_info *constantPool, u
  * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  * @param indentation é o número de tabs que deve ser imprimido na linha
  */
-void exibeByteCode(Code_attribute codeAttribute, cp_info *constantPool, uint8_t indentation);
+void exibeByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, uint8_t indentation);
 
 /**
  * Vetor contendo os mnemônicos de todas as instruções do bytecode Java.

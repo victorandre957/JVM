@@ -19,7 +19,7 @@ bool Utils::verificarThisClass(string auxFilename, string auxClass) {
 	int auxPos;
 
 	//remove extensao .class
-	auxFilename = auxFilename.substr(0, auxFilename.size() - 6);
+        auxFilename.erase(auxFilename.size() - 6);
 
 	//remove nomes de pastas no Windows
 	auxPos = auxFilename.find("\\");
@@ -113,7 +113,7 @@ void Utils::exibeTabs(uint8_t n) {
 }
 const char* Utils::converterStreamToCString(const stringstream &ss) {
 	string tmp = ss.str();
-	char *result = (char*) malloc(sizeof(char) * (tmp.size() + 1));
+        char *result = static_cast<char*>(malloc(sizeof(char) * (tmp.size() + 1)));
 	tmp.copy(result, tmp.size());
 	result[tmp.size()] = '\0';
 
