@@ -1,5 +1,8 @@
 #ifndef CLASSVIEWER_H
 #define CLASSVIEWER_H
+
+#pragma once
+
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>

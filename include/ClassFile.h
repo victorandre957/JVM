@@ -5,6 +5,8 @@
 #ifndef CLASSFILE
 #define CLASSFILE
 
+#pragma once
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>

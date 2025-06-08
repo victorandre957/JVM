@@ -1,6 +1,8 @@
 #ifndef TIPOS_H
 #define TIPOS_H
 
+#pragma once
+
 #include <stdint.h>
 
 // Tipos de representação de dados da classe

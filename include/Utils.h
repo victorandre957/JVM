@@ -1,6 +1,8 @@
 #ifndef utils_h
 #define utils_h
 
+#pragma once
+
 #include <sstream>
 #include <cstring>
 #include <cstdlib>
