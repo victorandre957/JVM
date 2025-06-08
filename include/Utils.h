@@ -40,7 +40,7 @@ public:
 	 * @param *classFile Ponteiro para uma instância de struct \c ClassFile, que descreve toda a estrutura de um arquivo .class.
 	 * @return O valor equivalente à versão lida em *classFile.
 	 */
-	static double verificarVersao(ClassFile *classFile);
+        static double verificarVersao(const ClassFile *classFile);
 
 	/**
 	 * Verifica a igualdade entre uma string e o conteúdo de uma struct \c CONSTANT_Utf8_info.
@@ -76,7 +76,7 @@ public:
 	 */
 	void exibeTabs(FILE *out, uint8_t n);
 
-	static double verificarVersaoClass(ClassFile *classFile);
+        static double verificarVersaoClass(const ClassFile *classFile);
 	static bool verificarThisClass(string auxFilename, string auxClass);
 
 };

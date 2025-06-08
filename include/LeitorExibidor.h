@@ -97,7 +97,7 @@ private:
 	 * @param *classFile Ponteiro para uma instância de struct ClassFile, que descreve a estrutura (parcial, no momento) de um arquivo .class.
 	 * @return Verdadeiro ou Falso.
 	 */
-	bool isMagicValid(ClassFile *classFile);
+        bool isMagicValid(const ClassFile *classFile);
 
 	/**
 	 * Lê a versão de um arquivo .class e a armazena em uma estrutura ClassFile. A versão é dada por major_version.minor_version.
@@ -113,7 +113,7 @@ private:
 	 * @param major Versão a se comparar.
 	 * @return Verdadeiro de a versão é no máximo major ou Falso caso contrário
 	 */
-	bool isVersionValid(ClassFile *classFile, uint16_t major);
+        bool isVersionValid(const ClassFile *classFile, uint16_t major);
 
 	/**
 	 * Lê o tamanho da pool de constantes de um arquivo .class e o armazena em uma estrutura ClassFile.
