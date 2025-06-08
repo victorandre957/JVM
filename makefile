@@ -6,7 +6,7 @@ RM = rm -f
 
 DEP_FLAGS = -MT $@ -MMD -MP -MF $(DEP_PATH)/$*.d
 
-DIRECTIVES = -std=c++11 -c -I $(HEADER_PATH) -Wall -Wextra
+DIRECTIVES = -std=c++11 -c -g -O0 -I $(HEADER_PATH) -Wall -Wextra
 LIBS = -lm
 
 HEADER_PATH = include
