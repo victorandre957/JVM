@@ -1,5 +1,5 @@
-#ifndef utils_h
-#define utils_h
+#ifndef UTILS_H
+#define UTILS_H
 
 #pragma once
 
@@ -7,77 +7,88 @@
 #include <cstring>
 #include <cstdlib>
 #include <cstdio>
-
 #include "BasicTypes.h"
 #include "LeitorExibidor.h"
 
 using namespace std;
 
-/** @class Utils
- * @brief  Representa classe utilitaria.
+/**
+ * @file Utils.h
+ * @brief Utilitários gerais para manipulação de dados
+ */
+
+/**
+ * @class Utils
+ * @brief Classe com funções utilitárias para formatação e conversão
  */
 class Utils {
-
 public:
-	/**
-	 * Converte os dados de versão obtidos da struct classFile para a convenção encontrada em https://en.wikipedia.org/wiki/Java_class_file#General_layout
-	 *
-	 * J2SE 8 = 52
-	 *
-	 * J2SE 7 = 51
-	 *
-	 * J2SE 6.0 = 50
-	 *
-	 * J2SE 5.0 = 49
-	 *
-	 * JDK 1.4 = 48
-	 *
-	 * JDK 1.3 = 47
-	 *
-	 * JDK 1.2 = 46
-	 *
-	 * JDK 1.1 = 45
-	 * @param *classFile Ponteiro para uma instância de struct \c ClassFile, que descreve toda a estrutura de um arquivo .class.
-	 * @return O valor equivalente à versão lida em *classFile.
-	 */
-        static double verificarVersao(const ClassFile *classFile);
+    /**
+     * @brief Mapeia a versão do arquivo .class para versão do JDK
+     * 
+     * Conversão baseada na especificação:
+     * - 52 = J2SE 8
+     * - 51 = J2SE 7
+     * - 50 = J2SE 6.0
+     * - 49 = J2SE 5.0
+     * - 48 = JDK 1.4
+     * - 47 = JDK 1.3
+     * - 46 = JDK 1.2
+     * - 45 = JDK 1.1
+     * 
+     * @param classFile Ponteiro para a estrutura ClassFile
+     * @return Versão equivalente do JDK (ex: 1.8 para major_version=52)
+     */
+    static double verificarVersao(const ClassFile *classFile);
 
-	/**
-	 * Verifica a igualdade entre uma string e o conteúdo de uma struct \c CONSTANT_Utf8_info.
-	 * @param constant Estrutura do tipo \c CONSTANT_Utf8_info.
-	 * @param *str String a se comparar.
-	 * @return É retornado \c true caso a igualdade seja verdadeira, e \c false caso contrário.
-	 */
-	static bool compararUtf8String(CONSTANT_Utf8_info constant, const char *str);
+    /**
+     * @brief Compara string C com conteúdo de CONSTANT_Utf8_info
+     * 
+     * @param constant Entrada da constant pool do tipo UTF-8
+     * @param str String C-style para comparação
+     * @return true se conteúdos forem iguais, false caso contrário
+     */
+    static bool compararUtf8String(CONSTANT_Utf8_info constant, const char *str);
 
-	/**
-	 * Imprime uma dada quantidade de tabs.
-	 * @param out
-	 * @param n Quantidade de tabs desejada.
-	 */
-	static void imprintTabs(FILE *out, uint8_t n);
+    /**
+     * @brief Imprime tabs de indentação em arquivo
+     * 
+     * @param out Arquivo de destino
+     * @param n Quantidade de tabs a imprimir
+     */
+    static void imprintTabs(FILE *out, uint8_t n);
 
-	/**
-	 * exibe uma dada quantidade de tabs.
-	 * @param n Quantidade de tabs desejada.
-	 */
-	static void exibeTabs(uint8_t n);
-	/**
-	 * Converte dados do tipo stringstream para \c const \c char*.
-	 * @param &ss Referência para um \c std::stringstream.
-	 * @return O resultado da conversão, uma string terminada com NULL (i.e. \0).
-	 */
-	static const char* converterStreamToCString(const stringstream &ss);
+    /**
+     * @brief Exibe tabs de indentação no console
+     * 
+     * @param n Quantidade de tabs a exibir
+     */
+    static void exibeTabs(uint8_t n);
 
-	/**
-	 * exibe uma dada quantidade de tabs.
-	 * @param out
-	 * @param n Quantidade de tabs desejada.
-	 */
-	void exibeTabs(FILE *out, uint8_t n);
+    /**
+     * @brief Converte stringstream para string C-style
+     * 
+     * @param ss Stream de entrada com conteúdo
+     * @return const char* String alocada dinamicamente (caller deve liberar memória)
+     */
+    static const char* converterStreamToCString(const stringstream &ss);
 
-        static double verificarVersaoClass(const ClassFile *classFile);
+    /**
+     * @brief Exibe tabs de indentação em arquivo (sobrecarga)
+     * 
+     * @param out Arquivo de destino
+     * @param n Quantidade de tabs a exibir
+     */
+    static void exibeTabs(FILE *out, uint8_t n);
 
+    /**
+     * @brief Alternativa para mapear versão do arquivo .class
+     * @note Parece ser duplicada de verificarVersao(), pode ser consolidada
+     * 
+     * @param classFile Ponteiro para a estrutura ClassFile
+     * @return Versão equivalente do JDK
+     */
+    static double verificarVersaoClass(const ClassFile *classFile);
 };
 
-#endif /* utils_h */
+#endif /* UTILS_H */
