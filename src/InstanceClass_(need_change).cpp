@@ -5,6 +5,7 @@
 #include "ArrayObject.h"
 #include "ClassVisao.h"
 #include "MethodArea.h"
+#include "Utils.h"
 
 InstanceClass::InstanceClass(StaticClass *classRuntime) :
 		_classRuntime(classRuntime) {

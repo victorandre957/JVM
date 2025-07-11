@@ -1,9 +1,9 @@
 #include "MethodArea.h"
 
-#include "ClassVisao.h" // talvez retirar isso e colocar a getFormattedConstant() na Util.
 #include "LeitorExibidor.h"
 #include "Operations.h"
 #include "PilhaJVM.h"
+#include "Utils.h"
 
 MethodArea::MethodArea() {
 

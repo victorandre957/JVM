@@ -7,6 +7,7 @@
 #include "Stringobject.h"
 #include "PilhaJVM.h"
 #include "StaticClass.h"
+#include "Utils.h"
 
 Operations::Operations() :
 		_isWide(false) {

@@ -1,6 +1,7 @@
 #include "BasicTypes.h"
 #include "StaticClass.h"
 #include "ClassVisao.h"
+#include "Utils.h"
 
 StaticClass::StaticClass(ClassFile *classFile) :
 		_classFile(classFile) {
