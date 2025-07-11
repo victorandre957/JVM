@@ -12,8 +12,8 @@ StaticClass::StaticClass(ClassFile *classFile) :
 		u2 finalFlag = 0x0010;
 
 		if ((field.access_flags & staticFlag) != 0 && (field.access_flags & finalFlag) == 0) { // estática e não final
-			string fieldName = getFormattedConstant(classFile->constant_pool, field.name_index);
-			string fieldDescriptor = getFormattedConstant(classFile->constant_pool, field.descriptor_index);
+			string fieldName = Utils::getFormattedConstant(classFile->constant_pool, field.name_index);
+			string fieldDescriptor = Utils::getFormattedConstant(classFile->constant_pool, field.descriptor_index);
 
 			char fieldType = fieldDescriptor[0];
 			Value value;

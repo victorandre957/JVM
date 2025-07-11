@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 	// Fim do carregamento.
 
 	// Verificação se o nome da classe de entrada é igual ao nome do arquivo.
-	string className = getFormattedConstant(classRuntime->getClassFile()->constant_pool, classRuntime->getClassFile()->this_class);
+	string className = Utils::getFormattedConstant(classRuntime->getClassFile()->constant_pool, classRuntime->getClassFile()->this_class);
 
 	string fileName(file_className);
 

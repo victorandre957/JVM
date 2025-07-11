@@ -82,20 +82,18 @@ const char* Utils::converterStreamToCString(const stringstream &ss) {
 	return result;
 }
 
-
-
-const char* getFormattedConstant(cp_info* constantPool, u2 index) {
+const char* Utils::getFormattedConstant(cp_info* constantPool, u2 index) {
 	cp_info constant = constantPool[index - 1];
 
 	if (constant.tag == CONSTANT_Class) {
 		CONSTANT_Class_info classInfo = constant.info.class_info;
-		return getFormattedConstant(constantPool, classInfo.name_index);
+		return Utils::getFormattedConstant(constantPool, classInfo.name_index);
 	} else if (constant.tag == CONSTANT_Fieldref) {
 		CONSTANT_Fieldref_info fieldRefInfo = constant.info.fieldref_info;
 		CONSTANT_NameAndType_info nameAndTypeInfo = constantPool[fieldRefInfo.name_and_type_index - 1].info.nameAndType_info;
 
-		const char *className = getFormattedConstant(constantPool, fieldRefInfo.class_index);
-		const char *name = getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
+		const char *className = Utils::getFormattedConstant(constantPool, fieldRefInfo.class_index);
+		const char *name = Utils::getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
 
 		stringstream ss;
 		ss << className << "." << name;
@@ -104,8 +102,8 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 		CONSTANT_Methodref_info methodRefInfo = constant.info.methodref_info;
 		CONSTANT_NameAndType_info nameAndTypeInfo = constantPool[methodRefInfo.name_and_type_index - 1].info.nameAndType_info;
 
-		const char *className = getFormattedConstant(constantPool, methodRefInfo.class_index);
-		const char *name = getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
+		const char *className = Utils::getFormattedConstant(constantPool, methodRefInfo.class_index);
+		const char *name = Utils::getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
 
 		stringstream ss;
 		ss << className << "." << name;
@@ -114,15 +112,15 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 		CONSTANT_InterfaceMethodref_info interfaceMethodRefInfo = constant.info.interfaceMethodref_info;
 		CONSTANT_NameAndType_info nameAndTypeInfo = constantPool[interfaceMethodRefInfo.name_and_type_index - 1].info.nameAndType_info;
 
-		const char *className = getFormattedConstant(constantPool, interfaceMethodRefInfo.class_index);
-		const char *name = getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
+		const char *className = Utils::getFormattedConstant(constantPool, interfaceMethodRefInfo.class_index);
+		const char *name = Utils::getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
 
 		stringstream ss;
 		ss << className << "." << name;
 		return Utils::converterStreamToCString(ss);
 	} else if (constant.tag == CONSTANT_String) {
 		CONSTANT_String_info stringInfo = constant.info.string_info;
-		return getFormattedConstant(constantPool, stringInfo.string_index);
+		return Utils::getFormattedConstant(constantPool, stringInfo.string_index);
 	} else if (constant.tag == CONSTANT_Integer) {
 		CONSTANT_Integer_info intInfo = constant.info.integer_info;
 		int32_t number = intInfo.bytes;
@@ -162,8 +160,8 @@ const char* getFormattedConstant(cp_info* constantPool, u2 index) {
 	} else if (constant.tag == CONSTANT_NameAndType) {
 		CONSTANT_NameAndType_info nameAndTypeInfo = constant.info.nameAndType_info;
 
-		const char *name = getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
-		const char *descriptor = getFormattedConstant(constantPool, nameAndTypeInfo.descriptor_index);
+		const char *name = Utils::getFormattedConstant(constantPool, nameAndTypeInfo.name_index);
+		const char *descriptor = Utils::getFormattedConstant(constantPool, nameAndTypeInfo.descriptor_index);
 
                 char *result = static_cast<char*>(malloc(sizeof(char) * (strlen(name) + strlen(descriptor)) + 1));
 		strcpy(result, name);

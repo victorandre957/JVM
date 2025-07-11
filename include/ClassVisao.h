@@ -186,7 +186,7 @@ const char* getAccessFlags(u2 accessFlags);
  * @param index Índice da entrada na pool
  * @return String formatada com o valor da constante
  */
-const char* getFormattedConstant(cp_info* constantPool, u2 index);
+const char* Utils::getFormattedConstant(cp_info* constantPool, u2 index);
 
 /**
  * @brief Exibe informações detalhadas de um atributo no console

@@ -104,8 +104,8 @@ method_info* Frame::obterMethodNamed(StaticClass *classRuntime, string name, str
 
 		for (int i = 0; i < classFile->methods_count; i++) {
 			method = &(classFile->methods[i]);
-			string methodName = getFormattedConstant(classFile->constant_pool, method->name_index);
-			string methodDesc = getFormattedConstant(classFile->constant_pool, method->descriptor_index);
+			string methodName = Utils::getFormattedConstant(classFile->constant_pool, method->name_index);
+			string methodDesc = Utils::getFormattedConstant(classFile->constant_pool, method->descriptor_index);
 
 			if (methodName == name && methodDesc == descriptor) {
 				_classRuntime = currClass;
@@ -117,7 +117,7 @@ method_info* Frame::obterMethodNamed(StaticClass *classRuntime, string name, str
 		if (classFile->super_class == 0) {
 			currClass = NULL;
 		} else {
-			string superClassName = getFormattedConstant(classFile->constant_pool, classFile->super_class);
+			string superClassName = Utils::getFormattedConstant(classFile->constant_pool, classFile->super_class);
 			currClass = methodArea.carregarClassNamed(superClassName);
 		}
 	}

@@ -65,7 +65,7 @@ StaticClass* MethodArea::getClassNamed(const string &className) {
 bool MethodArea::addClass(StaticClass *classRuntime) {
 	ClassFile *classFile = classRuntime->getClassFile();
 
-	const char *key = getFormattedConstant(classFile->constant_pool, classFile->this_class);
+	const char *key = Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class);
 
 	if (_classes.count(key) > 0) {
 		return false;

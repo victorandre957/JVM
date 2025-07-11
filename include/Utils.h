@@ -89,6 +89,17 @@ public:
      * @return Versão equivalente do JDK
      */
     static double verificarVersaoClass(const ClassFile *classFile);
+
+    static const char* getFormattedConstant(cp_info* constantPool, u2 index);
+	/**
+	 * Imprime informações básicas dos atributos e as específicas de um dos 
+	 * 9 elementos da unios, onde Synthetic e Deprecated são ignorados por
+	 * não possuirem informações extras.
+	 * @param attributeInfo sctruct do atributo
+	 * @param index é o índice do atributo
+	 * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+	 * @param indentation é o número de tabs que deve ser imprimido na linha
+	 */
 };
 
 #endif /* UTILS_H */

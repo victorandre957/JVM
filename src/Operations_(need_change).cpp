@@ -48,8 +48,8 @@ bool Operations::verificarMetodoExiste(StaticClass *classRuntime, string name, s
 	method_info method;
 	for (int i = 0; i < classFile->methods_count; i++) {
 		method = classFile->methods[i];
-		string methodName = getFormattedConstant(classFile->constant_pool, method.name_index);
-		string methodDesc = getFormattedConstant(classFile->constant_pool, method.descriptor_index);
+		string methodName = Utils::getFormattedConstant(classFile->constant_pool, method.name_index);
+		string methodDesc = Utils::getFormattedConstant(classFile->constant_pool, method.descriptor_index);
 
 		if (methodName == name && methodDesc == descriptor) {
 			found = true;
@@ -3524,15 +3524,15 @@ void Operations::getstatic() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
 
 	// caso especial
 	if (className == "java/lang/System" && fieldDescriptor == "Ljava/io/PrintStream;") {
@@ -3549,7 +3549,7 @@ void Operations::getstatic() {
 			if (classRuntime->getClassFile()->super_class == 0) {
 				classRuntime = NULL;
 			} else {
-				string superClassName = getFormattedConstant(classRuntime->getClassFile()->constant_pool,
+				string superClassName = Utils::getFormattedConstant(classRuntime->getClassFile()->constant_pool,
 						classRuntime->getClassFile()->super_class);
 				classRuntime = methodArea.carregarClassNamed(superClassName);
 			}
@@ -3615,15 +3615,15 @@ void Operations::putstatic() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
 
 	MethodArea &methodArea = MethodArea::getInstance();
 	StaticClass *classRuntime = methodArea.carregarClassNamed(className);
@@ -3633,7 +3633,7 @@ void Operations::putstatic() {
 			if (classRuntime->getClassFile()->super_class == 0) {
 				classRuntime = NULL;
 			} else {
-				string superClassName = getFormattedConstant(classRuntime->getClassFile()->constant_pool,
+				string superClassName = Utils::getFormattedConstant(classRuntime->getClassFile()->constant_pool,
 						classRuntime->getClassFile()->super_class);
 				classRuntime = methodArea.carregarClassNamed(superClassName);
 			}
@@ -3695,15 +3695,15 @@ void Operations::getfield() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
 
 	Value objectValue = topFrame->desempilhaOperandStack();
 	assert(objectValue.type == ValueType::REFERENCE);
@@ -3764,15 +3764,15 @@ void Operations::putfield() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
 
 	Value valueToBeInserted = topFrame->desempilhaOperandStack();
 	if (valueToBeInserted.type == ValueType::DOUBLE || valueToBeInserted.type == ValueType::LONG) {
@@ -3827,15 +3827,15 @@ void Operations::invokevirtual() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
 
 	if (className.find("java/") != string::npos) {
 		// simulando println ou print
@@ -4015,15 +4015,15 @@ void Operations::invokespecial() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
 
 	// casos especiais
 	if ((className == "java/lang/Object" || className == "java/lang/String") && methodName == "<init>") {
@@ -4117,15 +4117,15 @@ void Operations::invokestatic() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
 
 	if (className == "java/lang/Object" && methodName == "registerNatives") {
 		topFrame->pc += 3;
@@ -4204,15 +4204,15 @@ void Operations::invokeinterface() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
 
 	if (className.find("java/") != string::npos) {
 		cerr << "Tentando invocar metodo de interface invalido: " << methodName << endl;
@@ -4291,7 +4291,7 @@ void Operations::func_new() {
 	assert(classCP.tag == CONSTANT_Class);
 
 	CONSTANT_Class_info classInfo = classCP.info.class_info; // Formata nome da classe
-	string className = getFormattedConstant(constantPool, classInfo.name_index);
+	string className = Utils::getFormattedConstant(constantPool, classInfo.name_index);
 
 	Object *object;
 	if (className == "java/lang/String") {
@@ -4425,7 +4425,7 @@ void Operations::anewarray() {
 	assert(classCP.tag == CONSTANT_Class);
 
 	CONSTANT_Class_info classInfo = classCP.info.class_info; // Formata nome da classe
-	string className = getFormattedConstant(constantPool, classInfo.name_index);
+	string className = Utils::getFormattedConstant(constantPool, classInfo.name_index);
 
 	if (className != "java/lang/String") {
 		int i = 0;
@@ -4494,7 +4494,7 @@ void Operations::checkcast() {
 	cp_info *constantPool = *(topFrame->obterConstantPool());
 	cp_info cpElement = constantPool[cpIndex - 1];
 	assert(cpElement.tag == CONSTANT_Class);
-	string className = getFormattedConstant(constantPool, cpIndex);
+	string className = Utils::getFormattedConstant(constantPool, cpIndex);
 
 	Value objectrefValue = topFrame->desempilhaOperandStack();
 	assert(objectrefValue.type == ValueType::REFERENCE);
@@ -4515,7 +4515,7 @@ void Operations::checkcast() {
 			bool found = false;
 			while (!found) {
 				ClassFile *classFile = classRuntime->getClassFile();
-				string currClassName = getFormattedConstant(classFile->constant_pool, classFile->this_class);
+				string currClassName = Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class);
 
 				if (currClassName == className) {
 					found = true;
@@ -4523,7 +4523,7 @@ void Operations::checkcast() {
 					if (classFile->super_class == 0) {
 						break;
 					} else {
-						string superClassName = getFormattedConstant(classFile->constant_pool, classFile->this_class);
+						string superClassName = Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class);
 						classRuntime = methodArea.carregarClassNamed(superClassName);
 					}
 				}
@@ -4560,7 +4560,7 @@ void Operations::instanceof() {
 	cp_info *constantPool = *(topFrame->obterConstantPool());
 	cp_info cpElement = constantPool[cpIndex - 1];
 	assert(cpElement.tag == CONSTANT_Class);
-	string className = getFormattedConstant(constantPool, cpIndex);
+	string className = Utils::getFormattedConstant(constantPool, cpIndex);
 
 	Value objectrefValue = topFrame->desempilhaOperandStack();
 	assert(objectrefValue.type == ValueType::REFERENCE);
@@ -4580,7 +4580,7 @@ void Operations::instanceof() {
 			bool found = false;
 			while (!found) {
 				ClassFile *classFile = classRuntime->getClassFile();
-				string currClassName = getFormattedConstant(classFile->constant_pool, classFile->this_class);
+				string currClassName = Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class);
 
 				if (currClassName == className) {
 					found = true;
@@ -4588,7 +4588,7 @@ void Operations::instanceof() {
 					if (classFile->super_class == 0) {
 						break;
 					} else {
-						string superClassName = getFormattedConstant(classFile->constant_pool, classFile->this_class);
+						string superClassName = Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class);
 						classRuntime = methodArea.carregarClassNamed(superClassName);
 					}
 				}
@@ -4646,7 +4646,7 @@ void Operations::multianewarray() {
 	assert(classCP.tag == CONSTANT_Class);
 
 	CONSTANT_Class_info classInfo = classCP.info.class_info;
-	string className = getFormattedConstant(constantPool, classInfo.name_index);
+	string className = Utils::getFormattedConstant(constantPool, classInfo.name_index);
 
 	// obter o tipo dentro de className:
 	ValueType valueType;

@@ -35,13 +35,13 @@ void exibe_GeneralInformation(ClassFile *classFile) {
 	printf("\t Constant pool count: \t\t %hu\n", classFile->constant_pool_count);
 	printf("\t Access Flags: \t\t\t 0x%.4X [%s]\n", classFile->access_flags, getAccessFlags(classFile->access_flags));
 	printf("\t This class: \t\t\t cp_info #%hu <%s>\n", classFile->this_class,
-			getFormattedConstant(classFile->constant_pool, classFile->this_class));
+			Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class));
 
 	if (classFile->super_class == 0) {
 		printf("\t Super class: \t\t\t none\n");
 	} else {
 		printf("\t Super class: \t\t\t cp_info #%hu <%s>\n", classFile->super_class,
-				getFormattedConstant(classFile->constant_pool, classFile->super_class));
+				Utils::getFormattedConstant(classFile->constant_pool, classFile->super_class));
 	}
 
 	printf("\t Interfaces count: \t\t %hu\n", classFile->interfaces_count);
@@ -60,65 +60,65 @@ void exibe_ConstantPool(ClassFile *classFile) {
 			CONSTANT_Class_info classInfo = element.info.class_info;
                         printf("\t [%u] CONSTANT_Class_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n", classInfo.name_index,
-					getFormattedConstant(constantPool, classInfo.name_index));
+					Utils::getFormattedConstant(constantPool, classInfo.name_index));
 		} else if (element.tag == CONSTANT_Fieldref) {
 			CONSTANT_Fieldref_info fieldRefInfo = element.info.fieldref_info;
                         printf("\t [%u] CONSTANT_Fieldref_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", fieldRefInfo.class_index,
-					getFormattedConstant(constantPool, fieldRefInfo.class_index));
+					Utils::getFormattedConstant(constantPool, fieldRefInfo.class_index));
 			printf("\t\t Name and type: \t\t cp_info #%hu <%s>\n", fieldRefInfo.name_and_type_index,
-					getFormattedConstant(constantPool, fieldRefInfo.name_and_type_index));
+					Utils::getFormattedConstant(constantPool, fieldRefInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_Methodref) {
 			CONSTANT_Methodref_info methodInfo = element.info.methodref_info;
                         printf("\t [%u] CONSTANT_Methodref_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", methodInfo.class_index,
-					getFormattedConstant(constantPool, methodInfo.class_index));
+					Utils::getFormattedConstant(constantPool, methodInfo.class_index));
 			printf("\t\t Name and type: \t\t cp_info #%hu <%s>\n", methodInfo.name_and_type_index,
-					getFormattedConstant(constantPool, methodInfo.name_and_type_index));
+					Utils::getFormattedConstant(constantPool, methodInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_InterfaceMethodref) {
 			CONSTANT_InterfaceMethodref_info interfaceMethodInfo = element.info.interfaceMethodref_info;
                         printf("\t [%u] CONSTANT_InterfaceMethodref_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Class name: \t\t\t cp_info #%hu <%s>\n ", interfaceMethodInfo.class_index,
-					getFormattedConstant(constantPool, interfaceMethodInfo.class_index));
+					Utils::getFormattedConstant(constantPool, interfaceMethodInfo.class_index));
 			printf("\t\t Name and type: \t\t cp_info #%hu <%s>\n", interfaceMethodInfo.name_and_type_index,
-					getFormattedConstant(constantPool, interfaceMethodInfo.name_and_type_index));
+					Utils::getFormattedConstant(constantPool, interfaceMethodInfo.name_and_type_index));
 		} else if (element.tag == CONSTANT_String) {
 			CONSTANT_String_info stringInfo = element.info.string_info;
                         printf("\t [%u] CONSTANT_String_info\n", static_cast<unsigned>(i + 1));
 			printf("\t String: \t\t\t\t cp_info #%hu <%s>\n", stringInfo.string_index,
-					getFormattedConstant(constantPool, stringInfo.string_index));
+					Utils::getFormattedConstant(constantPool, stringInfo.string_index));
 		} else if (element.tag == CONSTANT_Integer) {
 			CONSTANT_Integer_info intInfo = element.info.integer_info;
                         printf("\t [%u] CONSTANT_Integer_info\n", static_cast<unsigned>(i + 1));
 			printf("\t Bytes: \t\t\t\t 0x%.8X\n", intInfo.bytes);
-			printf("\t Integer: \t\t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
+			printf("\t Integer: \t\t\t\t %s\n", Utils::getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Float) {
 			CONSTANT_Float_info floatInfo = element.info.float_info;
                         printf("\t [%u] CONSTANT_Float_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Bytes: \t\t\t 0x%.8X\n", floatInfo.bytes);
-			printf("\t\t Float: \t\t\t 0x%s\n", getFormattedConstant(constantPool, i + 1));
+			printf("\t\t Float: \t\t\t 0x%s\n", Utils::getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Long) {
 			CONSTANT_Long_info longInfo = element.info.long_info;
                         printf("\t [%u] CONSTANT_Long_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t High Bytes: \t\t\t 0x%.8X\n", longInfo.high_bytes);
 			printf("\t\t Low Bytes: \t\t\t 0x%.8X\n", longInfo.low_bytes);
-			printf("\t\t Long: \t\t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
+			printf("\t\t Long: \t\t\t\t %s\n", Utils::getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_Double) {
 			CONSTANT_Double_info doubleInfo = element.info.double_info;
                         printf("\t [%u] CONSTANT_Double_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t High Bytes: \t\t\t 0x%.8X\n", doubleInfo.high_bytes);
 			printf("\t\t Low Bytes: \t\t\t 0x%.8X\n", doubleInfo.low_bytes);
-			printf("\t\t Double: \t\t\t %s\n", getFormattedConstant(constantPool, i + 1));
+			printf("\t\t Double: \t\t\t %s\n", Utils::getFormattedConstant(constantPool, i + 1));
 		} else if (element.tag == CONSTANT_NameAndType) {
 			CONSTANT_NameAndType_info nameAndTypeInfo = element.info.nameAndType_info;
                         printf("\t [%u] CONSTANT_NameAndType_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Name: \t\t\t\t cp_info #%hu <%s>\n", nameAndTypeInfo.name_index,
-					getFormattedConstant(constantPool, nameAndTypeInfo.name_index));
+					Utils::getFormattedConstant(constantPool, nameAndTypeInfo.name_index));
 			printf("\t\t Descriptor: \t\t\t cp_info #%hu <%s>\n", nameAndTypeInfo.descriptor_index,
-					getFormattedConstant(constantPool, nameAndTypeInfo.descriptor_index));
+					Utils::getFormattedConstant(constantPool, nameAndTypeInfo.descriptor_index));
 		} else if (element.tag == CONSTANT_Utf8) {
 			CONSTANT_Utf8_info utf8Info = element.info.utf8_info;
-			const char *str = getFormattedConstant(constantPool, i + 1);
+			const char *str = Utils::getFormattedConstant(constantPool, i + 1);
 
                         printf("\t [%u] CONSTANT_Utf8_info\n", static_cast<unsigned>(i + 1));
 			printf("\t\t Length of byte array: \t\t %hu\n", utf8Info.length);
@@ -137,7 +137,7 @@ void exibe_ConstantPool(ClassFile *classFile) {
 
 void exibe_Interfaces(ClassFile *classFile) {
 	for (int i = 0; i < classFile->interfaces_count; i++) {
-		const char *className = getFormattedConstant(classFile->constant_pool, classFile->interfaces[i]);
+		const char *className = Utils::getFormattedConstant(classFile->constant_pool, classFile->interfaces[i]);
 
 		fprintf(out, "\t Interface %d \n", i);
 		fprintf(out, "\t\t Interface: \t\t cp_info #%hu <%s>\n ", classFile->interfaces[i], className);
@@ -148,12 +148,12 @@ void exibe_Fields(ClassFile *classFile) {
 	for (u2 i = 0; i < classFile->fields_count; i++) {
 		field_info field = classFile->fields[i];
 
-		printf("\t[%hu] %s\n", i, getFormattedConstant(classFile->constant_pool, field.name_index));
+		printf("\t[%hu] %s\n", i, Utils::getFormattedConstant(classFile->constant_pool, field.name_index));
 		printf("\t{\n");
 
-		printf("\t\tName: \t\t\t cp_info #%hu <%s>\n ", field.name_index, getFormattedConstant(classFile->constant_pool, field.name_index));
+		printf("\t\tName: \t\t\t cp_info #%hu <%s>\n ", field.name_index, Utils::getFormattedConstant(classFile->constant_pool, field.name_index));
 		printf("\t\tDescriptor: \t cp_info #%hu <%s>\n ", field.descriptor_index,
-				getFormattedConstant(classFile->constant_pool, field.descriptor_index));
+				Utils::getFormattedConstant(classFile->constant_pool, field.descriptor_index));
 		printf("\t\tAccess flags: \t %x [%s]\n", field.access_flags, getAccessFlags(field.access_flags));
 
 		printf("\t\tAttributes:\n");
@@ -171,8 +171,8 @@ void exibe_Methods(ClassFile *classFile) {
 
 	for (int i = 0; i < classFile->methods_count; i++) {
 		method_info method = classFile->methods[i];
-		const char *methodName = getFormattedConstant(classFile->constant_pool, method.name_index);
-		const char *descriptor = getFormattedConstant(classFile->constant_pool, method.descriptor_index);
+		const char *methodName = Utils::getFormattedConstant(classFile->constant_pool, method.name_index);
+		const char *descriptor = Utils::getFormattedConstant(classFile->constant_pool, method.descriptor_index);
 		const char *accessFlags = getAccessFlags(method.access_flags);
 
 		printf("\t[%d] %s\n", i, methodName);
@@ -215,7 +215,7 @@ const char* getAccessFlags(u2 accessFlags) {
 }
 
 void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation) {
-	const char *attributeName = getFormattedConstant(constantPool, attributeInfo.attribute_name_index);
+	const char *attributeName = Utils::getFormattedConstant(constantPool, attributeInfo.attribute_name_index);
 	Utils::imprintTabs(out, indentation);
         fprintf(out, "[%u] %s\n", index, attributeName);
 	Utils::imprintTabs(out, indentation + 1);
@@ -228,7 +228,7 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 		ConstantValue_attribute constantValue = attributeInfo.info.constantValue_info;
 		Utils::imprintTabs(out, indentation + 1);
 		fprintf(out, "Constant value index:\t cp_info #%d <%s>\n", constantValue.constantvalue_index,
-				getFormattedConstant(constantPool, constantValue.constantvalue_index));
+				Utils::getFormattedConstant(constantPool, constantValue.constantvalue_index));
 	} else if (Utils::compararUtf8String(attributeUtf8, "Code")) {
 		Code_attribute code = attributeInfo.info.code_info;
 		Utils::imprintTabs(out, indentation + 1);
@@ -254,7 +254,7 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 					fprintf(out, "0\n");
 				} else {
 					fprintf(out, "cp_info #%d\t ", exceptionTable.catch_type);
-					fprintf(out, "%s\n", getFormattedConstant(constantPool, exceptionTable.catch_type));
+					fprintf(out, "%s\n", Utils::getFormattedConstant(constantPool, exceptionTable.catch_type));
 				}
 			}
 		} else {
@@ -278,7 +278,7 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 			Utils::imprintTabs(out, indentation + 1);
 			fprintf(out, "%d\t ", i);
 			fprintf(out, "cp_info #%d\t ", exceptionsAttr.exception_index_table[i]);
-			fprintf(out, "%s\n", getFormattedConstant(constantPool, exceptionsAttr.exception_index_table[i]));
+			fprintf(out, "%s\n", Utils::getFormattedConstant(constantPool, exceptionsAttr.exception_index_table[i]));
 		}
 	} else if (Utils::compararUtf8String(attributeUtf8, "InnerClasses")) {
 		InnerClasses_attribute innerClassAttr = attributeInfo.info.innerClasses_info;
@@ -289,11 +289,11 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 			Utils::imprintTabs(out, indentation + 1);
 			fprintf(out, "%d\t ", i);
 			fprintf(out, "cp_info #%d <%s>\t ", innerClass.inner_class_info_index,
-					getFormattedConstant(constantPool, innerClass.inner_class_info_index));
+					Utils::getFormattedConstant(constantPool, innerClass.inner_class_info_index));
 			fprintf(out, "cp_info #%d <%s>\t ", innerClass.outer_class_info_index,
-					getFormattedConstant(constantPool, innerClass.outer_class_info_index));
+					Utils::getFormattedConstant(constantPool, innerClass.outer_class_info_index));
 			fprintf(out, "cp_info #%d <%s>\t ", innerClass.inner_name_index,
-					getFormattedConstant(constantPool, innerClass.inner_name_index));
+					Utils::getFormattedConstant(constantPool, innerClass.inner_name_index));
 			fprintf(out, "0x%.4X [%s]\n", innerClass.inner_class_access_flags, getAccessFlags(innerClass.inner_class_access_flags));
 		}
 	} else if (Utils::compararUtf8String(attributeUtf8, "Synthetic")) {
@@ -302,7 +302,7 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 		SourceFile_attribute sourceFile = attributeInfo.info.sourceFile_info;
 		Utils::imprintTabs(out, indentation + 1);
 		fprintf(out, "Constant value index:\t cp_info #%d <%s>\n", sourceFile.sourcefile_index,
-				getFormattedConstant(constantPool, sourceFile.sourcefile_index));
+				Utils::getFormattedConstant(constantPool, sourceFile.sourcefile_index));
 	} else if (Utils::compararUtf8String(attributeUtf8, "LineNumberTable")) {
 		LineNumberTable_attribute lineNumberTable = attributeInfo.info.lineNumberTable_info;
 		Utils::imprintTabs(out, indentation + 1);
@@ -325,8 +325,8 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 			fprintf(out, "%d\t ", variable.start_pc);
 			fprintf(out, "%d\t ", variable.length);
 			fprintf(out, "%d\t ", variable.index);
-			fprintf(out, "cp_info #%d <%s>\t ", variable.name_index, getFormattedConstant(constantPool, variable.name_index));
-			fprintf(out, "cp_info #%d <%s>\n", variable.descriptor_index, getFormattedConstant(constantPool, variable.descriptor_index));
+			fprintf(out, "cp_info #%d <%s>\t ", variable.name_index, Utils::getFormattedConstant(constantPool, variable.name_index));
+			fprintf(out, "cp_info #%d <%s>\n", variable.descriptor_index, Utils::getFormattedConstant(constantPool, variable.descriptor_index));
 		}
 	} else if (Utils::compararUtf8String(attributeUtf8, "Deprecated")) {
 		// vazio
@@ -340,7 +340,7 @@ void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 }
 
 void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation) {
-	const char *attributeName = getFormattedConstant(constantPool, attributeInfo.attribute_name_index);
+	const char *attributeName = Utils::getFormattedConstant(constantPool, attributeInfo.attribute_name_index);
 
 	Utils::exibeTabs(indentation);
         printf("[%u] %s\n", index, attributeName);
@@ -354,7 +354,7 @@ void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 		ConstantValue_attribute constantValue = attributeInfo.info.constantValue_info;
 		Utils::exibeTabs(indentation + 1);
 		printf("Constant value index:\t cp_info #%d <%s>\n", constantValue.constantvalue_index,
-				getFormattedConstant(constantPool, constantValue.constantvalue_index));
+				Utils::getFormattedConstant(constantPool, constantValue.constantvalue_index));
 	} else if (Utils::compararUtf8String(attributeUtf8, "Code")) {
 		Code_attribute code = attributeInfo.info.code_info;
 		Utils::exibeTabs(indentation + 1);
@@ -380,7 +380,7 @@ void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 					printf("0\n");
 				} else {
 					printf("cp_info #%d\t ", exceptionTable.catch_type);
-					printf("%s\n", getFormattedConstant(constantPool, exceptionTable.catch_type));
+					printf("%s\n", Utils::getFormattedConstant(constantPool, exceptionTable.catch_type));
 				}
 			}
 		} else {
@@ -404,7 +404,7 @@ void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 			Utils::exibeTabs(indentation + 1);
 			printf("%d\t ", i);
 			printf("cp_info #%d\t ", exceptionsAttr.exception_index_table[i]);
-			printf("%s\n", getFormattedConstant(constantPool, exceptionsAttr.exception_index_table[i]));
+			printf("%s\n", Utils::getFormattedConstant(constantPool, exceptionsAttr.exception_index_table[i]));
 		}
 	} else if (Utils::compararUtf8String(attributeUtf8, "InnerClasses")) {
 		InnerClasses_attribute innerClassAttr = attributeInfo.info.innerClasses_info;
@@ -415,10 +415,10 @@ void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 			Utils::exibeTabs(indentation + 1);
 			printf("%d\t ", i);
 			printf("cp_info #%d <%s>\t ", innerClass.inner_class_info_index,
-					getFormattedConstant(constantPool, innerClass.inner_class_info_index));
+					Utils::getFormattedConstant(constantPool, innerClass.inner_class_info_index));
 			printf("cp_info #%d <%s>\t ", innerClass.outer_class_info_index,
-					getFormattedConstant(constantPool, innerClass.outer_class_info_index));
-			printf("cp_info #%d <%s>\t ", innerClass.inner_name_index, getFormattedConstant(constantPool, innerClass.inner_name_index));
+					Utils::getFormattedConstant(constantPool, innerClass.outer_class_info_index));
+			printf("cp_info #%d <%s>\t ", innerClass.inner_name_index, Utils::getFormattedConstant(constantPool, innerClass.inner_name_index));
 			printf("0x%.4X [%s]\n", innerClass.inner_class_access_flags, getAccessFlags(innerClass.inner_class_access_flags));
 		}
 	} else if (Utils::compararUtf8String(attributeUtf8, "Synthetic")) {
@@ -427,7 +427,7 @@ void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 		SourceFile_attribute sourceFile = attributeInfo.info.sourceFile_info;
 		Utils::exibeTabs(indentation + 1);
 		printf("Constant value index:\t cp_info #%d <%s>\n", sourceFile.sourcefile_index,
-				getFormattedConstant(constantPool, sourceFile.sourcefile_index));
+				Utils::getFormattedConstant(constantPool, sourceFile.sourcefile_index));
 	} else if (Utils::compararUtf8String(attributeUtf8, "LineNumberTable")) {
 		LineNumberTable_attribute lineNumberTable = attributeInfo.info.lineNumberTable_info;
 		Utils::exibeTabs(indentation + 1);
@@ -450,8 +450,8 @@ void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp
 			printf("%d\t ", variable.start_pc);
 			printf("%d\t ", variable.length);
 			printf("%d\t ", variable.index);
-			printf("cp_info #%d <%s>\t ", variable.name_index, getFormattedConstant(constantPool, variable.name_index));
-			printf("cp_info #%d <%s>\n", variable.descriptor_index, getFormattedConstant(constantPool, variable.descriptor_index));
+			printf("cp_info #%d <%s>\t ", variable.name_index, Utils::getFormattedConstant(constantPool, variable.name_index));
+			printf("cp_info #%d <%s>\n", variable.descriptor_index, Utils::getFormattedConstant(constantPool, variable.descriptor_index));
 		}
 	} else if (Utils::compararUtf8String(attributeUtf8, "Deprecated")) {
 		// vazio
@@ -481,7 +481,7 @@ void printArquivoByteCode(const Code_attribute &codeAttribute, cp_info *constant
 			fprintf(out, "\n");
 			i += 1;
 		} else if (code[i] == 0x12) { // usa CP
-			fprintf(out, " #%d <%s>\n", code[i + 1], getFormattedConstant(constantPool, code[i + 1]));
+			fprintf(out, " #%d <%s>\n", code[i + 1], Utils::getFormattedConstant(constantPool, code[i + 1]));
 			i += 2;
 		} else if (code[i] == 0xbc) { // newarray
 			u1 atype = code[i + 1];
@@ -501,7 +501,7 @@ void printArquivoByteCode(const Code_attribute &codeAttribute, cp_info *constant
 		} else if (code[i] == 0x13 || code[i] == 0x14 || (code[i] >= 0xb2 && code[i] <= 0xb8) || code[i] == 0xbb || code[i] == 0xbd
 				|| code[i] == 0xc0 || code[i] == 0xc1) { // usa CP
 			u2 number = (code[i + 1] << 8) | code[i + 2];
-                        fprintf(out, " #%u <%s>\n", number, getFormattedConstant(constantPool, number));
+                        fprintf(out, " #%u <%s>\n", number, Utils::getFormattedConstant(constantPool, number));
 			i += 3;
 		} else if ((code[i] >= 0x99 && code[i] <= 0xa8) || code[i] == 0xc6 || code[i] == 0xc7) {
 			int16_t number = (code[i + 1] << 8) | code[i + 2];
@@ -509,11 +509,11 @@ void printArquivoByteCode(const Code_attribute &codeAttribute, cp_info *constant
 			i += 3;
 		} else if (code[i] == 0xc5) { // multianewarray - usa CP
 			u2 number = (code[i + 1] << 8) | code[i + 2];
-                        fprintf(out, " #%u <%s> dim %d\n", number, getFormattedConstant(constantPool, number), code[i + 3]);
+                        fprintf(out, " #%u <%s> dim %d\n", number, Utils::getFormattedConstant(constantPool, number), code[i + 3]);
 			i += 4;
 		} else if (code[i] == 0xb9) { // invokeinterface - usa CP
 			u2 number = (code[i + 1] << 8) | code[i + 2];
-                        fprintf(out, " #%u <%s> count %d\n", number, getFormattedConstant(constantPool, number), code[i + 3]);
+                        fprintf(out, " #%u <%s> count %d\n", number, Utils::getFormattedConstant(constantPool, number), code[i + 3]);
 			assert(code[i + 4] == 0);
 			i += 5;
 		} else if (code[i] == 0xc8 || code[i] == 0xc9) { // goto_w e jsr_w
@@ -610,7 +610,7 @@ void exibeByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, u
 			printf("\n");
 			i += 1;
 		} else if (code[i] == 0x12) { // usa CP
-                        printf(" #%u <%s>\n", code[i + 1], getFormattedConstant(constantPool, code[i + 1]));
+                        printf(" #%u <%s>\n", code[i + 1], Utils::getFormattedConstant(constantPool, code[i + 1]));
 			i += 2;
 		} else if (code[i] == 0xbc) { // newarray
 			u1 atype = code[i + 1];
@@ -630,7 +630,7 @@ void exibeByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, u
 		} else if (code[i] == 0x13 || code[i] == 0x14 || (code[i] >= 0xb2 && code[i] <= 0xb8) || code[i] == 0xbb || code[i] == 0xbd
 				|| code[i] == 0xc0 || code[i] == 0xc1) { // usa CP
 			u2 number = (code[i + 1] << 8) | code[i + 2];
-			printf(" #%d <%s>\n", number, getFormattedConstant(constantPool, number));
+			printf(" #%d <%s>\n", number, Utils::getFormattedConstant(constantPool, number));
 			i += 3;
 		} else if ((code[i] >= 0x99 && code[i] <= 0xa8) || code[i] == 0xc6 || code[i] == 0xc7) {
 			int16_t number = (code[i + 1] << 8) | code[i + 2];
@@ -638,11 +638,11 @@ void exibeByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, u
 			i += 3;
 		} else if (code[i] == 0xc5) { // multianewarray - usa CP
 			u2 number = (code[i + 1] << 8) | code[i + 2];
-                        printf(" #%u <%s> dim %d\n", number, getFormattedConstant(constantPool, number), code[i + 3]);
+                        printf(" #%u <%s> dim %d\n", number, Utils::getFormattedConstant(constantPool, number), code[i + 3]);
 			i += 4;
 		} else if (code[i] == 0xb9) { // invokeinterface - usa CP
 			u2 number = (code[i + 1] << 8) | code[i + 2];
-                        printf(" #%u <%s> count %d\n", number, getFormattedConstant(constantPool, number), code[i + 3]);
+                        printf(" #%u <%s> count %d\n", number, Utils::getFormattedConstant(constantPool, number), code[i + 3]);
 			assert(code[i + 4] == 0);
 			i += 5;
 		} else if (code[i] == 0xc8 || code[i] == 0xc9) { // goto_w e jsr_w

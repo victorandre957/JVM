@@ -24,8 +24,8 @@ InstanceClass::InstanceClass(StaticClass *classRuntime) :
 		u2 staticAndFinalFlag = 0x0008 | 0x0010;
 
 		if ((field.access_flags & staticAndFinalFlag) == 0) { // não estática e não final
-			string fieldName = getFormattedConstant(classFile->constant_pool, field.name_index);
-			string fieldDescriptor = getFormattedConstant(classFile->constant_pool, field.descriptor_index);
+			string fieldName = Utils::getFormattedConstant(classFile->constant_pool, field.name_index);
+			string fieldDescriptor = Utils::getFormattedConstant(classFile->constant_pool, field.descriptor_index);
 
 			char fieldType = fieldDescriptor[0];
 			Value value;
