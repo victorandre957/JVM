@@ -9,11 +9,6 @@ int main(int argc, char *argv[]) {
     }
 
     FILE *fp = fopen(argv[1], "rb");
-    if (!fp) {
-        perror("Erro ao abrir arquivo");
-        return 1;
-    }
-
     LeitorExibidor &leitor = LeitorExibidor::getInstance();
     ClassFile *cf = leitor.readClassFile(fp);
     fclose(fp);
@@ -26,12 +21,7 @@ int main(int argc, char *argv[]) {
     
     // Redireciona stdout para o arquivo
     stdout = freopen(output_name.c_str(), "w", stdout);
-    if (!stdout) {
-        perror("Erro ao redirecionar stdout");
-        stdout = original_stdout; // restaura antes de sair
-        return 1;
-    }
-    
+
     // Executa a exibição (agora vai para o arquivo)
     exibeClassFile(cf);
     
