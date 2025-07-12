@@ -1,10 +1,9 @@
 #include "Operations.h"
 
 #include "Frame.h"
-#include "ArrayObject.h"
+#include "Object.h"
 #include "ClassVisao.h"
 #include "MethodArea.h"
-#include "Stringobject.h"
 #include "PilhaJVM.h"
 #include "StaticClass.h"
 #include "Utils.h"
@@ -3876,7 +3875,7 @@ void Operations::invokevirtual() {
 
 						break;
 					case ValueType::REFERENCE:
-						assert(printValue.data.object->objectType() == ObjectType::STRING_INSTANCE);
+						assert(printValue.data.object->object_type() == ObjectType::STRING_INSTANCE);
 						printf("%s", ((StringObject *) printValue.data.object)->getString().c_str());
 						break;
 					case ValueType::BOOLEAN:
@@ -3906,8 +3905,8 @@ void Operations::invokevirtual() {
 			Value strValue2 = topFrame->desempilhaOperandStack();
 			assert(strValue1.type == ValueType::REFERENCE);
 			assert(strValue2.type == ValueType::REFERENCE);
-			assert(strValue1.data.object->objectType() == ObjectType::STRING_INSTANCE);
-			assert(strValue2.data.object->objectType() == ObjectType::STRING_INSTANCE);
+			assert(strValue1.data.object->object_type() == ObjectType::STRING_INSTANCE);
+			assert(strValue2.data.object->object_type() == ObjectType::STRING_INSTANCE);
 
 			StringObject *str1 = (StringObject*) strValue1.data.object;
 			StringObject *str2 = (StringObject*) strValue2.data.object;
@@ -3924,7 +3923,7 @@ void Operations::invokevirtual() {
 		} else if (className == "java/lang/String" && methodName == "length") {
 			Value strValue = topFrame->desempilhaOperandStack();
 			assert(strValue.type == ValueType::REFERENCE);
-			assert(strValue.data.object->objectType() == ObjectType::STRING_INSTANCE);
+			assert(strValue.data.object->object_type() == ObjectType::STRING_INSTANCE);
 
 			StringObject *str = (StringObject*) strValue.data.object;
 
@@ -4530,7 +4529,7 @@ void Operations::checkcast() {
 			}
 
 			resultValue.data.intValue = found ? 1 : 0;
-		} else if (obj->objectType() == ObjectType::STRING_INSTANCE) {
+		} else if (obj->object_type() == ObjectType::STRING_INSTANCE) {
 			resultValue.data.intValue = (className == "java/lang/String" || className == "java/lang/Object") ? 1 : 0;
 		} else {
 			if (className == "java/lang/Object") {
@@ -4595,7 +4594,7 @@ void Operations::instanceof() {
 			}
 
 			resultValue.data.intValue = found ? 1 : 0;
-		} else if (obj->objectType() == ObjectType::STRING_INSTANCE) {
+		} else if (obj->object_type() == ObjectType::STRING_INSTANCE) {
 			resultValue.data.intValue = (className == "java/lang/String" || className == "java/lang/Object") ? 1 : 0;
 		} else {
 			if (className == "java/lang/Object") {
