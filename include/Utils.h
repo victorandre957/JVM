@@ -100,6 +100,9 @@ public:
 	 * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
 	 * @param indentation é o número de tabs que deve ser imprimido na linha
 	 */
+
+    static bool verificarThisClass(string auxFilename, string auxClass);
+
 };
 
 #endif /* UTILS_H */

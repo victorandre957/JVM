@@ -1,15 +1,14 @@
 #ifndef CLASSVIEWER_H
 #define CLASSVIEWER_H
-
-#pragma once
-
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <cassert>
 #include <cmath>
+
 #include <iostream>
 #include <sstream>
+#include <cstdlib>
 #include "BasicTypes.h"
 #include "LeitorExibidor.h"
 #include "ClassFile.h"
@@ -18,225 +17,189 @@
 using namespace std;
 
 /**
- * @file ClassViewer.h
- * @brief Declarações para visualização de arquivos .class
- */
-
-/**
- * @brief Exibe toda a estrutura de um ClassFile no console
- * 
- * Ordem de exibição:
- * 1. Informações gerais
- * 2. Pool de constantes
- * 3. Interfaces
- * 4. Campos (fields)
- * 5. Métodos
- * 6. Atributos
- * 
- * @param classFile Ponteiro para a estrutura ClassFile a ser exibida
- */
-void exibeClassFile(ClassFile *classFile);
-
-/**
- * @brief Imprime toda a estrutura de um ClassFile em arquivo
- * 
- * Ordem de exibição idêntica à exibeClassFile()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile a ser impressa
- * @param output Arquivo de destino para a impressão
+ * Imprime os elementos do Leitor/Exibidor de classe
+ * em ordem: Informações gerais, pool de constantes,
+ * interfaces, campos, métodos e atributos.
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ * @param output é o arquivo exibidor da JVM.
  */
 void printArquivoClassFile(ClassFile *classFile, FILE *output);
 
 /**
- * @brief Exibe informações gerais do ClassFile no console
- * 
- * Inclui:
- * - Versão do Java
- * - Flags de acesso
- * - This/Super class
- * - Contadores de constantes/interfaces/campos/métodos/atributos
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime os elementos do Leitor/Exibidor de classe
+ * em ordem: Informações gerais, pool de constantes,
+ * interfaces, campos, métodos e atributos.
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ */
+void exibeClassFile(ClassFile *classFile);
+/**
+ * Imprime informações gerais do arquivo .class
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ */
+void printArquivo_GeneralInformation(ClassFile *classFile);
+/**
+ * Imprime informações gerais do arquivo .class
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibe_GeneralInformation(ClassFile *classFile);
 
 /**
- * @brief Imprime informações gerais do ClassFile em arquivo
- * 
- * @copydetails exibe_GeneralInformation()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
- */
-void printArquivo_GeneralInformation(ClassFile *classFile);
-
-/**
- * @brief Exibe a constant pool no console
- * 
- * Exibe cada entrada da pool com seu tipo e valor formatado.
- * Resolve referências entre entradas da pool.
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime pool de constantes e identidifica referências à elementos
+ * da própria pool de contantes (cp_info)
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibe_ConstantPool(ClassFile *classFile);
 
 /**
- * @brief Imprime a constant pool em arquivo
- * 
- * @copydetails exibe_ConstantPool()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime pool de constantes e identidifica referências à elementos
+ * da própria pool de contantes (cp_info)
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void printArquivo_ConstantPool(ClassFile *classFile);
 
 /**
- * @brief Exibe as interfaces implementadas no console
- * 
- * Mostra as interfaces e suas referências na constant pool.
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de interface e suas referẽncias à pool de constantes
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibe_Interfaces(ClassFile *classFile);
 
 /**
- * @brief Imprime as interfaces implementadas em arquivo
- * 
- * @copydetails exibe_Interfaces()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de interface e suas referẽncias à pool de constantes
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void printArquivo_Interfaces(ClassFile *classFile);
 
 /**
- * @brief Exibe os campos (fields) da classe no console
- * 
- * Para cada campo exibe:
- * - Flags de acesso decodificadas
- * - Nome e descritor
- * - Atributos associados
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
- */
-void exibe_Fields(ClassFile *classFile);
-
-/**
- * @brief Imprime os campos (fields) da classe em arquivo
- * 
- * @copydetails exibe_Fields()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de field, suas referências à pool de constantes e
+ * decodifica o valor das flags de acesso, utilizando a seguinte tabela de referência:
+ *
+ *  ACC_PUBLIC: 0x0001
+ *
+ *  ACC_SUPER: 0x0020
+ *
+ *  ACC_PRIVATE: 0x0002
+ *
+ *  ACC_INTERFACE: 0x0200
+ *
+ *  ACC_ABSTRACT: 0x0400
+ *
+ * 	ACC_PROTECTED: 0x0004
+ *
+ * 	ACC_STATIC: 0x0008
+ *
+ * 	ACC_FINAL: 0x0010
+ *
+ * 	ACC_VOLATILE: 0x0040
+ *
+ * 	ACC_TRANSIENT	: 0x0080
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void printArquivo_Fields(ClassFile *classFile);
-
 /**
- * @brief Exibe os métodos da classe no console
- * 
- * Para cada método exibe:
- * - Flags de acesso
- * - Nome e descritor
- * - Atributos (incluindo código bytecode)
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de field, suas referências à pool de constantes e
+ * decodifica o valor das flags de acesso, utilizando a seguinte tabela de referência:
+ *
+ *  ACC_PUBLIC: 0x0001
+ *
+ *  ACC_SUPER: 0x0020
+ *
+ *  ACC_PRIVATE: 0x0002
+ *
+ *  ACC_INTERFACE: 0x0200
+ *
+ *  ACC_ABSTRACT: 0x0400
+ *
+ * 	ACC_PROTECTED: 0x0004
+ *
+ * 	ACC_STATIC: 0x0008
+ *
+ * 	ACC_FINAL: 0x0010
+ *
+ * 	ACC_VOLATILE: 0x0040
+ *
+ * 	ACC_TRANSIENT	: 0x0080
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ */
+void exibe_Fields(ClassFile *classFile);
+/**
+ * Imprime elementos de método, suas referências à pool de constantes e
+ * chama função para imprimir os atributos relacionados aos métodos.
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibe_Methods(ClassFile *classFile);
 
 /**
- * @brief Imprime os métodos da classe em arquivo
- * 
- * @copydetails exibe_Methods()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de método, suas referências à pool de constantes e
+ * chama função para imprimir os atributos relacionados aos métodos.
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void printArquivo_Methods(ClassFile *classFile);
 
 /**
- * @brief Exibe os atributos da classe no console
- * 
- * Chama exibe_AttributeInfo() para cada atributo.
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de atributo, chamando função print_AttributeInfo para 
+ * cada um deles
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void exibe_Attributes(ClassFile *classFile);
-
 /**
- * @brief Imprime os atributos da classe em arquivo
- * 
- * @copydetails exibe_Attributes()
- * 
- * @param classFile Ponteiro para a estrutura ClassFile
+ * Imprime elementos de atributo, chamando função print_AttributeInfo para
+ * cada um deles
+ * @param classFile é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
  */
 void printArquivo_Attributes(ClassFile *classFile);
 
 /**
- * @brief Decodifica flags de acesso em string legível
- * 
- * @param accessFlags Valor numérico das flags (ex: 0x0001)
- * @return String contendo as flags decodificadas (ex: "ACC_PUBLIC")
+ * Encapsula decriptação das flags de acesso
+ * @param accessFlags é o hexadecimal lido referente à flag de acesso
+ * @return flags de acesso em forma de string
  */
 const char* getAccessFlags(u2 accessFlags);
 
 /**
- * @brief Formata uma constante da pool para exibição
- * 
- * Resolve referências e formata valores de acordo com o tipo:
- * - Strings UTF-8
- * - Valores numéricos (int, float, double, long)
- * - Referências a outras entradas
- * 
- * @param constantPool Ponteiro para a constant pool
- * @param index Índice da entrada na pool
- * @return String formatada com o valor da constante
+ * Função recursiva que busca um valor em bytes a partir de um índice que 
+ * faz referência à qualquer elemento da pool de constantes. Esse valor
+ * pode ser tanto numérico (inteiro, long, float ou double) ou string (Utf-8)
+ * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ * @param index é o índice do elemento
+ * @return constante formatada de acordo com o seu tipo
  */
-const char* Utils::getFormattedConstant(cp_info* constantPool, u2 index);
+
+void print_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
 
 /**
- * @brief Exibe informações detalhadas de um atributo no console
- * 
- * Trata especificamente:
- * - Code_attribute
- * - Exceptions
- * - InnerClasses
- * - SourceFile
- * - LineNumberTable
- * - LocalVariableTable
- * 
- * @param attributeInfo Estrutura do atributo a ser exibido
- * @param index Índice do atributo (para numeração)
- * @param constantPool Ponteiro para a constant pool (resolução de nomes)
- * @param indentation Nível de indentação (tabs) para formatação
+ * Imprime informações básicas dos atributos e as específicas de um dos
+ * 9 elementos da unios, onde Synthetic e Deprecated são ignorados por
+ * não possuirem informações extras.
+ * @param attributeInfo sctruct do atributo
+ * @param index é o índice do atributo
+ * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ * @param indentation é o número de tabs que deve ser imprimido na linha
  */
-void exibe_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
+void exibe_AttributeInfo(attribute_info attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
 
 /**
- * @brief Imprime informações detalhadas de um atributo em arquivo
- * 
- * @copydetails exibe_AttributeInfo()
+ * Imprime strings que representam instruções através da variável de código 
+ * do atributo. O valor do código em hexa é decriptado na função Utils::getFormattedConstant().
+ * A lista de instruções está armazenada em "instructions[]" e o que faz acesso
+ * à elas é "code[i]", ou seja, o vetor de códigos de cada atributo.
+ * @param codeAttribute struct do código de atributos
+ * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ * @param indentation é o número de tabs que deve ser imprimido na linha
  */
-void print_AttributeInfo(const attribute_info &attributeInfo, uint32_t index, cp_info *constantPool, uint8_t indentation);
+void printArquivoByteCode(Code_attribute codeAttribute, cp_info *constantPool, uint8_t indentation);
+/**
+ * Imprime strings que representam instruções através da variável de código
+ * do atributo. O valor do código em hexa é decriptado na função Utils::getFormattedConstant().
+ * A lista de instruções está armazenada em "instructions[]" e o que faz acesso
+ * à elas é "code[i]", ou seja, o vetor de códigos de cada atributo.
+ * @param codeAttribute struct do código de atributos
+ * @param constantPool é um ponteiro para uma instância de struct ClassFile, que descreve toda a estrutura de um arquivo .class
+ * @param indentation é o número de tabs que deve ser imprimido na linha
+ */
+void exibeByteCode(Code_attribute codeAttribute, cp_info *constantPool, uint8_t indentation);
 
 /**
- * @brief Exibe o bytecode de um método no console
- * 
- * Decodifica as instruções usando a tabela de mnemônicos.
- * Formata com indentação e resolução de constantes.
- * 
- * @param codeAttribute Estrutura contendo o bytecode
- * @param constantPool Ponteiro para a constant pool (resolução de operandos)
- * @param indentation Nível de indentação (tabs)
- */
-void exibeByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, uint8_t indentation);
-
-/**
- * @brief Imprime o bytecode de um método em arquivo
- * 
- * @copydetails exibeByteCode()
- */
-void printArquivoByteCode(const Code_attribute &codeAttribute, cp_info *constantPool, uint8_t indentation);
-
-/**
- * @brief Tabela de mnemônicos das instruções JVM
- * 
- * Mapeia opcodes para strings representando as instruções.
- * Indexada diretamente pelo valor do opcode.
+ * Vetor contendo os mnemônicos de todas as instruções do bytecode Java.
  */
 static  const string  vetorNomeFuncao[] = {
     "nop",

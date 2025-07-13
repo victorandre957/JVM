@@ -187,3 +187,42 @@ const char* Utils::getFormattedConstant(cp_info* constantPool, u2 index) {
 
 	return NULL;
 }
+
+bool Utils::verificarThisClass(string auxFilename, string auxClass) {
+	int auxPos;
+
+	//remove extensao .class
+	auxFilename = auxFilename.substr(0, auxFilename.size() - 6);
+
+	//remove nomes de pastas no Windows
+	auxPos = auxFilename.find("\\");
+
+	while (auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) {
+		auxFilename = auxFilename.substr(auxPos + 1);
+		auxPos = auxFilename.find("\\");
+	}
+
+	//remove nomes de pastas no Linux
+	auxPos = auxFilename.find("/");
+	while (auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) {
+		auxFilename = auxFilename.substr(auxPos + 1);
+		auxPos = auxFilename.find("/");
+	}
+	//..
+	//remove nomes de pastas no Windows
+	auxPos = auxClass.find("\\");
+
+	while (auxPos >= 0 && (unsigned int) auxPos <= auxClass.size()) {
+		auxClass = auxClass.substr(auxPos + 1);
+		auxPos = auxClass.find("\\");
+	}
+
+	//remove nomes de pastas no Linux
+	auxPos = auxClass.find("/");
+	while (auxPos >= 0 && (unsigned int) auxPos <= auxClass.size()) {
+		auxClass = auxClass.substr(auxPos + 1);
+		auxPos = auxClass.find("/");
+	}
+
+	return (auxClass == auxFilename);
+}
