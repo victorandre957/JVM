@@ -7,24 +7,28 @@
 Frame::Frame(InstanceClass *object, StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments) :
 		pc(0), _object(object) {
 
-	for (int i = 0; i < (signed) arguments.size(); i++) {
-		_localVariables[i] = arguments[i];
-	}
-
 	method_info *method = obterMethodNamed(classRuntime, methodName, methodDescriptor);
 	assert(method != NULL);
 	_method = *method;
 	assert((_method.access_flags & 0x0008) == 0); // o método não pode ser estático
 
 	encontrarAttributes();
+	
+	// Alocar array de variáveis locais
+	u2 max_locals = _codeAttribute->max_locals;
+	_localVariables = new Value[max_locals]();
+	
+	// Inicializar variáveis locais com argumentos
+	for (int i = 0; i < (signed) arguments.size(); i++) {
+		_localVariables[i] = arguments[i];
+	}
+	
+	// Alocar pilha de operandos
+	_operandStack = new stack<Value>();
 }
 
 Frame::Frame(StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments) :
 		pc(0), _object(NULL) {
-
-	for (int i = 0; i < (signed) arguments.size(); i++) {
-		_localVariables[i] = arguments[i];
-	}
 
 	method_info *method = obterMethodNamed(classRuntime, methodName, methodDescriptor);
 	assert(method != NULL);
@@ -32,10 +36,24 @@ Frame::Frame(StaticClass *classRuntime, string methodName, string methodDescript
 	assert((_method.access_flags & 0x0008) != 0); // o método precisa ser estático
 
 	encontrarAttributes();
+	
+	// Alocar array de variáveis locais
+	u2 max_locals = _codeAttribute->max_locals;
+	_localVariables = new Value[max_locals]();
+	
+	// Inicializar variáveis locais com argumentos
+	for (int i = 0; i < (signed) arguments.size(); i++) {
+		_localVariables[i] = arguments[i];
+	}
+	
+	// Alocar pilha de operandos
+	_operandStack = new stack<Value>();
 }
 
 Frame::~Frame() {
-
+	// Liberar memória alocada
+	delete[] _localVariables;
+	delete _operandStack;
 }
 
 cp_info** Frame::obterConstantPool() {
@@ -57,36 +75,30 @@ void Frame::trocaLocalVariable(Value variableValue, uint32_t index) {
 		exit(1);
 	}
 
-//    if (_localVariables.count(index) > 0 && variableValue.type != _localVariables[index].type) {
-//        cerr << "Tentando alterar variavel local com outro tipo" << endl;
-//        exit(1);
-//    }
-
 	_localVariables[index] = variableValue;
 }
 
 void Frame::empilharOperandStack(Value operand) {
-	_operandStack.push(operand);
+	_operandStack->push(operand);
 }
 
 Value Frame::desempilhaOperandStack() {
-	if (_operandStack.size() == 0) {
+	if (_operandStack->size() == 0) {
 		cerr << "IndexOutOfBoundsException" << endl;
 		exit(1);
 	}
 
-	Value top = _operandStack.top();
-
-	_operandStack.pop();
+	Value top = _operandStack->top();
+	_operandStack->pop();
 	return top;
 }
 
 stack<Value> Frame::backupOperandStack() {
-	return _operandStack;
+	return *_operandStack; // Retorna cópia da pilha
 }
 
 void Frame::setOperandStackFromBackup(stack<Value> backup) {
-	_operandStack = backup;
+	*_operandStack = backup; // Atribui cópia da pilha de backup
 }
 
 u1* Frame::getCode(uint32_t address) {

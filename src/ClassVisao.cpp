@@ -1,6 +1,9 @@
 #include "ClassVisao.h"
 #include "Utils.h"
 
+#define SEPARATOR "------------------------------------------------------------"
+#define SEPARATOR2 "============================================================"
+
 using namespace std;
 
 FILE *out; // variável global para armazenar o local de saída.

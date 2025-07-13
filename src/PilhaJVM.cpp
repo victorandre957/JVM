@@ -9,11 +9,10 @@ PilhaJVM::~PilhaJVM() {
 }
 
 void PilhaJVM::addFrame(Frame *frame) {
-	// Verifica se a stack está cheia
-//    if (_frameStack.size() >= FRAME_MAX_SIZE) {
-//        cerr << "StackOverflowError" << endl;
-//        exit(1);
-//    }
+    if (_frameStack.size() >= FRAME_MAX_SIZE) {
+       cerr << "StackOverflowError" << endl;
+        exit(1);
+   }
 
 	_frameStack.push(frame);
 }
