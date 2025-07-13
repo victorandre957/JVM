@@ -25,9 +25,18 @@ arquivos=(
 )
 
 # Executa o LeitorExibidor para cada arquivo
+
 for arq in "${arquivos[@]}"; do
     echo "Processando: $arq"
-    ./build/LeitorExibidor "$arq"
+    ./build/JVM -e "$arq"
+    echo "----------------------------------------"
+done
+
+# Executa o Interpretador para cada arquivo
+
+for arq in "${arquivos[@]}"; do
+    echo "Processando: $arq"
+    ./build/JVM -i "$arq"
     echo "----------------------------------------"
 done
 
