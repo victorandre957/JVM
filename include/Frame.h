@@ -16,8 +16,8 @@
 using namespace std;
 
 /** @class Frame
- * @brief Estrutura de armazenamento
- * @brief Responsável por todas as informações necessárias para a execução de um método.
+ * @brief Estrutura de armazenamento.
+ * @brief Armazenar dados e resultados parciais, executar ligação dinâmica, retornar valores para métodos e disparar exceções.
  */
 class Frame {
 
@@ -42,18 +42,18 @@ public:
 	Frame(StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments = vector<Value>());
 
 	/**
-	 * @brief Destrutor padrão.
+	 * @brief Destrutor padrão - Libera recursos associados (se houver), garantindo limpeza correta. .
 	 */
 	~Frame();
 
 	/**
-	 * @brief Obter um ponteiro para a pool de constantes referente ao frame atual.
+	 * @brief Retorna um ponteiro para o array de entradas da Constant Pool do método em execução. 
 	 * @return Retorna o ponteiro para a pool de constantes.
 	 */
 	cp_info** obterConstantPool();
 
 	/**
-	 * @brief Obtém o valor de uma variável local localizada no índice dado.
+	 * @brief Lê o valor na posição index (verifica limites).
 	 *
 	 * Se o índice for inválido, é emitido um erro.
 	 * @param index O índice da variável local.
@@ -64,7 +64,7 @@ public:
 	/**
 	 * @brief Modifica o valor de uma variável local.
 	 *
-	 * O valor passado necessita ser do mesmo tipo do valor já existente, caso contrário, é emitido um erro.
+	 * Se o valor for inválido (não ser do mesmo tipo existente), é emitido um erro.
 	 * @param variableValue O novo valor que será colocado na variável local.
 	 * @param index O índice da variável local que será modificada.
 	 */
@@ -173,14 +173,14 @@ private:
 	Exceptions_attribute *_exceptionsAttribute;
 
 	/**
-	 * Vetor de variáveis locais do frame.
+	 * Array de variáveis locais do frame (alocado dinamicamente).
 	 */
-	map<uint32_t, Value> _localVariables;
+	Value* _localVariables;
 
 	/**
-	 * Pilha de operandos do frame.
+	 * Ponteiro para a pilha de operandos do frame (alocado dinamicamente).
 	 */
-	stack<Value> _operandStack;
+	stack<Value>* _operandStack;
 
 };
 
