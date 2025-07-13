@@ -10,7 +10,7 @@
 #include <cfloat>
 #include <cstdlib>
 
-#include "ArrayObject.h"
+#include "Object.h"
 #include "BasicTypes.h"
 #include "InstanceClass.h"
 

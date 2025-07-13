@@ -5,7 +5,7 @@
 #include "PilhaJVM.h"
 #include "StaticClass.h"
 #include "Utils.h"
-#include "Stringobject.h"
+#include "Object.h"
 
 void OperationsConstants::aconst_null() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();

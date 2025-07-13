@@ -1,7 +1,7 @@
 #include "OperationsLoadStore.h"
 #include "Frame.h"
 #include "PilhaJVM.h"
-#include "ArrayObject.h"
+#include "Object.h"
 #include <iostream>
 #include <cassert>
 

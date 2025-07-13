@@ -1,8 +1,7 @@
 #include "InstanceClass.h"
 
 #include "Heap.h"
-#include "Stringobject.h"
-#include "ArrayObject.h"
+#include "Object.h"
 #include "ClassVisao.h"
 #include "MethodArea.h"
 #include "Utils.h"

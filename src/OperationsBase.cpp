@@ -1,10 +1,9 @@
 #include "OperationsBase.h"
 
 #include "Frame.h"
-#include "ArrayObject.h"
+#include "Object.h"
 #include "ClassVisao.h"
 #include "MethodArea.h"
-#include "Stringobject.h"
 #include "PilhaJVM.h"
 #include "StaticClass.h"
 #include "Utils.h"
