@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 	// Fim da verificação
 	if (argv[1][1] == 'e') { //exibidor
 		//const char *file_output = (argc < 3) ? NULL : argv[2];
-		string nome = classRuntime->inicializarArquivo(argv);
+		string nome = StaticClass::extrairNomeArquivo(argv);
 		FILE *output = fopen(nome.append(".txt").c_str(), "w+");
 		if (output == NULL) {
 			cerr << "Erro ao abrir arquivo " << nome << "." << endl;

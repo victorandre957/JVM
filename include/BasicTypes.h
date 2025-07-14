@@ -5,6 +5,9 @@
 
 #include <stdint.h>
 
+// Macro útil para parâmetros não utilizados
+#define UNUSED(x) ((void)(x))
+
 // Tipos de representação de dados da classe
 typedef uint8_t u1;
 typedef uint16_t u2;

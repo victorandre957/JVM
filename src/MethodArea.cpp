@@ -14,11 +14,11 @@ MethodArea::~MethodArea() {
 }
 
 StaticClass* MethodArea::carregarClassNamed(const string &className) {
-	// se a classe já tiver sido carregada, retorna-la
-	if (_classes.count(className) > 0) {
-		return getClassNamed(className);
-	}
-
+	// Verifica se a classe já foi carregada
+	map<string, StaticClass*>::iterator classIt = _classes.find(className);
+       if (classIt != _classes.end()) {
+               return classIt->second;
+       }
 	string classNameStr(className);
 	string classLocation("");
 	string classFormat(".class");
@@ -66,11 +66,8 @@ bool MethodArea::addClass(StaticClass *classRuntime) {
 	ClassFile *classFile = classRuntime->getClassFile();
 
 	const char *key = Utils::getFormattedConstant(classFile->constant_pool, classFile->this_class);
-
-	if (_classes.count(key) > 0) {
-		return false;
-	}
-
-	_classes[key] = classRuntime;
-	return true;
+	
+	pair<map<string, StaticClass*>::iterator, bool> result =
+                       _classes.insert(make_pair(key, classRuntime));
+    return result.second;
 }

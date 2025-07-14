@@ -1,8 +1,7 @@
 #include "InstanceClass.h"
 
 #include "Heap.h"
-#include "Stringobject.h"
-#include "ArrayObject.h"
+#include "Object.h"
 #include "ClassVisao.h"
 #include "MethodArea.h"
 #include "Utils.h"
@@ -13,14 +12,13 @@ InstanceClass::InstanceClass(StaticClass *classRuntime) :
 	field_info *fields = classFile->fields;
 	u2 abstractFlag = 0x0400;
 
-	if ((classFile->access_flags & abstractFlag) != 0) {
-		// Não pode instanciar se for classe abstrata (i.e., interface)
+	if ((classFile->access_flags & abstractFlag) != 0) { // Não pode instanciar se for classe abstrata (i.e., interface)
 		cerr << "InstantiationError" << endl;
 		exit(1);
 	}
 
 	for (int i = 0; i < classFile->fields_count; i++) {
-		field_info field = fields[i];
+		const field_info &field = fields[i];
 		u2 staticAndFinalFlag = 0x0008 | 0x0010;
 
 		if ((field.access_flags & staticAndFinalFlag) == 0) { // não estática e não final
@@ -72,7 +70,7 @@ InstanceClass::InstanceClass(StaticClass *classRuntime) :
 		}
 	}
 
-	// quando um objeto é criado, ele precisa ser armazenado na Heap
+	// quando um objeto é criado, ele é armazenado na Heap
 	Heap &heap = Heap::getInstance();
 	heap.addObject(this);
 }
@@ -94,14 +92,14 @@ void InstanceClass::putValueIntoField(Value value, string fieldName) {
 }
 
 Value InstanceClass::getValueFromField(string fieldName) {
-	if (_fields.count(fieldName) == 0) {
-		cerr << "NoSuchFieldError" << endl;
-		exit(1);
-	}
-
-	return _fields[fieldName];
+	map<string, Value>::iterator it = _fields.find(fieldName);
+       if (it == _fields.end()) {
+               cerr << "NoSuchFieldError" << endl;
+               exit(1);
+       }
+	return it->second;
 }
 
 bool InstanceClass::fieldExists(string fieldName) {
-	return _fields.count(fieldName) > 0;
+	return _fields.find(fieldName) != _fields.end();
 }

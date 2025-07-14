@@ -18,7 +18,7 @@ CPP_FILES = $(wildcard $(SRC_PATH)/*.cpp)
 OBJ_FILES = $(addprefix $(BIN_PATH)/,$(notdir $(CPP_FILES:.cpp=.o)))
 DEP_FILES = $(wildcard $(DEP_PATH)/*.d)
 
-EXEC = LeitorExibidor
+EXEC = JVM
 
 ifeq ($(OS),Windows_NT)
 	RMDIR = rd /s /q

@@ -13,7 +13,7 @@
 using namespace std;
 
 /**  @class InstanceClass
- * @brief  Lida com operações que lidam com uma instância da classe
+ * @brief  Lida com operações que lidam com uma instância da classe.
  */
 class InstanceClass: public Object {
 

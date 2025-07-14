@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <vector>
 
 #include "Object.h"
 
@@ -44,9 +43,29 @@ private:
 	void operator=(Heap const&); // não permitir implementação do operador de igual
 
 	/**
-	 * Vetor interno que armazena todos os objetos.
+	 * Array dinâmico que armazena todos os objetos usando malloc/free.
 	 */
-	vector<Object*> _objectVector;
+	Object** _objectArray;
+	
+	/**
+	 * Número atual de objetos armazenados.
+	 */
+	size_t _objectCount;
+	
+	/**
+	 * Capacidade atual do array.
+	 */
+	size_t _capacity;
+	
+	/**
+	 * Capacidade inicial do array.
+	 */
+	static const size_t INITIAL_CAPACITY = 16;
+	
+	/**
+	 * Fator de crescimento quando o array precisa ser expandido.
+	 */
+	static const size_t GROWTH_FACTOR = 2;
 };
 
 #endif // Heap_h
