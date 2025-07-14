@@ -16,13 +16,13 @@ using namespace std;
 
 /** @class MethodArea
  * @brief Classe responsável por todas as operações que gerenciam os métodos
- * @brief Essa classe é um singleton, ou seja, somente existe no máximo 1 instância dela para cada instância da JVM.
+ * @brief Essa classe é um singleton, ou seja, existe somente uma instância dela para cada instância da JVM.
  */
 class MethodArea {
 
 public:
 	/**
-	 * @brief Obter a única instância do MethodArea.
+	 * @brief Obter a instância única do MethodArea.
 	 * @return A instância do MethodArea.
 	 */
 	static MethodArea& getInstance() {
@@ -55,7 +55,7 @@ private:
 	 */
 	MethodArea();
 
-	MethodArea(MethodArea const&); // não permitir implementação do construtor de cópia
+	MethodArea(MethodArea const&);     // não permitir implementação do construtor de cópia
 	void operator=(MethodArea const&); // não permitir implementação do operador de igual
 
 	/**
