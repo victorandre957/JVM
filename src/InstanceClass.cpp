@@ -19,7 +19,6 @@ InstanceClass::InstanceClass(StaticClass *classRuntime) :
 
 	for (int i = 0; i < classFile->fields_count; i++) {
 		const field_info &field = fields[i];
-		// field_info field = fields[i];
 		u2 staticAndFinalFlag = 0x0008 | 0x0010;
 
 		if ((field.access_flags & staticAndFinalFlag) == 0) { // não estática e não final
@@ -99,17 +98,8 @@ Value InstanceClass::getValueFromField(string fieldName) {
                exit(1);
        }
 	return it->second;
-	/*
-	if (_fields.count(fieldName) == 0) {
-		cerr << "NoSuchFieldError" << endl;
-		exit(1);
-	}
-	return _fields[fieldName];
-	*/
 }
 
 bool InstanceClass::fieldExists(string fieldName) {
 	return _fields.find(fieldName) != _fields.end();
-	
-	//return _fields.count(fieldName) > 0;
 }
