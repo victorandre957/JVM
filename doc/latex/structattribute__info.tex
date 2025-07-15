@@ -1,0 +1,229 @@
+\doxysection{Referência à estrutura attribute\+\_\+info}
+\hypertarget{structattribute__info}{}\label{structattribute__info}\index{attribute\_info@{attribute\_info}}
+
+
+{\ttfamily \#include $<$Basic\+Types.\+h$>$}
+
+
+
+Diagrama de colaboração para attribute\+\_\+info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structattribute__info__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}} \mbox{\hyperlink{structattribute__info_a19df9d4b42eb55ca5dc1bed98df89378}{attribute\+\_\+name\+\_\+index}}
+\item 
+\mbox{\hyperlink{BasicTypes_8h_ae5be1f726785414dd1b77d60df074c9d}{u4}} \mbox{\hyperlink{structattribute__info_a1ed8f679458c4bb0ed3315721588f50d}{attribute\+\_\+length}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structConstantValue__attribute}{ConstantValue\_attribute}} \mbox{\hyperlink{structattribute__info_ae07b4986ad567ee03d7f5b9476cd2576}{constantValue\_info}}\\
+\>\mbox{\hyperlink{structCode__attribute}{Code\_attribute}} \mbox{\hyperlink{structattribute__info_a098a24d1810b1a2a1691cbf89199bdc5}{code\_info}}\\
+\>\mbox{\hyperlink{structExceptions__attribute}{Exceptions\_attribute}} \mbox{\hyperlink{structattribute__info_a244c271949354ebd402f9330cb02b062}{exceptions\_info}}\\
+\>\mbox{\hyperlink{structInnerClasses__attribute}{InnerClasses\_attribute}} \mbox{\hyperlink{structattribute__info_ab17c5c178068ef13e7f6d61e741bc398}{innerClasses\_info}}\\
+\>\mbox{\hyperlink{structSynthetic__attribute}{Synthetic\_attribute}} \mbox{\hyperlink{structattribute__info_a8a7080734144a95a2b2a0fc350fd235c}{synthetic\_info}}\\
+\>\mbox{\hyperlink{structSourceFile__attribute}{SourceFile\_attribute}} \mbox{\hyperlink{structattribute__info_a92dad0fdd4730da884a5ee0f2fc181e7}{sourceFile\_info}}\\
+\>\mbox{\hyperlink{structLineNumberTable__attribute}{LineNumberTable\_attribute}} \mbox{\hyperlink{structattribute__info_a184f00b0276336a22f3a41e55df6ecf9}{lineNumberTable\_info}}\\
+\>\mbox{\hyperlink{structLocalVariableTable__attribute}{LocalVariableTable\_attribute}} \mbox{\hyperlink{structattribute__info_a98095c1c653f2dd7e6f11330967829e8}{localVariableTable\_info}}\\
+\>\mbox{\hyperlink{structDeprecated__attribute}{Deprecated\_attribute}} \mbox{\hyperlink{structattribute__info_a915a26115aeeff5e3d997116f3d671ba}{deprecated\_info}}\\
+\>\mbox{\hyperlink{structDeprecated__attribute1}{Deprecated\_attribute1}} \mbox{\hyperlink{structattribute__info_a5de1a193a4c37b0432092f204322dc46}{deprecated\_info1}}\\
+\} \mbox{\hyperlink{structattribute__info_a7c36e4395d959c99f58f3824e35256b9}{info}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00265}{265}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structattribute__info_doc-variable-members}
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{structattribute__info_a1ed8f679458c4bb0ed3315721588f50d}\index{attribute\_info@{attribute\_info}!attribute\_length@{attribute\_length}}
+\index{attribute\_length@{attribute\_length}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{attribute\_length}{attribute\_length}}
+{\footnotesize\ttfamily \label{structattribute__info_a1ed8f679458c4bb0ed3315721588f50d} 
+\mbox{\hyperlink{BasicTypes_8h_ae5be1f726785414dd1b77d60df074c9d}{u4}} attribute\+\_\+info\+::attribute\+\_\+length}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00267}{267}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a19df9d4b42eb55ca5dc1bed98df89378}\index{attribute\_info@{attribute\_info}!attribute\_name\_index@{attribute\_name\_index}}
+\index{attribute\_name\_index@{attribute\_name\_index}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{attribute\_name\_index}{attribute\_name\_index}}
+{\footnotesize\ttfamily \label{structattribute__info_a19df9d4b42eb55ca5dc1bed98df89378} 
+\mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}} attribute\+\_\+info\+::attribute\+\_\+name\+\_\+index}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00266}{266}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{Frame_8cpp_source_l00140}{Frame\+::encontrar\+Attributes()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a098a24d1810b1a2a1691cbf89199bdc5}\index{attribute\_info@{attribute\_info}!code\_info@{code\_info}}
+\index{code\_info@{code\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{code\_info}{code\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a098a24d1810b1a2a1691cbf89199bdc5} 
+\mbox{\hyperlink{structCode__attribute}{Code\+\_\+attribute}} attribute\+\_\+info\+::code\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00270}{270}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{Frame_8cpp_source_l00140}{Frame\+::encontrar\+Attributes()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_ae07b4986ad567ee03d7f5b9476cd2576}\index{attribute\_info@{attribute\_info}!constantValue\_info@{constantValue\_info}}
+\index{constantValue\_info@{constantValue\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{constantValue\_info}{constantValue\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_ae07b4986ad567ee03d7f5b9476cd2576} 
+\mbox{\hyperlink{structConstantValue__attribute}{Constant\+Value\+\_\+attribute}} attribute\+\_\+info\+::constant\+Value\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00269}{269}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a915a26115aeeff5e3d997116f3d671ba}\index{attribute\_info@{attribute\_info}!deprecated\_info@{deprecated\_info}}
+\index{deprecated\_info@{deprecated\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{deprecated\_info}{deprecated\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a915a26115aeeff5e3d997116f3d671ba} 
+\mbox{\hyperlink{structDeprecated__attribute}{Deprecated\+\_\+attribute}} attribute\+\_\+info\+::deprecated\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00277}{277}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a5de1a193a4c37b0432092f204322dc46}\index{attribute\_info@{attribute\_info}!deprecated\_info1@{deprecated\_info1}}
+\index{deprecated\_info1@{deprecated\_info1}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{deprecated\_info1}{deprecated\_info1}}
+{\footnotesize\ttfamily \label{structattribute__info_a5de1a193a4c37b0432092f204322dc46} 
+\mbox{\hyperlink{structDeprecated__attribute1}{Deprecated\+\_\+attribute1}} attribute\+\_\+info\+::deprecated\+\_\+info1}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00278}{278}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+\Hypertarget{structattribute__info_a244c271949354ebd402f9330cb02b062}\index{attribute\_info@{attribute\_info}!exceptions\_info@{exceptions\_info}}
+\index{exceptions\_info@{exceptions\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{exceptions\_info}{exceptions\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a244c271949354ebd402f9330cb02b062} 
+\mbox{\hyperlink{structExceptions__attribute}{Exceptions\+\_\+attribute}} attribute\+\_\+info\+::exceptions\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00271}{271}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Frame_8cpp_source_l00140}{Frame\+::encontrar\+Attributes()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a7c36e4395d959c99f58f3824e35256b9}\index{attribute\_info@{attribute\_info}!info@{info}}
+\index{info@{info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{[union]}{[union]}}
+{\footnotesize\ttfamily \label{structattribute__info_a7c36e4395d959c99f58f3824e35256b9} 
+union  \{ ... \}  attribute\+\_\+info\+::info}
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{Frame_8cpp_source_l00140}{Frame\+::encontrar\+Attributes()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_ab17c5c178068ef13e7f6d61e741bc398}\index{attribute\_info@{attribute\_info}!innerClasses\_info@{innerClasses\_info}}
+\index{innerClasses\_info@{innerClasses\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{innerClasses\_info}{innerClasses\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_ab17c5c178068ef13e7f6d61e741bc398} 
+\mbox{\hyperlink{structInnerClasses__attribute}{Inner\+Classes\+\_\+attribute}} attribute\+\_\+info\+::inner\+Classes\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00272}{272}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a184f00b0276336a22f3a41e55df6ecf9}\index{attribute\_info@{attribute\_info}!lineNumberTable\_info@{lineNumberTable\_info}}
+\index{lineNumberTable\_info@{lineNumberTable\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{lineNumberTable\_info}{lineNumberTable\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a184f00b0276336a22f3a41e55df6ecf9} 
+\mbox{\hyperlink{structLineNumberTable__attribute}{Line\+Number\+Table\+\_\+attribute}} attribute\+\_\+info\+::line\+Number\+Table\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00275}{275}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a98095c1c653f2dd7e6f11330967829e8}\index{attribute\_info@{attribute\_info}!localVariableTable\_info@{localVariableTable\_info}}
+\index{localVariableTable\_info@{localVariableTable\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{localVariableTable\_info}{localVariableTable\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a98095c1c653f2dd7e6f11330967829e8} 
+\mbox{\hyperlink{structLocalVariableTable__attribute}{Local\+Variable\+Table\+\_\+attribute}} attribute\+\_\+info\+::local\+Variable\+Table\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00276}{276}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a92dad0fdd4730da884a5ee0f2fc181e7}\index{attribute\_info@{attribute\_info}!sourceFile\_info@{sourceFile\_info}}
+\index{sourceFile\_info@{sourceFile\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{sourceFile\_info}{sourceFile\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a92dad0fdd4730da884a5ee0f2fc181e7} 
+\mbox{\hyperlink{structSourceFile__attribute}{Source\+File\+\_\+attribute}} attribute\+\_\+info\+::source\+File\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00274}{274}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{structattribute__info_a8a7080734144a95a2b2a0fc350fd235c}\index{attribute\_info@{attribute\_info}!synthetic\_info@{synthetic\_info}}
+\index{synthetic\_info@{synthetic\_info}!attribute\_info@{attribute\_info}}
+\doxysubsubsection{\texorpdfstring{synthetic\_info}{synthetic\_info}}
+{\footnotesize\ttfamily \label{structattribute__info_a8a7080734144a95a2b2a0fc350fd235c} 
+\mbox{\hyperlink{structSynthetic__attribute}{Synthetic\+\_\+attribute}} attribute\+\_\+info\+::synthetic\+\_\+info}
+
+
+
+Definido na linha \mbox{\hyperlink{BasicTypes_8h_source_l00273}{273}} do ficheiro \mbox{\hyperlink{BasicTypes_8h_source}{Basic\+Types.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{BasicTypes_8h}{Basic\+Types.\+h}}\end{DoxyCompactItemize}

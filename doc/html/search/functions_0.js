@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['aaload_0',['aaload',['../classOperations.html#a522dfa2224d54268008f3bec4ff2b388',1,'Operations::aaload()'],['../classOperationsLoadStore.html#a749ebd9ee2eb618f378c473b28d2da8f',1,'OperationsLoadStore::aaload()']]],
+  ['aastore_1',['aastore',['../classOperations.html#a60b30bd84b2d59334e735f0adda6febe',1,'Operations::aastore()'],['../classOperationsLoadStore.html#a39804d60eef92afe669a0b238e28807b',1,'OperationsLoadStore::aastore()']]],
+  ['aconst_5fnull_2',['aconst_null',['../classOperations.html#af51ec8a98d9ed3167da0d8ac6279a1cd',1,'Operations::aconst_null()'],['../classOperationsConstants.html#a1e27a1e2147cb06902915301ccfcf666',1,'OperationsConstants::aconst_null()']]],
+  ['addclass_3',['addClass',['../classMethodArea.html#a9e4e378de46c1a9836820d86cd9dadb8',1,'MethodArea']]],
+  ['addframe_4',['addFrame',['../classPilhaJVM.html#a64d7185bc812d3c81e5270c54c212e07',1,'PilhaJVM']]],
+  ['addobject_5',['addObject',['../classHeap.html#aa2a5f92b36abe24c83853feca936548e',1,'Heap']]],
+  ['aload_6',['aload',['../classOperations.html#a2f5c13146658e71de665c3b32ebed8c9',1,'Operations::aload()'],['../classOperationsLoadStore.html#a1effe7af0f653ef7838114589c1286c6',1,'OperationsLoadStore::aload()']]],
+  ['aload_5f0_7',['aload_0',['../classOperations.html#a9d821a16ef0681755717e8c4f740f6d0',1,'Operations::aload_0()'],['../classOperationsLoadStore.html#a970e293b32bc2c5ce4308efc9d2c4fd4',1,'OperationsLoadStore::aload_0()']]],
+  ['aload_5f1_8',['aload_1',['../classOperations.html#a8291f2b716c1be7428d9b63a5225b52d',1,'Operations::aload_1()'],['../classOperationsLoadStore.html#aeb9637c06a1c4be0e19f948da9e046e7',1,'OperationsLoadStore::aload_1()']]],
+  ['aload_5f2_9',['aload_2',['../classOperations.html#abd58f463152d7f88b9fb2f133c6ca184',1,'Operations::aload_2()'],['../classOperationsLoadStore.html#a87611b411d0229a821c627d741722915',1,'OperationsLoadStore::aload_2()']]],
+  ['aload_5f3_10',['aload_3',['../classOperations.html#ac0cadd4fe7c17eab1985f11b5389fafc',1,'Operations::aload_3()'],['../classOperationsLoadStore.html#afa29b61ac2a23f34471f766ab8ce5b22',1,'OperationsLoadStore::aload_3()']]],
+  ['anewarray_11',['anewarray',['../classOperations.html#aa5110e66aa565e9130be292935ef5c71',1,'Operations::anewarray()'],['../classOperationsObject.html#a306ed009455e3a600ec54c540768abf5',1,'OperationsObject::anewarray()']]],
+  ['areturn_12',['areturn',['../classOperations.html#a5829421b72f92d50dea0461953b26c5b',1,'Operations::areturn()'],['../classOperationsControl.html#a448301f5fae5f347270a9eaa4d0f79bc',1,'OperationsControl::areturn()']]],
+  ['arraycontenttype_13',['arrayContentType',['../classArrayObject.html#a389af37c0ab94e2c84985ab1698ce679',1,'ArrayObject']]],
+  ['arraylength_14',['arraylength',['../classOperations.html#ae01c8bce2d6a583151dc0e46d1b8d52f',1,'Operations::arraylength()'],['../classOperationsObject.html#a6d0b8e18fabc1ba66194a7d46ab269c4',1,'OperationsObject::arraylength()']]],
+  ['arrayobject_15',['ArrayObject',['../classArrayObject.html#afd91a9df894ad32f51e40da74de7f2c4',1,'ArrayObject']]],
+  ['astore_16',['astore',['../classOperations.html#aa414424bd203fb9788712fd2e74c3a32',1,'Operations::astore()'],['../classOperationsLoadStore.html#a813cfd73cc419aee1cc8911c451fae3a',1,'OperationsLoadStore::astore()']]],
+  ['astore_5f0_17',['astore_0',['../classOperations.html#a140f2e8501424f8a73dbfecfa3ca859f',1,'Operations::astore_0()'],['../classOperationsLoadStore.html#a6048c630be8872acc567f5a75c2a87de',1,'OperationsLoadStore::astore_0()']]],
+  ['astore_5f1_18',['astore_1',['../classOperations.html#a1a7a41be018313dd524df5327c8b6035',1,'Operations::astore_1()'],['../classOperationsLoadStore.html#ae91480bcbf21ed5028168580b2dad8c5',1,'OperationsLoadStore::astore_1()']]],
+  ['astore_5f2_19',['astore_2',['../classOperations.html#a01e238bbea0f9d61d80a8fcd3ed2f660',1,'Operations::astore_2()'],['../classOperationsLoadStore.html#a593e3f934b641b81ec60f879e0a9a9f3',1,'OperationsLoadStore::astore_2()']]],
+  ['astore_5f3_20',['astore_3',['../classOperations.html#ac3c02b3ff78b6222bd58bebb4f01c083',1,'Operations::astore_3()'],['../classOperationsLoadStore.html#a118db42696a05889d85014886b90432f',1,'OperationsLoadStore::astore_3()']]],
+  ['athrow_21',['athrow',['../classOperations.html#a2a5eea0fb18391bb3854dfe55c8ac5d3',1,'Operations::athrow()'],['../classOperationsObject.html#a617fc8a93fe1c5cd11903981f7163123',1,'OperationsObject::athrow()']]]
+];

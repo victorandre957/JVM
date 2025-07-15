@@ -1,0 +1,15 @@
+<map id="OperationsConstants::ldc" name="OperationsConstants::ldc">
+<area shape="rect" id="Node000001" title="Implementa a funcionalidade da instrução ldc." alt="" coords="5,109,190,137"/>
+<area shape="rect" id="Node000002" href="$classFrame.html#af2481010c4795fbe1cba48122609cf1e" title="Adiciona um operando na pilha de operandos." alt="" coords="238,5,457,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,107,171,75,237,43,260,35,262,40,239,48,174,80,121,111"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#a6863584ef3a6f2e4b1f93fb0deb09f4b" title="Obtém o código do método a partir de um offset." alt="" coords="285,57,410,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,106,270,85,271,90,168,111"/>
+<area shape="rect" id="Node000004" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="266,109,428,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,120,251,120,251,126,190,126"/>
+<area shape="rect" id="Node000006" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="262,161,432,189"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="168,135,263,155,262,160,167,140"/>
+<area shape="rect" id="Node000007" href="$classFrame.html#a77f9705e64bfbdfc68921b7de11a893f" title="Retorna um ponteiro para o array de entradas da Constant Pool do método em execução." alt="" coords="252,213,442,241"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="121,135,174,167,239,198,262,206,260,211,237,203,171,171,119,140"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="505,109,648,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="429,120,489,120,489,126,429,126"/>
+</map>

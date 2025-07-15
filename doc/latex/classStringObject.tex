@@ -1,0 +1,199 @@
+\doxysection{Referência à classe String\+Object}
+\hypertarget{classStringObject}{}\label{classStringObject}\index{StringObject@{StringObject}}
+
+
+Representa um objeto do tipo String.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+
+
+Diagrama de heranças da classe String\+Object\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classStringObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para String\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classStringObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringObject_af29d58fcfbd76c7708e5c8689321ab32}{String\+Object}} (string s="{}"{})
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStringObject_a7db6683d04fe432e570458daf305500b}{\texorpdfstring{$\sim$}{\string~}\+String\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{BasicTypes_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classStringObject_a4757889f8b78eba719d5891658abe685}{object\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Obtém o tipo do objeto (string). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classStringObject_aedd2df1630c9b291ea17407b3f626573}{get\+String}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a sequência de caracteres presente na string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStringObject_a96812d8ef025b1f897b09f816d0297f7}{set\+String}} (string s)
+\begin{DoxyCompactList}\small\item\em Substitui o valor da string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classObject_a226f2ae2af766b77d83c09a4d766b725}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual para permitir destruição polimórfica segura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classStringObject_a129b52ebca78da26c58175e45e1869cc}{\+\_\+internal\+String}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um objeto do tipo String. 
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00119}{119}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classStringObject_doc-constructors}
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classStringObject_af29d58fcfbd76c7708e5c8689321ab32}\index{StringObject@{StringObject}!StringObject@{StringObject}}
+\index{StringObject@{StringObject}!StringObject@{StringObject}}
+\doxysubsubsection{\texorpdfstring{StringObject()}{StringObject()}}
+{\footnotesize\ttfamily \label{classStringObject_af29d58fcfbd76c7708e5c8689321ab32} 
+String\+Object\+::\+String\+Object (\begin{DoxyParamCaption}\item[{string}]{s}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor padrão. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & O valor inicial da string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00228}{228}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+Referências \mbox{\hyperlink{Object_8h_source_l00154}{\+\_\+internal\+String}}.
+
+\Hypertarget{classStringObject_a7db6683d04fe432e570458daf305500b}\index{StringObject@{StringObject}!````~StringObject@{\texorpdfstring{$\sim$}{\string~}StringObject}}
+\index{````~StringObject@{\texorpdfstring{$\sim$}{\string~}StringObject}!StringObject@{StringObject}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StringObject()}{\string~StringObject()}}
+{\footnotesize\ttfamily \label{classStringObject_a7db6683d04fe432e570458daf305500b} 
+String\+Object\+::\texorpdfstring{$\sim$}{\string~}\+String\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor padrão. 
+
+
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00231}{231}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classStringObject_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classStringObject_aedd2df1630c9b291ea17407b3f626573}\index{StringObject@{StringObject}!getString@{getString}}
+\index{getString@{getString}!StringObject@{StringObject}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily \label{classStringObject_aedd2df1630c9b291ea17407b3f626573} 
+string String\+Object\+::get\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a sequência de caracteres presente na string. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a string como uma std\+::string. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00238}{238}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+Referências \mbox{\hyperlink{Object_8h_source_l00154}{\+\_\+internal\+String}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsObject_8cpp_source_l00320}{Operations\+Object\+::invokevirtual()}}.
+
+\Hypertarget{classStringObject_a4757889f8b78eba719d5891658abe685}\index{StringObject@{StringObject}!objectType@{objectType}}
+\index{objectType@{objectType}!StringObject@{StringObject}}
+\doxysubsubsection{\texorpdfstring{objectType()}{objectType()}}
+{\footnotesize\ttfamily \label{classStringObject_a4757889f8b78eba719d5891658abe685} 
+\mbox{\hyperlink{BasicTypes_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} String\+Object\+::object\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obtém o tipo do objeto (string). 
+
+\begin{DoxyReturn}{Retorna}
+O tipo do objeto. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classObject_a08cee945bc224fc81f4448086625183d}{Object}}.
+
+
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00234}{234}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+\Hypertarget{classStringObject_a96812d8ef025b1f897b09f816d0297f7}\index{StringObject@{StringObject}!setString@{setString}}
+\index{setString@{setString}!StringObject@{StringObject}}
+\doxysubsubsection{\texorpdfstring{setString()}{setString()}}
+{\footnotesize\ttfamily \label{classStringObject_a96812d8ef025b1f897b09f816d0297f7} 
+void String\+Object\+::set\+String (\begin{DoxyParamCaption}\item[{string}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Substitui o valor da string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & O novo valor da string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00242}{242}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+Referências \mbox{\hyperlink{Object_8h_source_l00154}{\+\_\+internal\+String}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classStringObject_doc-variable-members}
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classStringObject_a129b52ebca78da26c58175e45e1869cc}\index{StringObject@{StringObject}!\_internalString@{\_internalString}}
+\index{\_internalString@{\_internalString}!StringObject@{StringObject}}
+\doxysubsubsection{\texorpdfstring{\_internalString}{\_internalString}}
+{\footnotesize\ttfamily \label{classStringObject_a129b52ebca78da26c58175e45e1869cc} 
+string String\+Object\+::\+\_\+internal\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+A string interna. 
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00154}{154}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Object_8h_source_l00238}{get\+String()}}, \mbox{\hyperlink{Object_8h_source_l00242}{set\+String()}} e \mbox{\hyperlink{Object_8h_source_l00228}{String\+Object()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Object_8h}{Object.\+h}}\end{DoxyCompactItemize}

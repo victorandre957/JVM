@@ -1,0 +1,17 @@
+<map id="OperationsLoadStore::iload" name="OperationsLoadStore::iload">
+<area shape="rect" id="Node000001" title="Implementa a funcionalidade da instrução iload." alt="" coords="5,128,163,172"/>
+<area shape="rect" id="Node000002" href="$classFrame.html#af2481010c4795fbe1cba48122609cf1e" title="Adiciona um operando na pilha de operandos." alt="" coords="211,5,430,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,125,150,83,179,62,209,43,226,36,228,41,212,48,182,66,154,87,108,129"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#a6863584ef3a6f2e4b1f93fb0deb09f4b" title="Obtém o código do método a partir de um offset." alt="" coords="258,57,382,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,125,210,95,242,86,244,91,212,100,136,130"/>
+<area shape="rect" id="Node000004" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="239,109,402,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,138,223,131,224,137,163,144"/>
+<area shape="rect" id="Node000006" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="235,161,406,189"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="163,156,220,162,219,167,163,161"/>
+<area shape="rect" id="Node000007" href="$classFrame.html#ae074652eb3b71fb4cb28afd1ba91885d" title="Lê o valor na posição index (verifica limites)." alt="" coords="225,213,416,258"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="140,170,212,198,231,205,229,210,210,203,138,175"/>
+<area shape="rect" id="Node000008" href="$classFrame.html#a2b65f6fa2195970fd25d69c17b5ca933" title="Retorna o comprimento do vetor de variáveis locais associado ao frame." alt="" coords="225,281,416,309"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="105,171,150,220,179,246,212,268,223,273,221,278,209,272,176,250,146,224,101,174"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="478,109,621,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,120,462,120,462,126,402,126"/>
+</map>

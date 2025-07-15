@@ -1,0 +1,7 @@
+<map id="LeitorExibidor::getInstance" name="LeitorExibidor::getInstance">
+<area shape="rect" id="Node000001" title="Obtém a única instância do LeitorExibidor." alt="" coords="5,5,201,33"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#a246be764c0b6895539f915cc0f813e7b" title="Construtor privado (singleton)" alt="" coords="249,5,458,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,16,233,16,233,22,201,22"/>
+<area shape="rect" id="Node000003" href="$classLeitorExibidor.html#ac8ff6248b6897d88bb5cf22ea987a6ab" title="Detecta a endianness do sistema." alt="" coords="506,5,716,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="458,16,491,16,491,22,458,22"/>
+</map>

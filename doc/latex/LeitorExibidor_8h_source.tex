@@ -1,0 +1,101 @@
+\doxysection{Leitor\+Exibidor.\+h}
+\hypertarget{LeitorExibidor_8h_source}{}\label{LeitorExibidor_8h_source}\index{include/LeitorExibidor.h@{include/LeitorExibidor.h}}
+\mbox{\hyperlink{LeitorExibidor_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ CLASSLOADER\_H}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ CLASSLOADER\_H}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00004}00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <cstdbool>}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BasicTypes_8h}{BasicTypes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ClassFile_8h}{ClassFile.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00032}\mbox{\hyperlink{classLeitorExibidor}{00032}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLeitorExibidor_a246be764c0b6895539f915cc0f813e7b}{LeitorExibidor}}\ \{}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00033}00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00038}\mbox{\hyperlink{classLeitorExibidor_abbde32917d7e0e7f07264b7fb0726a77}{00038}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classLeitorExibidor_a246be764c0b6895539f915cc0f813e7b}{LeitorExibidor}}\&\ \mbox{\hyperlink{classLeitorExibidor_abbde32917d7e0e7f07264b7fb0726a77}{getInstance}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classLeitorExibidor_a246be764c0b6895539f915cc0f813e7b}{LeitorExibidor}}\ instance;}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{classLeitorExibidor_a7785a12083b7979aa615915cb8e2d274}{\string~LeitorExibidor}}();}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{classClassFile}{ClassFile}}*\ \mbox{\hyperlink{classLeitorExibidor_af6f4f84cbfaf72e6673e1dc42023b308}{readClassFile}}(FILE\ *file);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00061}00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{classLeitorExibidor_a246be764c0b6895539f915cc0f813e7b}{LeitorExibidor}}();\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00063}\mbox{\hyperlink{classLeitorExibidor_a98a0f84f7d42d7868317cacfc883398d}{00063}}\ \ \ \ \ \mbox{\hyperlink{classLeitorExibidor_a98a0f84f7d42d7868317cacfc883398d}{LeitorExibidor}}(\mbox{\hyperlink{classLeitorExibidor_a246be764c0b6895539f915cc0f813e7b}{LeitorExibidor}}\ \textcolor{keyword}{const}\&);\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00064}\mbox{\hyperlink{classLeitorExibidor_ad273b8b4b3210bf1c246b1226bdaf1c8}{00064}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_ad273b8b4b3210bf1c246b1226bdaf1c8}{operator=}}(\mbox{\hyperlink{classLeitorExibidor_a246be764c0b6895539f915cc0f813e7b}{LeitorExibidor}}\ \textcolor{keyword}{const}\&);\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00066}\mbox{\hyperlink{classLeitorExibidor_a25a267e1238c481356a970b17d2fd044}{00066}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLeitorExibidor_a25a267e1238c481356a970b17d2fd044}{isLittleEndian}};\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLeitorExibidor_ac8ff6248b6897d88bb5cf22ea987a6ab}{testEndianess}}();}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ Funções\ de\ leitura\ primitivas}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ \mbox{\hyperlink{classLeitorExibidor_af679ae83326347418cd0d3c90776d7a3}{readU1}}(FILE\ *file);\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}\ \mbox{\hyperlink{classLeitorExibidor_aa801d28856915543cfd59fb787e59626}{readU2}}(FILE\ *file);\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ae5be1f726785414dd1b77d60df074c9d}{u4}}\ \mbox{\hyperlink{classLeitorExibidor_a5ce4bdf25870ab04449d4ba35a961390}{readU4}}(FILE\ *file);\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00079}00079\ \ \ \ \ \textcolor{comment}{//\ Métodos\ de\ carregamento\ de\ seções}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a08d4a6ea1c0f054f6f2969afe96a1d99}{setMagic}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLeitorExibidor_a034bab9e173eabd3cce5f36daf6c74f6}{isMagicValid}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a9a11956018816200897ca137c027cbf1}{setVersion}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLeitorExibidor_a57fce5e64174ca5900dd469cb0db8376}{isVersionValid}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile,\ uint16\_t\ major);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a13b5c2cf5de57b6cea330a425f7e55be}{setConstantPoolSize}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a34dc148775506753f609e643ac931cac}{setConstantPool}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a7934c3a6d4da59ecb351d32b74240c60}{setAccessFlags}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_af0f402911ed326bd9e495eef93a43c24}{setThisClass}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_af726ef535e88d9d86938a2d6aad6658c}{setSuperClass}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_afbe776f3eb57a38dde0bfe862dd5650a}{setInterfacesCount}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_aff26e69a60fa1285388e300ac7ec3342}{setInterfaces}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_af325d9f6276a66c6bac95b09e83405c9}{setFieldsCount}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a682c7ad4fd18b4dce390285c3c643b7b}{setFields}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00093}00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a6292517ec3beae1ef6ff67678110e961}{setMethodsCount}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_aa7ce00ed1b02c20c2eb7ff1b503563d5}{setMethods}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00095}00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a891dc9f2ceb6f5c337f91a973d2ad6ee}{setAttributesCount}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00096}00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLeitorExibidor_a988287e777377265b23482e307eb4a63}{setAttributes}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Métodos\ de\ decodificação\ da\ constant\ pool}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Class__info}{CONSTANT\_Class\_info}}\ \mbox{\hyperlink{classLeitorExibidor_a105cc85df3dce1817b67d49a6af55075}{getConstantClassInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00100}00100\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Fieldref__info}{CONSTANT\_Fieldref\_info}}\ \mbox{\hyperlink{classLeitorExibidor_abef996cec1493870298ba1c13aba9a12}{getConstantFieldRefInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00101}00101\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Methodref__info}{CONSTANT\_Methodref\_info}}\ \mbox{\hyperlink{classLeitorExibidor_adfb763ec31e25964a5566c3d453ea297}{getConstantMethodRefInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__InterfaceMethodref__info}{CONSTANT\_InterfaceMethodref\_info}}\ \mbox{\hyperlink{classLeitorExibidor_a01b35468a048d479576f9c99440b9306}{getConstantInterfaceMethodRefInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00103}00103\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__String__info}{CONSTANT\_String\_info}}\ \mbox{\hyperlink{classLeitorExibidor_a4b2e1f73e85d73953a97571684ec9ceb}{getConstantStringInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00104}00104\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Integer__info}{CONSTANT\_Integer\_info}}\ \mbox{\hyperlink{classLeitorExibidor_aa9d25cd5fe52c32bb51f9209cf8ef7e6}{getConstantIntegerInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00105}00105\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Float__info}{CONSTANT\_Float\_info}}\ \mbox{\hyperlink{classLeitorExibidor_af858b066d00fec9a5fcc6b4e63046393}{getConstantFloatInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Long__info}{CONSTANT\_Long\_info}}\ \mbox{\hyperlink{classLeitorExibidor_a336e0f9abfbda32438aa285469993547}{getConstantLongInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Double__info}{CONSTANT\_Double\_info}}\ \mbox{\hyperlink{classLeitorExibidor_aa16859827e46b1a61c8d0bfa747754e3}{getConstantDoubleInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00108}00108\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__NameAndType__info}{CONSTANT\_NameAndType\_info}}\ \mbox{\hyperlink{classLeitorExibidor_a11acaf5d8c110037608d86273bf4c24e}{getConstantNameAndTypeInfo}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00109}00109\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Utf8__info}{CONSTANT\_Utf8\_info}}\ \mbox{\hyperlink{classLeitorExibidor_ac377ddc183e03ec12941e8bd557104f7}{getConstantUtf8Info}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00110}00110\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00111}00111\ \ \ \ \ \textcolor{comment}{//\ Métodos\ de\ decodificação\ de\ atributos}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00112}00112\ \ \ \ \ \mbox{\hyperlink{structattribute__info}{attribute\_info}}\ \mbox{\hyperlink{classLeitorExibidor_a81a7c01ab5ad3fb4fb1bb524d85ee5c0}{getAttributeInfo}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{structConstantValue__attribute}{ConstantValue\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a90079e579d24fc03705b624a906709e3}{getAttributeConstantValue}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{structExceptionTable}{ExceptionTable}}\ \mbox{\hyperlink{classLeitorExibidor_afc06b4ce567e2b0d2c26ad0fc797f735}{getExceptionTable}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{structCode__attribute}{Code\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a3ebd90beea3ea327aa7d22b84357c4d0}{getAttributeCode}}(FILE\ *fp,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{structExceptions__attribute}{Exceptions\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a36e7bb07a50754e6236dd555654d9032}{getAttributeExceptions}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00117}00117\ \ \ \ \ \mbox{\hyperlink{structClass}{Class}}\ \mbox{\hyperlink{classLeitorExibidor_a331d5d793343e29a8180771a4d2aa29c}{getClass}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00118}00118\ \ \ \ \ \mbox{\hyperlink{structInnerClasses__attribute}{InnerClasses\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a466d543f9134cc30ab471b359e19e765}{getAttributeInnerClasses}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{structSynthetic__attribute}{Synthetic\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a9920aaaab4f9a67647977ffdbfe91b71}{getAttributeSynthetic}}();}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{structSourceFile__attribute}{SourceFile\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a265f56dc5c7eb8cfc9471435735c2145}{getAttributeSourceFile}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00121}00121\ \ \ \ \ \mbox{\hyperlink{structLineNumberTable}{LineNumberTable}}\ \mbox{\hyperlink{classLeitorExibidor_ae0197a46804ec6e06829f53439f6c563}{getLineNumberTable}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00122}00122\ \ \ \ \ \mbox{\hyperlink{structLineNumberTable__attribute}{LineNumberTable\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a3b8b5cdf9d3f583088496091ab3d53c7}{getAttributeLineNumberTable}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{structLocalVariableTable}{LocalVariableTable}}\ \mbox{\hyperlink{classLeitorExibidor_a4b4d4ae7d4d68d9b0869cf0141965a43}{getLocalVariableTable}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00124}00124\ \ \ \ \ \mbox{\hyperlink{structLocalVariableTable__attribute}{LocalVariableTable\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a95ba6c34c4225f737bf0571f065de7aa}{getAttributeLocalVariable}}(FILE\ *fp);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00125}00125\ \ \ \ \ \mbox{\hyperlink{structDeprecated__attribute}{Deprecated\_attribute}}\ \mbox{\hyperlink{classLeitorExibidor_a7e979d1f74f0b8a8a904404f657a84d5}{getAttributeDeprecated}}();}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00126}00126\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00127}00127\ \ \ \ \ \textcolor{comment}{//\ Utilitários}}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00128}00128\ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Utf8__info}{CONSTANT\_Utf8\_info}}\ \mbox{\hyperlink{classLeitorExibidor_ad3299334f937507986cef571036b93c0}{getUtf8FromConstantPool}}(\mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}\ index,\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00129}00129\ \};}
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{LeitorExibidor_8h_source_l00131}00131\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

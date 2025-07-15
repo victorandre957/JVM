@@ -1,0 +1,10 @@
+<map id="MethodArea::addClass" name="MethodArea::addClass">
+<area shape="rect" id="Node000001" title="Adiciona uma classe à área de métodos." alt="" coords="5,44,173,72"/>
+<area shape="rect" id="Node000002" href="$classStaticClass.html#a8a0c621d79a360af4b96e9c7546daef2" title="Obtém a ClassFile associada." alt="" coords="233,5,414,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,41,220,33,221,39,174,47"/>
+<area shape="rect" id="Node000003" href="$classUtils.html#a9f417939b31cec9a87e58080d692df04" title=" " alt="" coords="221,81,426,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,69,217,76,217,81,173,74"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="283,82,277,72,282,63,298,57,323,55,351,57,366,64,364,68,350,62,323,60,299,62,285,67,282,72,288,79"/>
+<area shape="rect" id="Node000004" href="$classUtils.html#abef6742f09f81fea5952454925325ea5" title="Converte stringstream para string C&#45;style." alt="" coords="474,73,656,118"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="426,92,458,92,458,98,426,98"/>
+</map>

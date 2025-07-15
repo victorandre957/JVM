@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['_5farraytype_0',['_arrayType',['../classArrayObject.html#a83a4c777ec1059f3e85aaa698442f72b',1,'ArrayObject']]],
+  ['_5fcapacity_1',['_capacity',['../classHeap.html#ad5a30eb38a8be63c077d10c1ef5cef6f',1,'Heap']]],
+  ['_5fclasses_2',['_classes',['../classMethodArea.html#a1244d392d351920d754db8c6940dd7aa',1,'MethodArea']]],
+  ['_5fclassfile_3',['_classFile',['../classStaticClass.html#ae54948d5ec18075dd5b68c7faf4ccc8b',1,'StaticClass']]],
+  ['_5fclassruntime_4',['_classRuntime',['../classFrame.html#aa6f380f48c5bac83780daed06dc04f9e',1,'Frame::_classRuntime'],['../classInstanceClass.html#aa8ed961b694f26f470dc2399532d3538',1,'InstanceClass::_classRuntime']]],
+  ['_5fcodeattribute_5',['_codeAttribute',['../classFrame.html#a0b7e80617513d7c1879e20510622103d',1,'Frame']]],
+  ['_5felements_6',['_elements',['../classArrayObject.html#a1d085d50c90613812fdf539472e76b0c',1,'ArrayObject']]],
+  ['_5fexceptionsattribute_7',['_exceptionsAttribute',['../classFrame.html#a5e98b7eb6642b16c03a75ec1f96c4fc4',1,'Frame']]],
+  ['_5ffields_8',['_fields',['../classInstanceClass.html#a603a0866f5113d16ff8f80b5d6bf152b',1,'InstanceClass']]],
+  ['_5fframestack_9',['_frameStack',['../classPilhaJVM.html#a09290179ef6c914aa32297ab9dae94ed',1,'PilhaJVM']]],
+  ['_5finternalstring_10',['_internalString',['../classStringObject.html#a129b52ebca78da26c58175e45e1869cc',1,'StringObject']]],
+  ['_5fiswide_11',['_isWide',['../classOperationsArithmetic.html#af97a39b361f1f7df6b41e54fe3826c81',1,'OperationsArithmetic::_isWide'],['../classOperationsBase.html#a0520f405a185ca37cc0bd088b01ed5ad',1,'OperationsBase::_isWide'],['../classOperationsControl.html#a53579afec8f180e0a2fc3a4ab66fada9',1,'OperationsControl::_isWide'],['../classOperationsLoadStore.html#a312aebad0f135ec20d29c0de81994cb6',1,'OperationsLoadStore::_isWide'],['../classOperationsObject.html#af15c5a90cf532b84f3f36cd1850c031f',1,'OperationsObject::_isWide']]],
+  ['_5flocalvariables_12',['_localVariables',['../classFrame.html#a4239e09dc85d16e5448d5c51d609aaf7',1,'Frame']]],
+  ['_5fmethod_13',['_method',['../classFrame.html#af9658f71efb91988fa39a224ce9ec9c6',1,'Frame']]],
+  ['_5fobject_14',['_object',['../classFrame.html#a618b0873a50306f7805ea09685e8eee9',1,'Frame']]],
+  ['_5fobjectarray_15',['_objectArray',['../classHeap.html#a79ae13d891ba0a94cccfdfdb3d805497',1,'Heap']]],
+  ['_5fobjectcount_16',['_objectCount',['../classHeap.html#a245293c01203737d35ce03fa734b9a99',1,'Heap']]],
+  ['_5foperandstack_17',['_operandStack',['../classFrame.html#a79c20265fc90cf99a5b9b95e3e32c35f',1,'Frame']]],
+  ['_5fstaticfields_18',['_staticFields',['../classStaticClass.html#a6a6be07653e7f40530b5cf22e5045110',1,'StaticClass']]]
+];

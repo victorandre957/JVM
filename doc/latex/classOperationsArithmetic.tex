@@ -1,0 +1,1599 @@
+\doxysection{Referência à classe Operations\+Arithmetic}
+\hypertarget{classOperationsArithmetic}{}\label{classOperationsArithmetic}\index{OperationsArithmetic@{OperationsArithmetic}}
+
+
+Handles arithmetic and stack manipulation operations.  
+
+
+
+
+{\ttfamily \#include $<$Operations\+Arithmetic.\+h$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOperationsArithmetic_af13f2ed1cdaafc1bf94ae20f47e9e3f1}{Operations\+Arithmetic}} (bool \&is\+Wide)
+\begin{DoxyCompactList}\small\item\em Constructor that takes reference to is\+Wide flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a5d63a265e48741129afe8f0b08f70eb6}{pop}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a349e3936e53e4f25306ad2eb52492ae2}{pop2}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_aa8043df36a646f436ab1f78c15b1f4b1}{dup}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a6fbe47e93633a9a7ac3a93f6910a3613}{dup\+\_\+x1}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a60e1ccdcd1aa4fa83547f2eecc8547b3}{dup\+\_\+x2}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a4baa185036f525adc5e267d09bf2b756}{dup2}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a29c1b87f9ddb50b4b536e2a02034640a}{dup2\+\_\+x1}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_aa3cac656f38a845e04201532f4c16ad6}{dup2\+\_\+x2}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a78b38f50939b6e5e6a13c676a832739c}{swap}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ae2e2c9b9b03aaf306ff4dc9d1bf43599}{iadd}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a7ede4262906426dafd44ac646411e218}{ladd}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a502e54071fdd9447272fc79fb3ffc4b6}{fadd}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_aab37e49eb4bd317f56183df823a0568c}{dadd}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_af366c6174e3832d66f96961c32e6ab00}{isub}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a53cb94bcb06b53733a595df0b380681f}{lsub}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a0a6696e9d3569b7b9239cdf407d43647}{fsub}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ac1b249b67598466eb992f75090f180fa}{dsub}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a9a8e054769a01b85e26a6f96239b1f89}{imul}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a5dd8b47208475b41dd77f948f1b55f4c}{lmul}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ab2a9967b870262d45ae160c5dc0c8b6b}{fmul}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ade95052db47d3154f1cda54ca50deb10}{dmul}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a97ab1ed38daeb128d4aa54f7ee2af55b}{idiv}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a17ed573cc1b41c3959b91b17417ae487}{ldiv}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a7a9ee39a6194a7cd3b2e9548c2d3605f}{fdiv}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a4c23e428932cd3c89aa08f8b0c4e74af}{ddiv}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ac0653cb119c4700182010662f35b54c7}{irem}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_abe3c8d1099e9fe15756128de9bb1e6f7}{lrem}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ac6886d547fa64fbad62bc775c1896357}{frem}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a1657894c60c114e6eba88b36f86b0a59}{drem}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a281caca972543cebcf0977c8024e260c}{ineg}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_aa28f8fb0a2da43ff536d78e2531a20cb}{lneg}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a84c0e91e6faf809da78633f54720c641}{fneg}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a662cb179204ef164e138c7b6d70d631b}{dneg}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a6c178a59db9cd1a49d2a24e36ebe83a3}{ishl}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a338f1793c0723aefb8cb3ae551381d45}{lshl}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ac8ac7da5b37ec894baef9bb41aed1461}{ishr}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a47a814414ea89d3052f56aed37bda3fd}{lshr}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ad9eed6684976ffa69a814b0c87f4dfb2}{iushr}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ae41e77efebbdac433bde8b54f4e1fc55}{lushr}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ad405afc70f24f0c542f4c33ac6f092ae}{iand}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a79dfd0156c2dbe00643bdd1a5f0770fd}{land}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ae87c1b4e13b204518d881527bc800038}{ior}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_af41b5a515ecd7f5de5785d948bf87cad}{lor}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a7d9615ab52641e249b1e3c219b8b071d}{ixor}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a13ce43231a2e0c04da981697ce1f942d}{lxor}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_adfce1c97eec4750edec1766c07ad175d}{iinc}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a8ee84ee1c91ee4e9f3309f77be3c13a5}{i2l}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a58a0df549ad0244bcb1e18ed9e30a51d}{i2f}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a746a6f259e6a6e899c70635605caafa8}{i2d}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ad273e681d00a97f6e2c5f388ee2099c0}{l2i}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a0d0e0c4d91b72deb03b9cf0c11d2bddb}{l2f}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a3885d991ac9f296de0e6fdf3377fe82a}{l2d}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_acdfded76fe607864a773350ae91ad775}{f2i}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a72688c8323b13537430655ff0f427dca}{f2l}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ac5226e3558c37ddd7c3b5d8669079b1b}{f2d}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a1a4f0c6060808bd88008f4d7e5be610f}{d2i}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_afd2f0249b479d25f5b316a96957defe1}{d2l}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a53ea3c9ea4ab9a4f5b96b101c7b6115e}{d2f}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_ac0c4a679b6c8411a76e189cfcd4f6e09}{i2b}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a8f4fd09f2d84cfbfc5212ce9260fee2e}{i2c}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a7c7d98bf36639326b6e3b5b2154955aa}{i2s}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a70f469ae8e3105664b1dc22c88516322}{lcmp}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a4d9e45d406517777a51098499e534e64}{fcmpl}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a81714c3e3098ce16390d5f8db95d4a57}{fcmpg}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_aa10429ad4ac31e28843f3be067866721}{dcmpl}} ()
+\item 
+void \mbox{\hyperlink{classOperationsArithmetic_a2951f78e0c3e087dda4100e2774006bc}{dcmpg}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \& \mbox{\hyperlink{classOperationsArithmetic_af97a39b361f1f7df6b41e54fe3826c81}{\+\_\+is\+Wide}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Handles arithmetic and stack manipulation operations. 
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8h_source_l00009}{9}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8h_source}{Operations\+Arithmetic.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classOperationsArithmetic_doc-constructors}
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classOperationsArithmetic_af13f2ed1cdaafc1bf94ae20f47e9e3f1}\index{OperationsArithmetic@{OperationsArithmetic}!OperationsArithmetic@{OperationsArithmetic}}
+\index{OperationsArithmetic@{OperationsArithmetic}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{OperationsArithmetic()}{OperationsArithmetic()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_af13f2ed1cdaafc1bf94ae20f47e9e3f1} 
+Operations\+Arithmetic\+::\+Operations\+Arithmetic (\begin{DoxyParamCaption}\item[{bool \&}]{is\+Wide}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that takes reference to is\+Wide flag. 
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8h_source_l00014}{14}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8h_source}{Operations\+Arithmetic.\+h}}.
+
+
+
+Referências \mbox{\hyperlink{OperationsArithmetic_8h_source_l00017}{\+\_\+is\+Wide}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classOperationsArithmetic_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classOperationsArithmetic_a53ea3c9ea4ab9a4f5b96b101c7b6115e}\index{OperationsArithmetic@{OperationsArithmetic}!d2f@{d2f}}
+\index{d2f@{d2f}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{d2f()}{d2f()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a53ea3c9ea4ab9a4f5b96b101c7b6115e} 
+void Operations\+Arithmetic\+::d2f (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00961}{961}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a53ea3c9ea4ab9a4f5b96b101c7b6115e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a1a4f0c6060808bd88008f4d7e5be610f}\index{OperationsArithmetic@{OperationsArithmetic}!d2i@{d2i}}
+\index{d2i@{d2i}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{d2i()}{d2i()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a1a4f0c6060808bd88008f4d7e5be610f} 
+void Operations\+Arithmetic\+::d2i (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00931}{931}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a1a4f0c6060808bd88008f4d7e5be610f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_afd2f0249b479d25f5b316a96957defe1}\index{OperationsArithmetic@{OperationsArithmetic}!d2l@{d2l}}
+\index{d2l@{d2l}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{d2l()}{d2l()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_afd2f0249b479d25f5b316a96957defe1} 
+void Operations\+Arithmetic\+::d2l (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00946}{946}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_afd2f0249b479d25f5b316a96957defe1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_aab37e49eb4bd317f56183df823a0568c}\index{OperationsArithmetic@{OperationsArithmetic}!dadd@{dadd}}
+\index{dadd@{dadd}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dadd()}{dadd()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_aab37e49eb4bd317f56183df823a0568c} 
+void Operations\+Arithmetic\+::dadd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00215}{215}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_aab37e49eb4bd317f56183df823a0568c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a2951f78e0c3e087dda4100e2774006bc}\index{OperationsArithmetic@{OperationsArithmetic}!dcmpg@{dcmpg}}
+\index{dcmpg@{dcmpg}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dcmpg()}{dcmpg()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a2951f78e0c3e087dda4100e2774006bc} 
+void Operations\+Arithmetic\+::dcmpg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l01121}{1121}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a2951f78e0c3e087dda4100e2774006bc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_aa10429ad4ac31e28843f3be067866721}\index{OperationsArithmetic@{OperationsArithmetic}!dcmpl@{dcmpl}}
+\index{dcmpl@{dcmpl}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dcmpl()}{dcmpl()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_aa10429ad4ac31e28843f3be067866721} 
+void Operations\+Arithmetic\+::dcmpl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l01096}{1096}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_aa10429ad4ac31e28843f3be067866721_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a4c23e428932cd3c89aa08f8b0c4e74af}\index{OperationsArithmetic@{OperationsArithmetic}!ddiv@{ddiv}}
+\index{ddiv@{ddiv}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ddiv()}{ddiv()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a4c23e428932cd3c89aa08f8b0c4e74af} 
+void Operations\+Arithmetic\+::ddiv (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00419}{419}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a4c23e428932cd3c89aa08f8b0c4e74af_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ade95052db47d3154f1cda54ca50deb10}\index{OperationsArithmetic@{OperationsArithmetic}!dmul@{dmul}}
+\index{dmul@{dmul}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dmul()}{dmul()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ade95052db47d3154f1cda54ca50deb10} 
+void Operations\+Arithmetic\+::dmul (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00343}{343}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ade95052db47d3154f1cda54ca50deb10_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a662cb179204ef164e138c7b6d70d631b}\index{OperationsArithmetic@{OperationsArithmetic}!dneg@{dneg}}
+\index{dneg@{dneg}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dneg()}{dneg()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a662cb179204ef164e138c7b6d70d631b} 
+void Operations\+Arithmetic\+::dneg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00558}{558}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a662cb179204ef164e138c7b6d70d631b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a1657894c60c114e6eba88b36f86b0a59}\index{OperationsArithmetic@{OperationsArithmetic}!drem@{drem}}
+\index{drem@{drem}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{drem()}{drem()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a1657894c60c114e6eba88b36f86b0a59} 
+void Operations\+Arithmetic\+::drem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00495}{495}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a1657894c60c114e6eba88b36f86b0a59_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ac1b249b67598466eb992f75090f180fa}\index{OperationsArithmetic@{OperationsArithmetic}!dsub@{dsub}}
+\index{dsub@{dsub}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dsub()}{dsub()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ac1b249b67598466eb992f75090f180fa} 
+void Operations\+Arithmetic\+::dsub (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00279}{279}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ac1b249b67598466eb992f75090f180fa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_aa8043df36a646f436ab1f78c15b1f4b1}\index{OperationsArithmetic@{OperationsArithmetic}!dup@{dup}}
+\index{dup@{dup}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dup()}{dup()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_aa8043df36a646f436ab1f78c15b1f4b1} 
+void Operations\+Arithmetic\+::dup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00031}{31}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_aa8043df36a646f436ab1f78c15b1f4b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a4baa185036f525adc5e267d09bf2b756}\index{OperationsArithmetic@{OperationsArithmetic}!dup2@{dup2}}
+\index{dup2@{dup2}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dup2()}{dup2()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a4baa185036f525adc5e267d09bf2b756} 
+void Operations\+Arithmetic\+::dup2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00084}{84}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a4baa185036f525adc5e267d09bf2b756_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a29c1b87f9ddb50b4b536e2a02034640a}\index{OperationsArithmetic@{OperationsArithmetic}!dup2\_x1@{dup2\_x1}}
+\index{dup2\_x1@{dup2\_x1}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dup2\_x1()}{dup2\_x1()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a29c1b87f9ddb50b4b536e2a02034640a} 
+void Operations\+Arithmetic\+::dup2\+\_\+x1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00101}{101}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a29c1b87f9ddb50b4b536e2a02034640a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_aa3cac656f38a845e04201532f4c16ad6}\index{OperationsArithmetic@{OperationsArithmetic}!dup2\_x2@{dup2\_x2}}
+\index{dup2\_x2@{dup2\_x2}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dup2\_x2()}{dup2\_x2()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_aa3cac656f38a845e04201532f4c16ad6} 
+void Operations\+Arithmetic\+::dup2\+\_\+x2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00123}{123}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_aa3cac656f38a845e04201532f4c16ad6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a6fbe47e93633a9a7ac3a93f6910a3613}\index{OperationsArithmetic@{OperationsArithmetic}!dup\_x1@{dup\_x1}}
+\index{dup\_x1@{dup\_x1}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dup\_x1()}{dup\_x1()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a6fbe47e93633a9a7ac3a93f6910a3613} 
+void Operations\+Arithmetic\+::dup\+\_\+x1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00045}{45}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a6fbe47e93633a9a7ac3a93f6910a3613_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a60e1ccdcd1aa4fa83547f2eecc8547b3}\index{OperationsArithmetic@{OperationsArithmetic}!dup\_x2@{dup\_x2}}
+\index{dup\_x2@{dup\_x2}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{dup\_x2()}{dup\_x2()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a60e1ccdcd1aa4fa83547f2eecc8547b3} 
+void Operations\+Arithmetic\+::dup\+\_\+x2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00063}{63}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a60e1ccdcd1aa4fa83547f2eecc8547b3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ac5226e3558c37ddd7c3b5d8669079b1b}\index{OperationsArithmetic@{OperationsArithmetic}!f2d@{f2d}}
+\index{f2d@{f2d}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{f2d()}{f2d()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ac5226e3558c37ddd7c3b5d8669079b1b} 
+void Operations\+Arithmetic\+::f2d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00916}{916}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ac5226e3558c37ddd7c3b5d8669079b1b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_acdfded76fe607864a773350ae91ad775}\index{OperationsArithmetic@{OperationsArithmetic}!f2i@{f2i}}
+\index{f2i@{f2i}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{f2i()}{f2i()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_acdfded76fe607864a773350ae91ad775} 
+void Operations\+Arithmetic\+::f2i (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00886}{886}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_acdfded76fe607864a773350ae91ad775_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a72688c8323b13537430655ff0f427dca}\index{OperationsArithmetic@{OperationsArithmetic}!f2l@{f2l}}
+\index{f2l@{f2l}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{f2l()}{f2l()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a72688c8323b13537430655ff0f427dca} 
+void Operations\+Arithmetic\+::f2l (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00901}{901}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a72688c8323b13537430655ff0f427dca_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a502e54071fdd9447272fc79fb3ffc4b6}\index{OperationsArithmetic@{OperationsArithmetic}!fadd@{fadd}}
+\index{fadd@{fadd}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fadd()}{fadd()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a502e54071fdd9447272fc79fb3ffc4b6} 
+void Operations\+Arithmetic\+::fadd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00199}{199}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a502e54071fdd9447272fc79fb3ffc4b6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a81714c3e3098ce16390d5f8db95d4a57}\index{OperationsArithmetic@{OperationsArithmetic}!fcmpg@{fcmpg}}
+\index{fcmpg@{fcmpg}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fcmpg()}{fcmpg()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a81714c3e3098ce16390d5f8db95d4a57} 
+void Operations\+Arithmetic\+::fcmpg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l01071}{1071}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a81714c3e3098ce16390d5f8db95d4a57_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a4d9e45d406517777a51098499e534e64}\index{OperationsArithmetic@{OperationsArithmetic}!fcmpl@{fcmpl}}
+\index{fcmpl@{fcmpl}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fcmpl()}{fcmpl()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a4d9e45d406517777a51098499e534e64} 
+void Operations\+Arithmetic\+::fcmpl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l01046}{1046}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a4d9e45d406517777a51098499e534e64_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a7a9ee39a6194a7cd3b2e9548c2d3605f}\index{OperationsArithmetic@{OperationsArithmetic}!fdiv@{fdiv}}
+\index{fdiv@{fdiv}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fdiv()}{fdiv()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a7a9ee39a6194a7cd3b2e9548c2d3605f} 
+void Operations\+Arithmetic\+::fdiv (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00403}{403}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a7a9ee39a6194a7cd3b2e9548c2d3605f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ab2a9967b870262d45ae160c5dc0c8b6b}\index{OperationsArithmetic@{OperationsArithmetic}!fmul@{fmul}}
+\index{fmul@{fmul}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fmul()}{fmul()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ab2a9967b870262d45ae160c5dc0c8b6b} 
+void Operations\+Arithmetic\+::fmul (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00327}{327}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ab2a9967b870262d45ae160c5dc0c8b6b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a84c0e91e6faf809da78633f54720c641}\index{OperationsArithmetic@{OperationsArithmetic}!fneg@{fneg}}
+\index{fneg@{fneg}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fneg()}{fneg()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a84c0e91e6faf809da78633f54720c641} 
+void Operations\+Arithmetic\+::fneg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00543}{543}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a84c0e91e6faf809da78633f54720c641_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ac6886d547fa64fbad62bc775c1896357}\index{OperationsArithmetic@{OperationsArithmetic}!frem@{frem}}
+\index{frem@{frem}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{frem()}{frem()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ac6886d547fa64fbad62bc775c1896357} 
+void Operations\+Arithmetic\+::frem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00479}{479}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ac6886d547fa64fbad62bc775c1896357_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a0a6696e9d3569b7b9239cdf407d43647}\index{OperationsArithmetic@{OperationsArithmetic}!fsub@{fsub}}
+\index{fsub@{fsub}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{fsub()}{fsub()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a0a6696e9d3569b7b9239cdf407d43647} 
+void Operations\+Arithmetic\+::fsub (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00263}{263}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a0a6696e9d3569b7b9239cdf407d43647_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ac0c4a679b6c8411a76e189cfcd4f6e09}\index{OperationsArithmetic@{OperationsArithmetic}!i2b@{i2b}}
+\index{i2b@{i2b}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{i2b()}{i2b()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ac0c4a679b6c8411a76e189cfcd4f6e09} 
+void Operations\+Arithmetic\+::i2b (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00976}{976}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00033}{Value\+::byte\+Value}}, \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ac0c4a679b6c8411a76e189cfcd4f6e09_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a8f4fd09f2d84cfbfc5212ce9260fee2e}\index{OperationsArithmetic@{OperationsArithmetic}!i2c@{i2c}}
+\index{i2c@{i2c}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{i2c()}{i2c()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a8f4fd09f2d84cfbfc5212ce9260fee2e} 
+void Operations\+Arithmetic\+::i2c (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00991}{991}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00034}{Value\+::char\+Value}}, \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a8f4fd09f2d84cfbfc5212ce9260fee2e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a746a6f259e6a6e899c70635605caafa8}\index{OperationsArithmetic@{OperationsArithmetic}!i2d@{i2d}}
+\index{i2d@{i2d}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{i2d()}{i2d()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a746a6f259e6a6e899c70635605caafa8} 
+void Operations\+Arithmetic\+::i2d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00826}{826}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a746a6f259e6a6e899c70635605caafa8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a58a0df549ad0244bcb1e18ed9e30a51d}\index{OperationsArithmetic@{OperationsArithmetic}!i2f@{i2f}}
+\index{i2f@{i2f}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{i2f()}{i2f()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a58a0df549ad0244bcb1e18ed9e30a51d} 
+void Operations\+Arithmetic\+::i2f (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00811}{811}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a58a0df549ad0244bcb1e18ed9e30a51d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a8ee84ee1c91ee4e9f3309f77be3c13a5}\index{OperationsArithmetic@{OperationsArithmetic}!i2l@{i2l}}
+\index{i2l@{i2l}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{i2l()}{i2l()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a8ee84ee1c91ee4e9f3309f77be3c13a5} 
+void Operations\+Arithmetic\+::i2l (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00796}{796}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a8ee84ee1c91ee4e9f3309f77be3c13a5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a7c7d98bf36639326b6e3b5b2154955aa}\index{OperationsArithmetic@{OperationsArithmetic}!i2s@{i2s}}
+\index{i2s@{i2s}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{i2s()}{i2s()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a7c7d98bf36639326b6e3b5b2154955aa} 
+void Operations\+Arithmetic\+::i2s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l01006}{1006}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}, \mbox{\hyperlink{BasicTypes_8h_source_l00035}{Value\+::short\+Value}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a7c7d98bf36639326b6e3b5b2154955aa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ae2e2c9b9b03aaf306ff4dc9d1bf43599}\index{OperationsArithmetic@{OperationsArithmetic}!iadd@{iadd}}
+\index{iadd@{iadd}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{iadd()}{iadd()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ae2e2c9b9b03aaf306ff4dc9d1bf43599} 
+void Operations\+Arithmetic\+::iadd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00167}{167}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ae2e2c9b9b03aaf306ff4dc9d1bf43599_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ad405afc70f24f0c542f4c33ac6f092ae}\index{OperationsArithmetic@{OperationsArithmetic}!iand@{iand}}
+\index{iand@{iand}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{iand()}{iand()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ad405afc70f24f0c542f4c33ac6f092ae} 
+void Operations\+Arithmetic\+::iand (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00673}{673}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ad405afc70f24f0c542f4c33ac6f092ae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a97ab1ed38daeb128d4aa54f7ee2af55b}\index{OperationsArithmetic@{OperationsArithmetic}!idiv@{idiv}}
+\index{idiv@{idiv}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{idiv()}{idiv()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a97ab1ed38daeb128d4aa54f7ee2af55b} 
+void Operations\+Arithmetic\+::idiv (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00361}{361}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a97ab1ed38daeb128d4aa54f7ee2af55b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_adfce1c97eec4750edec1766c07ad175d}\index{OperationsArithmetic@{OperationsArithmetic}!iinc@{iinc}}
+\index{iinc@{iinc}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{iinc()}{iinc()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_adfce1c97eec4750edec1766c07ad175d} 
+void Operations\+Arithmetic\+::iinc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00771}{771}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{OperationsArithmetic_8h_source_l00017}{\+\_\+is\+Wide}}, \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00063}{Frame\+::obter\+Local\+Variable\+Value()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{Frame_8cpp_source_l00072}{Frame\+::troca\+Local\+Variable()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_adfce1c97eec4750edec1766c07ad175d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a9a8e054769a01b85e26a6f96239b1f89}\index{OperationsArithmetic@{OperationsArithmetic}!imul@{imul}}
+\index{imul@{imul}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{imul()}{imul()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a9a8e054769a01b85e26a6f96239b1f89} 
+void Operations\+Arithmetic\+::imul (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00295}{295}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a9a8e054769a01b85e26a6f96239b1f89_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a281caca972543cebcf0977c8024e260c}\index{OperationsArithmetic@{OperationsArithmetic}!ineg@{ineg}}
+\index{ineg@{ineg}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ineg()}{ineg()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a281caca972543cebcf0977c8024e260c} 
+void Operations\+Arithmetic\+::ineg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00513}{513}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a281caca972543cebcf0977c8024e260c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ae87c1b4e13b204518d881527bc800038}\index{OperationsArithmetic@{OperationsArithmetic}!ior@{ior}}
+\index{ior@{ior}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ior()}{ior()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ae87c1b4e13b204518d881527bc800038} 
+void Operations\+Arithmetic\+::ior (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00705}{705}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ae87c1b4e13b204518d881527bc800038_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ac0653cb119c4700182010662f35b54c7}\index{OperationsArithmetic@{OperationsArithmetic}!irem@{irem}}
+\index{irem@{irem}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{irem()}{irem()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ac0653cb119c4700182010662f35b54c7} 
+void Operations\+Arithmetic\+::irem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00437}{437}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ac0653cb119c4700182010662f35b54c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a6c178a59db9cd1a49d2a24e36ebe83a3}\index{OperationsArithmetic@{OperationsArithmetic}!ishl@{ishl}}
+\index{ishl@{ishl}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ishl()}{ishl()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a6c178a59db9cd1a49d2a24e36ebe83a3} 
+void Operations\+Arithmetic\+::ishl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00575}{575}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a6c178a59db9cd1a49d2a24e36ebe83a3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ac8ac7da5b37ec894baef9bb41aed1461}\index{OperationsArithmetic@{OperationsArithmetic}!ishr@{ishr}}
+\index{ishr@{ishr}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ishr()}{ishr()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ac8ac7da5b37ec894baef9bb41aed1461} 
+void Operations\+Arithmetic\+::ishr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00607}{607}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ac8ac7da5b37ec894baef9bb41aed1461_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_af366c6174e3832d66f96961c32e6ab00}\index{OperationsArithmetic@{OperationsArithmetic}!isub@{isub}}
+\index{isub@{isub}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{isub()}{isub()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_af366c6174e3832d66f96961c32e6ab00} 
+void Operations\+Arithmetic\+::isub (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00231}{231}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_af366c6174e3832d66f96961c32e6ab00_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ad9eed6684976ffa69a814b0c87f4dfb2}\index{OperationsArithmetic@{OperationsArithmetic}!iushr@{iushr}}
+\index{iushr@{iushr}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{iushr()}{iushr()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ad9eed6684976ffa69a814b0c87f4dfb2} 
+void Operations\+Arithmetic\+::iushr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00639}{639}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ad9eed6684976ffa69a814b0c87f4dfb2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a7d9615ab52641e249b1e3c219b8b071d}\index{OperationsArithmetic@{OperationsArithmetic}!ixor@{ixor}}
+\index{ixor@{ixor}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ixor()}{ixor()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a7d9615ab52641e249b1e3c219b8b071d} 
+void Operations\+Arithmetic\+::ixor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00737}{737}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a7d9615ab52641e249b1e3c219b8b071d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a3885d991ac9f296de0e6fdf3377fe82a}\index{OperationsArithmetic@{OperationsArithmetic}!l2d@{l2d}}
+\index{l2d@{l2d}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{l2d()}{l2d()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a3885d991ac9f296de0e6fdf3377fe82a} 
+void Operations\+Arithmetic\+::l2d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00871}{871}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a3885d991ac9f296de0e6fdf3377fe82a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a0d0e0c4d91b72deb03b9cf0c11d2bddb}\index{OperationsArithmetic@{OperationsArithmetic}!l2f@{l2f}}
+\index{l2f@{l2f}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{l2f()}{l2f()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a0d0e0c4d91b72deb03b9cf0c11d2bddb} 
+void Operations\+Arithmetic\+::l2f (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00856}{856}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a0d0e0c4d91b72deb03b9cf0c11d2bddb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ad273e681d00a97f6e2c5f388ee2099c0}\index{OperationsArithmetic@{OperationsArithmetic}!l2i@{l2i}}
+\index{l2i@{l2i}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{l2i()}{l2i()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ad273e681d00a97f6e2c5f388ee2099c0} 
+void Operations\+Arithmetic\+::l2i (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00841}{841}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ad273e681d00a97f6e2c5f388ee2099c0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a7ede4262906426dafd44ac646411e218}\index{OperationsArithmetic@{OperationsArithmetic}!ladd@{ladd}}
+\index{ladd@{ladd}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ladd()}{ladd()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a7ede4262906426dafd44ac646411e218} 
+void Operations\+Arithmetic\+::ladd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00183}{183}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a7ede4262906426dafd44ac646411e218_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a79dfd0156c2dbe00643bdd1a5f0770fd}\index{OperationsArithmetic@{OperationsArithmetic}!land@{land}}
+\index{land@{land}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{land()}{land()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a79dfd0156c2dbe00643bdd1a5f0770fd} 
+void Operations\+Arithmetic\+::land (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00689}{689}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a79dfd0156c2dbe00643bdd1a5f0770fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a70f469ae8e3105664b1dc22c88516322}\index{OperationsArithmetic@{OperationsArithmetic}!lcmp@{lcmp}}
+\index{lcmp@{lcmp}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lcmp()}{lcmp()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a70f469ae8e3105664b1dc22c88516322} 
+void Operations\+Arithmetic\+::lcmp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l01023}{1023}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a70f469ae8e3105664b1dc22c88516322_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a17ed573cc1b41c3959b91b17417ae487}\index{OperationsArithmetic@{OperationsArithmetic}!ldiv@{ldiv}}
+\index{ldiv@{ldiv}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{ldiv()}{ldiv()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a17ed573cc1b41c3959b91b17417ae487} 
+void Operations\+Arithmetic\+::ldiv (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00382}{382}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a17ed573cc1b41c3959b91b17417ae487_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a5dd8b47208475b41dd77f948f1b55f4c}\index{OperationsArithmetic@{OperationsArithmetic}!lmul@{lmul}}
+\index{lmul@{lmul}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lmul()}{lmul()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a5dd8b47208475b41dd77f948f1b55f4c} 
+void Operations\+Arithmetic\+::lmul (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00311}{311}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a5dd8b47208475b41dd77f948f1b55f4c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_aa28f8fb0a2da43ff536d78e2531a20cb}\index{OperationsArithmetic@{OperationsArithmetic}!lneg@{lneg}}
+\index{lneg@{lneg}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lneg()}{lneg()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_aa28f8fb0a2da43ff536d78e2531a20cb} 
+void Operations\+Arithmetic\+::lneg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00528}{528}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_aa28f8fb0a2da43ff536d78e2531a20cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_af41b5a515ecd7f5de5785d948bf87cad}\index{OperationsArithmetic@{OperationsArithmetic}!lor@{lor}}
+\index{lor@{lor}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lor()}{lor()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_af41b5a515ecd7f5de5785d948bf87cad} 
+void Operations\+Arithmetic\+::lor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00721}{721}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_af41b5a515ecd7f5de5785d948bf87cad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_abe3c8d1099e9fe15756128de9bb1e6f7}\index{OperationsArithmetic@{OperationsArithmetic}!lrem@{lrem}}
+\index{lrem@{lrem}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lrem()}{lrem()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_abe3c8d1099e9fe15756128de9bb1e6f7} 
+void Operations\+Arithmetic\+::lrem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00458}{458}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_abe3c8d1099e9fe15756128de9bb1e6f7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a338f1793c0723aefb8cb3ae551381d45}\index{OperationsArithmetic@{OperationsArithmetic}!lshl@{lshl}}
+\index{lshl@{lshl}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lshl()}{lshl()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a338f1793c0723aefb8cb3ae551381d45} 
+void Operations\+Arithmetic\+::lshl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00591}{591}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a338f1793c0723aefb8cb3ae551381d45_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a47a814414ea89d3052f56aed37bda3fd}\index{OperationsArithmetic@{OperationsArithmetic}!lshr@{lshr}}
+\index{lshr@{lshr}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lshr()}{lshr()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a47a814414ea89d3052f56aed37bda3fd} 
+void Operations\+Arithmetic\+::lshr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00623}{623}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a47a814414ea89d3052f56aed37bda3fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a53cb94bcb06b53733a595df0b380681f}\index{OperationsArithmetic@{OperationsArithmetic}!lsub@{lsub}}
+\index{lsub@{lsub}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lsub()}{lsub()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a53cb94bcb06b53733a595df0b380681f} 
+void Operations\+Arithmetic\+::lsub (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00247}{247}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a53cb94bcb06b53733a595df0b380681f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_ae41e77efebbdac433bde8b54f4e1fc55}\index{OperationsArithmetic@{OperationsArithmetic}!lushr@{lushr}}
+\index{lushr@{lushr}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lushr()}{lushr()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_ae41e77efebbdac433bde8b54f4e1fc55} 
+void Operations\+Arithmetic\+::lushr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00655}{655}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_ae41e77efebbdac433bde8b54f4e1fc55_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a13ce43231a2e0c04da981697ce1f942d}\index{OperationsArithmetic@{OperationsArithmetic}!lxor@{lxor}}
+\index{lxor@{lxor}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{lxor()}{lxor()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a13ce43231a2e0c04da981697ce1f942d} 
+void Operations\+Arithmetic\+::lxor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00753}{753}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a13ce43231a2e0c04da981697ce1f942d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a5d63a265e48741129afe8f0b08f70eb6}\index{OperationsArithmetic@{OperationsArithmetic}!pop@{pop}}
+\index{pop@{pop}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a5d63a265e48741129afe8f0b08f70eb6} 
+void Operations\+Arithmetic\+::pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00012}{12}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a5d63a265e48741129afe8f0b08f70eb6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a349e3936e53e4f25306ad2eb52492ae2}\index{OperationsArithmetic@{OperationsArithmetic}!pop2@{pop2}}
+\index{pop2@{pop2}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{pop2()}{pop2()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a349e3936e53e4f25306ad2eb52492ae2} 
+void Operations\+Arithmetic\+::pop2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00022}{22}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a349e3936e53e4f25306ad2eb52492ae2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsArithmetic_a78b38f50939b6e5e6a13c676a832739c}\index{OperationsArithmetic@{OperationsArithmetic}!swap@{swap}}
+\index{swap@{swap}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_a78b38f50939b6e5e6a13c676a832739c} 
+void Operations\+Arithmetic\+::swap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00147}{147}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8cpp_source}{Operations\+Arithmetic.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsArithmetic_a78b38f50939b6e5e6a13c676a832739c_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classOperationsArithmetic_doc-variable-members}
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classOperationsArithmetic_af97a39b361f1f7df6b41e54fe3826c81}\index{OperationsArithmetic@{OperationsArithmetic}!\_isWide@{\_isWide}}
+\index{\_isWide@{\_isWide}!OperationsArithmetic@{OperationsArithmetic}}
+\doxysubsubsection{\texorpdfstring{\_isWide}{\_isWide}}
+{\footnotesize\ttfamily \label{classOperationsArithmetic_af97a39b361f1f7df6b41e54fe3826c81} 
+bool\& Operations\+Arithmetic\+::\+\_\+is\+Wide\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsArithmetic_8h_source_l00017}{17}} do ficheiro \mbox{\hyperlink{OperationsArithmetic_8h_source}{Operations\+Arithmetic.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsArithmetic_8cpp_source_l00771}{iinc()}} e \mbox{\hyperlink{OperationsArithmetic_8h_source_l00014}{Operations\+Arithmetic()}}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{OperationsArithmetic_8h}{Operations\+Arithmetic.\+h}}\item 
+src/\mbox{\hyperlink{OperationsArithmetic_8cpp}{Operations\+Arithmetic.\+cpp}}\end{DoxyCompactItemize}

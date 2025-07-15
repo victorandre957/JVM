@@ -1,0 +1,28 @@
+<map id="OperationsObject::getfield" name="OperationsObject::getfield">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,280,197,308"/>
+<area shape="rect" id="Node000002" href="$classFrame.html#a93c26ae659c3f1b11837a0e9942acb20" title="Remove o operando do topo da pilha de operandos." alt="" coords="254,5,455,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,279,121,236,150,177,190,115,215,86,243,60,249,56,252,60,246,64,219,89,195,118,154,180,126,238,110,281"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#af2481010c4795fbe1cba48122609cf1e" title="Adiciona um operando na pilha de operandos." alt="" coords="245,74,464,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,279,126,244,156,199,195,152,243,112,254,106,257,111,246,117,199,156,160,202,131,247,112,281"/>
+<area shape="rect" id="Node000004" href="$classInstanceClass.html#a284c7d0a062623c614a2f9440340070f" title="Verifica se existe um field com o nome dado." alt="" coords="261,126,448,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,278,165,222,202,191,243,164,259,157,261,162,246,169,205,195,168,226,116,282"/>
+<area shape="rect" id="Node000005" href="$classFrame.html#a6863584ef3a6f2e4b1f93fb0deb09f4b" title="Obtém o código do método a partir de um offset." alt="" coords="292,178,416,206"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="124,278,177,247,244,216,277,205,278,210,246,221,180,251,126,282"/>
+<area shape="rect" id="Node000006" href="$classUtils.html#a9f417939b31cec9a87e58080d692df04" title=" " alt="" coords="252,254,457,282"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="197,282,236,277,236,283,197,287"/>
+<area shape="rect" id="Node000008" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="273,306,436,334"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="197,301,258,307,258,313,197,307"/>
+<area shape="rect" id="Node000010" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="269,358,440,386"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="140,306,245,342,276,351,274,356,244,348,139,311"/>
+<area shape="rect" id="Node000011" href="$classInstanceClass.html#aee974c71919d470ea2e9aa75cf741a39" title="Obtém o valor contido em um field informado." alt="" coords="250,409,459,454"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="120,306,174,349,246,395,259,401,257,406,243,399,171,354,117,311"/>
+<area shape="rect" id="Node000012" href="$classObject.html#a08cee945bc224fc81f4448086625183d" title="Método utilizado para declaração do tipo de objeto." alt="" coords="284,478,425,506"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="112,307,131,340,161,383,200,427,246,464,270,475,268,480,243,469,196,431,157,386,127,343,107,310"/>
+<area shape="rect" id="Node000013" href="$classFrame.html#a77f9705e64bfbdfc68921b7de11a893f" title="Retorna um ponteiro para o array de entradas da Constant Pool do método em execução." alt="" coords="259,530,450,558"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="110,307,126,349,154,405,194,465,219,492,246,515,255,521,252,525,243,519,215,496,190,468,150,408,121,351,105,309"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="312,255,305,245,311,235,327,229,354,227,383,230,399,236,397,241,382,235,354,232,328,234,314,239,310,245,316,252"/>
+<area shape="rect" id="Node000007" href="$classUtils.html#abef6742f09f81fea5952454925325ea5" title="Converte stringstream para string C&#45;style." alt="" coords="512,241,694,286"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="458,263,496,263,496,268,458,269"/>
+<area shape="rect" id="Node000009" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="532,310,675,338"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="436,318,516,320,516,325,436,324"/>
+</map>

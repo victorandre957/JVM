@@ -1,0 +1,44 @@
+\doxysection{Utils.\+h}
+\hypertarget{Utils_8h_source}{}\label{Utils_8h_source}\index{include/Utils.h@{include/Utils.h}}
+\mbox{\hyperlink{Utils_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BasicTypes_8h}{BasicTypes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LeitorExibidor_8h}{LeitorExibidor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00013}00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00024}\mbox{\hyperlink{classUtils}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUtils}{Utils}}\ \{}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00025}00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classUtils_a702dbed7dee69418ecddc86e17e6d703}{verificarVersao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classUtils_a63daf33599b447a8f3b2ea5aef2815ce}{compararUtf8String}}(\mbox{\hyperlink{structCONSTANT__Utf8__info}{CONSTANT\_Utf8\_info}}\ constant,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUtils_a932c28783170c6aa53362fbd0c4ceefa}{imprintTabs}}(FILE\ *out,\ uint8\_t\ n);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUtils_a2a13f135d652b68fae6f4b8a9b21464e}{exibeTabs}}(uint8\_t\ n);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classUtils_abef6742f09f81fea5952454925325ea5}{converterStreamToCString}}(\textcolor{keyword}{const}\ stringstream\ \&ss);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00082}\mbox{\hyperlink{classUtils_adab42646ff804e531410448b584e4c32}{00082}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUtils_adab42646ff804e531410448b584e4c32}{exibeTabs}}(FILE\ *out,\ uint8\_t\ n);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00091}00091\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classUtils_a7277a15116076dbfef0adaef520499cc}{verificarVersaoClass}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classUtils_a9f417939b31cec9a87e58080d692df04}{getFormattedConstant}}(\mbox{\hyperlink{structcp__info}{cp\_info}}*\ constantPool,\ \mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}\ index);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00104}00104\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classUtils_aa70b3d26f8b094e4bb4bbf3e05a6bd63}{verificarThisClass}}(\textcolor{keywordtype}{string}\ auxFilename,\ \textcolor{keywordtype}{string}\ auxClass);}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00106}00106\ \};}
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{Utils_8h_source_l00108}00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ UTILS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

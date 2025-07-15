@@ -1,0 +1,257 @@
+\doxysection{Referência ao ficheiro src/\+Class\+Visao.cpp}
+\hypertarget{ClassVisao_8cpp}{}\label{ClassVisao_8cpp}\index{src/ClassVisao.cpp@{src/ClassVisao.cpp}}
+{\ttfamily \#include "{}Class\+Visao.\+h"{}}\newline
+{\ttfamily \#include "{}Utils.\+h"{}}\newline
+Diagrama de dependências de inclusão para Class\+Visao.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClassVisao_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ClassVisao_8cpp_aed11c03a140899c2c29d7cd659253423}{get\+Access\+Flags\+String}} (\mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}} access\+Flags)
+\item 
+static void \mbox{\hyperlink{ClassVisao_8cpp_a7a17aa4010b1bf467152c633a9c02de6}{print\+Tabs}} (FILE \texorpdfstring{$\ast$}{*}output, int count)
+\item 
+static void \mbox{\hyperlink{ClassVisao_8cpp_a1fd10c905d0eb2be2b38a482dfbf304f}{display\+Constant\+Pool}} (\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}class\+File, FILE \texorpdfstring{$\ast$}{*}output)
+\item 
+static void \mbox{\hyperlink{ClassVisao_8cpp_afb2928b8cd47c45ea7c72731922e1507}{display\+Byte\+Code}} (const \mbox{\hyperlink{structCode__attribute}{Code\+\_\+attribute}} \&code, \mbox{\hyperlink{structcp__info}{cp\+\_\+info}} \texorpdfstring{$\ast$}{*}constant\+Pool, FILE \texorpdfstring{$\ast$}{*}output)
+\item 
+static void \mbox{\hyperlink{ClassVisao_8cpp_a8b3d3cceab57e9af983985f2b24f6a14}{display\+Attribute}} (const \mbox{\hyperlink{structattribute__info}{attribute\+\_\+info}} \&attr, \mbox{\hyperlink{structcp__info}{cp\+\_\+info}} \texorpdfstring{$\ast$}{*}constant\+Pool, FILE \texorpdfstring{$\ast$}{*}output, int indentation)
+\item 
+void \mbox{\hyperlink{ClassVisao_8cpp_ab591ae1b83d6c20b31d14878874a9c5f}{print\+Arquivo\+Class\+File}} (\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}class\+File, FILE \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Imprime informações detalhadas de um arquivo .class para um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ClassVisao_8cpp_a78619a05de0e6d7bd60070461eaf3696}{exibe\+Class\+File}} (\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}class\+File)
+\begin{DoxyCompactList}\small\item\em Exibe informações resumidas de um arquivo .class no console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{ClassVisao_8cpp_a1eea9d889ec52856c7fd416d24f2b7c9}{INSTRUCTION\+\_\+\+NAMES}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{ClassVisao_8cpp_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{ClassVisao_8cpp_a8b3d3cceab57e9af983985f2b24f6a14}\index{ClassVisao.cpp@{ClassVisao.cpp}!displayAttribute@{displayAttribute}}
+\index{displayAttribute@{displayAttribute}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{displayAttribute()}{displayAttribute()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_a8b3d3cceab57e9af983985f2b24f6a14} 
+void display\+Attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structattribute__info}{attribute\+\_\+info}} \&}]{attr}{, }\item[{\mbox{\hyperlink{structcp__info}{cp\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{constant\+Pool}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{output}{, }\item[{int}]{indentation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{256}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00267}{attribute\+\_\+info\+::attribute\+\_\+length}}, \mbox{\hyperlink{BasicTypes_8h_source_l00266}{attribute\+\_\+info\+::attribute\+\_\+name\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00208}{Code\+\_\+attribute\+::attributes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00207}{Code\+\_\+attribute\+::attributes\+\_\+count}}, \mbox{\hyperlink{BasicTypes_8h_source_l00270}{attribute\+\_\+info\+::code\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00203}{Code\+\_\+attribute\+::code\+\_\+length}}, \mbox{\hyperlink{Utils_8cpp_source_l00055}{Utils\+::comparar\+Utf8\+String()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00184}{display\+Byte\+Code()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00205}{Code\+\_\+attribute\+::exception\+\_\+table\+\_\+length}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{Utils\+::get\+Formatted\+Constant()}}, \mbox{\hyperlink{structattribute__info_a7c36e4395d959c99f58f3824e35256b9}{attribute\+\_\+info\+::info}}, \mbox{\hyperlink{structcp__info_aef2e974ef9200a71aa848d71b3e797c7}{cp\+\_\+info\+::info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00238}{Line\+Number\+Table\+::line\+\_\+number}}, \mbox{\hyperlink{BasicTypes_8h_source_l00243}{Line\+Number\+Table\+\_\+attribute\+::line\+\_\+number\+\_\+table}}, \mbox{\hyperlink{BasicTypes_8h_source_l00242}{Line\+Number\+Table\+\_\+attribute\+::line\+\_\+number\+\_\+table\+\_\+length}}, \mbox{\hyperlink{BasicTypes_8h_source_l00275}{attribute\+\_\+info\+::line\+Number\+Table\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00202}{Code\+\_\+attribute\+::max\+\_\+locals}}, \mbox{\hyperlink{BasicTypes_8h_source_l00201}{Code\+\_\+attribute\+::max\+\_\+stack}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00057}{print\+Tabs()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00233}{Source\+File\+\_\+attribute\+::sourcefile\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00274}{attribute\+\_\+info\+::source\+File\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00237}{Line\+Number\+Table\+::start\+\_\+pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00185}{cp\+\_\+info\+::utf8\+\_\+info}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}} e \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{print\+Arquivo\+Class\+File()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClassVisao_8cpp_a8b3d3cceab57e9af983985f2b24f6a14_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ClassVisao_8cpp_afb2928b8cd47c45ea7c72731922e1507}\index{ClassVisao.cpp@{ClassVisao.cpp}!displayByteCode@{displayByteCode}}
+\index{displayByteCode@{displayByteCode}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{displayByteCode()}{displayByteCode()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_afb2928b8cd47c45ea7c72731922e1507} 
+void display\+Byte\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCode__attribute}{Code\+\_\+attribute}} \&}]{code}{, }\item[{\mbox{\hyperlink{structcp__info}{cp\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{constant\+Pool}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00184}{184}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00204}{Code\+\_\+attribute\+::code}}, \mbox{\hyperlink{BasicTypes_8h_source_l00203}{Code\+\_\+attribute\+::code\+\_\+length}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{Utils\+::get\+Formatted\+Constant()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00007}{INSTRUCTION\+\_\+\+NAMES}} e \mbox{\hyperlink{ClassVisao_8cpp_source_l00057}{print\+Tabs()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClassVisao_8cpp_afb2928b8cd47c45ea7c72731922e1507_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ClassVisao_8cpp_a1fd10c905d0eb2be2b38a482dfbf304f}\index{ClassVisao.cpp@{ClassVisao.cpp}!displayConstantPool@{displayConstantPool}}
+\index{displayConstantPool@{displayConstantPool}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{displayConstantPool()}{displayConstantPool()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_a1fd10c905d0eb2be2b38a482dfbf304f} 
+void display\+Constant\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}}]{class\+File}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00064}{64}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00145}{CONSTANT\+\_\+\+Integer\+\_\+info\+::bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00126}{CONSTANT\+\_\+\+Fieldref\+\_\+info\+::class\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00136}{CONSTANT\+\_\+\+Interface\+Methodref\+\_\+info\+::class\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00131}{CONSTANT\+\_\+\+Methodref\+\_\+info\+::class\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00175}{cp\+\_\+info\+::class\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00107}{CONSTANT\+\_\+\+Class}}, \mbox{\hyperlink{BasicTypes_8h_source_l00115}{CONSTANT\+\_\+\+Double}}, \mbox{\hyperlink{BasicTypes_8h_source_l00108}{CONSTANT\+\_\+\+Fieldref}}, \mbox{\hyperlink{BasicTypes_8h_source_l00113}{CONSTANT\+\_\+\+Float}}, \mbox{\hyperlink{BasicTypes_8h_source_l00112}{CONSTANT\+\_\+\+Integer}}, \mbox{\hyperlink{BasicTypes_8h_source_l00110}{CONSTANT\+\_\+\+Interface\+Methodref}}, \mbox{\hyperlink{BasicTypes_8h_source_l00114}{CONSTANT\+\_\+\+Long}}, \mbox{\hyperlink{BasicTypes_8h_source_l00109}{CONSTANT\+\_\+\+Methodref}}, \mbox{\hyperlink{BasicTypes_8h_source_l00116}{CONSTANT\+\_\+\+Name\+And\+Type}}, \mbox{\hyperlink{ClassFile_8h_source_l00039}{Class\+File\+::constant\+\_\+pool}}, \mbox{\hyperlink{ClassFile_8h_source_l00038}{Class\+File\+::constant\+\_\+pool\+\_\+count}}, \mbox{\hyperlink{BasicTypes_8h_source_l00111}{CONSTANT\+\_\+\+String}}, \mbox{\hyperlink{BasicTypes_8h_source_l00117}{CONSTANT\+\_\+\+Utf8}}, \mbox{\hyperlink{BasicTypes_8h_source_l00164}{CONSTANT\+\_\+\+Name\+And\+Type\+\_\+info\+::descriptor\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00176}{cp\+\_\+info\+::fieldref\+\_\+info}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{Utils\+::get\+Formatted\+Constant()}}, \mbox{\hyperlink{structcp__info_aef2e974ef9200a71aa848d71b3e797c7}{cp\+\_\+info\+::info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00180}{cp\+\_\+info\+::integer\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00178}{cp\+\_\+info\+::interface\+Methodref\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00168}{CONSTANT\+\_\+\+Utf8\+\_\+info\+::length}}, \mbox{\hyperlink{BasicTypes_8h_source_l00177}{cp\+\_\+info\+::methodref\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00127}{CONSTANT\+\_\+\+Fieldref\+\_\+info\+::name\+\_\+and\+\_\+type\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00137}{CONSTANT\+\_\+\+Interface\+Methodref\+\_\+info\+::name\+\_\+and\+\_\+type\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00132}{CONSTANT\+\_\+\+Methodref\+\_\+info\+::name\+\_\+and\+\_\+type\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00122}{CONSTANT\+\_\+\+Class\+\_\+info\+::name\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00163}{CONSTANT\+\_\+\+Name\+And\+Type\+\_\+info\+::name\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00184}{cp\+\_\+info\+::name\+And\+Type\+\_\+info}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00057}{print\+Tabs()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00141}{CONSTANT\+\_\+\+String\+\_\+info\+::string\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00179}{cp\+\_\+info\+::string\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00173}{cp\+\_\+info\+::tag}} e \mbox{\hyperlink{BasicTypes_8h_source_l00185}{cp\+\_\+info\+::utf8\+\_\+info}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{print\+Arquivo\+Class\+File()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClassVisao_8cpp_a1fd10c905d0eb2be2b38a482dfbf304f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ClassVisao_8cpp_a78619a05de0e6d7bd60070461eaf3696}\index{ClassVisao.cpp@{ClassVisao.cpp}!exibeClassFile@{exibeClassFile}}
+\index{exibeClassFile@{exibeClassFile}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{exibeClassFile()}{exibeClassFile()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_a78619a05de0e6d7bd60070461eaf3696} 
+void exibe\+Class\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}}]{class\+File}{}\end{DoxyParamCaption})}
+
+
+
+Exibe informações resumidas de um arquivo .class no console. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+File} & Ponteiro para estrutura \doxylink{classClassFile}{Class\+File} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00415}{415}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{print\+Arquivo\+Class\+File()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClassVisao_8cpp_a78619a05de0e6d7bd60070461eaf3696_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ClassVisao_8cpp_aed11c03a140899c2c29d7cd659253423}\index{ClassVisao.cpp@{ClassVisao.cpp}!getAccessFlagsString@{getAccessFlagsString}}
+\index{getAccessFlagsString@{getAccessFlagsString}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{getAccessFlagsString()}{getAccessFlagsString()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_aed11c03a140899c2c29d7cd659253423} 
+const char \texorpdfstring{$\ast$}{*} get\+Access\+Flags\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}}]{access\+Flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00032}{32}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{print\+Arquivo\+Class\+File()}}.
+
+\Hypertarget{ClassVisao_8cpp_ab591ae1b83d6c20b31d14878874a9c5f}\index{ClassVisao.cpp@{ClassVisao.cpp}!printArquivoClassFile@{printArquivoClassFile}}
+\index{printArquivoClassFile@{printArquivoClassFile}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{printArquivoClassFile()}{printArquivoClassFile()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_ab591ae1b83d6c20b31d14878874a9c5f} 
+void print\+Arquivo\+Class\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}}]{class\+File}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+
+
+Imprime informações detalhadas de um arquivo .class para um arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+File} & Ponteiro para estrutura \doxylink{classClassFile}{Class\+File} \\
+\hline
+{\em output} & Ponteiro para FILE de destino \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{307}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{ClassFile_8h_source_l00040}{Class\+File\+::access\+\_\+flags}}, \mbox{\hyperlink{BasicTypes_8h_source_l00091}{field\+\_\+info\+::access\+\_\+flags}}, \mbox{\hyperlink{BasicTypes_8h_source_l00099}{method\+\_\+info\+::access\+\_\+flags}}, \mbox{\hyperlink{ClassFile_8h_source_l00050}{Class\+File\+::attributes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00095}{field\+\_\+info\+::attributes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00103}{method\+\_\+info\+::attributes}}, \mbox{\hyperlink{ClassFile_8h_source_l00049}{Class\+File\+::attributes\+\_\+count}}, \mbox{\hyperlink{BasicTypes_8h_source_l00094}{field\+\_\+info\+::attributes\+\_\+count}}, \mbox{\hyperlink{BasicTypes_8h_source_l00102}{method\+\_\+info\+::attributes\+\_\+count}}, \mbox{\hyperlink{ClassFile_8h_source_l00039}{Class\+File\+::constant\+\_\+pool}}, \mbox{\hyperlink{ClassFile_8h_source_l00038}{Class\+File\+::constant\+\_\+pool\+\_\+count}}, \mbox{\hyperlink{BasicTypes_8h_source_l00093}{field\+\_\+info\+::descriptor\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00101}{method\+\_\+info\+::descriptor\+\_\+index}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00064}{display\+Constant\+Pool()}}, \mbox{\hyperlink{ClassFile_8h_source_l00046}{Class\+File\+::fields}}, \mbox{\hyperlink{ClassFile_8h_source_l00045}{Class\+File\+::fields\+\_\+count}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00032}{get\+Access\+Flags\+String()}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{Utils\+::get\+Formatted\+Constant()}}, \mbox{\hyperlink{ClassFile_8h_source_l00044}{Class\+File\+::interfaces}}, \mbox{\hyperlink{ClassFile_8h_source_l00043}{Class\+File\+::interfaces\+\_\+count}}, \mbox{\hyperlink{ClassFile_8h_source_l00037}{Class\+File\+::major\+\_\+version}}, \mbox{\hyperlink{ClassFile_8h_source_l00048}{Class\+File\+::methods}}, \mbox{\hyperlink{ClassFile_8h_source_l00047}{Class\+File\+::methods\+\_\+count}}, \mbox{\hyperlink{ClassFile_8h_source_l00036}{Class\+File\+::minor\+\_\+version}}, \mbox{\hyperlink{BasicTypes_8h_source_l00092}{field\+\_\+info\+::name\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00100}{method\+\_\+info\+::name\+\_\+index}}, \mbox{\hyperlink{ClassFile_8h_source_l00042}{Class\+File\+::super\+\_\+class}}, \mbox{\hyperlink{ClassFile_8h_source_l00041}{Class\+File\+::this\+\_\+class}} e \mbox{\hyperlink{Utils_8cpp_source_l00006}{Utils\+::verificar\+Versao()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00415}{exibe\+Class\+File()}} e \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ClassVisao_8cpp_ab591ae1b83d6c20b31d14878874a9c5f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ClassVisao_8cpp_a7a17aa4010b1bf467152c633a9c02de6}\index{ClassVisao.cpp@{ClassVisao.cpp}!printTabs@{printTabs}}
+\index{printTabs@{printTabs}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{printTabs()}{printTabs()}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_a7a17aa4010b1bf467152c633a9c02de6} 
+void print\+Tabs (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output}{, }\item[{int}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00057}{57}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00184}{display\+Byte\+Code()}} e \mbox{\hyperlink{ClassVisao_8cpp_source_l00064}{display\+Constant\+Pool()}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{ClassVisao_8cpp_doc-var-members}
+\doxysubsection{Documentação das variáveis}
+\Hypertarget{ClassVisao_8cpp_a1eea9d889ec52856c7fd416d24f2b7c9}\index{ClassVisao.cpp@{ClassVisao.cpp}!INSTRUCTION\_NAMES@{INSTRUCTION\_NAMES}}
+\index{INSTRUCTION\_NAMES@{INSTRUCTION\_NAMES}!ClassVisao.cpp@{ClassVisao.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTRUCTION\_NAMES}{INSTRUCTION\_NAMES}}
+{\footnotesize\ttfamily \label{ClassVisao_8cpp_a1eea9d889ec52856c7fd416d24f2b7c9} 
+const char\texorpdfstring{$\ast$}{*} const INSTRUCTION\+\_\+\+NAMES\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}nop"{}},\ \textcolor{stringliteral}{"{}aconst\_null"{}},\ \textcolor{stringliteral}{"{}iconst\_m1"{}},\ \textcolor{stringliteral}{"{}iconst\_0"{}},\ \textcolor{stringliteral}{"{}iconst\_1"{}},\ \textcolor{stringliteral}{"{}iconst\_2"{}},\ \textcolor{stringliteral}{"{}iconst\_3"{}},\ \textcolor{stringliteral}{"{}iconst\_4"{}},\ \textcolor{stringliteral}{"{}iconst\_5"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}lconst\_0"{}},\ \textcolor{stringliteral}{"{}lconst\_1"{}},\ \textcolor{stringliteral}{"{}fconst\_0"{}},\ \textcolor{stringliteral}{"{}fconst\_1"{}},\ \textcolor{stringliteral}{"{}fconst\_2"{}},\ \textcolor{stringliteral}{"{}dconst\_0"{}},\ \textcolor{stringliteral}{"{}dconst\_1"{}},\ \textcolor{stringliteral}{"{}bipush"{}},\ \textcolor{stringliteral}{"{}sipush"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}ldc"{}},\ \textcolor{stringliteral}{"{}ldc\_w"{}},\ \textcolor{stringliteral}{"{}ldc2\_w"{}},\ \textcolor{stringliteral}{"{}iload"{}},\ \textcolor{stringliteral}{"{}lload"{}},\ \textcolor{stringliteral}{"{}fload"{}},\ \textcolor{stringliteral}{"{}dload"{}},\ \textcolor{stringliteral}{"{}aload"{}},\ \textcolor{stringliteral}{"{}iload\_0"{}},\ \textcolor{stringliteral}{"{}iload\_1"{}},\ \textcolor{stringliteral}{"{}iload\_2"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}iload\_3"{}},\ \textcolor{stringliteral}{"{}lload\_0"{}},\ \textcolor{stringliteral}{"{}lload\_1"{}},\ \textcolor{stringliteral}{"{}lload\_2"{}},\ \textcolor{stringliteral}{"{}lload\_3"{}},\ \textcolor{stringliteral}{"{}fload\_0"{}},\ \textcolor{stringliteral}{"{}fload\_1"{}},\ \textcolor{stringliteral}{"{}fload\_2"{}},\ \textcolor{stringliteral}{"{}fload\_3"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}dload\_0"{}},\ \textcolor{stringliteral}{"{}dload\_1"{}},\ \textcolor{stringliteral}{"{}dload\_2"{}},\ \textcolor{stringliteral}{"{}dload\_3"{}},\ \textcolor{stringliteral}{"{}aload\_0"{}},\ \textcolor{stringliteral}{"{}aload\_1"{}},\ \textcolor{stringliteral}{"{}aload\_2"{}},\ \textcolor{stringliteral}{"{}aload\_3"{}},\ \textcolor{stringliteral}{"{}iaload"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}laload"{}},\ \textcolor{stringliteral}{"{}faload"{}},\ \textcolor{stringliteral}{"{}daload"{}},\ \textcolor{stringliteral}{"{}aaload"{}},\ \textcolor{stringliteral}{"{}baload"{}},\ \textcolor{stringliteral}{"{}caload"{}},\ \textcolor{stringliteral}{"{}saload"{}},\ \textcolor{stringliteral}{"{}istore"{}},\ \textcolor{stringliteral}{"{}lstore"{}},\ \textcolor{stringliteral}{"{}fstore"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}dstore"{}},\ \textcolor{stringliteral}{"{}astore"{}},\ \textcolor{stringliteral}{"{}istore\_0"{}},\ \textcolor{stringliteral}{"{}istore\_1"{}},\ \textcolor{stringliteral}{"{}istore\_2"{}},\ \textcolor{stringliteral}{"{}istore\_3"{}},\ \textcolor{stringliteral}{"{}lstore\_0"{}},\ \textcolor{stringliteral}{"{}lstore\_1"{}},\ \textcolor{stringliteral}{"{}lstore\_2"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}lstore\_3"{}},\ \textcolor{stringliteral}{"{}fstore\_0"{}},\ \textcolor{stringliteral}{"{}fstore\_1"{}},\ \textcolor{stringliteral}{"{}fstore\_2"{}},\ \textcolor{stringliteral}{"{}fstore\_3"{}},\ \textcolor{stringliteral}{"{}dstore\_0"{}},\ \textcolor{stringliteral}{"{}dstore\_1"{}},\ \textcolor{stringliteral}{"{}dstore\_2"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}dstore\_3"{}},\ \textcolor{stringliteral}{"{}astore\_0"{}},\ \textcolor{stringliteral}{"{}astore\_1"{}},\ \textcolor{stringliteral}{"{}astore\_2"{}},\ \textcolor{stringliteral}{"{}astore\_3"{}},\ \textcolor{stringliteral}{"{}iastore"{}},\ \textcolor{stringliteral}{"{}lastore"{}},\ \textcolor{stringliteral}{"{}fastore"{}},\ \textcolor{stringliteral}{"{}dastore"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}aastore"{}},\ \textcolor{stringliteral}{"{}bastore"{}},\ \textcolor{stringliteral}{"{}castore"{}},\ \textcolor{stringliteral}{"{}sastore"{}},\ \textcolor{stringliteral}{"{}pop"{}},\ \textcolor{stringliteral}{"{}pop2"{}},\ \textcolor{stringliteral}{"{}dup"{}},\ \textcolor{stringliteral}{"{}dup\_x1"{}},\ \textcolor{stringliteral}{"{}dup\_x2"{}},\ \textcolor{stringliteral}{"{}dup2"{}},\ \textcolor{stringliteral}{"{}dup2\_x1"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}dup2\_x2"{}},\ \textcolor{stringliteral}{"{}swap"{}},\ \textcolor{stringliteral}{"{}iadd"{}},\ \textcolor{stringliteral}{"{}ladd"{}},\ \textcolor{stringliteral}{"{}fadd"{}},\ \textcolor{stringliteral}{"{}dadd"{}},\ \textcolor{stringliteral}{"{}isub"{}},\ \textcolor{stringliteral}{"{}lsub"{}},\ \textcolor{stringliteral}{"{}fsub"{}},\ \textcolor{stringliteral}{"{}dsub"{}},\ \textcolor{stringliteral}{"{}imul"{}},\ \textcolor{stringliteral}{"{}lmul"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}fmul"{}},\ \textcolor{stringliteral}{"{}dmul"{}},\ \textcolor{stringliteral}{"{}idiv"{}},\ \textcolor{stringliteral}{"{}ldiv"{}},\ \textcolor{stringliteral}{"{}fdiv"{}},\ \textcolor{stringliteral}{"{}ddiv"{}},\ \textcolor{stringliteral}{"{}irem"{}},\ \textcolor{stringliteral}{"{}lrem"{}},\ \textcolor{stringliteral}{"{}frem"{}},\ \textcolor{stringliteral}{"{}drem"{}},\ \textcolor{stringliteral}{"{}ineg"{}},\ \textcolor{stringliteral}{"{}lneg"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}fneg"{}},\ \textcolor{stringliteral}{"{}dneg"{}},\ \textcolor{stringliteral}{"{}ishl"{}},\ \textcolor{stringliteral}{"{}lshl"{}},\ \textcolor{stringliteral}{"{}ishr"{}},\ \textcolor{stringliteral}{"{}lshr"{}},\ \textcolor{stringliteral}{"{}iushr"{}},\ \textcolor{stringliteral}{"{}lushr"{}},\ \textcolor{stringliteral}{"{}iand"{}},\ \textcolor{stringliteral}{"{}land"{}},\ \textcolor{stringliteral}{"{}ior"{}},\ \textcolor{stringliteral}{"{}lor"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}ixor"{}},\ \textcolor{stringliteral}{"{}lxor"{}},\ \textcolor{stringliteral}{"{}iinc"{}},\ \textcolor{stringliteral}{"{}i2l"{}},\ \textcolor{stringliteral}{"{}i2f"{}},\ \textcolor{stringliteral}{"{}i2d"{}},\ \textcolor{stringliteral}{"{}l2i"{}},\ \textcolor{stringliteral}{"{}l2f"{}},\ \textcolor{stringliteral}{"{}l2d"{}},\ \textcolor{stringliteral}{"{}f2i"{}},\ \textcolor{stringliteral}{"{}f2l"{}},\ \textcolor{stringliteral}{"{}f2d"{}},\ \textcolor{stringliteral}{"{}d2i"{}},\ \textcolor{stringliteral}{"{}d2l"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}d2f"{}},\ \textcolor{stringliteral}{"{}i2b"{}},\ \textcolor{stringliteral}{"{}i2c"{}},\ \textcolor{stringliteral}{"{}i2s"{}},\ \textcolor{stringliteral}{"{}lcmp"{}},\ \textcolor{stringliteral}{"{}fcmpl"{}},\ \textcolor{stringliteral}{"{}fcmpg"{}},\ \textcolor{stringliteral}{"{}dcmpl"{}},\ \textcolor{stringliteral}{"{}dcmpg"{}},\ \textcolor{stringliteral}{"{}ifeq"{}},\ \textcolor{stringliteral}{"{}ifne"{}},\ \textcolor{stringliteral}{"{}iflt"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}ifge"{}},\ \textcolor{stringliteral}{"{}ifgt"{}},\ \textcolor{stringliteral}{"{}ifle"{}},\ \textcolor{stringliteral}{"{}if\_icmpeq"{}},\ \textcolor{stringliteral}{"{}if\_icmpne"{}},\ \textcolor{stringliteral}{"{}if\_icmplt"{}},\ \textcolor{stringliteral}{"{}if\_icmpge"{}},\ \textcolor{stringliteral}{"{}if\_icmpgt"{}},\ \textcolor{stringliteral}{"{}if\_icmple"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}if\_acmpeq"{}},\ \textcolor{stringliteral}{"{}if\_acmpne"{}},\ \textcolor{stringliteral}{"{}goto"{}},\ \textcolor{stringliteral}{"{}jsr"{}},\ \textcolor{stringliteral}{"{}ret"{}},\ \textcolor{stringliteral}{"{}tableswitch"{}},\ \textcolor{stringliteral}{"{}lookupswitch"{}},\ \textcolor{stringliteral}{"{}ireturn"{}},\ \textcolor{stringliteral}{"{}lreturn"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}freturn"{}},\ \textcolor{stringliteral}{"{}dreturn"{}},\ \textcolor{stringliteral}{"{}areturn"{}},\ \textcolor{stringliteral}{"{}return"{}},\ \textcolor{stringliteral}{"{}getstatic"{}},\ \textcolor{stringliteral}{"{}putstatic"{}},\ \textcolor{stringliteral}{"{}getfield"{}},\ \textcolor{stringliteral}{"{}putfield"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}invokevirtual"{}},\ \textcolor{stringliteral}{"{}invokespecial"{}},\ \textcolor{stringliteral}{"{}invokestatic"{}},\ \textcolor{stringliteral}{"{}invokeinterface"{}},\ \textcolor{stringliteral}{"{}UNUSED"{}},\ \textcolor{stringliteral}{"{}new"{}},\ \textcolor{stringliteral}{"{}newarray"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}anewarray"{}},\ \textcolor{stringliteral}{"{}arraylength"{}},\ \textcolor{stringliteral}{"{}athrow"{}},\ \textcolor{stringliteral}{"{}checkcast"{}},\ \textcolor{stringliteral}{"{}instanceof"{}},\ \textcolor{stringliteral}{"{}monitorenter"{}},\ \textcolor{stringliteral}{"{}monitorexit"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}wide"{}},\ \textcolor{stringliteral}{"{}multianewarray"{}},\ \textcolor{stringliteral}{"{}ifnull"{}},\ \textcolor{stringliteral}{"{}ifnonnull"{}},\ \textcolor{stringliteral}{"{}goto\_w"{}},\ \textcolor{stringliteral}{"{}jsr\_w"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definido na linha \mbox{\hyperlink{ClassVisao_8cpp_source_l00007}{7}} do ficheiro \mbox{\hyperlink{ClassVisao_8cpp_source}{Class\+Visao.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00184}{display\+Byte\+Code()}}.
+

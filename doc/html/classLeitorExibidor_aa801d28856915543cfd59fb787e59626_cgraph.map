@@ -1,0 +1,5 @@
+<map id="LeitorExibidor::readU2" name="LeitorExibidor::readU2">
+<area shape="rect" id="Node000001" title="Lê 2 bytes (converte endianness)" alt="" coords="5,5,172,33"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#af679ae83326347418cd0d3c90776d7a3" title="Lê 1 byte." alt="" coords="220,5,386,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,16,204,16,204,22,172,22"/>
+</map>

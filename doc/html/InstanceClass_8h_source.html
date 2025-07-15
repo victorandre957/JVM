@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Leitor Exibidor da JVM: Código-Fonte de include/InstanceClass.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Leitor Exibidor da JVM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('InstanceClass_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InstanceClass.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="InstanceClass_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef classinstance_h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define classinstance_h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Object_8h.html">Object.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="BasicTypes_8h.html">BasicTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="StaticClass_8h.html">StaticClass.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classInstanceClass.html">   18</a></span><span class="keyword">class </span><a class="code hl_function" href="classInstanceClass.html#a86ab031eb0f0240b0a54423003000322">InstanceClass</a>: <span class="keyword">public</span> <a class="code hl_class" href="classObject.html">Object</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="classInstanceClass.html#a86ab031eb0f0240b0a54423003000322">InstanceClass</a>(<a class="code hl_class" href="classStaticClass.html">StaticClass</a> *classRuntime);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="classInstanceClass.html#a441cc692dedc481373b7e670fab72556">~InstanceClass</a>(); <span class="comment">// @suppress(&quot;Class has a virtual method and non-virtual destructor&quot;)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_enumeration" href="BasicTypes_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> <a class="code hl_function" href="classInstanceClass.html#ae8570307f49cb95cc01fb8d6bda23763">objectType</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="classStaticClass.html">StaticClass</a>* <a class="code hl_function" href="classInstanceClass.html#adf2af3015bb8f777a3181d85aa279de8">getClassRuntime</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classInstanceClass.html#af445c2e244c91b6cce4bb2c2798a720c">putValueIntoField</a>(<a class="code hl_struct" href="structValue.html">Value</a> value, <span class="keywordtype">string</span> fieldName);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_struct" href="structValue.html">Value</a> <a class="code hl_function" href="classInstanceClass.html#aee974c71919d470ea2e9aa75cf741a39">getValueFromField</a>(<span class="keywordtype">string</span> fieldName);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classInstanceClass.html#a284c7d0a062623c614a2f9440340070f">fieldExists</a>(<span class="keywordtype">string</span> fieldName);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classInstanceClass.html#aa8ed961b694f26f470dc2399532d3538">   73</a></span>    <a class="code hl_class" href="classStaticClass.html">StaticClass</a> *<a class="code hl_variable" href="classInstanceClass.html#aa8ed961b694f26f470dc2399532d3538">_classRuntime</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classInstanceClass.html#a603a0866f5113d16ff8f80b5d6bf152b">   78</a></span>    map&lt;string, Value&gt; <a class="code hl_variable" href="classInstanceClass.html#a603a0866f5113d16ff8f80b5d6bf152b">_fields</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif </span><span class="comment">/* classinstance_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aBasicTypes_8h_html"><div class="ttname"><a href="BasicTypes_8h.html">BasicTypes.h</a></div></div>
+<div class="ttc" id="aBasicTypes_8h_html_a842c5e2e69277690b064bf363c017980"><div class="ttname"><a href="BasicTypes_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a></div><div class="ttdeci">ObjectType</div><div class="ttdef"><b>Definição</b> <a href="BasicTypes_8h_source.html#l00016">BasicTypes.h:16</a></div></div>
+<div class="ttc" id="aObject_8h_html"><div class="ttname"><a href="Object_8h.html">Object.h</a></div></div>
+<div class="ttc" id="aStaticClass_8h_html"><div class="ttname"><a href="StaticClass_8h.html">StaticClass.h</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_a284c7d0a062623c614a2f9440340070f"><div class="ttname"><a href="classInstanceClass.html#a284c7d0a062623c614a2f9440340070f">InstanceClass::fieldExists</a></div><div class="ttdeci">bool fieldExists(string fieldName)</div><div class="ttdoc">Verifica se existe um field com o nome dado.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00103">InstanceClass.cpp:103</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_a441cc692dedc481373b7e670fab72556"><div class="ttname"><a href="classInstanceClass.html#a441cc692dedc481373b7e670fab72556">InstanceClass::~InstanceClass</a></div><div class="ttdeci">~InstanceClass()</div><div class="ttdoc">Destrutor padrão.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00078">InstanceClass.cpp:78</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_a603a0866f5113d16ff8f80b5d6bf152b"><div class="ttname"><a href="classInstanceClass.html#a603a0866f5113d16ff8f80b5d6bf152b">InstanceClass::_fields</a></div><div class="ttdeci">map&lt; string, Value &gt; _fields</div><div class="ttdef"><b>Definição</b> <a href="#l00078">InstanceClass.h:78</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_a86ab031eb0f0240b0a54423003000322"><div class="ttname"><a href="classInstanceClass.html#a86ab031eb0f0240b0a54423003000322">InstanceClass::InstanceClass</a></div><div class="ttdeci">InstanceClass(StaticClass *classRuntime)</div><div class="ttdoc">Construtor padrão.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00009">InstanceClass.cpp:9</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_aa8ed961b694f26f470dc2399532d3538"><div class="ttname"><a href="classInstanceClass.html#aa8ed961b694f26f470dc2399532d3538">InstanceClass::_classRuntime</a></div><div class="ttdeci">StaticClass * _classRuntime</div><div class="ttdef"><b>Definição</b> <a href="#l00073">InstanceClass.h:73</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_adf2af3015bb8f777a3181d85aa279de8"><div class="ttname"><a href="classInstanceClass.html#adf2af3015bb8f777a3181d85aa279de8">InstanceClass::getClassRuntime</a></div><div class="ttdeci">StaticClass * getClassRuntime()</div><div class="ttdoc">Obtém a classe correspondente ao objeto.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00086">InstanceClass.cpp:86</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_ae8570307f49cb95cc01fb8d6bda23763"><div class="ttname"><a href="classInstanceClass.html#ae8570307f49cb95cc01fb8d6bda23763">InstanceClass::objectType</a></div><div class="ttdeci">ObjectType objectType()</div><div class="ttdoc">Método utilizado para declaração do tipo de objeto.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00082">InstanceClass.cpp:82</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_aee974c71919d470ea2e9aa75cf741a39"><div class="ttname"><a href="classInstanceClass.html#aee974c71919d470ea2e9aa75cf741a39">InstanceClass::getValueFromField</a></div><div class="ttdeci">Value getValueFromField(string fieldName)</div><div class="ttdoc">Obtém o valor contido em um field informado.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00094">InstanceClass.cpp:94</a></div></div>
+<div class="ttc" id="aclassInstanceClass_html_af445c2e244c91b6cce4bb2c2798a720c"><div class="ttname"><a href="classInstanceClass.html#af445c2e244c91b6cce4bb2c2798a720c">InstanceClass::putValueIntoField</a></div><div class="ttdeci">void putValueIntoField(Value value, string fieldName)</div><div class="ttdoc">Adiciona um valor no field de índice informado.</div><div class="ttdef"><b>Definição</b> <a href="InstanceClass_8cpp_source.html#l00090">InstanceClass.cpp:90</a></div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdoc">Classe base utilizada para todos elementos que se caracterizam como objetos, como: instância de class...</div><div class="ttdef"><b>Definição</b> <a href="Object_8h_source.html#l00016">Object.h:16</a></div></div>
+<div class="ttc" id="aclassStaticClass_html"><div class="ttname"><a href="classStaticClass.html">StaticClass</a></div><div class="ttdoc">Representação de uma classe carregada durante o runtime.</div><div class="ttdef"><b>Definição</b> <a href="StaticClass_8h_source.html#l00019">StaticClass.h:19</a></div></div>
+<div class="ttc" id="astructValue_html"><div class="ttname"><a href="structValue.html">Value</a></div><div class="ttdef"><b>Definição</b> <a href="BasicTypes_8h_source.html#l00028">BasicTypes.h:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="InstanceClass_8h.html">InstanceClass.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

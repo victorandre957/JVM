@@ -1,0 +1,51 @@
+\doxysection{Static\+Class.\+h}
+\hypertarget{StaticClass_8h_source}{}\label{StaticClass_8h_source}\index{include/StaticClass.h@{include/StaticClass.h}}
+\mbox{\hyperlink{StaticClass_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ classruntime\_h}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ classruntime\_h}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LeitorExibidor_8h}{LeitorExibidor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ClassFile_8h}{ClassFile.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00013}00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00019}\mbox{\hyperlink{classStaticClass}{00019}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}{StaticClass}}\ \{}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00020}00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}{StaticClass}}(\mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile);}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00030}\mbox{\hyperlink{classStaticClass_ac5f5868b6e461dfdd9a1724407ee4fda}{00030}}\ \ \ \ \ \mbox{\hyperlink{classStaticClass_ac5f5868b6e461dfdd9a1724407ee4fda}{\string~StaticClass}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00035}\mbox{\hyperlink{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c}{00035}}\ \ \ \ \ \mbox{\hyperlink{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c}{StaticClass}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}{StaticClass}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00040}\mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{00040}}\ \ \ \ \ \mbox{\hyperlink{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}{StaticClass}}\&\ \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}{StaticClass}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{classClassFile}{ClassFile}}*\ \mbox{\hyperlink{classStaticClass_a8a0c621d79a360af4b96e9c7546daef2}{getClassFile}}()\ const\ noexcept;}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStaticClass_ae87d4a428ef84551219b9daa8280e774}{putValueIntoField}}(const\ \mbox{\hyperlink{structValue}{Value}}\&\ value,\ const\ \textcolor{keywordtype}{string}\&\ fieldName);}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00061}00061\ \ \ \ \ const\ \mbox{\hyperlink{structValue}{Value}}\&\ \mbox{\hyperlink{classStaticClass_a17b66d9db593f2a58f5bb72f359069f4}{getValueFromField}}(const\ \textcolor{keywordtype}{string}\&\ fieldName)\ const;}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStaticClass_ab542c00149953d1c470a6c6267143510}{fieldExists}}(const\ \textcolor{keywordtype}{string}\&\ fieldName)\ const\ noexcept;}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00075}00075\ \ \ \ \ static\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classStaticClass_aa0dcab967f720db213f8591c67861a6e}{extrairNomeArquivo}}(\textcolor{keywordtype}{char}\ *argv[]);}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classStaticClass_aade050def051a5f9cf4518999ff39996}{getNumeroFieldsEstaticos}}()\ const\ noexcept;}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00083}00083\ private:}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00089}00089\ \ \ \ \ static\ \mbox{\hyperlink{structValue}{Value}}\ \mbox{\hyperlink{classStaticClass_a49a8e8b0ed634056308ee572e93b1372}{criarValorPadrao}}(\textcolor{keywordtype}{char}\ fieldType)\ noexcept;}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00094}\mbox{\hyperlink{classStaticClass_ae54948d5ec18075dd5b68c7faf4ccc8b}{00094}}\ \ \ \ \ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *\mbox{\hyperlink{classStaticClass_ae54948d5ec18075dd5b68c7faf4ccc8b}{\_classFile}};}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00099}\mbox{\hyperlink{classStaticClass_a6a6be07653e7f40530b5cf22e5045110}{00099}}\ \ \ \ \ unordered\_map<\textcolor{keywordtype}{string},\ \mbox{\hyperlink{structValue}{Value}}>\ \mbox{\hyperlink{classStaticClass_a6a6be07653e7f40530b5cf22e5045110}{\_staticFields}};}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00100}00100\ \};}
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{StaticClass_8h_source_l00102}00102\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ classruntime\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

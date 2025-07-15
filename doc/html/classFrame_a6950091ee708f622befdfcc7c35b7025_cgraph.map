@@ -1,0 +1,7 @@
+<map id="Frame::encontrarAttributes" name="Frame::encontrarAttributes">
+<area shape="rect" id="Node000001" title="Encontra os atributos Code e Exceptions do método associado ao frame." alt="" coords="5,32,202,60"/>
+<area shape="rect" id="Node000002" href="$classUtils.html#a63daf33599b447a8f3b2ea5aef2815ce" title="Compara string C com conteúdo de CONSTANT_Utf8_info." alt="" coords="251,5,438,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,32,235,29,236,34,203,38"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#a77f9705e64bfbdfc68921b7de11a893f" title="Retorna um ponteiro para o array de entradas da Constant Pool do método em execução." alt="" coords="250,57,440,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,54,234,57,234,62,202,59"/>
+</map>

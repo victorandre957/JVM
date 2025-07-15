@@ -1,0 +1,7 @@
+<map id="LeitorExibidor::getConstantFloatInfo" name="LeitorExibidor::getConstantFloatInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,204,50"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#a5ce4bdf25870ab04449d4ba35a961390" title="Lê 4 bytes (converte endianness)" alt="" coords="252,14,418,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,25,236,25,236,30,204,30"/>
+<area shape="rect" id="Node000003" href="$classLeitorExibidor.html#af679ae83326347418cd0d3c90776d7a3" title="Lê 1 byte." alt="" coords="466,14,632,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,25,451,25,451,30,419,30"/>
+</map>

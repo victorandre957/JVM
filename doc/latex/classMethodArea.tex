@@ -1,0 +1,285 @@
+\doxysection{Referência à classe Method\+Area}
+\hypertarget{classMethodArea}{}\label{classMethodArea}\index{MethodArea@{MethodArea}}
+
+
+Classe responsável por todas as operações que gerenciam os métodos.  
+
+
+
+
+{\ttfamily \#include $<$Method\+Area.\+h$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMethodArea_a79edf80f07f068f918907d8e2a3508b7}{\texorpdfstring{$\sim$}{\string~}\+Method\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6}{carregar\+Class\+Named}} (const string \&class\+Name)
+\begin{DoxyCompactList}\small\item\em Carrega a classe com o nome dado e a adiciona na área de métodos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMethodArea_a1fb65cf5f35cadbe2be8ad1aece57025}{get\+Class\+Named}} (const string \&class\+Name)
+\begin{DoxyCompactList}\small\item\em Busca por uma classe com o nome qualificado passado (e.\+g. java/lang/\+Object). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMethodArea}{Method\+Area}} \& \mbox{\hyperlink{classMethodArea_a35649a68d069a8610b8c25d5f594ff2f}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Obter a instância única do \doxylink{classMethodArea}{Method\+Area}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMethodArea_a6e9aac39975424e6c0ab3c29535aca75}{Method\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMethodArea_a3a51cf2f998faa40ff46f17019f59e0a}{Method\+Area}} (\mbox{\hyperlink{classMethodArea}{Method\+Area}} const \&)
+\item 
+void \mbox{\hyperlink{classMethodArea_a02652b16a9bc28ceae405a9959cf4ee8}{operator=}} (\mbox{\hyperlink{classMethodArea}{Method\+Area}} const \&)
+\item 
+bool \mbox{\hyperlink{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8}{add\+Class}} (\mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*}class\+File)
+\begin{DoxyCompactList}\small\item\em Adiciona uma classe à área de métodos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMethodArea_a1244d392d351920d754db8c6940dd7aa}{\+\_\+classes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe responsável por todas as operações que gerenciam os métodos. 
+
+Essa classe é um singleton, ou seja, existe somente uma instância dela para cada instância da JVM. 
+
+Definido na linha \mbox{\hyperlink{MethodArea_8h_source_l00021}{21}} do ficheiro \mbox{\hyperlink{MethodArea_8h_source}{Method\+Area.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classMethodArea_doc-constructors}
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classMethodArea_a79edf80f07f068f918907d8e2a3508b7}\index{MethodArea@{MethodArea}!````~MethodArea@{\texorpdfstring{$\sim$}{\string~}MethodArea}}
+\index{````~MethodArea@{\texorpdfstring{$\sim$}{\string~}MethodArea}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MethodArea()}{\string~MethodArea()}}
+{\footnotesize\ttfamily \label{classMethodArea_a79edf80f07f068f918907d8e2a3508b7} 
+Method\+Area\+::\texorpdfstring{$\sim$}{\string~}\+Method\+Area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor padrão. 
+
+
+
+Definido na linha \mbox{\hyperlink{MethodArea_8cpp_source_l00012}{12}} do ficheiro \mbox{\hyperlink{MethodArea_8cpp_source}{Method\+Area.\+cpp}}.
+
+\Hypertarget{classMethodArea_a6e9aac39975424e6c0ab3c29535aca75}\index{MethodArea@{MethodArea}!MethodArea@{MethodArea}}
+\index{MethodArea@{MethodArea}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{MethodArea()}{MethodArea()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classMethodArea_a6e9aac39975424e6c0ab3c29535aca75} 
+Method\+Area\+::\+Method\+Area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Construtor padrão. 
+
+
+
+Definido na linha \mbox{\hyperlink{MethodArea_8cpp_source_l00008}{8}} do ficheiro \mbox{\hyperlink{MethodArea_8cpp_source}{Method\+Area.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MethodArea_8h_source_l00028}{get\+Instance()}}, \mbox{\hyperlink{classMethodArea_a3a51cf2f998faa40ff46f17019f59e0a}{Method\+Area()}} e \mbox{\hyperlink{classMethodArea_a02652b16a9bc28ceae405a9959cf4ee8}{operator=()}}.
+
+\Hypertarget{classMethodArea_a3a51cf2f998faa40ff46f17019f59e0a}\index{MethodArea@{MethodArea}!MethodArea@{MethodArea}}
+\index{MethodArea@{MethodArea}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{MethodArea()}{MethodArea()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classMethodArea_a3a51cf2f998faa40ff46f17019f59e0a} 
+Method\+Area\+::\+Method\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMethodArea}{Method\+Area}} const \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referências \mbox{\hyperlink{MethodArea_8cpp_source_l00008}{Method\+Area()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMethodArea_a3a51cf2f998faa40ff46f17019f59e0a_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classMethodArea_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8}\index{MethodArea@{MethodArea}!addClass@{addClass}}
+\index{addClass@{addClass}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{addClass()}{addClass()}}
+{\footnotesize\ttfamily \label{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8} 
+bool Method\+Area\+::add\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*}}]{class\+File}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adiciona uma classe à área de métodos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+File} & A classe que será adicionada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+{\ttfamily true} caso a classe foi adicionada, e {\ttfamily false} caso contrário, pois uma classe com o mesmo nome já está adicionada. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{MethodArea_8cpp_source_l00065}{65}} do ficheiro \mbox{\hyperlink{MethodArea_8cpp_source}{Method\+Area.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{MethodArea_8h_source_l00073}{\+\_\+classes}}, \mbox{\hyperlink{ClassFile_8h_source_l00039}{Class\+File\+::constant\+\_\+pool}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00032}{Static\+Class\+::get\+Class\+File()}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{Utils\+::get\+Formatted\+Constant()}} e \mbox{\hyperlink{ClassFile_8h_source_l00041}{Class\+File\+::this\+\_\+class}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MethodArea_8cpp_source_l00016}{carregar\+Class\+Named()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6}\index{MethodArea@{MethodArea}!carregarClassNamed@{carregarClassNamed}}
+\index{carregarClassNamed@{carregarClassNamed}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{carregarClassNamed()}{carregarClassNamed()}}
+{\footnotesize\ttfamily \label{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6} 
+\mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*} Method\+Area\+::carregar\+Class\+Named (\begin{DoxyParamCaption}\item[{const string \&}]{class\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Carrega a classe com o nome dado e a adiciona na área de métodos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & O nome da classe (contendo o sufixo .class ou não). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O ponteiro para {\ttfamily \doxylink{classClassFile}{Class\+File}} da classe carregada. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{MethodArea_8cpp_source_l00016}{16}} do ficheiro \mbox{\hyperlink{MethodArea_8cpp_source}{Method\+Area.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{MethodArea_8h_source_l00073}{\+\_\+classes}}, \mbox{\hyperlink{MethodArea_8cpp_source_l00065}{add\+Class()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00011}{Pilha\+JVM\+::add\+Frame()}}, \mbox{\hyperlink{LeitorExibidor_8h_source_l00038}{Leitor\+Exibidor\+::get\+Instance()}}, \mbox{\hyperlink{Operations_8h_source_l00026}{Operations\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00022}{Leitor\+Exibidor\+::read\+Class\+File()}} e \mbox{\hyperlink{OperationsBase_8cpp_source_l00042}{Operations\+Base\+::verificar\+Metodo\+Existe()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsObject_8cpp_source_l00915}{Operations\+Object\+::anewarray()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00991}{Operations\+Object\+::checkcast()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00788}{Operations\+Object\+::func\+\_\+new()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00020}{Operations\+Object\+::getstatic()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01057}{Operations\+Object\+::instanceof()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00697}{Operations\+Object\+::invokeinterface()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00508}{Operations\+Object\+::invokespecial()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00610}{Operations\+Object\+::invokestatic()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00320}{Operations\+Object\+::invokevirtual()}}, \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01134}{Operations\+Object\+::multianewarray()}}, \mbox{\hyperlink{Frame_8cpp_source_l00108}{Frame\+::obter\+Method\+Named()}} e \mbox{\hyperlink{OperationsObject_8cpp_source_l00111}{Operations\+Object\+::putstatic()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMethodArea_a1fb65cf5f35cadbe2be8ad1aece57025}\index{MethodArea@{MethodArea}!getClassNamed@{getClassNamed}}
+\index{getClassNamed@{getClassNamed}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{getClassNamed()}{getClassNamed()}}
+{\footnotesize\ttfamily \label{classMethodArea_a1fb65cf5f35cadbe2be8ad1aece57025} 
+\mbox{\hyperlink{classStaticClass}{Static\+Class}} \texorpdfstring{$\ast$}{*} Method\+Area\+::get\+Class\+Named (\begin{DoxyParamCaption}\item[{const string \&}]{class\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Busca por uma classe com o nome qualificado passado (e.\+g. java/lang/\+Object). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & O nome qualificado da classe que será buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um ponteiro para a classe será retornado caso ela exista, e {\ttfamily NULL} caso contrário. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{MethodArea_8cpp_source_l00055}{55}} do ficheiro \mbox{\hyperlink{MethodArea_8cpp_source}{Method\+Area.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{MethodArea_8h_source_l00073}{\+\_\+classes}}.
+
+\Hypertarget{classMethodArea_a35649a68d069a8610b8c25d5f594ff2f}\index{MethodArea@{MethodArea}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{classMethodArea_a35649a68d069a8610b8c25d5f594ff2f} 
+\mbox{\hyperlink{classMethodArea}{Method\+Area}} \& Method\+Area\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obter a instância única do \doxylink{classMethodArea}{Method\+Area}. 
+
+\begin{DoxyReturn}{Retorna}
+A instância do \doxylink{classMethodArea}{Method\+Area}. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{MethodArea_8h_source_l00028}{28}} do ficheiro \mbox{\hyperlink{MethodArea_8h_source}{Method\+Area.\+h}}.
+
+
+
+Referências \mbox{\hyperlink{MethodArea_8cpp_source_l00008}{Method\+Area()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsObject_8cpp_source_l00915}{Operations\+Object\+::anewarray()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00991}{Operations\+Object\+::checkcast()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00788}{Operations\+Object\+::func\+\_\+new()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00020}{Operations\+Object\+::getstatic()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01057}{Operations\+Object\+::instanceof()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00697}{Operations\+Object\+::invokeinterface()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00508}{Operations\+Object\+::invokespecial()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00610}{Operations\+Object\+::invokestatic()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00320}{Operations\+Object\+::invokevirtual()}}, \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01134}{Operations\+Object\+::multianewarray()}}, \mbox{\hyperlink{Frame_8cpp_source_l00108}{Frame\+::obter\+Method\+Named()}} e \mbox{\hyperlink{OperationsObject_8cpp_source_l00111}{Operations\+Object\+::putstatic()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMethodArea_a35649a68d069a8610b8c25d5f594ff2f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMethodArea_a02652b16a9bc28ceae405a9959cf4ee8}\index{MethodArea@{MethodArea}!operator=@{operator=}}
+\index{operator=@{operator=}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classMethodArea_a02652b16a9bc28ceae405a9959cf4ee8} 
+void Method\+Area\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMethodArea}{Method\+Area}} const \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referências \mbox{\hyperlink{MethodArea_8cpp_source_l00008}{Method\+Area()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMethodArea_a02652b16a9bc28ceae405a9959cf4ee8_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classMethodArea_doc-variable-members}
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classMethodArea_a1244d392d351920d754db8c6940dd7aa}\index{MethodArea@{MethodArea}!\_classes@{\_classes}}
+\index{\_classes@{\_classes}!MethodArea@{MethodArea}}
+\doxysubsubsection{\texorpdfstring{\_classes}{\_classes}}
+{\footnotesize\ttfamily \label{classMethodArea_a1244d392d351920d754db8c6940dd7aa} 
+map$<$string, \mbox{\hyperlink{classStaticClass}{Static\+Class}}\texorpdfstring{$\ast$}{*}$>$ Method\+Area\+::\+\_\+classes\hspace{0.3cm}{\ttfamily [private]}}
+
+Um {\ttfamily map} contendo todas as classes presentes na área de métodos.
+
+A chave do map é o nome qualificado da classe, e o valor é um ponteiro para o {\ttfamily \doxylink{classClassFile}{Class\+File}} correspondente. 
+
+Definido na linha \mbox{\hyperlink{MethodArea_8h_source_l00073}{73}} do ficheiro \mbox{\hyperlink{MethodArea_8h_source}{Method\+Area.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MethodArea_8cpp_source_l00065}{add\+Class()}}, \mbox{\hyperlink{MethodArea_8cpp_source_l00016}{carregar\+Class\+Named()}} e \mbox{\hyperlink{MethodArea_8cpp_source_l00055}{get\+Class\+Named()}}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{MethodArea_8h}{Method\+Area.\+h}}\item 
+src/\mbox{\hyperlink{MethodArea_8cpp}{Method\+Area.\+cpp}}\end{DoxyCompactItemize}

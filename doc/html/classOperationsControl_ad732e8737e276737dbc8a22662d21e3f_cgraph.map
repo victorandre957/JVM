@@ -1,0 +1,13 @@
+<map id="OperationsControl::ifgt" name="OperationsControl::ifgt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,175,128"/>
+<area shape="rect" id="Node000002" href="$classFrame.html#a93c26ae659c3f1b11837a0e9942acb20" title="Remove o operando do topo da pilha de operandos." alt="" coords="223,5,424,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,98,222,60,240,53,242,58,224,65,127,103"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#a6863584ef3a6f2e4b1f93fb0deb09f4b" title="Obtém o código do método a partir de um offset." alt="" coords="261,74,386,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,102,245,94,246,99,176,107"/>
+<area shape="rect" id="Node000004" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="242,126,404,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,121,227,127,226,132,175,126"/>
+<area shape="rect" id="Node000006" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="238,178,408,206"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="126,126,224,162,250,171,249,176,222,168,125,131"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="472,126,615,154"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="405,137,456,137,456,142,405,142"/>
+</map>

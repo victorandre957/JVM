@@ -1,6 +1,5 @@
 build/
 dep/
 bin/
-doc/
 .vscode/
 **.txt

@@ -1,0 +1,13 @@
+<map id="OperationsArithmetic::d2f" name="OperationsArithmetic::d2f">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,195,128"/>
+<area shape="rect" id="Node000002" href="$classFrame.html#a93c26ae659c3f1b11837a0e9942acb20" title="Remove o operando do topo da pilha de operandos." alt="" coords="252,5,453,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,97,242,60,263,53,264,58,244,65,140,102"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#af2481010c4795fbe1cba48122609cf1e" title="Adiciona um operando na pilha de operandos." alt="" coords="243,74,462,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,102,227,98,227,104,195,107"/>
+<area shape="rect" id="Node000004" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="271,126,434,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,121,256,127,255,133,195,126"/>
+<area shape="rect" id="Node000006" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="267,178,438,206"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="139,126,243,162,274,171,272,176,242,168,137,131"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="510,126,653,154"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="434,137,494,137,494,142,434,142"/>
+</map>

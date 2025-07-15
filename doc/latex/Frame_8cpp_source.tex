@@ -1,0 +1,174 @@
+\doxysection{Frame.\+cpp}
+\hypertarget{Frame_8cpp_source}{}\label{Frame_8cpp_source}\index{src/Frame.cpp@{src/Frame.cpp}}
+\mbox{\hyperlink{Frame_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Frame_8h}{Frame.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ClassVisao_8h}{ClassVisao.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MethodArea_8h}{MethodArea.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Utils_8h}{Utils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00007}\mbox{\hyperlink{classFrame_a3318a2cfd762b3a31adc4f101cb006e6}{00007}}\ \mbox{\hyperlink{classFrame_a3318a2cfd762b3a31adc4f101cb006e6}{Frame::Frame}}(\mbox{\hyperlink{classInstanceClass}{InstanceClass}}\ *\textcolor{keywordtype}{object},\ \mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime,\ \textcolor{keywordtype}{string}\ methodName,\ \textcolor{keywordtype}{string}\ methodDescriptor,\ vector<Value>\ arguments)\ :}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}(0),\ \mbox{\hyperlink{classFrame_a618b0873a50306f7805ea09685e8eee9}{\_object}}(object)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{structmethod__info}{method\_info}}\ *method\ =\ \mbox{\hyperlink{classFrame_a9920bdecf44e07796b7feea5bc4f1a6c}{obterMethodNamed}}(classRuntime,\ methodName,\ methodDescriptor);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00011}00011\ \ \ \ \ assert(method\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{classFrame_af9658f71efb91988fa39a224ce9ec9c6}{\_method}}\ =\ *method;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00013}00013\ \ \ \ \ assert((\mbox{\hyperlink{classFrame_af9658f71efb91988fa39a224ce9ec9c6}{\_method}}.access\_flags\ \&\ 0x0008)\ ==\ 0);\ \textcolor{comment}{//\ o\ método\ não\ pode\ ser\ estático}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classFrame_a6950091ee708f622befdfcc7c35b7025}{encontrarAttributes}}();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Alocar\ array\ de\ variáveis\ locais}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}\ max\_locals\ =\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>max\_locals;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structValue}{Value}}[max\_locals]();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00020}00020\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ Inicializar\ variáveis\ locais\ com\ argumentos}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (signed)\ arguments.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}}[i]\ =\ arguments[i];}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Alocar\ pilha\ de\ operandos}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}\ =\ \textcolor{keyword}{new}\ stack<Value>();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00030}\mbox{\hyperlink{classFrame_aa4ea414fba16a44e8c556bb0b9cfc831}{00030}}\ \mbox{\hyperlink{classFrame_a3318a2cfd762b3a31adc4f101cb006e6}{Frame::Frame}}(\mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime,\ \textcolor{keywordtype}{string}\ methodName,\ \textcolor{keywordtype}{string}\ methodDescriptor,\ vector<Value>\ arguments)\ :}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}(0),\ \mbox{\hyperlink{classFrame_a618b0873a50306f7805ea09685e8eee9}{\_object}}(NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{structmethod__info}{method\_info}}\ *method\ =\ \mbox{\hyperlink{classFrame_a9920bdecf44e07796b7feea5bc4f1a6c}{obterMethodNamed}}(classRuntime,\ methodName,\ methodDescriptor);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00034}00034\ \ \ \ \ assert(method\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{classFrame_af9658f71efb91988fa39a224ce9ec9c6}{\_method}}\ =\ *method;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00036}00036\ \ \ \ \ assert((\mbox{\hyperlink{classFrame_af9658f71efb91988fa39a224ce9ec9c6}{\_method}}.access\_flags\ \&\ 0x0008)\ !=\ 0);\ \textcolor{comment}{//\ o\ método\ precisa\ ser\ estático}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{classFrame_a6950091ee708f622befdfcc7c35b7025}{encontrarAttributes}}();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00039}00039\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Alocar\ array\ de\ variáveis\ locais}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}\ max\_locals\ =\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>max\_locals;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structValue}{Value}}[max\_locals]();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00043}00043\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Inicializar\ variáveis\ locais\ com\ argumentos}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (signed)\ arguments.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}}[i]\ =\ arguments[i];}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ Alocar\ pilha\ de\ operandos}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}\ =\ \textcolor{keyword}{new}\ stack<Value>();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00053}\mbox{\hyperlink{classFrame_abec8c7bccdfc88cb4da137caae9f73d6}{00053}}\ \mbox{\hyperlink{classFrame_abec8c7bccdfc88cb4da137caae9f73d6}{Frame::\string~Frame}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ Liberar\ memória\ alocada}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}};}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}};}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00059}\mbox{\hyperlink{classFrame_a77f9705e64bfbdfc68921b7de11a893f}{00059}}\ \mbox{\hyperlink{structcp__info}{cp\_info}}**\ \mbox{\hyperlink{classFrame_a77f9705e64bfbdfc68921b7de11a893f}{Frame::obterConstantPool}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \&(\mbox{\hyperlink{classFrame_aa6f380f48c5bac83780daed06dc04f9e}{\_classRuntime}}-\/>getClassFile()-\/>constant\_pool);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00063}\mbox{\hyperlink{classFrame_ae074652eb3b71fb4cb28afd1ba91885d}{00063}}\ \mbox{\hyperlink{structValue}{Value}}\ \mbox{\hyperlink{classFrame_ae074652eb3b71fb4cb28afd1ba91885d}{Frame::obterLocalVariableValue}}(uint32\_t\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>max\_locals)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Tentando\ acessar\ variavel\ local\ inexistente"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}}[index];}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00072}\mbox{\hyperlink{classFrame_adfa57fa3049213f13beba10ba7152500}{00072}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrame_adfa57fa3049213f13beba10ba7152500}{Frame::trocaLocalVariable}}(\mbox{\hyperlink{structValue}{Value}}\ variableValue,\ uint32\_t\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>max\_locals)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Tentando\ alterar\ variavel\ local\ inexistente"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{classFrame_a4239e09dc85d16e5448d5c51d609aaf7}{\_localVariables}}[index]\ =\ variableValue;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00081}\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{Frame::empilharOperandStack}}(\mbox{\hyperlink{structValue}{Value}}\ operand)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}-\/>push(operand);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00085}\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{00085}}\ \mbox{\hyperlink{structValue}{Value}}\ \mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{Frame::desempilhaOperandStack}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}-\/>size()\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}IndexOutOfBoundsException"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ top\ =\ \mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}-\/>top();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}-\/>pop();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{return}\ top;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00096}\mbox{\hyperlink{classFrame_a874ac5162f805570d944a807ebf2bd40}{00096}}\ stack<Value>\ \mbox{\hyperlink{classFrame_a874ac5162f805570d944a807ebf2bd40}{Frame::backupOperandStack}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}};\ \textcolor{comment}{//\ Retorna\ cópia\ da\ pilha}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00100}\mbox{\hyperlink{classFrame_afda87a144c907a9220ea2209ad3cd429}{00100}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrame_afda87a144c907a9220ea2209ad3cd429}{Frame::setOperandStackFromBackup}}(stack<Value>\ backup)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00101}00101\ \ \ \ \ *\mbox{\hyperlink{classFrame_a79c20265fc90cf99a5b9b95e3e32c35f}{\_operandStack}}\ =\ backup;\ \textcolor{comment}{//\ Atribui\ cópia\ da\ pilha\ de\ backup}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00104}\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{00104}}\ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}*\ \mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{Frame::getCode}}(uint32\_t\ address)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>code\ +\ address;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00106}00106\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00108}\mbox{\hyperlink{classFrame_a9920bdecf44e07796b7feea5bc4f1a6c}{00108}}\ \mbox{\hyperlink{structmethod__info}{method\_info}}*\ \mbox{\hyperlink{classFrame_a9920bdecf44e07796b7feea5bc4f1a6c}{Frame::obterMethodNamed}}(\mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime,\ \textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{string}\ descriptor)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00109}00109\ \ \ \ \ \mbox{\hyperlink{classMethodArea}{MethodArea}}\ \&methodArea\ =\ \mbox{\hyperlink{classMethodArea_a35649a68d069a8610b8c25d5f594ff2f}{MethodArea::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{classStaticClass}{StaticClass}}\ *currClass\ =\ classRuntime;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00112}00112\ \ \ \ \ \mbox{\hyperlink{structmethod__info}{method\_info}}\ *method;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{while}\ (currClass\ !=\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile\ =\ currClass-\/>\mbox{\hyperlink{classStaticClass_a8a0c621d79a360af4b96e9c7546daef2}{getClassFile}}();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ classFile-\/>\mbox{\hyperlink{classClassFile_aacfb45d4af64216324b1ae5269c870d5}{methods\_count}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ method\ =\ \&(classFile-\/>\mbox{\hyperlink{classClassFile_ad061f06cd709d10dbfbf82f443e43632}{methods}}[i]);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ methodName\ =\ \mbox{\hyperlink{classUtils_a9f417939b31cec9a87e58080d692df04}{Utils::getFormattedConstant}}(classFile-\/>\mbox{\hyperlink{classClassFile_a2309d843091aad79aed04ce92470a434}{constant\_pool}},\ method-\/>\mbox{\hyperlink{structmethod__info_ab91d62d0658b77bba83f6bb685e3bbb9}{name\_index}});}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ methodDesc\ =\ \mbox{\hyperlink{classUtils_a9f417939b31cec9a87e58080d692df04}{Utils::getFormattedConstant}}(classFile-\/>\mbox{\hyperlink{classClassFile_a2309d843091aad79aed04ce92470a434}{constant\_pool}},\ method-\/>\mbox{\hyperlink{structmethod__info_a7713103e0c8d060630ad62774fb9be37}{descriptor\_index}});}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (methodName\ ==\ name\ \&\&\ methodDesc\ ==\ descriptor)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_aa6f380f48c5bac83780daed06dc04f9e}{\_classRuntime}}\ =\ currClass;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ method;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ procurando\ o\ método\ nas\ super\ classes.}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (classFile-\/>\mbox{\hyperlink{classClassFile_a5f6c11c0ccb02fd992b5c102725253ec}{super\_class}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ currClass\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ superClassName\ =\ \mbox{\hyperlink{classUtils_a9f417939b31cec9a87e58080d692df04}{Utils::getFormattedConstant}}(classFile-\/>\mbox{\hyperlink{classClassFile_a2309d843091aad79aed04ce92470a434}{constant\_pool}},\ classFile-\/>\mbox{\hyperlink{classClassFile_a5f6c11c0ccb02fd992b5c102725253ec}{super\_class}});}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ currClass\ =\ methodArea.\mbox{\hyperlink{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6}{carregarClassNamed}}(superClassName);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00140}\mbox{\hyperlink{classFrame_a6950091ee708f622befdfcc7c35b7025}{00140}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrame_a6950091ee708f622befdfcc7c35b7025}{Frame::encontrarAttributes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00141}00141\ \ \ \ \ \mbox{\hyperlink{structcp__info}{cp\_info}}\ *constantPool\ =\ *\mbox{\hyperlink{classFrame_a77f9705e64bfbdfc68921b7de11a893f}{obterConstantPool}}();}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00143}00143\ \ \ \ \ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00144}00144\ \ \ \ \ \mbox{\hyperlink{classFrame_a5e98b7eb6642b16c03a75ec1f96c4fc4}{\_exceptionsAttribute}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classFrame_af9658f71efb91988fa39a224ce9ec9c6}{\_method}}.attributes\_count;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structattribute__info}{attribute\_info}}\ *attr\ =\ \&(\mbox{\hyperlink{classFrame_af9658f71efb91988fa39a224ce9ec9c6}{\_method}}.attributes[i]);}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCONSTANT__Utf8__info}{CONSTANT\_Utf8\_info}}\ attrName\ =\ constantPool[attr-\/>\mbox{\hyperlink{structattribute__info_a19df9d4b42eb55ca5dc1bed98df89378}{attribute\_name\_index}}\ -\/\ 1].\mbox{\hyperlink{structcp__info_aef2e974ef9200a71aa848d71b3e797c7}{info}}.\mbox{\hyperlink{structcp__info_a980c5cbcb2aefe984b7a4988f1f71576}{utf8\_info}};}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classUtils_a63daf33599b447a8f3b2ea5aef2815ce}{Utils::compararUtf8String}}(attrName,\ \textcolor{stringliteral}{"{}Code"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}\ =\ \&(attr-\/>\mbox{\hyperlink{structattribute__info_a7c36e4395d959c99f58f3824e35256b9}{info}}.\mbox{\hyperlink{structattribute__info_a098a24d1810b1a2a1691cbf89199bdc5}{code\_info}});}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classFrame_a5e98b7eb6642b16c03a75ec1f96c4fc4}{\_exceptionsAttribute}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classUtils_a63daf33599b447a8f3b2ea5aef2815ce}{Utils::compararUtf8String}}(attrName,\ \textcolor{stringliteral}{"{}Exceptions"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame_a5e98b7eb6642b16c03a75ec1f96c4fc4}{\_exceptionsAttribute}}\ =\ \&(attr-\/>\mbox{\hyperlink{structattribute__info_a7c36e4395d959c99f58f3824e35256b9}{info}}.\mbox{\hyperlink{structattribute__info_a244c271949354ebd402f9330cb02b062}{exceptions\_info}});}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00160}00160\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00162}\mbox{\hyperlink{classFrame_a2b65f6fa2195970fd25d69c17b5ca933}{00162}}\ \mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}\ \mbox{\hyperlink{classFrame_a2b65f6fa2195970fd25d69c17b5ca933}{Frame::sizeLocalVariables}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>max\_locals;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00164}00164\ \}}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00166}\mbox{\hyperlink{classFrame_a3151aeb977a24c464ed8930c9100715d}{00166}}\ \mbox{\hyperlink{BasicTypes_8h_ae5be1f726785414dd1b77d60df074c9d}{u4}}\ \mbox{\hyperlink{classFrame_a3151aeb977a24c464ed8930c9100715d}{Frame::sizeCode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00167}00167\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFrame_a0b7e80617513d7c1879e20510622103d}{\_codeAttribute}}-\/>code\_length;}
+\DoxyCodeLine{\Hypertarget{Frame_8cpp_source_l00168}00168\ \}}
+
+\end{DoxyCode}

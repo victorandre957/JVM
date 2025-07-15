@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Leitor Exibidor da JVM: Código-Fonte de include/OperationsObject.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Leitor Exibidor da JVM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('OperationsObject_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OperationsObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="OperationsObject_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef operationsobject_h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define operationsobject_h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="BasicTypes_8h.html">BasicTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classOperationsObject.html">    9</a></span><span class="keyword">class </span><a class="code hl_function" href="classOperationsObject.html#ae8ec51323aa26fb17e25cda8e12cd376">OperationsObject</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="classOperationsObject.html#ae8ec51323aa26fb17e25cda8e12cd376">OperationsObject</a>(<span class="keywordtype">bool</span> &amp;isWideRef);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#ae18c85827676ab907d378e6e35d919b5">getstatic</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#adb70bb7c25f74c67d2e9bd13da36ca9e">putstatic</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a5b5ea57f32e965724e3421fb0e159e20">getfield</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a6c75ee2b991f923bc655da80c968f01d">putfield</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a49ca551453935a72152f43c5dd59aeb0">invokevirtual</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a6a0142ea7295db8dbece36a57687e71c">invokespecial</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#ade3238294587093b535a951a12163d64">invokestatic</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a9e4acd6f0206328fb6a39a3db85ac626">invokeinterface</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#aea1e12433688626a104b20a3e7d44930">func_new</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#abc3b34c333528225c7bc3149e30a539e">newarray</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a306ed009455e3a600ec54c540768abf5">anewarray</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a6d0b8e18fabc1ba66194a7d46ab269c4">arraylength</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a617fc8a93fe1c5cd11903981f7163123">athrow</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#adcdcd068fe3240f34a91707abb69580b">checkcast</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#ac34990305860108d4f52ee248f2946ed">instanceof</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#abb3f557211baf3ee0b383467af5f3ef9">monitorenter</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#a9e47b291343d288df0b1105023020e5e">monitorexit</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsObject.html#aada909d0066fb73361eba385902917df">multianewarray</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classOperationsObject.html#af15c5a90cf532b84f3f36cd1850c031f">   36</a></span>    <span class="keywordtype">bool</span> &amp;<a class="code hl_variable" href="classOperationsObject.html#af15c5a90cf532b84f3f36cd1850c031f">_isWide</a>; <span class="comment">// Reference to the shared _isWide flag</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">/* operationsobject_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aBasicTypes_8h_html"><div class="ttname"><a href="BasicTypes_8h.html">BasicTypes.h</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a306ed009455e3a600ec54c540768abf5"><div class="ttname"><a href="classOperationsObject.html#a306ed009455e3a600ec54c540768abf5">OperationsObject::anewarray</a></div><div class="ttdeci">void anewarray()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00915">OperationsObject.cpp:915</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a49ca551453935a72152f43c5dd59aeb0"><div class="ttname"><a href="classOperationsObject.html#a49ca551453935a72152f43c5dd59aeb0">OperationsObject::invokevirtual</a></div><div class="ttdeci">void invokevirtual()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00320">OperationsObject.cpp:320</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a5b5ea57f32e965724e3421fb0e159e20"><div class="ttname"><a href="classOperationsObject.html#a5b5ea57f32e965724e3421fb0e159e20">OperationsObject::getfield</a></div><div class="ttdeci">void getfield()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00191">OperationsObject.cpp:191</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a617fc8a93fe1c5cd11903981f7163123"><div class="ttname"><a href="classOperationsObject.html#a617fc8a93fe1c5cd11903981f7163123">OperationsObject::athrow</a></div><div class="ttdeci">void athrow()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00985">OperationsObject.cpp:985</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a6a0142ea7295db8dbece36a57687e71c"><div class="ttname"><a href="classOperationsObject.html#a6a0142ea7295db8dbece36a57687e71c">OperationsObject::invokespecial</a></div><div class="ttdeci">void invokespecial()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00508">OperationsObject.cpp:508</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a6c75ee2b991f923bc655da80c968f01d"><div class="ttname"><a href="classOperationsObject.html#a6c75ee2b991f923bc655da80c968f01d">OperationsObject::putfield</a></div><div class="ttdeci">void putfield()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00260">OperationsObject.cpp:260</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a6d0b8e18fabc1ba66194a7d46ab269c4"><div class="ttname"><a href="classOperationsObject.html#a6d0b8e18fabc1ba66194a7d46ab269c4">OperationsObject::arraylength</a></div><div class="ttdeci">void arraylength()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00966">OperationsObject.cpp:966</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a9e47b291343d288df0b1105023020e5e"><div class="ttname"><a href="classOperationsObject.html#a9e47b291343d288df0b1105023020e5e">OperationsObject::monitorexit</a></div><div class="ttdeci">void monitorexit()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l01128">OperationsObject.cpp:1128</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_a9e4acd6f0206328fb6a39a3db85ac626"><div class="ttname"><a href="classOperationsObject.html#a9e4acd6f0206328fb6a39a3db85ac626">OperationsObject::invokeinterface</a></div><div class="ttdeci">void invokeinterface()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00697">OperationsObject.cpp:697</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_aada909d0066fb73361eba385902917df"><div class="ttname"><a href="classOperationsObject.html#aada909d0066fb73361eba385902917df">OperationsObject::multianewarray</a></div><div class="ttdeci">void multianewarray()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l01134">OperationsObject.cpp:1134</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_abb3f557211baf3ee0b383467af5f3ef9"><div class="ttname"><a href="classOperationsObject.html#abb3f557211baf3ee0b383467af5f3ef9">OperationsObject::monitorenter</a></div><div class="ttdeci">void monitorenter()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l01122">OperationsObject.cpp:1122</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_abc3b34c333528225c7bc3149e30a539e"><div class="ttname"><a href="classOperationsObject.html#abc3b34c333528225c7bc3149e30a539e">OperationsObject::newarray</a></div><div class="ttdeci">void newarray()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00822">OperationsObject.cpp:822</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_ac34990305860108d4f52ee248f2946ed"><div class="ttname"><a href="classOperationsObject.html#ac34990305860108d4f52ee248f2946ed">OperationsObject::instanceof</a></div><div class="ttdeci">void instanceof()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l01057">OperationsObject.cpp:1057</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_adb70bb7c25f74c67d2e9bd13da36ca9e"><div class="ttname"><a href="classOperationsObject.html#adb70bb7c25f74c67d2e9bd13da36ca9e">OperationsObject::putstatic</a></div><div class="ttdeci">void putstatic()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00111">OperationsObject.cpp:111</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_adcdcd068fe3240f34a91707abb69580b"><div class="ttname"><a href="classOperationsObject.html#adcdcd068fe3240f34a91707abb69580b">OperationsObject::checkcast</a></div><div class="ttdeci">void checkcast()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00991">OperationsObject.cpp:991</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_ade3238294587093b535a951a12163d64"><div class="ttname"><a href="classOperationsObject.html#ade3238294587093b535a951a12163d64">OperationsObject::invokestatic</a></div><div class="ttdeci">void invokestatic()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00610">OperationsObject.cpp:610</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_ae18c85827676ab907d378e6e35d919b5"><div class="ttname"><a href="classOperationsObject.html#ae18c85827676ab907d378e6e35d919b5">OperationsObject::getstatic</a></div><div class="ttdeci">void getstatic()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00020">OperationsObject.cpp:20</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_ae8ec51323aa26fb17e25cda8e12cd376"><div class="ttname"><a href="classOperationsObject.html#ae8ec51323aa26fb17e25cda8e12cd376">OperationsObject::OperationsObject</a></div><div class="ttdeci">OperationsObject(bool &amp;isWideRef)</div><div class="ttdoc">Constructor that takes a reference to the _isWide flag.</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00017">OperationsObject.cpp:17</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_aea1e12433688626a104b20a3e7d44930"><div class="ttname"><a href="classOperationsObject.html#aea1e12433688626a104b20a3e7d44930">OperationsObject::func_new</a></div><div class="ttdeci">void func_new()</div><div class="ttdef"><b>Definição</b> <a href="OperationsObject_8cpp_source.html#l00788">OperationsObject.cpp:788</a></div></div>
+<div class="ttc" id="aclassOperationsObject_html_af15c5a90cf532b84f3f36cd1850c031f"><div class="ttname"><a href="classOperationsObject.html#af15c5a90cf532b84f3f36cd1850c031f">OperationsObject::_isWide</a></div><div class="ttdeci">bool &amp; _isWide</div><div class="ttdef"><b>Definição</b> <a href="#l00036">OperationsObject.h:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="OperationsObject_8h.html">OperationsObject.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

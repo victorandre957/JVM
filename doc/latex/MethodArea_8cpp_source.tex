@@ -1,0 +1,79 @@
+\doxysection{Method\+Area.\+cpp}
+\hypertarget{MethodArea_8cpp_source}{}\label{MethodArea_8cpp_source}\index{src/MethodArea.cpp@{src/MethodArea.cpp}}
+\mbox{\hyperlink{MethodArea_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MethodArea_8h}{MethodArea.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LeitorExibidor_8h}{LeitorExibidor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Operations_8h}{Operations.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PilhaJVM_8h}{PilhaJVM.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Utils_8h}{Utils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00008}\mbox{\hyperlink{classMethodArea_a6e9aac39975424e6c0ab3c29535aca75}{00008}}\ \mbox{\hyperlink{classMethodArea_a6e9aac39975424e6c0ab3c29535aca75}{MethodArea::MethodArea}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00012}\mbox{\hyperlink{classMethodArea_a79edf80f07f068f918907d8e2a3508b7}{00012}}\ \mbox{\hyperlink{classMethodArea_a79edf80f07f068f918907d8e2a3508b7}{MethodArea::\string~MethodArea}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00016}\mbox{\hyperlink{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6}{00016}}\ \mbox{\hyperlink{classStaticClass}{StaticClass}}*\ \mbox{\hyperlink{classMethodArea_a6e5cd27f3133d70a8c56c5daf9190ba6}{MethodArea::carregarClassNamed}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&className)\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ a\ classe\ já\ foi\ carregada}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00018}00018\ \ \ \ \ map<string,\ StaticClass*>::iterator\ classIt\ =\ \mbox{\hyperlink{classMethodArea_a1244d392d351920d754db8c6940dd7aa}{\_classes}}.find(className);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (classIt\ !=\ \mbox{\hyperlink{classMethodArea_a1244d392d351920d754db8c6940dd7aa}{\_classes}}.end())\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ classIt-\/>second;}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{string}\ classNameStr(className);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{string}\ classLocation(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{string}\ classFormat(\textcolor{stringliteral}{"{}.class"{}});}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (classNameStr.size()\ <\ classFormat.size()}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ ||\ classNameStr.compare(classNameStr.size()\ -\/\ classFormat.size(),\ classFormat.size(),\ classFormat)\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ classNameStr\ =\ classLocation\ +\ classNameStr\ +\ classFormat;\ \textcolor{comment}{//\ concatena\ com\ "{}.class"{}}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00031}00031\ \ \ \ \ FILE\ *fp\ =\ fopen(classNameStr.c\_str(),\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Não\ tem\ suporte\ para\ classe\ :\ "{}}\ <<\ classNameStr\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classLeitorExibidor}{LeitorExibidor}}\ \&classLoader\ =\ \mbox{\hyperlink{classLeitorExibidor_abbde32917d7e0e7f07264b7fb0726a77}{LeitorExibidor::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile\ =\ classLoader.\mbox{\hyperlink{classLeitorExibidor_af6f4f84cbfaf72e6673e1dc42023b308}{readClassFile}}(fp);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classStaticClass}{StaticClass}}(classFile);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8}{addClass}}(classRuntime);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00041}00041\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ adicionando\ <clinit>\ da\ classe\ (se\ existir)\ na\ stack\ frame.}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{classOperations}{Operations}}\ \&operations\ =\ \mbox{\hyperlink{classOperations_aaa6ee097e659da72b7b6aa7ce88e8899}{Operations::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ existsClinit\ =\ operations.\mbox{\hyperlink{classOperationsBase_afb7d8812aacf31df17c79e625b021c95}{verificarMetodoExiste}}(classRuntime,\ \textcolor{stringliteral}{"{}<clinit>"{}},\ \textcolor{stringliteral}{"{}()V"{}});}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (existsClinit)\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *newFrame\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classFrame}{Frame}}(classRuntime,\ \textcolor{stringliteral}{"{}<clinit>"{}},\ \textcolor{stringliteral}{"{}()V"{}});}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a64d7185bc812d3c81e5270c54c212e07}{addFrame}}(newFrame);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ classRuntime;}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00055}\mbox{\hyperlink{classMethodArea_a1fb65cf5f35cadbe2be8ad1aece57025}{00055}}\ \mbox{\hyperlink{classStaticClass}{StaticClass}}*\ \mbox{\hyperlink{classMethodArea_a1fb65cf5f35cadbe2be8ad1aece57025}{MethodArea::getClassNamed}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&className)\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00056}00056\ \ \ \ \ map<string,\ StaticClass*>::iterator\ it\ =\ \mbox{\hyperlink{classMethodArea_a1244d392d351920d754db8c6940dd7aa}{\_classes}}.find(className);}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ \mbox{\hyperlink{classMethodArea_a1244d392d351920d754db8c6940dd7aa}{\_classes}}.end())\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ it-\/>second;}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00065}\mbox{\hyperlink{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8}{00065}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMethodArea_a9e4e378de46c1a9836820d86cd9dadb8}{MethodArea::addClass}}(\mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime)\ \{}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00066}00066\ \ \ \ \ \mbox{\hyperlink{classClassFile}{ClassFile}}\ *classFile\ =\ classRuntime-\/>\mbox{\hyperlink{classStaticClass_a8a0c621d79a360af4b96e9c7546daef2}{getClassFile}}();}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key\ =\ \mbox{\hyperlink{classUtils_a9f417939b31cec9a87e58080d692df04}{Utils::getFormattedConstant}}(classFile-\/>\mbox{\hyperlink{classClassFile_a2309d843091aad79aed04ce92470a434}{constant\_pool}},\ classFile-\/>\mbox{\hyperlink{classClassFile_a2d33db0a560a71b94bc572dd1e4ec03a}{this\_class}});}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00069}00069\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00070}00070\ \ \ \ \ pair<map<string,\ StaticClass*>::iterator,\ \textcolor{keywordtype}{bool}>\ result\ =}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMethodArea_a1244d392d351920d754db8c6940dd7aa}{\_classes}}.insert(make\_pair(key,\ classRuntime));}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ result.second;}
+\DoxyCodeLine{\Hypertarget{MethodArea_8cpp_source_l00073}00073\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,17 @@
+<map id="OperationsLoadStore::lastore" name="OperationsLoadStore::lastore">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,140,163,184"/>
+<area shape="rect" id="Node000002" href="$classArrayObject.html#a389af37c0ab94e2c84985ab1698ce679" title="Obtém o tipo de conteúdo do array." alt="" coords="211,5,432,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,137,147,89,177,65,209,43,225,36,227,41,212,48,180,69,151,93,106,141"/>
+<area shape="rect" id="Node000003" href="$classArrayObject.html#a20e1735b3bc9db6c9bd219d70355f160" title="Substitui um elemento do array." alt="" coords="220,57,423,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,137,163,114,210,94,231,87,232,92,212,99,166,119,124,141"/>
+<area shape="rect" id="Node000004" href="$classFrame.html#a93c26ae659c3f1b11837a0e9942acb20" title="Remove o operando do topo da pilha de operandos." alt="" coords="221,109,422,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,149,205,143,206,149,163,154"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="240,177,402,205"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="163,169,225,177,225,182,162,174"/>
+<area shape="rect" id="Node000007" href="$classArrayObject.html#af43b8f4106c2f15def7fecd3e3f6b239" title="Obtém o tamanho atual do array." alt="" coords="244,229,398,257"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="134,182,212,214,239,222,238,227,210,219,132,187"/>
+<area shape="rect" id="Node000008" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="236,281,406,309"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="108,183,153,226,181,248,212,266,228,273,226,278,209,271,178,252,149,230,104,186"/>
+<area shape="rect" id="Node000006" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="480,177,623,205"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="403,188,464,188,464,194,403,194"/>
+</map>

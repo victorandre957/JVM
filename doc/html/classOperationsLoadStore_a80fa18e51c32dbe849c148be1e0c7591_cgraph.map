@@ -1,0 +1,15 @@
+<map id="OperationsLoadStore::sastore" name="OperationsLoadStore::sastore">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,117,163,162"/>
+<area shape="rect" id="Node000002" href="$classArrayObject.html#a20e1735b3bc9db6c9bd219d70355f160" title="Substitui um elemento do array." alt="" coords="211,5,414,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,114,153,77,209,42,223,36,226,41,212,47,156,82,111,118"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#a93c26ae659c3f1b11837a0e9942acb20" title="Remove o operando do topo da pilha de operandos." alt="" coords="212,57,413,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,116,210,103,211,109,164,121"/>
+<area shape="rect" id="Node000004" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="231,125,394,153"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,136,215,136,215,142,163,142"/>
+<area shape="rect" id="Node000006" href="$classArrayObject.html#af43b8f4106c2f15def7fecd3e3f6b239" title="Obtém o tamanho atual do array." alt="" coords="235,177,390,205"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="164,154,234,171,233,176,162,160"/>
+<area shape="rect" id="Node000007" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="227,229,398,257"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="118,160,161,188,212,214,232,222,230,227,210,219,159,192,115,164"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="462,125,605,153"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="394,136,447,136,447,142,394,142"/>
+</map>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Leitor Exibidor da JVM: Leitor/Exibidor JVM java 8</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Leitor Exibidor da JVM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Leitor/Exibidor JVM java 8 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Sobre o projeto</h1>
+<p>Projeto para a disciplina de Software Básico.</p>
+<p>Projetado por:</p>
+<ul>
+<li>Anita Garcia Lagos Oliveira - 211068243</li>
+<li>Giovanni Nogueira Catelli - 211043502</li>
+<li>Luan Crisley Gomes Guedes - 211026628</li>
+<li>Victor André de Moraes - 211026664</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Como compilar</h1>
+<p>Para compilar o projeto, execute o seguinte comando no terminal:</p>
+<ul>
+<li>Execute o comando abaixo para compilar o projeto:</li>
+</ul>
+<div class="fragment"><div class="line">g++ -MT bin/ClassFile.o -MMD -MP -MF dep/ClassFile.d -c -o bin/ClassFile.o src/ClassFile.cpp -std=c++11 -c -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/ClassVisao.o -MMD -MP -MF dep/ClassVisao.d -c -o bin/ClassVisao.o src/ClassVisao.cpp -std=c++11 -c -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/LeitorExibidor.o -MMD -MP -MF dep/LeitorExibidor.d -c -o bin/LeitorExibidor.o src/LeitorExibidor.cpp -std=c++11 -c -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Main.o -MMD -MP -MF dep/Main.d -c -o bin/Main.o src/Main.cpp -std=c++11 -c -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Utils.o -MMD -MP -MF dep/Utils.d -c -o bin/Utils.o src/Utils.cpp -std=c++11 -c -I include -Wall -Wextra</div>
+<div class="line">g++ -o build/LeitorExibidor bin/ClassFile.o bin/ClassVisao.o bin/LeitorExibidor.o bin/Main.o bin/Utils.o -lm</div>
+</div><!-- fragment --><p>Depois de compilar, o executável será gerado na pasta <span class="tt">build</span>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Como testar</h1>
+<p>Para executar os testes disponíveis, execute o seguinte comando no terminal:</p>
+<div class="fragment"><div class="line">chmod +x ./run_tests.sh           </div>
+<div class="line">./run_tests.sh</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Analisador de código estático Cppcheck</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Analisador de código dinâmico Valgrind</h1>
+<p>Como o analisador trabalha encima de binários gerados pela compilação dos códigos, é necessário fazer a compilação de todos os códigos com as flags -g e -O0, sendo essas alterações feitas sobre o makefile.</p>
+<p>Em seguida, no terminal linke os binários .o em um binário principal executável com o comando:</p>
+<div class="fragment"><div class="line">g++ bin/*.o -o JVM_B</div>
+</div><!-- fragment --><p>Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:</p>
+<div class="fragment"><div class="line">valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./JVM_B</div>
+</div><!-- fragment --><p>Resultados:</p>
+<div class="fragment"><div class="line">  ==104227== Memcheck, a memory error detector</div>
+<div class="line">==104227== Copyright (C) 2002-2017, and GNU GPL&#39;d, by Julian Seward et al.</div>
+<div class="line">==104227== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info</div>
+<div class="line">==104227== Command: ./JVM_B</div>
+<div class="line">==104227==</div>
+<div class="line">Uso: ./JVM_B arquivo.class</div>
+<div class="line">==104227==</div>
+<div class="line">==104227== HEAP SUMMARY:</div>
+<div class="line">==104227==     in use at exit: 0 bytes in 0 blocks</div>
+<div class="line">==104227==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated</div>
+<div class="line">==104227==</div>
+<div class="line">==104227== All heap blocks were freed -- no leaks are possible</div>
+<div class="line">==104227==</div>
+<div class="line">==104227== For lists of detected and suppressed errors, rerun with: -s</div>
+<div class="line">==104227== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

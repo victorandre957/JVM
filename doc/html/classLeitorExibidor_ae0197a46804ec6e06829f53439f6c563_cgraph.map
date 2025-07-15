@@ -1,0 +1,7 @@
+<map id="LeitorExibidor::getLineNumberTable" name="LeitorExibidor::getLineNumberTable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,225,50"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#aa801d28856915543cfd59fb787e59626" title="Lê 2 bytes (converte endianness)" alt="" coords="273,14,439,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,25,257,25,257,30,225,30"/>
+<area shape="rect" id="Node000003" href="$classLeitorExibidor.html#af679ae83326347418cd0d3c90776d7a3" title="Lê 1 byte." alt="" coords="487,14,653,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="440,25,472,25,472,30,440,30"/>
+</map>

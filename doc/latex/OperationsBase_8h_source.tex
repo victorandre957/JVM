@@ -1,0 +1,51 @@
+\doxysection{Operations\+Base.\+h}
+\hypertarget{OperationsBase_8h_source}{}\label{OperationsBase_8h_source}\index{include/OperationsBase.h@{include/OperationsBase.h}}
+\mbox{\hyperlink{OperationsBase_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ operationsbase\_h}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ operationsbase\_h}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <cfloat>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BasicTypes_8h}{BasicTypes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{InstanceClass_8h}{InstanceClass.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00017}00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00019}00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStaticClass}{StaticClass}};}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00024}\mbox{\hyperlink{classOperationsBase}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOperationsBase_a51f16750fa638b9ff3bc41e07f133a8f}{OperationsBase}}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00025}00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classOperationsBase_a4d8fb0de7c8a378ac7770467859f1686}{\string~OperationsBase}}();}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsBase_a79ae2426fda99e49c082b9f89cf625f0}{executarMetodos}}(\mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime);}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classOperationsBase_afb7d8812aacf31df17c79e625b021c95}{verificarMetodoExiste}}(\mbox{\hyperlink{classStaticClass}{StaticClass}}\ *classRuntime,\ \textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{string}\ descriptor);}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsBase_acc99835b0edc368f38b946e75c204d4b}{populateMultiarray}}(\mbox{\hyperlink{classArrayObject}{ArrayObject}}\ *array,\ \mbox{\hyperlink{BasicTypes_8h_ad9971b6ef33e02ba2c75d19c1d2518a1}{ValueType}}\ value,\ stack<int>\ count);}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00056}00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{classOperationsBase_a51f16750fa638b9ff3bc41e07f133a8f}{OperationsBase}}();}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00065}\mbox{\hyperlink{classOperationsBase_a0520f405a185ca37cc0bd088b01ed5ad}{00065}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classOperationsBase_a0520f405a185ca37cc0bd088b01ed5ad}{\_isWide}};}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsBase_a89b34325309dda27c0071a4a76b38f02}{nop}}();}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsBase_a2a84fd96d57578f9e426f3176024bb84}{wide}}();}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00080}\mbox{\hyperlink{classOperationsBase_a3181a99155817eb20d3b8c3a0eb5d12f}{00080}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsBase_a3181a99155817eb20d3b8c3a0eb5d12f}{initInstructions}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00086}\mbox{\hyperlink{classOperationsBase_a3a981511ded74adb03b2e4d42ce0ee36}{00086}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsBase_a3a981511ded74adb03b2e4d42ce0ee36}{executeInstruction}}(\mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ opcode)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00087}00087\ \};}
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{OperationsBase_8h_source_l00089}00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ operationsbase\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

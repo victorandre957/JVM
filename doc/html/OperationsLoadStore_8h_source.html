@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Leitor Exibidor da JVM: Código-Fonte de include/OperationsLoadStore.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Leitor Exibidor da JVM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('OperationsLoadStore_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OperationsLoadStore.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="OperationsLoadStore_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef operationsloadstore_h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define operationsloadstore_h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="OperationsBase_8h.html">OperationsBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classOperationsLoadStore.html">    9</a></span><span class="keyword">class </span><a class="code hl_function" href="classOperationsLoadStore.html#a8ea94a49e1ce556e82c707a83912d5a8">OperationsLoadStore</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classOperationsLoadStore.html#a8ea94a49e1ce556e82c707a83912d5a8">   14</a></span>    <a class="code hl_function" href="classOperationsLoadStore.html#a8ea94a49e1ce556e82c707a83912d5a8">OperationsLoadStore</a>(<span class="keywordtype">bool</span>&amp; isWide) : <a class="code hl_variable" href="classOperationsLoadStore.html#a312aebad0f135ec20d29c0de81994cb6">_isWide</a>(isWide) {}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classOperationsLoadStore.html#a312aebad0f135ec20d29c0de81994cb6">   17</a></span>    <span class="keywordtype">bool</span>&amp; <a class="code hl_variable" href="classOperationsLoadStore.html#a312aebad0f135ec20d29c0de81994cb6">_isWide</a>;  <span class="comment">// Reference to the _isWide flag from main Operations class</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a3d4afc6c79182998f8f4d39a2c9a7bd0">iload</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a26e9229096168393e4041605415a555b">lload</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a700bfab1c1333b143541cacfe7e4e3e7">fload</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#afe811581c326586d875ca11878036327">dload</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a1effe7af0f653ef7838114589c1286c6">aload</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a5e743babc86d54b0f13f4e4e4e1a7b5e">iload_0</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a5de6dc86e4778e73ecf838e1d80e5320">iload_1</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a95bcb195ada063efda686070c9ec2af2">iload_2</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#af6a36ff53c8f4aa0e288a6e200392a3b">iload_3</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#afd5fe386babd6d4ca8dbd4049b1916f3">lload_0</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#ac26fb726099f6a702e1038bbc579ed2a">lload_1</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#af733dca66ef9e0b77f1718f983606519">lload_2</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a6932a1d328c281243e6c5d954f383fe6">lload_3</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a11f6f473a1552b3a119871c456c72223">fload_0</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#af7d24dbd7517a6e65819fabf89b8c899">fload_1</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a32f485a4eee13e9c010af6b5165d8c18">fload_2</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a5a1a08b19f407d0754f4a8233c20dd41">fload_3</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a0724692bcdda38dfea2d6a59e9d19034">dload_0</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a8cfed197106dc88f2351306c8609d120">dload_1</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a8e091b1a57f6a3b0d10fcdb8f6ecbbd5">dload_2</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a7276196dffffe16ddf95414afe7df0a1">dload_3</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a970e293b32bc2c5ce4308efc9d2c4fd4">aload_0</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#aeb9637c06a1c4be0e19f948da9e046e7">aload_1</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a87611b411d0229a821c627d741722915">aload_2</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#afa29b61ac2a23f34471f766ab8ce5b22">aload_3</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a164ffc29c77ba27abe455b1f586aea10">iaload</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a392098afc9a76bf489fd265399a87ce5">laload</a>();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#ae761fdf12af95c740ce462b3b457114f">faload</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a3c2d02f672007ba8814f70ce019198a6">daload</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a749ebd9ee2eb618f378c473b28d2da8f">aaload</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#ad7ef5b1c935516a0de115a6497de83a3">baload</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a83b87013ac3e40026da6d79daafee311">caload</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a5f8a663ce271d632e89c39ef43b793c5">saload</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a33f1be9167d7b65217e01bfac5e6177f">istore</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#aba06781db7ce41568c70c3545f2a0606">lstore</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a12795ae86d4388c77d65bbabe8ae953a">fstore</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a8cbeafdfc308684cd6e304ab5613e156">dstore</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a813cfd73cc419aee1cc8911c451fae3a">astore</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a9c58fdafb25d3352bc4f7ce49004f09f">istore_0</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#aa0d12da80c9080a0da77a6a7cc268422">istore_1</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a293cd1ef4ff07d45024a563cfd9f1425">istore_2</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#affd9951d028b044a0fc3fb9e7784e49c">istore_3</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#afeb0b96276ca6ae9efe744c301e8c164">lstore_0</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a2daefd5745ef3f4b6658c389dd668ba9">lstore_1</a>();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a751917b2e2a1663ff62523bfa3ac6d2b">lstore_2</a>();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#aec7be856c5ef6ab49e6d234489a5f066">lstore_3</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a8e3dda0bc10f726811da0b9508ea4c2f">fstore_0</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a4fbb6e0f18e1c8aea0634fd9ccef7cd0">fstore_1</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a63f6bf435006b03d35851d415e044e27">fstore_2</a>();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#aebd5370330b65b1760d6985493097564">fstore_3</a>();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a80b39f4dfd0e750aca528ebe0fe02156">dstore_0</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#aa0adcd3fefd905cb552cd60b02e64e7d">dstore_1</a>();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a76559ce56b446767708c216fb6014c78">dstore_2</a>();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a6352eca6207ff23b15b7e48c99f4449f">dstore_3</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a6048c630be8872acc567f5a75c2a87de">astore_0</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#ae91480bcbf21ed5028168580b2dad8c5">astore_1</a>();</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a593e3f934b641b81ec60f879e0a9a9f3">astore_2</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a118db42696a05889d85014886b90432f">astore_3</a>();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a3788d57e651b122d4d42e685fe0864f1">iastore</a>();</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#acabdcc99a703c7eb596fcd8c37e5c08d">lastore</a>();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a2c776df95dfdb9c41dcdd5dfc5eaf0e7">fastore</a>();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a5f13881e6f1133814fed566b56dd8589">dastore</a>();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a39804d60eef92afe669a0b238e28807b">aastore</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a69c0e3e368f88b617d7f4f11e1a646bd">bastore</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#af5021449932b1597368dfbacb6faafb7">castore</a>();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOperationsLoadStore.html#a80fa18e51c32dbe849c148be1e0c7591">sastore</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>};</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#endif </span><span class="comment">/* operationsloadstore_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aOperationsBase_8h_html"><div class="ttname"><a href="OperationsBase_8h.html">OperationsBase.h</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a0724692bcdda38dfea2d6a59e9d19034"><div class="ttname"><a href="classOperationsLoadStore.html#a0724692bcdda38dfea2d6a59e9d19034">OperationsLoadStore::dload_0</a></div><div class="ttdeci">void dload_0()</div><div class="ttdoc">Implementa a funcionalidade da instrução dload_0.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00303">OperationsLoadStore.cpp:303</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a118db42696a05889d85014886b90432f"><div class="ttname"><a href="classOperationsLoadStore.html#a118db42696a05889d85014886b90432f">OperationsLoadStore::astore_3</a></div><div class="ttdeci">void astore_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01033">OperationsLoadStore.cpp:1033</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a11f6f473a1552b3a119871c456c72223"><div class="ttname"><a href="classOperationsLoadStore.html#a11f6f473a1552b3a119871c456c72223">OperationsLoadStore::fload_0</a></div><div class="ttdeci">void fload_0()</div><div class="ttdoc">Implementa a funcionalidade da instrução fload_0.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00259">OperationsLoadStore.cpp:259</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a12795ae86d4388c77d65bbabe8ae953a"><div class="ttname"><a href="classOperationsLoadStore.html#a12795ae86d4388c77d65bbabe8ae953a">OperationsLoadStore::fstore</a></div><div class="ttdeci">void fstore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00712">OperationsLoadStore.cpp:712</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a164ffc29c77ba27abe455b1f586aea10"><div class="ttname"><a href="classOperationsLoadStore.html#a164ffc29c77ba27abe455b1f586aea10">OperationsLoadStore::iaload</a></div><div class="ttdeci">void iaload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00417">OperationsLoadStore.cpp:417</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a1effe7af0f653ef7838114589c1286c6"><div class="ttname"><a href="classOperationsLoadStore.html#a1effe7af0f653ef7838114589c1286c6">OperationsLoadStore::aload</a></div><div class="ttdeci">void aload()</div><div class="ttdoc">Implementa a funcionalidade da instrução aload.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00122">OperationsLoadStore.cpp:122</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a26e9229096168393e4041605415a555b"><div class="ttname"><a href="classOperationsLoadStore.html#a26e9229096168393e4041605415a555b">OperationsLoadStore::lload</a></div><div class="ttdeci">void lload()</div><div class="ttdoc">Implementa a funcionalidade da instrução lload.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00038">OperationsLoadStore.cpp:38</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a293cd1ef4ff07d45024a563cfd9f1425"><div class="ttname"><a href="classOperationsLoadStore.html#a293cd1ef4ff07d45024a563cfd9f1425">OperationsLoadStore::istore_2</a></div><div class="ttdeci">void istore_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00814">OperationsLoadStore.cpp:814</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a2c776df95dfdb9c41dcdd5dfc5eaf0e7"><div class="ttname"><a href="classOperationsLoadStore.html#a2c776df95dfdb9c41dcdd5dfc5eaf0e7">OperationsLoadStore::fastore</a></div><div class="ttdeci">void fastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01110">OperationsLoadStore.cpp:1110</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a2daefd5745ef3f4b6658c389dd668ba9"><div class="ttname"><a href="classOperationsLoadStore.html#a2daefd5745ef3f4b6658c389dd668ba9">OperationsLoadStore::lstore_1</a></div><div class="ttdeci">void lstore_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00851">OperationsLoadStore.cpp:851</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a312aebad0f135ec20d29c0de81994cb6"><div class="ttname"><a href="classOperationsLoadStore.html#a312aebad0f135ec20d29c0de81994cb6">OperationsLoadStore::_isWide</a></div><div class="ttdeci">bool &amp; _isWide</div><div class="ttdef"><b>Definição</b> <a href="#l00017">OperationsLoadStore.h:17</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a32f485a4eee13e9c010af6b5165d8c18"><div class="ttname"><a href="classOperationsLoadStore.html#a32f485a4eee13e9c010af6b5165d8c18">OperationsLoadStore::fload_2</a></div><div class="ttdeci">void fload_2()</div><div class="ttdoc">Implementa a funcionalidade da instrução fload_2.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00281">OperationsLoadStore.cpp:281</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a33f1be9167d7b65217e01bfac5e6177f"><div class="ttname"><a href="classOperationsLoadStore.html#a33f1be9167d7b65217e01bfac5e6177f">OperationsLoadStore::istore</a></div><div class="ttdeci">void istore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00658">OperationsLoadStore.cpp:658</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a3788d57e651b122d4d42e685fe0864f1"><div class="ttname"><a href="classOperationsLoadStore.html#a3788d57e651b122d4d42e685fe0864f1">OperationsLoadStore::iastore</a></div><div class="ttdeci">void iastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01046">OperationsLoadStore.cpp:1046</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a392098afc9a76bf489fd265399a87ce5"><div class="ttname"><a href="classOperationsLoadStore.html#a392098afc9a76bf489fd265399a87ce5">OperationsLoadStore::laload</a></div><div class="ttdeci">void laload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00443">OperationsLoadStore.cpp:443</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a39804d60eef92afe669a0b238e28807b"><div class="ttname"><a href="classOperationsLoadStore.html#a39804d60eef92afe669a0b238e28807b">OperationsLoadStore::aastore</a></div><div class="ttdeci">void aastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01172">OperationsLoadStore.cpp:1172</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a3c2d02f672007ba8814f70ce019198a6"><div class="ttname"><a href="classOperationsLoadStore.html#a3c2d02f672007ba8814f70ce019198a6">OperationsLoadStore::daload</a></div><div class="ttdeci">void daload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00499">OperationsLoadStore.cpp:499</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a3d4afc6c79182998f8f4d39a2c9a7bd0"><div class="ttname"><a href="classOperationsLoadStore.html#a3d4afc6c79182998f8f4d39a2c9a7bd0">OperationsLoadStore::iload</a></div><div class="ttdeci">void iload()</div><div class="ttdoc">Implementa a funcionalidade da instrução iload.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00013">OperationsLoadStore.cpp:13</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a4fbb6e0f18e1c8aea0634fd9ccef7cd0"><div class="ttname"><a href="classOperationsLoadStore.html#a4fbb6e0f18e1c8aea0634fd9ccef7cd0">OperationsLoadStore::fstore_1</a></div><div class="ttdeci">void fstore_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00907">OperationsLoadStore.cpp:907</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a593e3f934b641b81ec60f879e0a9a9f3"><div class="ttname"><a href="classOperationsLoadStore.html#a593e3f934b641b81ec60f879e0a9a9f3">OperationsLoadStore::astore_2</a></div><div class="ttdeci">void astore_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01022">OperationsLoadStore.cpp:1022</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a5a1a08b19f407d0754f4a8233c20dd41"><div class="ttname"><a href="classOperationsLoadStore.html#a5a1a08b19f407d0754f4a8233c20dd41">OperationsLoadStore::fload_3</a></div><div class="ttdeci">void fload_3()</div><div class="ttdoc">Implementa a funcionalidade da instrução fload_3.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00292">OperationsLoadStore.cpp:292</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a5de6dc86e4778e73ecf838e1d80e5320"><div class="ttname"><a href="classOperationsLoadStore.html#a5de6dc86e4778e73ecf838e1d80e5320">OperationsLoadStore::iload_1</a></div><div class="ttdeci">void iload_1()</div><div class="ttdoc">Implementa a funcionalidade da instrução iload_1.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00158">OperationsLoadStore.cpp:158</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a5e743babc86d54b0f13f4e4e4e1a7b5e"><div class="ttname"><a href="classOperationsLoadStore.html#a5e743babc86d54b0f13f4e4e4e1a7b5e">OperationsLoadStore::iload_0</a></div><div class="ttdeci">void iload_0()</div><div class="ttdoc">Implementa a funcionalidade da instrução iload_0.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00147">OperationsLoadStore.cpp:147</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a5f13881e6f1133814fed566b56dd8589"><div class="ttname"><a href="classOperationsLoadStore.html#a5f13881e6f1133814fed566b56dd8589">OperationsLoadStore::dastore</a></div><div class="ttdeci">void dastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01140">OperationsLoadStore.cpp:1140</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a5f8a663ce271d632e89c39ef43b793c5"><div class="ttname"><a href="classOperationsLoadStore.html#a5f8a663ce271d632e89c39ef43b793c5">OperationsLoadStore::saload</a></div><div class="ttdeci">void saload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00624">OperationsLoadStore.cpp:624</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a6048c630be8872acc567f5a75c2a87de"><div class="ttname"><a href="classOperationsLoadStore.html#a6048c630be8872acc567f5a75c2a87de">OperationsLoadStore::astore_0</a></div><div class="ttdeci">void astore_0()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01000">OperationsLoadStore.cpp:1000</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a6352eca6207ff23b15b7e48c99f4449f"><div class="ttname"><a href="classOperationsLoadStore.html#a6352eca6207ff23b15b7e48c99f4449f">OperationsLoadStore::dstore_3</a></div><div class="ttdeci">void dstore_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00985">OperationsLoadStore.cpp:985</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a63f6bf435006b03d35851d415e044e27"><div class="ttname"><a href="classOperationsLoadStore.html#a63f6bf435006b03d35851d415e044e27">OperationsLoadStore::fstore_2</a></div><div class="ttdeci">void fstore_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00918">OperationsLoadStore.cpp:918</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a6932a1d328c281243e6c5d954f383fe6"><div class="ttname"><a href="classOperationsLoadStore.html#a6932a1d328c281243e6c5d954f383fe6">OperationsLoadStore::lload_3</a></div><div class="ttdeci">void lload_3()</div><div class="ttdoc">Implementa a funcionalidade da instrução lload_3.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00242">OperationsLoadStore.cpp:242</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a69c0e3e368f88b617d7f4f11e1a646bd"><div class="ttname"><a href="classOperationsLoadStore.html#a69c0e3e368f88b617d7f4f11e1a646bd">OperationsLoadStore::bastore</a></div><div class="ttdeci">void bastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01201">OperationsLoadStore.cpp:1201</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a700bfab1c1333b143541cacfe7e4e3e7"><div class="ttname"><a href="classOperationsLoadStore.html#a700bfab1c1333b143541cacfe7e4e3e7">OperationsLoadStore::fload</a></div><div class="ttdeci">void fload()</div><div class="ttdoc">Implementa a funcionalidade da instrução fload.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00068">OperationsLoadStore.cpp:68</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a7276196dffffe16ddf95414afe7df0a1"><div class="ttname"><a href="classOperationsLoadStore.html#a7276196dffffe16ddf95414afe7df0a1">OperationsLoadStore::dload_3</a></div><div class="ttdeci">void dload_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00354">OperationsLoadStore.cpp:354</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a749ebd9ee2eb618f378c473b28d2da8f"><div class="ttname"><a href="classOperationsLoadStore.html#a749ebd9ee2eb618f378c473b28d2da8f">OperationsLoadStore::aaload</a></div><div class="ttdeci">void aaload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00529">OperationsLoadStore.cpp:529</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a751917b2e2a1663ff62523bfa3ac6d2b"><div class="ttname"><a href="classOperationsLoadStore.html#a751917b2e2a1663ff62523bfa3ac6d2b">OperationsLoadStore::lstore_2</a></div><div class="ttdeci">void lstore_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00866">OperationsLoadStore.cpp:866</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a76559ce56b446767708c216fb6014c78"><div class="ttname"><a href="classOperationsLoadStore.html#a76559ce56b446767708c216fb6014c78">OperationsLoadStore::dstore_2</a></div><div class="ttdeci">void dstore_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00970">OperationsLoadStore.cpp:970</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a80b39f4dfd0e750aca528ebe0fe02156"><div class="ttname"><a href="classOperationsLoadStore.html#a80b39f4dfd0e750aca528ebe0fe02156">OperationsLoadStore::dstore_0</a></div><div class="ttdeci">void dstore_0()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00940">OperationsLoadStore.cpp:940</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a80fa18e51c32dbe849c148be1e0c7591"><div class="ttname"><a href="classOperationsLoadStore.html#a80fa18e51c32dbe849c148be1e0c7591">OperationsLoadStore::sastore</a></div><div class="ttdeci">void sastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01273">OperationsLoadStore.cpp:1273</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a813cfd73cc419aee1cc8911c451fae3a"><div class="ttname"><a href="classOperationsLoadStore.html#a813cfd73cc419aee1cc8911c451fae3a">OperationsLoadStore::astore</a></div><div class="ttdeci">void astore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00766">OperationsLoadStore.cpp:766</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a83b87013ac3e40026da6d79daafee311"><div class="ttname"><a href="classOperationsLoadStore.html#a83b87013ac3e40026da6d79daafee311">OperationsLoadStore::caload</a></div><div class="ttdeci">void caload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00593">OperationsLoadStore.cpp:593</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a87611b411d0229a821c627d741722915"><div class="ttname"><a href="classOperationsLoadStore.html#a87611b411d0229a821c627d741722915">OperationsLoadStore::aload_2</a></div><div class="ttdeci">void aload_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00393">OperationsLoadStore.cpp:393</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a8cbeafdfc308684cd6e304ab5613e156"><div class="ttname"><a href="classOperationsLoadStore.html#a8cbeafdfc308684cd6e304ab5613e156">OperationsLoadStore::dstore</a></div><div class="ttdeci">void dstore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00737">OperationsLoadStore.cpp:737</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a8cfed197106dc88f2351306c8609d120"><div class="ttname"><a href="classOperationsLoadStore.html#a8cfed197106dc88f2351306c8609d120">OperationsLoadStore::dload_1</a></div><div class="ttdeci">void dload_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00320">OperationsLoadStore.cpp:320</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a8e091b1a57f6a3b0d10fcdb8f6ecbbd5"><div class="ttname"><a href="classOperationsLoadStore.html#a8e091b1a57f6a3b0d10fcdb8f6ecbbd5">OperationsLoadStore::dload_2</a></div><div class="ttdeci">void dload_2()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00337">OperationsLoadStore.cpp:337</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a8e3dda0bc10f726811da0b9508ea4c2f"><div class="ttname"><a href="classOperationsLoadStore.html#a8e3dda0bc10f726811da0b9508ea4c2f">OperationsLoadStore::fstore_0</a></div><div class="ttdeci">void fstore_0()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00896">OperationsLoadStore.cpp:896</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a8ea94a49e1ce556e82c707a83912d5a8"><div class="ttname"><a href="classOperationsLoadStore.html#a8ea94a49e1ce556e82c707a83912d5a8">OperationsLoadStore::OperationsLoadStore</a></div><div class="ttdeci">OperationsLoadStore(bool &amp;isWide)</div><div class="ttdoc">Constructor that takes reference to isWide flag.</div><div class="ttdef"><b>Definição</b> <a href="#l00014">OperationsLoadStore.h:14</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a95bcb195ada063efda686070c9ec2af2"><div class="ttname"><a href="classOperationsLoadStore.html#a95bcb195ada063efda686070c9ec2af2">OperationsLoadStore::iload_2</a></div><div class="ttdeci">void iload_2()</div><div class="ttdoc">Implementa a funcionalidade da instrução iload_2.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00169">OperationsLoadStore.cpp:169</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a970e293b32bc2c5ce4308efc9d2c4fd4"><div class="ttname"><a href="classOperationsLoadStore.html#a970e293b32bc2c5ce4308efc9d2c4fd4">OperationsLoadStore::aload_0</a></div><div class="ttdeci">void aload_0()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00371">OperationsLoadStore.cpp:371</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_a9c58fdafb25d3352bc4f7ce49004f09f"><div class="ttname"><a href="classOperationsLoadStore.html#a9c58fdafb25d3352bc4f7ce49004f09f">OperationsLoadStore::istore_0</a></div><div class="ttdeci">void istore_0()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00792">OperationsLoadStore.cpp:792</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_aa0adcd3fefd905cb552cd60b02e64e7d"><div class="ttname"><a href="classOperationsLoadStore.html#aa0adcd3fefd905cb552cd60b02e64e7d">OperationsLoadStore::dstore_1</a></div><div class="ttdeci">void dstore_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00955">OperationsLoadStore.cpp:955</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_aa0d12da80c9080a0da77a6a7cc268422"><div class="ttname"><a href="classOperationsLoadStore.html#aa0d12da80c9080a0da77a6a7cc268422">OperationsLoadStore::istore_1</a></div><div class="ttdeci">void istore_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00803">OperationsLoadStore.cpp:803</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_aba06781db7ce41568c70c3545f2a0606"><div class="ttname"><a href="classOperationsLoadStore.html#aba06781db7ce41568c70c3545f2a0606">OperationsLoadStore::lstore</a></div><div class="ttdeci">void lstore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00683">OperationsLoadStore.cpp:683</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_ac26fb726099f6a702e1038bbc579ed2a"><div class="ttname"><a href="classOperationsLoadStore.html#ac26fb726099f6a702e1038bbc579ed2a">OperationsLoadStore::lload_1</a></div><div class="ttdeci">void lload_1()</div><div class="ttdoc">Implementa a funcionalidade da instrução lload_1.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00208">OperationsLoadStore.cpp:208</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_acabdcc99a703c7eb596fcd8c37e5c08d"><div class="ttname"><a href="classOperationsLoadStore.html#acabdcc99a703c7eb596fcd8c37e5c08d">OperationsLoadStore::lastore</a></div><div class="ttdeci">void lastore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01078">OperationsLoadStore.cpp:1078</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_ad7ef5b1c935516a0de115a6497de83a3"><div class="ttname"><a href="classOperationsLoadStore.html#ad7ef5b1c935516a0de115a6497de83a3">OperationsLoadStore::baload</a></div><div class="ttdeci">void baload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00555">OperationsLoadStore.cpp:555</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_ae761fdf12af95c740ce462b3b457114f"><div class="ttname"><a href="classOperationsLoadStore.html#ae761fdf12af95c740ce462b3b457114f">OperationsLoadStore::faload</a></div><div class="ttdeci">void faload()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00473">OperationsLoadStore.cpp:473</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_ae91480bcbf21ed5028168580b2dad8c5"><div class="ttname"><a href="classOperationsLoadStore.html#ae91480bcbf21ed5028168580b2dad8c5">OperationsLoadStore::astore_1</a></div><div class="ttdeci">void astore_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01011">OperationsLoadStore.cpp:1011</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_aeb9637c06a1c4be0e19f948da9e046e7"><div class="ttname"><a href="classOperationsLoadStore.html#aeb9637c06a1c4be0e19f948da9e046e7">OperationsLoadStore::aload_1</a></div><div class="ttdeci">void aload_1()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00382">OperationsLoadStore.cpp:382</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_aebd5370330b65b1760d6985493097564"><div class="ttname"><a href="classOperationsLoadStore.html#aebd5370330b65b1760d6985493097564">OperationsLoadStore::fstore_3</a></div><div class="ttdeci">void fstore_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00929">OperationsLoadStore.cpp:929</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_aec7be856c5ef6ab49e6d234489a5f066"><div class="ttname"><a href="classOperationsLoadStore.html#aec7be856c5ef6ab49e6d234489a5f066">OperationsLoadStore::lstore_3</a></div><div class="ttdeci">void lstore_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00881">OperationsLoadStore.cpp:881</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_af5021449932b1597368dfbacb6faafb7"><div class="ttname"><a href="classOperationsLoadStore.html#af5021449932b1597368dfbacb6faafb7">OperationsLoadStore::castore</a></div><div class="ttdeci">void castore()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l01241">OperationsLoadStore.cpp:1241</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_af6a36ff53c8f4aa0e288a6e200392a3b"><div class="ttname"><a href="classOperationsLoadStore.html#af6a36ff53c8f4aa0e288a6e200392a3b">OperationsLoadStore::iload_3</a></div><div class="ttdeci">void iload_3()</div><div class="ttdoc">Implementa a funcionalidade da instrução iload_3.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00180">OperationsLoadStore.cpp:180</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_af733dca66ef9e0b77f1718f983606519"><div class="ttname"><a href="classOperationsLoadStore.html#af733dca66ef9e0b77f1718f983606519">OperationsLoadStore::lload_2</a></div><div class="ttdeci">void lload_2()</div><div class="ttdoc">Implementa a funcionalidade da instrução lload_2.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00225">OperationsLoadStore.cpp:225</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_af7d24dbd7517a6e65819fabf89b8c899"><div class="ttname"><a href="classOperationsLoadStore.html#af7d24dbd7517a6e65819fabf89b8c899">OperationsLoadStore::fload_1</a></div><div class="ttdeci">void fload_1()</div><div class="ttdoc">Implementa a funcionalidade da instrução fload_1.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00270">OperationsLoadStore.cpp:270</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_afa29b61ac2a23f34471f766ab8ce5b22"><div class="ttname"><a href="classOperationsLoadStore.html#afa29b61ac2a23f34471f766ab8ce5b22">OperationsLoadStore::aload_3</a></div><div class="ttdeci">void aload_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00404">OperationsLoadStore.cpp:404</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_afd5fe386babd6d4ca8dbd4049b1916f3"><div class="ttname"><a href="classOperationsLoadStore.html#afd5fe386babd6d4ca8dbd4049b1916f3">OperationsLoadStore::lload_0</a></div><div class="ttdeci">void lload_0()</div><div class="ttdoc">Implementa a funcionalidade da instrução lload_0.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00191">OperationsLoadStore.cpp:191</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_afe811581c326586d875ca11878036327"><div class="ttname"><a href="classOperationsLoadStore.html#afe811581c326586d875ca11878036327">OperationsLoadStore::dload</a></div><div class="ttdeci">void dload()</div><div class="ttdoc">Implementa a funcionalidade da instrução dload.</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00092">OperationsLoadStore.cpp:92</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_afeb0b96276ca6ae9efe744c301e8c164"><div class="ttname"><a href="classOperationsLoadStore.html#afeb0b96276ca6ae9efe744c301e8c164">OperationsLoadStore::lstore_0</a></div><div class="ttdeci">void lstore_0()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00836">OperationsLoadStore.cpp:836</a></div></div>
+<div class="ttc" id="aclassOperationsLoadStore_html_affd9951d028b044a0fc3fb9e7784e49c"><div class="ttname"><a href="classOperationsLoadStore.html#affd9951d028b044a0fc3fb9e7784e49c">OperationsLoadStore::istore_3</a></div><div class="ttdeci">void istore_3()</div><div class="ttdef"><b>Definição</b> <a href="OperationsLoadStore_8cpp_source.html#l00825">OperationsLoadStore.cpp:825</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="OperationsLoadStore_8h.html">OperationsLoadStore.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

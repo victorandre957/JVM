@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Leitor Exibidor da JVM: Código-Fonte de include/Utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Leitor Exibidor da JVM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('Utils_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utils.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Utils_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="BasicTypes_8h.html">BasicTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="LeitorExibidor_8h.html">LeitorExibidor.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classUtils.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classUtils.html">Utils</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classUtils.html#a702dbed7dee69418ecddc86e17e6d703">verificarVersao</a>(<span class="keyword">const</span> <a class="code hl_class" href="classClassFile.html">ClassFile</a> *classFile);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classUtils.html#a63daf33599b447a8f3b2ea5aef2815ce">compararUtf8String</a>(<a class="code hl_struct" href="structCONSTANT__Utf8__info.html">CONSTANT_Utf8_info</a> constant, <span class="keyword">const</span> <span class="keywordtype">char</span> *str);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUtils.html#a932c28783170c6aa53362fbd0c4ceefa">imprintTabs</a>(FILE *out, uint8_t n);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUtils.html#a2a13f135d652b68fae6f4b8a9b21464e">exibeTabs</a>(uint8_t n);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classUtils.html#abef6742f09f81fea5952454925325ea5">converterStreamToCString</a>(<span class="keyword">const</span> stringstream &amp;ss);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classUtils.html#adab42646ff804e531410448b584e4c32">   82</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classUtils.html#adab42646ff804e531410448b584e4c32">exibeTabs</a>(FILE *out, uint8_t n);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classUtils.html#a7277a15116076dbfef0adaef520499cc">verificarVersaoClass</a>(<span class="keyword">const</span> <a class="code hl_class" href="classClassFile.html">ClassFile</a> *classFile);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classUtils.html#a9f417939b31cec9a87e58080d692df04">getFormattedConstant</a>(<a class="code hl_struct" href="structcp__info.html">cp_info</a>* constantPool, <a class="code hl_typedef" href="BasicTypes_8h.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> index);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classUtils.html#aa70b3d26f8b094e4bb4bbf3e05a6bd63">verificarThisClass</a>(<span class="keywordtype">string</span> auxFilename, <span class="keywordtype">string</span> auxClass);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>};</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif </span><span class="comment">/* UTILS_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aBasicTypes_8h_html"><div class="ttname"><a href="BasicTypes_8h.html">BasicTypes.h</a></div></div>
+<div class="ttc" id="aBasicTypes_8h_html_a732cde1300aafb73b0ea6c2558a7a54f"><div class="ttname"><a href="BasicTypes_8h.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a></div><div class="ttdeci">uint16_t u2</div><div class="ttdef"><b>Definição</b> <a href="BasicTypes_8h_source.html#l00013">BasicTypes.h:13</a></div></div>
+<div class="ttc" id="aLeitorExibidor_8h_html"><div class="ttname"><a href="LeitorExibidor_8h.html">LeitorExibidor.h</a></div></div>
+<div class="ttc" id="aclassClassFile_html"><div class="ttname"><a href="classClassFile.html">ClassFile</a></div><div class="ttdef"><b>Definição</b> <a href="ClassFile_8h_source.html#l00025">ClassFile.h:25</a></div></div>
+<div class="ttc" id="aclassUtils_html"><div class="ttname"><a href="classUtils.html">Utils</a></div><div class="ttdoc">Classe com funções utilitárias para formatação e conversão.</div><div class="ttdef"><b>Definição</b> <a href="#l00024">Utils.h:24</a></div></div>
+<div class="ttc" id="aclassUtils_html_a2a13f135d652b68fae6f4b8a9b21464e"><div class="ttname"><a href="classUtils.html#a2a13f135d652b68fae6f4b8a9b21464e">Utils::exibeTabs</a></div><div class="ttdeci">static void exibeTabs(uint8_t n)</div><div class="ttdoc">Exibe tabs de indentação no console.</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00072">Utils.cpp:72</a></div></div>
+<div class="ttc" id="aclassUtils_html_a63daf33599b447a8f3b2ea5aef2815ce"><div class="ttname"><a href="classUtils.html#a63daf33599b447a8f3b2ea5aef2815ce">Utils::compararUtf8String</a></div><div class="ttdeci">static bool compararUtf8String(CONSTANT_Utf8_info constant, const char *str)</div><div class="ttdoc">Compara string C com conteúdo de CONSTANT_Utf8_info.</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00055">Utils.cpp:55</a></div></div>
+<div class="ttc" id="aclassUtils_html_a702dbed7dee69418ecddc86e17e6d703"><div class="ttname"><a href="classUtils.html#a702dbed7dee69418ecddc86e17e6d703">Utils::verificarVersao</a></div><div class="ttdeci">static double verificarVersao(const ClassFile *classFile)</div><div class="ttdoc">Mapeia a versão do arquivo .class para versão do JDK.</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00006">Utils.cpp:6</a></div></div>
+<div class="ttc" id="aclassUtils_html_a7277a15116076dbfef0adaef520499cc"><div class="ttname"><a href="classUtils.html#a7277a15116076dbfef0adaef520499cc">Utils::verificarVersaoClass</a></div><div class="ttdeci">static double verificarVersaoClass(const ClassFile *classFile)</div><div class="ttdoc">Alternativa para mapear versão do arquivo .class.</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00041">Utils.cpp:41</a></div></div>
+<div class="ttc" id="aclassUtils_html_a932c28783170c6aa53362fbd0c4ceefa"><div class="ttname"><a href="classUtils.html#a932c28783170c6aa53362fbd0c4ceefa">Utils::imprintTabs</a></div><div class="ttdeci">static void imprintTabs(FILE *out, uint8_t n)</div><div class="ttdoc">Imprime tabs de indentação em arquivo.</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00068">Utils.cpp:68</a></div></div>
+<div class="ttc" id="aclassUtils_html_a9f417939b31cec9a87e58080d692df04"><div class="ttname"><a href="classUtils.html#a9f417939b31cec9a87e58080d692df04">Utils::getFormattedConstant</a></div><div class="ttdeci">static const char * getFormattedConstant(cp_info *constantPool, u2 index)</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00085">Utils.cpp:85</a></div></div>
+<div class="ttc" id="aclassUtils_html_aa70b3d26f8b094e4bb4bbf3e05a6bd63"><div class="ttname"><a href="classUtils.html#aa70b3d26f8b094e4bb4bbf3e05a6bd63">Utils::verificarThisClass</a></div><div class="ttdeci">static bool verificarThisClass(string auxFilename, string auxClass)</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00191">Utils.cpp:191</a></div></div>
+<div class="ttc" id="aclassUtils_html_abef6742f09f81fea5952454925325ea5"><div class="ttname"><a href="classUtils.html#abef6742f09f81fea5952454925325ea5">Utils::converterStreamToCString</a></div><div class="ttdeci">static const char * converterStreamToCString(const stringstream &amp;ss)</div><div class="ttdoc">Converte stringstream para string C-style.</div><div class="ttdef"><b>Definição</b> <a href="Utils_8cpp_source.html#l00076">Utils.cpp:76</a></div></div>
+<div class="ttc" id="aclassUtils_html_adab42646ff804e531410448b584e4c32"><div class="ttname"><a href="classUtils.html#adab42646ff804e531410448b584e4c32">Utils::exibeTabs</a></div><div class="ttdeci">static void exibeTabs(FILE *out, uint8_t n)</div><div class="ttdoc">Exibe tabs de indentação em arquivo (sobrecarga)</div></div>
+<div class="ttc" id="astructCONSTANT__Utf8__info_html"><div class="ttname"><a href="structCONSTANT__Utf8__info.html">CONSTANT_Utf8_info</a></div><div class="ttdef"><b>Definição</b> <a href="BasicTypes_8h_source.html#l00167">BasicTypes.h:167</a></div></div>
+<div class="ttc" id="astructcp__info_html"><div class="ttname"><a href="structcp__info.html">cp_info</a></div><div class="ttdef"><b>Definição</b> <a href="BasicTypes_8h_source.html#l00172">BasicTypes.h:172</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="Utils_8h.html">Utils.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

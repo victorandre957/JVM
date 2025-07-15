@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Leitor Exibidor da JVM: Referência à classe PilhaJVM</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Leitor Exibidor da JVM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classPilhaJVM.html','','classPilhaJVM-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência à classe PilhaJVM</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe para representar a pilha da JVM. Uma pilha é responsável por conter frames. O seu limite é dado por <code>FRAME_MAX_SIZE</code>.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="PilhaJVM_8h_source.html">PilhaJVM.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:a7995ffc4e2ca9b149b83293cbbe0ea1b" id="r_a7995ffc4e2ca9b149b83293cbbe0ea1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7995ffc4e2ca9b149b83293cbbe0ea1b">~PilhaJVM</a> ()</td></tr>
+<tr class="memdesc:a7995ffc4e2ca9b149b83293cbbe0ea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor padrão.  <br /></td></tr>
+<tr class="memitem:a64d7185bc812d3c81e5270c54c212e07" id="r_a64d7185bc812d3c81e5270c54c212e07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d7185bc812d3c81e5270c54c212e07">addFrame</a> (<a class="el" href="classFrame.html">Frame</a> *frame)</td></tr>
+<tr class="memdesc:a64d7185bc812d3c81e5270c54c212e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um frame na pilha da JVM.  <br /></td></tr>
+<tr class="memitem:aa0e43da476df6147c86c8cc3d6899718" id="r_aa0e43da476df6147c86c8cc3d6899718"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFrame.html">Frame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0e43da476df6147c86c8cc3d6899718">getTopFrame</a> ()</td></tr>
+<tr class="memdesc:aa0e43da476df6147c86c8cc3d6899718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o frame no topo da pilha da JVM.  <br /></td></tr>
+<tr class="memitem:a8ae0ed77b894fa95e73ea4077ebdeea2" id="r_a8ae0ed77b894fa95e73ea4077ebdeea2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae0ed77b894fa95e73ea4077ebdeea2">destroyTopFrame</a> ()</td></tr>
+<tr class="memdesc:a8ae0ed77b894fa95e73ea4077ebdeea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove o frame do topo da pilha e o libera da memória.  <br /></td></tr>
+<tr class="memitem:a22d7bcd7db598b00ae219c9c2efb2c88" id="r_a22d7bcd7db598b00ae219c9c2efb2c88"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22d7bcd7db598b00ae219c9c2efb2c88">size</a> ()</td></tr>
+<tr class="memdesc:a22d7bcd7db598b00ae219c9c2efb2c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o tamanho da pilha da JVM.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Membros públicos estáticos</h2></td></tr>
+<tr class="memitem:a65763b14444559b443ab8bf550987d52" id="r_a65763b14444559b443ab8bf550987d52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPilhaJVM.html">PilhaJVM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65763b14444559b443ab8bf550987d52">getInstance</a> ()</td></tr>
+<tr class="memdesc:a65763b14444559b443ab8bf550987d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obter a única instância da pilha.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:a7f0451ca9cf124f5098d43928566fadf" id="r_a7f0451ca9cf124f5098d43928566fadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f0451ca9cf124f5098d43928566fadf">PilhaJVM</a> ()</td></tr>
+<tr class="memdesc:a7f0451ca9cf124f5098d43928566fadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão.  <br /></td></tr>
+<tr class="memitem:a051085f51d79d3333356c5d36bef4687" id="r_a051085f51d79d3333356c5d36bef4687"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a051085f51d79d3333356c5d36bef4687">PilhaJVM</a> (<a class="el" href="classPilhaJVM.html">PilhaJVM</a> const &amp;)</td></tr>
+<tr class="memitem:a636c01ded057b339aa00486003db9037" id="r_a636c01ded057b339aa00486003db9037"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636c01ded057b339aa00486003db9037">operator=</a> (<a class="el" href="classPilhaJVM.html">PilhaJVM</a> const &amp;)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:a09290179ef6c914aa32297ab9dae94ed" id="r_a09290179ef6c914aa32297ab9dae94ed"><td class="memItemLeft" align="right" valign="top">stack&lt; <a class="el" href="classFrame.html">Frame</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09290179ef6c914aa32297ab9dae94ed">_frameStack</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe para representar a pilha da JVM. Uma pilha é responsável por conter frames. O seu limite é dado por <code>FRAME_MAX_SIZE</code>. </p>
+<p>Essa classe é um singleton, ou seja, somente existe no máximo 1 instância dela para cada instância da JVM. </p>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8h_source.html#l00017">17</a> do ficheiro <a class="el" href="PilhaJVM_8h_source.html">PilhaJVM.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="a7995ffc4e2ca9b149b83293cbbe0ea1b" name="a7995ffc4e2ca9b149b83293cbbe0ea1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7995ffc4e2ca9b149b83293cbbe0ea1b">&#9670;&#160;</a></span>~PilhaJVM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PilhaJVM::~PilhaJVM </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor padrão. </p>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8cpp_source.html#l00007">7</a> do ficheiro <a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f0451ca9cf124f5098d43928566fadf" name="a7f0451ca9cf124f5098d43928566fadf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0451ca9cf124f5098d43928566fadf">&#9670;&#160;</a></span>PilhaJVM() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PilhaJVM::PilhaJVM </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor padrão. </p>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8cpp_source.html#l00003">3</a> do ficheiro <a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="PilhaJVM_8h_source.html#l00024">getInstance()</a>, <a class="el" href="#a636c01ded057b339aa00486003db9037">operator=()</a> e <a class="el" href="#a051085f51d79d3333356c5d36bef4687">PilhaJVM()</a>.</p>
+
+</div>
+</div>
+<a id="a051085f51d79d3333356c5d36bef4687" name="a051085f51d79d3333356c5d36bef4687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051085f51d79d3333356c5d36bef4687">&#9670;&#160;</a></span>PilhaJVM() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PilhaJVM::PilhaJVM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPilhaJVM.html">PilhaJVM</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8cpp_source.html#l00003">PilhaJVM()</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPilhaJVM_a051085f51d79d3333356c5d36bef4687_cgraph.png" border="0" usemap="#aclassPilhaJVM_a051085f51d79d3333356c5d36bef4687_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPilhaJVM_a051085f51d79d3333356c5d36bef4687_cgraph" id="aclassPilhaJVM_a051085f51d79d3333356c5d36bef4687_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,149,33"/>
+<area shape="rect" href="classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="197,5,340,33"/>
+<area shape="poly" title=" " alt="" coords="149,16,181,16,181,22,149,22"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="a64d7185bc812d3c81e5270c54c212e07" name="a64d7185bc812d3c81e5270c54c212e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d7185bc812d3c81e5270c54c212e07">&#9670;&#160;</a></span>addFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PilhaJVM::addFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFrame.html">Frame</a> *</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona um frame na pilha da JVM. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Um ponteiro para o frame que será adicionado na pilha. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8cpp_source.html#l00011">11</a> do ficheiro <a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a>.</p>
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8h_source.html#l00070">_frameStack</a> e <a class="el" href="PilhaJVM_8h_source.html#l00011">FRAME_MAX_SIZE</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="MethodArea_8cpp_source.html#l00016">MethodArea::carregarClassNamed()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00019">OperationsBase::executarMetodos()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00697">OperationsObject::invokeinterface()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00508">OperationsObject::invokespecial()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00610">OperationsObject::invokestatic()</a> e <a class="el" href="OperationsObject_8cpp_source.html#l00320">OperationsObject::invokevirtual()</a>.</p>
+
+</div>
+</div>
+<a id="a8ae0ed77b894fa95e73ea4077ebdeea2" name="a8ae0ed77b894fa95e73ea4077ebdeea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae0ed77b894fa95e73ea4077ebdeea2">&#9670;&#160;</a></span>destroyTopFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PilhaJVM::destroyTopFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove o frame do topo da pilha e o libera da memória. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna <code>true</code> caso o frame foi deletado, e <code>false</code> caso contrário. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8cpp_source.html#l00028">28</a> do ficheiro <a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a>.</p>
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8h_source.html#l00070">_frameStack</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="OperationsControl_8cpp_source.html#l00498">OperationsControl::areturn()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00480">OperationsControl::dreturn()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00467">OperationsControl::freturn()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00511">OperationsControl::func_return()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00437">OperationsControl::ireturn()</a> e <a class="el" href="OperationsControl_8cpp_source.html#l00450">OperationsControl::lreturn()</a>.</p>
+
+</div>
+</div>
+<a id="a65763b14444559b443ab8bf550987d52" name="a65763b14444559b443ab8bf550987d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65763b14444559b443ab8bf550987d52">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPilhaJVM.html">PilhaJVM</a> &amp; PilhaJVM::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obter a única instância da pilha. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A instância da pilha. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8h_source.html#l00024">24</a> do ficheiro <a class="el" href="PilhaJVM_8h_source.html">PilhaJVM.h</a>.</p>
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8cpp_source.html#l00003">PilhaJVM()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="OperationsLoadStore_8cpp_source.html#l00529">OperationsLoadStore::aaload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01172">OperationsLoadStore::aastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00010">OperationsConstants::aconst_null()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00122">OperationsLoadStore::aload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00371">OperationsLoadStore::aload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00382">OperationsLoadStore::aload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00393">OperationsLoadStore::aload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00404">OperationsLoadStore::aload_3()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00915">OperationsObject::anewarray()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00498">OperationsControl::areturn()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00966">OperationsObject::arraylength()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00766">OperationsLoadStore::astore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01000">OperationsLoadStore::astore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01011">OperationsLoadStore::astore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01022">OperationsLoadStore::astore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01033">OperationsLoadStore::astore_3()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00985">OperationsObject::athrow()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00555">OperationsLoadStore::baload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01201">OperationsLoadStore::bastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00214">OperationsConstants::bipush()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00593">OperationsLoadStore::caload()</a>, <a class="el" href="MethodArea_8cpp_source.html#l00016">MethodArea::carregarClassNamed()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01241">OperationsLoadStore::castore()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00991">OperationsObject::checkcast()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00961">OperationsArithmetic::d2f()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00931">OperationsArithmetic::d2i()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00946">OperationsArithmetic::d2l()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00215">OperationsArithmetic::dadd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00499">OperationsLoadStore::daload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01140">OperationsLoadStore::dastore()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01121">OperationsArithmetic::dcmpg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01096">OperationsArithmetic::dcmpl()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00188">OperationsConstants::dconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00201">OperationsConstants::dconst_1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00419">OperationsArithmetic::ddiv()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00092">OperationsLoadStore::dload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00303">OperationsLoadStore::dload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00320">OperationsLoadStore::dload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00337">OperationsLoadStore::dload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00354">OperationsLoadStore::dload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00343">OperationsArithmetic::dmul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00558">OperationsArithmetic::dneg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00495">OperationsArithmetic::drem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00480">OperationsControl::dreturn()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00737">OperationsLoadStore::dstore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00940">OperationsLoadStore::dstore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00955">OperationsLoadStore::dstore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00970">OperationsLoadStore::dstore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00985">OperationsLoadStore::dstore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00279">OperationsArithmetic::dsub()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00031">OperationsArithmetic::dup()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00084">OperationsArithmetic::dup2()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00101">OperationsArithmetic::dup2_x1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00123">OperationsArithmetic::dup2_x2()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00045">OperationsArithmetic::dup_x1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00063">OperationsArithmetic::dup_x2()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00019">OperationsBase::executarMetodos()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00916">OperationsArithmetic::f2d()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00886">OperationsArithmetic::f2i()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00901">OperationsArithmetic::f2l()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00199">OperationsArithmetic::fadd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00473">OperationsLoadStore::faload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01110">OperationsLoadStore::fastore()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01071">OperationsArithmetic::fcmpg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01046">OperationsArithmetic::fcmpl()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00149">OperationsConstants::fconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00162">OperationsConstants::fconst_1()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00175">OperationsConstants::fconst_2()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00403">OperationsArithmetic::fdiv()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00068">OperationsLoadStore::fload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00259">OperationsLoadStore::fload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00270">OperationsLoadStore::fload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00281">OperationsLoadStore::fload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00292">OperationsLoadStore::fload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00327">OperationsArithmetic::fmul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00543">OperationsArithmetic::fneg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00479">OperationsArithmetic::frem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00467">OperationsControl::freturn()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00712">OperationsLoadStore::fstore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00896">OperationsLoadStore::fstore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00907">OperationsLoadStore::fstore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00918">OperationsLoadStore::fstore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00929">OperationsLoadStore::fstore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00263">OperationsArithmetic::fsub()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00288">OperationsControl::func_goto()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00788">OperationsObject::func_new()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00511">OperationsControl::func_return()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00191">OperationsObject::getfield()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00020">OperationsObject::getstatic()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00556">OperationsControl::goto_w()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00976">OperationsArithmetic::i2b()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00991">OperationsArithmetic::i2c()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00826">OperationsArithmetic::i2d()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00811">OperationsArithmetic::i2f()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00796">OperationsArithmetic::i2l()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01006">OperationsArithmetic::i2s()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00167">OperationsArithmetic::iadd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00417">OperationsLoadStore::iaload()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00673">OperationsArithmetic::iand()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01046">OperationsLoadStore::iastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00037">OperationsConstants::iconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00051">OperationsConstants::iconst_1()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00065">OperationsConstants::iconst_2()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00079">OperationsConstants::iconst_3()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00093">OperationsConstants::iconst_4()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00107">OperationsConstants::iconst_5()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00023">OperationsConstants::iconst_m1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00361">OperationsArithmetic::idiv()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00246">OperationsControl::if_acmpeq()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00266">OperationsControl::if_acmpne()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00124">OperationsControl::if_icmpeq()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00184">OperationsControl::if_icmpge()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00204">OperationsControl::if_icmpgt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00224">OperationsControl::if_icmple()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00164">OperationsControl::if_icmplt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00144">OperationsControl::if_icmpne()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00014">OperationsControl::ifeq()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00068">OperationsControl::ifge()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00086">OperationsControl::ifgt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00104">OperationsControl::ifle()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00050">OperationsControl::iflt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00032">OperationsControl::ifne()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00536">OperationsControl::ifnonnull()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00518">OperationsControl::ifnull()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00771">OperationsArithmetic::iinc()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00013">OperationsLoadStore::iload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00147">OperationsLoadStore::iload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00158">OperationsLoadStore::iload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00169">OperationsLoadStore::iload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00180">OperationsLoadStore::iload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00295">OperationsArithmetic::imul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00513">OperationsArithmetic::ineg()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01057">OperationsObject::instanceof()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00697">OperationsObject::invokeinterface()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00508">OperationsObject::invokespecial()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00610">OperationsObject::invokestatic()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00320">OperationsObject::invokevirtual()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00705">OperationsArithmetic::ior()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00437">OperationsArithmetic::irem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00437">OperationsControl::ireturn()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00575">OperationsArithmetic::ishl()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00607">OperationsArithmetic::ishr()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00658">OperationsLoadStore::istore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00792">OperationsLoadStore::istore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00803">OperationsLoadStore::istore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00814">OperationsLoadStore::istore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00825">OperationsLoadStore::istore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00231">OperationsArithmetic::isub()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00639">OperationsArithmetic::iushr()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00737">OperationsArithmetic::ixor()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00299">OperationsControl::jsr()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00570">OperationsControl::jsr_w()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00871">OperationsArithmetic::l2d()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00856">OperationsArithmetic::l2f()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00841">OperationsArithmetic::l2i()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00183">OperationsArithmetic::ladd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00443">OperationsLoadStore::laload()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00689">OperationsArithmetic::land()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01078">OperationsLoadStore::lastore()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01023">OperationsArithmetic::lcmp()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00121">OperationsConstants::lconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00135">OperationsConstants::lconst_1()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00250">OperationsConstants::ldc()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00348">OperationsConstants::ldc2_w()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00298">OperationsConstants::ldc_w()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00382">OperationsArithmetic::ldiv()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00038">OperationsLoadStore::lload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00191">OperationsLoadStore::lload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00208">OperationsLoadStore::lload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00225">OperationsLoadStore::lload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00242">OperationsLoadStore::lload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00311">OperationsArithmetic::lmul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00528">OperationsArithmetic::lneg()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00391">OperationsControl::lookupswitch()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00721">OperationsArithmetic::lor()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00458">OperationsArithmetic::lrem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00450">OperationsControl::lreturn()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00591">OperationsArithmetic::lshl()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00623">OperationsArithmetic::lshr()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00683">OperationsLoadStore::lstore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00836">OperationsLoadStore::lstore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00851">OperationsLoadStore::lstore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00866">OperationsLoadStore::lstore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00881">OperationsLoadStore::lstore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00247">OperationsArithmetic::lsub()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00655">OperationsArithmetic::lushr()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00753">OperationsArithmetic::lxor()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01122">OperationsObject::monitorenter()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01128">OperationsObject::monitorexit()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01134">OperationsObject::multianewarray()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00822">OperationsObject::newarray()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00088">OperationsBase::nop()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00012">OperationsArithmetic::pop()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00022">OperationsArithmetic::pop2()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00260">OperationsObject::putfield()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00111">OperationsObject::putstatic()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00316">OperationsControl::ret()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00624">OperationsLoadStore::saload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01273">OperationsLoadStore::sastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00231">OperationsConstants::sipush()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00147">OperationsArithmetic::swap()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00341">OperationsControl::tableswitch()</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00094">OperationsBase::wide()</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPilhaJVM_a65763b14444559b443ab8bf550987d52_cgraph.png" border="0" usemap="#aclassPilhaJVM_a65763b14444559b443ab8bf550987d52_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPilhaJVM_a65763b14444559b443ab8bf550987d52_cgraph" id="aclassPilhaJVM_a65763b14444559b443ab8bf550987d52_cgraph">
+<area shape="rect" title="Obter a única instância da pilha." alt="" coords="5,5,168,33"/>
+<area shape="rect" href="classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="216,5,359,33"/>
+<area shape="poly" title=" " alt="" coords="168,16,200,16,200,22,168,22"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa0e43da476df6147c86c8cc3d6899718" name="aa0e43da476df6147c86c8cc3d6899718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e43da476df6147c86c8cc3d6899718">&#9670;&#160;</a></span>getTopFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFrame.html">Frame</a> * PilhaJVM::getTopFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o frame no topo da pilha da JVM. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o frame no topo da pilha. Caso a pilha esteja vazia, é retornado <code>NULL</code>. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8cpp_source.html#l00020">20</a> do ficheiro <a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a>.</p>
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8h_source.html#l00070">_frameStack</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="OperationsLoadStore_8cpp_source.html#l00529">OperationsLoadStore::aaload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01172">OperationsLoadStore::aastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00010">OperationsConstants::aconst_null()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00122">OperationsLoadStore::aload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00371">OperationsLoadStore::aload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00382">OperationsLoadStore::aload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00393">OperationsLoadStore::aload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00404">OperationsLoadStore::aload_3()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00915">OperationsObject::anewarray()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00498">OperationsControl::areturn()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00966">OperationsObject::arraylength()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00766">OperationsLoadStore::astore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01000">OperationsLoadStore::astore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01011">OperationsLoadStore::astore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01022">OperationsLoadStore::astore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01033">OperationsLoadStore::astore_3()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00985">OperationsObject::athrow()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00555">OperationsLoadStore::baload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01201">OperationsLoadStore::bastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00214">OperationsConstants::bipush()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00593">OperationsLoadStore::caload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01241">OperationsLoadStore::castore()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00991">OperationsObject::checkcast()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00961">OperationsArithmetic::d2f()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00931">OperationsArithmetic::d2i()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00946">OperationsArithmetic::d2l()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00215">OperationsArithmetic::dadd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00499">OperationsLoadStore::daload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01140">OperationsLoadStore::dastore()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01121">OperationsArithmetic::dcmpg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01096">OperationsArithmetic::dcmpl()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00188">OperationsConstants::dconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00201">OperationsConstants::dconst_1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00419">OperationsArithmetic::ddiv()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00092">OperationsLoadStore::dload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00303">OperationsLoadStore::dload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00320">OperationsLoadStore::dload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00337">OperationsLoadStore::dload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00354">OperationsLoadStore::dload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00343">OperationsArithmetic::dmul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00558">OperationsArithmetic::dneg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00495">OperationsArithmetic::drem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00480">OperationsControl::dreturn()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00737">OperationsLoadStore::dstore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00940">OperationsLoadStore::dstore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00955">OperationsLoadStore::dstore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00970">OperationsLoadStore::dstore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00985">OperationsLoadStore::dstore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00279">OperationsArithmetic::dsub()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00031">OperationsArithmetic::dup()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00084">OperationsArithmetic::dup2()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00101">OperationsArithmetic::dup2_x1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00123">OperationsArithmetic::dup2_x2()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00045">OperationsArithmetic::dup_x1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00063">OperationsArithmetic::dup_x2()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00019">OperationsBase::executarMetodos()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00916">OperationsArithmetic::f2d()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00886">OperationsArithmetic::f2i()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00901">OperationsArithmetic::f2l()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00199">OperationsArithmetic::fadd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00473">OperationsLoadStore::faload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01110">OperationsLoadStore::fastore()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01071">OperationsArithmetic::fcmpg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01046">OperationsArithmetic::fcmpl()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00149">OperationsConstants::fconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00162">OperationsConstants::fconst_1()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00175">OperationsConstants::fconst_2()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00403">OperationsArithmetic::fdiv()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00068">OperationsLoadStore::fload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00259">OperationsLoadStore::fload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00270">OperationsLoadStore::fload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00281">OperationsLoadStore::fload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00292">OperationsLoadStore::fload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00327">OperationsArithmetic::fmul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00543">OperationsArithmetic::fneg()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00479">OperationsArithmetic::frem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00467">OperationsControl::freturn()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00712">OperationsLoadStore::fstore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00896">OperationsLoadStore::fstore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00907">OperationsLoadStore::fstore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00918">OperationsLoadStore::fstore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00929">OperationsLoadStore::fstore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00263">OperationsArithmetic::fsub()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00288">OperationsControl::func_goto()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00788">OperationsObject::func_new()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00191">OperationsObject::getfield()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00020">OperationsObject::getstatic()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00556">OperationsControl::goto_w()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00976">OperationsArithmetic::i2b()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00991">OperationsArithmetic::i2c()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00826">OperationsArithmetic::i2d()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00811">OperationsArithmetic::i2f()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00796">OperationsArithmetic::i2l()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01006">OperationsArithmetic::i2s()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00167">OperationsArithmetic::iadd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00417">OperationsLoadStore::iaload()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00673">OperationsArithmetic::iand()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01046">OperationsLoadStore::iastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00037">OperationsConstants::iconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00051">OperationsConstants::iconst_1()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00065">OperationsConstants::iconst_2()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00079">OperationsConstants::iconst_3()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00093">OperationsConstants::iconst_4()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00107">OperationsConstants::iconst_5()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00023">OperationsConstants::iconst_m1()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00361">OperationsArithmetic::idiv()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00246">OperationsControl::if_acmpeq()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00266">OperationsControl::if_acmpne()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00124">OperationsControl::if_icmpeq()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00184">OperationsControl::if_icmpge()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00204">OperationsControl::if_icmpgt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00224">OperationsControl::if_icmple()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00164">OperationsControl::if_icmplt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00144">OperationsControl::if_icmpne()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00014">OperationsControl::ifeq()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00068">OperationsControl::ifge()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00086">OperationsControl::ifgt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00104">OperationsControl::ifle()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00050">OperationsControl::iflt()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00032">OperationsControl::ifne()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00536">OperationsControl::ifnonnull()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00518">OperationsControl::ifnull()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00771">OperationsArithmetic::iinc()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00013">OperationsLoadStore::iload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00147">OperationsLoadStore::iload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00158">OperationsLoadStore::iload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00169">OperationsLoadStore::iload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00180">OperationsLoadStore::iload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00295">OperationsArithmetic::imul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00513">OperationsArithmetic::ineg()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01057">OperationsObject::instanceof()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00697">OperationsObject::invokeinterface()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00508">OperationsObject::invokespecial()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00610">OperationsObject::invokestatic()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00320">OperationsObject::invokevirtual()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00705">OperationsArithmetic::ior()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00437">OperationsArithmetic::irem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00437">OperationsControl::ireturn()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00575">OperationsArithmetic::ishl()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00607">OperationsArithmetic::ishr()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00658">OperationsLoadStore::istore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00792">OperationsLoadStore::istore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00803">OperationsLoadStore::istore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00814">OperationsLoadStore::istore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00825">OperationsLoadStore::istore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00231">OperationsArithmetic::isub()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00639">OperationsArithmetic::iushr()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00737">OperationsArithmetic::ixor()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00299">OperationsControl::jsr()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00570">OperationsControl::jsr_w()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00871">OperationsArithmetic::l2d()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00856">OperationsArithmetic::l2f()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00841">OperationsArithmetic::l2i()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00183">OperationsArithmetic::ladd()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00443">OperationsLoadStore::laload()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00689">OperationsArithmetic::land()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01078">OperationsLoadStore::lastore()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l01023">OperationsArithmetic::lcmp()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00121">OperationsConstants::lconst_0()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00135">OperationsConstants::lconst_1()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00250">OperationsConstants::ldc()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00348">OperationsConstants::ldc2_w()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00298">OperationsConstants::ldc_w()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00382">OperationsArithmetic::ldiv()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00038">OperationsLoadStore::lload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00191">OperationsLoadStore::lload_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00208">OperationsLoadStore::lload_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00225">OperationsLoadStore::lload_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00242">OperationsLoadStore::lload_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00311">OperationsArithmetic::lmul()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00528">OperationsArithmetic::lneg()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00391">OperationsControl::lookupswitch()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00721">OperationsArithmetic::lor()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00458">OperationsArithmetic::lrem()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00450">OperationsControl::lreturn()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00591">OperationsArithmetic::lshl()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00623">OperationsArithmetic::lshr()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00683">OperationsLoadStore::lstore()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00836">OperationsLoadStore::lstore_0()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00851">OperationsLoadStore::lstore_1()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00866">OperationsLoadStore::lstore_2()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00881">OperationsLoadStore::lstore_3()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00247">OperationsArithmetic::lsub()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00655">OperationsArithmetic::lushr()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00753">OperationsArithmetic::lxor()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01122">OperationsObject::monitorenter()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01128">OperationsObject::monitorexit()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01134">OperationsObject::multianewarray()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00822">OperationsObject::newarray()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00088">OperationsBase::nop()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00012">OperationsArithmetic::pop()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00022">OperationsArithmetic::pop2()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00260">OperationsObject::putfield()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00111">OperationsObject::putstatic()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00316">OperationsControl::ret()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l00624">OperationsLoadStore::saload()</a>, <a class="el" href="OperationsLoadStore_8cpp_source.html#l01273">OperationsLoadStore::sastore()</a>, <a class="el" href="OperationsConstants_8cpp_source.html#l00231">OperationsConstants::sipush()</a>, <a class="el" href="OperationsArithmetic_8cpp_source.html#l00147">OperationsArithmetic::swap()</a>, <a class="el" href="OperationsControl_8cpp_source.html#l00341">OperationsControl::tableswitch()</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00094">OperationsBase::wide()</a>.</p>
+
+</div>
+</div>
+<a id="a636c01ded057b339aa00486003db9037" name="a636c01ded057b339aa00486003db9037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636c01ded057b339aa00486003db9037">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PilhaJVM::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPilhaJVM.html">PilhaJVM</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8cpp_source.html#l00003">PilhaJVM()</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPilhaJVM_a636c01ded057b339aa00486003db9037_cgraph.png" border="0" usemap="#aclassPilhaJVM_a636c01ded057b339aa00486003db9037_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPilhaJVM_a636c01ded057b339aa00486003db9037_cgraph" id="aclassPilhaJVM_a636c01ded057b339aa00486003db9037_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,158,33"/>
+<area shape="rect" href="classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="206,5,349,33"/>
+<area shape="poly" title=" " alt="" coords="158,16,190,16,190,22,158,22"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22d7bcd7db598b00ae219c9c2efb2c88" name="a22d7bcd7db598b00ae219c9c2efb2c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d7bcd7db598b00ae219c9c2efb2c88">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PilhaJVM::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o tamanho da pilha da JVM. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Obtém o número de frames contidos na pilha da JVM. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8cpp_source.html#l00040">40</a> do ficheiro <a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a>.</p>
+
+<p class="reference">Referências <a class="el" href="PilhaJVM_8h_source.html#l00070">_frameStack</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="OperationsBase_8cpp_source.html#l00019">OperationsBase::executarMetodos()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentação dos dados membro</h2>
+<a id="a09290179ef6c914aa32297ab9dae94ed" name="a09290179ef6c914aa32297ab9dae94ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09290179ef6c914aa32297ab9dae94ed">&#9670;&#160;</a></span>_frameStack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">stack&lt;<a class="el" href="classFrame.html">Frame</a>*&gt; PilhaJVM::_frameStack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Armazena a pilha da JVM, que contém frames. </p>
+
+<p class="definition">Definido na linha <a class="el" href="PilhaJVM_8h_source.html#l00070">70</a> do ficheiro <a class="el" href="PilhaJVM_8h_source.html">PilhaJVM.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="PilhaJVM_8cpp_source.html#l00011">addFrame()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00028">destroyTopFrame()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">getTopFrame()</a> e <a class="el" href="PilhaJVM_8cpp_source.html#l00040">size()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li>include/<a class="el" href="PilhaJVM_8h_source.html">PilhaJVM.h</a></li>
+<li>src/<a class="el" href="PilhaJVM_8cpp_source.html">PilhaJVM.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classPilhaJVM.html">PilhaJVM</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

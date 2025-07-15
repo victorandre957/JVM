@@ -1,0 +1,80 @@
+\doxysection{Referência à classe Object}
+\hypertarget{classObject}{}\label{classObject}\index{Object@{Object}}
+
+
+Classe base utilizada para todos elementos que se caracterizam como objetos, como\+: instância de classe e arrays.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+
+
+Diagrama de heranças da classe Object\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classObject_a226f2ae2af766b77d83c09a4d766b725}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual para permitir destruição polimórfica segura. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{BasicTypes_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classObject_a08cee945bc224fc81f4448086625183d}{object\+Type}} ()=0
+\begin{DoxyCompactList}\small\item\em Método utilizado para declaração do tipo de objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe base utilizada para todos elementos que se caracterizam como objetos, como\+: instância de classe e arrays. 
+
+Definido na linha \mbox{\hyperlink{Object_8h_source_l00016}{16}} do ficheiro \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classObject_doc-constructors}
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classObject_a226f2ae2af766b77d83c09a4d766b725}\index{Object@{Object}!````~Object@{\texorpdfstring{$\sim$}{\string~}Object}}
+\index{````~Object@{\texorpdfstring{$\sim$}{\string~}Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Object()}{\string~Object()}}
+{\footnotesize\ttfamily \label{classObject_a226f2ae2af766b77d83c09a4d766b725} 
+virtual Object\+::\texorpdfstring{$\sim$}{\string~}\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual para permitir destruição polimórfica segura. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classObject_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classObject_a08cee945bc224fc81f4448086625183d}\index{Object@{Object}!objectType@{objectType}}
+\index{objectType@{objectType}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{objectType()}{objectType()}}
+{\footnotesize\ttfamily \label{classObject_a08cee945bc224fc81f4448086625183d} 
+virtual \mbox{\hyperlink{BasicTypes_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Object\+::object\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Método utilizado para declaração do tipo de objeto. 
+
+\begin{DoxyReturn}{Retorna}
+O tipo de objeto. 
+\end{DoxyReturn}
+
+
+Implementado em \mbox{\hyperlink{classArrayObject_a9f29b0c867a13a853d64a9e353a0eefa}{Array\+Object}}, \mbox{\hyperlink{classInstanceClass_ae8570307f49cb95cc01fb8d6bda23763}{Instance\+Class}} e \mbox{\hyperlink{classStringObject_a4757889f8b78eba719d5891658abe685}{String\+Object}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsObject_8cpp_source_l00991}{Operations\+Object\+::checkcast()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00191}{Operations\+Object\+::getfield()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01057}{Operations\+Object\+::instanceof()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00697}{Operations\+Object\+::invokeinterface()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00508}{Operations\+Object\+::invokespecial()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00320}{Operations\+Object\+::invokevirtual()}} e \mbox{\hyperlink{OperationsObject_8cpp_source_l00260}{Operations\+Object\+::putfield()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Object_8h}{Object.\+h}}\end{DoxyCompactItemize}

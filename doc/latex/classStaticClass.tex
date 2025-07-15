@@ -1,0 +1,402 @@
+\doxysection{Referência à classe Static\+Class}
+\hypertarget{classStaticClass}{}\label{classStaticClass}\index{StaticClass@{StaticClass}}
+
+
+Representação de uma classe carregada durante o runtime.  
+
+
+
+
+{\ttfamily \#include $<$Static\+Class.\+h$>$}
+
+
+
+Diagrama de colaboração para Static\+Class\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStaticClass__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}{Static\+Class}} (\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}class\+File)
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticClass_ac5f5868b6e461dfdd9a1724407ee4fda}{\texorpdfstring{$\sim$}{\string~}\+Static\+Class}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c}{Static\+Class}} (const \mbox{\hyperlink{classStaticClass}{Static\+Class}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor (deleted para evitar cópias desnecessárias). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStaticClass}{Static\+Class}} \& \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=}} (const \mbox{\hyperlink{classStaticClass}{Static\+Class}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Assignment operator (deleted para evitar cópias desnecessárias). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classStaticClass_a8a0c621d79a360af4b96e9c7546daef2}{get\+Class\+File}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Obtém a \doxylink{classClassFile}{Class\+File} associada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStaticClass_ae87d4a428ef84551219b9daa8280e774}{put\+Value\+Into\+Field}} (const \mbox{\hyperlink{structValue}{Value}} \&value, const string \&field\+Name)
+\begin{DoxyCompactList}\small\item\em Insere um valor no field estático informado. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structValue}{Value}} \& \mbox{\hyperlink{classStaticClass_a17b66d9db593f2a58f5bb72f359069f4}{get\+Value\+From\+Field}} (const string \&field\+Name) const
+\begin{DoxyCompactList}\small\item\em Obtém o valor de um field estático. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStaticClass_ab542c00149953d1c470a6c6267143510}{field\+Exists}} (const string \&field\+Name) const noexcept
+\begin{DoxyCompactList}\small\item\em Verifica se o field informado existe. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classStaticClass_aade050def051a5f9cf4518999ff39996}{get\+Numero\+Fields\+Estaticos}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Obtém o número de campos estáticos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classStaticClass_aa0dcab967f720db213f8591c67861a6e}{extrair\+Nome\+Arquivo}} (char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Extrai o nome do arquivo sem extensão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structValue}{Value}} \mbox{\hyperlink{classStaticClass_a49a8e8b0ed634056308ee572e93b1372}{criar\+Valor\+Padrao}} (char field\+Type) noexcept
+\begin{DoxyCompactList}\small\item\em Inicializa um valor padrão baseado no tipo do campo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classStaticClass_ae54948d5ec18075dd5b68c7faf4ccc8b}{\+\_\+class\+File}}
+\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{structValue}{Value}} $>$ \mbox{\hyperlink{classStaticClass_a6a6be07653e7f40530b5cf22e5045110}{\+\_\+static\+Fields}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representação de uma classe carregada durante o runtime. 
+
+Gerencia os campos estáticos e metadados da classe. 
+
+Definido na linha \mbox{\hyperlink{StaticClass_8h_source_l00019}{19}} do ficheiro \mbox{\hyperlink{StaticClass_8h_source}{Static\+Class.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classStaticClass_doc-constructors}
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3}\index{StaticClass@{StaticClass}!StaticClass@{StaticClass}}
+\index{StaticClass@{StaticClass}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{StaticClass()}{StaticClass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3} 
+Static\+Class\+::\+Static\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}}]{class\+File}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construtor padrão. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+File} & A \doxylink{classClassFile}{Class\+File} correspondente à classe. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{6}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8h_source_l00094}{\+\_\+class\+File}}, \mbox{\hyperlink{BasicTypes_8h_source_l00091}{field\+\_\+info\+::access\+\_\+flags}}, \mbox{\hyperlink{ClassFile_8h_source_l00039}{Class\+File\+::constant\+\_\+pool}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00076}{criar\+Valor\+Padrao()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00093}{field\+\_\+info\+::descriptor\+\_\+index}}, \mbox{\hyperlink{ClassFile_8h_source_l00046}{Class\+File\+::fields}}, \mbox{\hyperlink{ClassFile_8h_source_l00045}{Class\+File\+::fields\+\_\+count}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{Utils\+::get\+Formatted\+Constant()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00092}{field\+\_\+info\+::name\+\_\+index}} e \mbox{\hyperlink{StaticClass_8cpp_source_l00036}{put\+Value\+Into\+Field()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}} e \mbox{\hyperlink{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c}{Static\+Class()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStaticClass_a6c0e4d8842888a97160f1e815c8e6ac3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStaticClass_ac5f5868b6e461dfdd9a1724407ee4fda}\index{StaticClass@{StaticClass}!````~StaticClass@{\texorpdfstring{$\sim$}{\string~}StaticClass}}
+\index{````~StaticClass@{\texorpdfstring{$\sim$}{\string~}StaticClass}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StaticClass()}{\string~StaticClass()}}
+{\footnotesize\ttfamily \label{classStaticClass_ac5f5868b6e461dfdd9a1724407ee4fda} 
+Static\+Class\+::\texorpdfstring{$\sim$}{\string~}\+Static\+Class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destrutor padrão. 
+
+\Hypertarget{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c}\index{StaticClass@{StaticClass}!StaticClass@{StaticClass}}
+\index{StaticClass@{StaticClass}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{StaticClass()}{StaticClass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c} 
+Static\+Class\+::\+Static\+Class (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStaticClass}{Static\+Class}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor (deleted para evitar cópias desnecessárias). 
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{Static\+Class()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStaticClass_a06cf89664b18e3c186a8d2ba957b911c_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classStaticClass_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classStaticClass_a49a8e8b0ed634056308ee572e93b1372}\index{StaticClass@{StaticClass}!criarValorPadrao@{criarValorPadrao}}
+\index{criarValorPadrao@{criarValorPadrao}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{criarValorPadrao()}{criarValorPadrao()}}
+{\footnotesize\ttfamily \label{classStaticClass_a49a8e8b0ed634056308ee572e93b1372} 
+\mbox{\hyperlink{structValue}{Value}} Static\+Class\+::criar\+Valor\+Padrao (\begin{DoxyParamCaption}\item[{char}]{field\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Inicializa um valor padrão baseado no tipo do campo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em field\+Type} & Tipo do campo (primeiro caractere do descritor). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor padrão inicializado. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00076}{76}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00033}{Value\+::byte\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00034}{Value\+::char\+Value}}, \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{BasicTypes_8h_source_l00039}{Value\+::double\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00037}{Value\+::float\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00038}{Value\+::long\+Value}}, \mbox{\hyperlink{BasicTypes_8h_source_l00041}{Value\+::object}}, \mbox{\hyperlink{BasicTypes_8h_source_l00035}{Value\+::short\+Value}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+
+
+Referenciado por \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}} e \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{Static\+Class()}}.
+
+\Hypertarget{classStaticClass_aa0dcab967f720db213f8591c67861a6e}\index{StaticClass@{StaticClass}!extrairNomeArquivo@{extrairNomeArquivo}}
+\index{extrairNomeArquivo@{extrairNomeArquivo}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{extrairNomeArquivo()}{extrairNomeArquivo()}}
+{\footnotesize\ttfamily \label{classStaticClass_aa0dcab967f720db213f8591c67861a6e} 
+string Static\+Class\+::extrair\+Nome\+Arquivo (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extrai o nome do arquivo sem extensão. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argv} & Array de argumentos da linha de comando. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Nome do arquivo sem a extensão .class. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00054}{54}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}} e \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}}.
+
+\Hypertarget{classStaticClass_ab542c00149953d1c470a6c6267143510}\index{StaticClass@{StaticClass}!fieldExists@{fieldExists}}
+\index{fieldExists@{fieldExists}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{fieldExists()}{fieldExists()}}
+{\footnotesize\ttfamily \label{classStaticClass_ab542c00149953d1c470a6c6267143510} 
+bool Static\+Class\+::field\+Exists (\begin{DoxyParamCaption}\item[{const string \&}]{field\+Name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Verifica se o field informado existe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em field\+Name} & O nome do field que será verificado a existência. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso o field exista, false caso contrário. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00050}{50}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8h_source_l00099}{\+\_\+static\+Fields}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsObject_8cpp_source_l00020}{Operations\+Object\+::getstatic()}}, \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}} e \mbox{\hyperlink{OperationsObject_8cpp_source_l00111}{Operations\+Object\+::putstatic()}}.
+
+\Hypertarget{classStaticClass_a8a0c621d79a360af4b96e9c7546daef2}\index{StaticClass@{StaticClass}!getClassFile@{getClassFile}}
+\index{getClassFile@{getClassFile}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{getClassFile()}{getClassFile()}}
+{\footnotesize\ttfamily \label{classStaticClass_a8a0c621d79a360af4b96e9c7546daef2} 
+\mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*} Static\+Class\+::get\+Class\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Obtém a \doxylink{classClassFile}{Class\+File} associada. 
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a \doxylink{classClassFile}{Class\+File}. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00032}{32}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8h_source_l00094}{\+\_\+class\+File}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MethodArea_8cpp_source_l00065}{Method\+Area\+::add\+Class()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00991}{Operations\+Object\+::checkcast()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00020}{Operations\+Object\+::getstatic()}}, \mbox{\hyperlink{InstanceClass_8cpp_source_l00009}{Instance\+Class\+::\+Instance\+Class()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01057}{Operations\+Object\+::instanceof()}}, \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}, \mbox{\hyperlink{Frame_8cpp_source_l00108}{Frame\+::obter\+Method\+Named()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00111}{Operations\+Object\+::putstatic()}} e \mbox{\hyperlink{OperationsBase_8cpp_source_l00042}{Operations\+Base\+::verificar\+Metodo\+Existe()}}.
+
+\Hypertarget{classStaticClass_aade050def051a5f9cf4518999ff39996}\index{StaticClass@{StaticClass}!getNumeroFieldsEstaticos@{getNumeroFieldsEstaticos}}
+\index{getNumeroFieldsEstaticos@{getNumeroFieldsEstaticos}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{getNumeroFieldsEstaticos()}{getNumeroFieldsEstaticos()}}
+{\footnotesize\ttfamily \label{classStaticClass_aade050def051a5f9cf4518999ff39996} 
+size\+\_\+t Static\+Class\+::get\+Numero\+Fields\+Estaticos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Obtém o número de campos estáticos. 
+
+\begin{DoxyReturn}{Retorna}
+Número de campos estáticos na classe. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00072}{72}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8h_source_l00099}{\+\_\+static\+Fields}}.
+
+
+
+Referenciado por \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}}.
+
+\Hypertarget{classStaticClass_a17b66d9db593f2a58f5bb72f359069f4}\index{StaticClass@{StaticClass}!getValueFromField@{getValueFromField}}
+\index{getValueFromField@{getValueFromField}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{getValueFromField()}{getValueFromField()}}
+{\footnotesize\ttfamily \label{classStaticClass_a17b66d9db593f2a58f5bb72f359069f4} 
+const \mbox{\hyperlink{structValue}{Value}} \& Static\+Class\+::get\+Value\+From\+Field (\begin{DoxyParamCaption}\item[{const string \&}]{field\+Name}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém o valor de um field estático. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em field\+Name} & O nome do field que será obtido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência constante ao valor correspondente ao field estático. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em No\+Such\+Field\+Error} & se o campo não existir. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00040}{40}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8h_source_l00099}{\+\_\+static\+Fields}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsObject_8cpp_source_l00020}{Operations\+Object\+::getstatic()}} e \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}}.
+
+\Hypertarget{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}\index{StaticClass@{StaticClass}!operator=@{operator=}}
+\index{operator=@{operator=}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574} 
+\mbox{\hyperlink{classStaticClass}{Static\+Class}} \& Static\+Class\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStaticClass}{Static\+Class}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Assignment operator (deleted para evitar cópias desnecessárias). 
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8cpp_source_l00076}{criar\+Valor\+Padrao()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00054}{extrair\+Nome\+Arquivo()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00050}{field\+Exists()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00072}{get\+Numero\+Fields\+Estaticos()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00040}{get\+Value\+From\+Field()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00036}{put\+Value\+Into\+Field()}} e \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{Static\+Class()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStaticClass_ae87d4a428ef84551219b9daa8280e774}\index{StaticClass@{StaticClass}!putValueIntoField@{putValueIntoField}}
+\index{putValueIntoField@{putValueIntoField}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{putValueIntoField()}{putValueIntoField()}}
+{\footnotesize\ttfamily \label{classStaticClass_ae87d4a428ef84551219b9daa8280e774} 
+void Static\+Class\+::put\+Value\+Into\+Field (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structValue}{Value}} \&}]{value}{, }\item[{const string \&}]{field\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Insere um valor no field estático informado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & O valor que será inserido. \\
+\hline
+{\em field\+Name} & O nome do field estático. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{StaticClass_8cpp_source_l00036}{36}} do ficheiro \mbox{\hyperlink{StaticClass_8cpp_source}{Static\+Class.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{StaticClass_8h_source_l00099}{\+\_\+static\+Fields}}.
+
+
+
+Referenciado por \mbox{\hyperlink{classStaticClass_affbe2e5c1401bee9f1dcfa258be4f574}{operator=()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00111}{Operations\+Object\+::putstatic()}} e \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{Static\+Class()}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classStaticClass_doc-variable-members}
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classStaticClass_ae54948d5ec18075dd5b68c7faf4ccc8b}\index{StaticClass@{StaticClass}!\_classFile@{\_classFile}}
+\index{\_classFile@{\_classFile}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{\_classFile}{\_classFile}}
+{\footnotesize\ttfamily \label{classStaticClass_ae54948d5ec18075dd5b68c7faf4ccc8b} 
+\mbox{\hyperlink{classClassFile}{Class\+File}}\texorpdfstring{$\ast$}{*} Static\+Class\+::\+\_\+class\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+A \doxylink{classClassFile}{Class\+File} correspondente à classe. 
+
+Definido na linha \mbox{\hyperlink{StaticClass_8h_source_l00094}{94}} do ficheiro \mbox{\hyperlink{StaticClass_8h_source}{Static\+Class.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{StaticClass_8cpp_source_l00032}{get\+Class\+File()}} e \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{Static\+Class()}}.
+
+\Hypertarget{classStaticClass_a6a6be07653e7f40530b5cf22e5045110}\index{StaticClass@{StaticClass}!\_staticFields@{\_staticFields}}
+\index{\_staticFields@{\_staticFields}!StaticClass@{StaticClass}}
+\doxysubsubsection{\texorpdfstring{\_staticFields}{\_staticFields}}
+{\footnotesize\ttfamily \label{classStaticClass_a6a6be07653e7f40530b5cf22e5045110} 
+unordered\+\_\+map$<$string, \mbox{\hyperlink{structValue}{Value}}$>$ Static\+Class\+::\+\_\+static\+Fields\hspace{0.3cm}{\ttfamily [private]}}
+
+Os fields estáticos da classe (usando unordered\+\_\+map para melhor performance). 
+
+Definido na linha \mbox{\hyperlink{StaticClass_8h_source_l00099}{99}} do ficheiro \mbox{\hyperlink{StaticClass_8h_source}{Static\+Class.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{StaticClass_8cpp_source_l00050}{field\+Exists()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00072}{get\+Numero\+Fields\+Estaticos()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00040}{get\+Value\+From\+Field()}} e \mbox{\hyperlink{StaticClass_8cpp_source_l00036}{put\+Value\+Into\+Field()}}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{StaticClass_8h}{Static\+Class.\+h}}\item 
+src/\mbox{\hyperlink{StaticClass_8cpp}{Static\+Class.\+cpp}}\end{DoxyCompactItemize}

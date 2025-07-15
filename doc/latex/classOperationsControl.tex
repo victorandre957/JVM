@@ -1,0 +1,757 @@
+\doxysection{Referência à classe Operations\+Control}
+\hypertarget{classOperationsControl}{}\label{classOperationsControl}\index{OperationsControl@{OperationsControl}}
+
+
+Handles control flow operations (if, goto, return, etc.)  
+
+
+
+
+{\ttfamily \#include $<$Operations\+Control.\+h$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOperationsControl_a0d416230712edeeacc57514d7c378c0c}{Operations\+Control}} (bool \&is\+Wide)
+\begin{DoxyCompactList}\small\item\em Constructor that takes a reference to the \+\_\+is\+Wide state variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOperationsControl_aa8bf21102946b7bdddc8e0fc14d281ba}{ifeq}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_ab2106b65d892b7423af060775aa3611b}{ifne}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a6372e655c0b2baa7fb4dbcca53008ce9}{iflt}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a0f78f191fbd787f46903622cc91e1823}{ifge}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_ad732e8737e276737dbc8a22662d21e3f}{ifgt}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_aa95e9ec4a9a5e6ee063bc0604507901e}{ifle}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a845463b701d3c302bdd78c23d0763984}{if\+\_\+icmpeq}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a8b0528e1f0d67286a45137cb1f327f1d}{if\+\_\+icmpne}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a5cf66dcdb07b3a440f53955a4f194293}{if\+\_\+icmplt}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a458ed5e059dc92f608e8e03d69cb14fa}{if\+\_\+icmpge}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_acdaf0c4624669ed6c711eb7e68e9e4df}{if\+\_\+icmpgt}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a8629fdebba9830bdc725710ffaa9847b}{if\+\_\+icmple}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a2ad4318d70171056b8b07405a092313d}{if\+\_\+acmpeq}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_afe0db4d451b52bb6b532b1de47e60241}{if\+\_\+acmpne}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a2e4b2b5c5c3943b8640ee4d9d0c71dfc}{func\+\_\+goto}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_acefffccd5faf407fe66bd130c609ce77}{jsr}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_accac16b38cfe72ccc84b1cb65c44ae36}{ret}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a5d14c06c8398858320abdde9d014cdf2}{tableswitch}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_afbf5e1f15ff3ee9c3bfa8cf98be8d54b}{lookupswitch}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_ac412b92b7428e7710545aaf6537e53d6}{ireturn}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a798c25a56bbeaad810e536aef8a5429f}{lreturn}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_aacdf98d1ecb68b0e2e778c9f0384ce68}{freturn}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_ae9ddd8bae64ee470956546646f81058f}{dreturn}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a448301f5fae5f347270a9eaa4d0f79bc}{areturn}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a292e602f45ccac0f0bc5151245def9e8}{func\+\_\+return}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a598bdb8b726f843185b7b00ad12ccd31}{ifnull}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a4945be1f40cccb83769df011d81e4734}{ifnonnull}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a0b60ccc78a8d3b7d323c57501b6e1c26}{goto\+\_\+w}} ()
+\item 
+void \mbox{\hyperlink{classOperationsControl_a73e2b104b8713ece5b5300c81e8dddf3}{jsr\+\_\+w}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \& \mbox{\hyperlink{classOperationsControl_a53579afec8f180e0a2fc3a4ab66fada9}{\+\_\+is\+Wide}}
+\begin{DoxyCompactList}\small\item\em Reference to shared \+\_\+is\+Wide state variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Handles control flow operations (if, goto, return, etc.) 
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8h_source_l00009}{9}} do ficheiro \mbox{\hyperlink{OperationsControl_8h_source}{Operations\+Control.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classOperationsControl_doc-constructors}
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classOperationsControl_a0d416230712edeeacc57514d7c378c0c}\index{OperationsControl@{OperationsControl}!OperationsControl@{OperationsControl}}
+\index{OperationsControl@{OperationsControl}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{OperationsControl()}{OperationsControl()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a0d416230712edeeacc57514d7c378c0c} 
+Operations\+Control\+::\+Operations\+Control (\begin{DoxyParamCaption}\item[{bool \&}]{is\+Wide}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that takes a reference to the \+\_\+is\+Wide state variable. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em is\+Wide} & Reference to the shared \+\_\+is\+Wide state variable. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00009}{9}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{OperationsControl_8h_source_l00048}{\+\_\+is\+Wide}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classOperationsControl_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classOperationsControl_a448301f5fae5f347270a9eaa4d0f79bc}\index{OperationsControl@{OperationsControl}!areturn@{areturn}}
+\index{areturn@{areturn}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{areturn()}{areturn()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a448301f5fae5f347270a9eaa4d0f79bc} 
+void Operations\+Control\+::areturn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00498}{498}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00028}{Pilha\+JVM\+::destroy\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a448301f5fae5f347270a9eaa4d0f79bc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_ae9ddd8bae64ee470956546646f81058f}\index{OperationsControl@{OperationsControl}!dreturn@{dreturn}}
+\index{dreturn@{dreturn}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{dreturn()}{dreturn()}}
+{\footnotesize\ttfamily \label{classOperationsControl_ae9ddd8bae64ee470956546646f81058f} 
+void Operations\+Control\+::dreturn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00480}{480}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00028}{Pilha\+JVM\+::destroy\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_ae9ddd8bae64ee470956546646f81058f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_aacdf98d1ecb68b0e2e778c9f0384ce68}\index{OperationsControl@{OperationsControl}!freturn@{freturn}}
+\index{freturn@{freturn}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{freturn()}{freturn()}}
+{\footnotesize\ttfamily \label{classOperationsControl_aacdf98d1ecb68b0e2e778c9f0384ce68} 
+void Operations\+Control\+::freturn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00467}{467}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00028}{Pilha\+JVM\+::destroy\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_aacdf98d1ecb68b0e2e778c9f0384ce68_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a2e4b2b5c5c3943b8640ee4d9d0c71dfc}\index{OperationsControl@{OperationsControl}!func\_goto@{func\_goto}}
+\index{func\_goto@{func\_goto}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{func\_goto()}{func\_goto()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a2e4b2b5c5c3943b8640ee4d9d0c71dfc} 
+void Operations\+Control\+::func\+\_\+goto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00288}{288}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a2e4b2b5c5c3943b8640ee4d9d0c71dfc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a292e602f45ccac0f0bc5151245def9e8}\index{OperationsControl@{OperationsControl}!func\_return@{func\_return}}
+\index{func\_return@{func\_return}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{func\_return()}{func\_return()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a292e602f45ccac0f0bc5151245def9e8} 
+void Operations\+Control\+::func\+\_\+return (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00511}{511}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{PilhaJVM_8cpp_source_l00028}{Pilha\+JVM\+::destroy\+Top\+Frame()}} e \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a292e602f45ccac0f0bc5151245def9e8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a0b60ccc78a8d3b7d323c57501b6e1c26}\index{OperationsControl@{OperationsControl}!goto\_w@{goto\_w}}
+\index{goto\_w@{goto\_w}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{goto\_w()}{goto\_w()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a0b60ccc78a8d3b7d323c57501b6e1c26} 
+void Operations\+Control\+::goto\+\_\+w (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00556}{556}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a0b60ccc78a8d3b7d323c57501b6e1c26_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a2ad4318d70171056b8b07405a092313d}\index{OperationsControl@{OperationsControl}!if\_acmpeq@{if\_acmpeq}}
+\index{if\_acmpeq@{if\_acmpeq}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_acmpeq()}{if\_acmpeq()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a2ad4318d70171056b8b07405a092313d} 
+void Operations\+Control\+::if\+\_\+acmpeq (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00246}{246}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00041}{Value\+::object}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a2ad4318d70171056b8b07405a092313d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_afe0db4d451b52bb6b532b1de47e60241}\index{OperationsControl@{OperationsControl}!if\_acmpne@{if\_acmpne}}
+\index{if\_acmpne@{if\_acmpne}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_acmpne()}{if\_acmpne()}}
+{\footnotesize\ttfamily \label{classOperationsControl_afe0db4d451b52bb6b532b1de47e60241} 
+void Operations\+Control\+::if\+\_\+acmpne (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00266}{266}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00041}{Value\+::object}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_afe0db4d451b52bb6b532b1de47e60241_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a845463b701d3c302bdd78c23d0763984}\index{OperationsControl@{OperationsControl}!if\_icmpeq@{if\_icmpeq}}
+\index{if\_icmpeq@{if\_icmpeq}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_icmpeq()}{if\_icmpeq()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a845463b701d3c302bdd78c23d0763984} 
+void Operations\+Control\+::if\+\_\+icmpeq (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00124}{124}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a845463b701d3c302bdd78c23d0763984_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a458ed5e059dc92f608e8e03d69cb14fa}\index{OperationsControl@{OperationsControl}!if\_icmpge@{if\_icmpge}}
+\index{if\_icmpge@{if\_icmpge}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_icmpge()}{if\_icmpge()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a458ed5e059dc92f608e8e03d69cb14fa} 
+void Operations\+Control\+::if\+\_\+icmpge (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00184}{184}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a458ed5e059dc92f608e8e03d69cb14fa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_acdaf0c4624669ed6c711eb7e68e9e4df}\index{OperationsControl@{OperationsControl}!if\_icmpgt@{if\_icmpgt}}
+\index{if\_icmpgt@{if\_icmpgt}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_icmpgt()}{if\_icmpgt()}}
+{\footnotesize\ttfamily \label{classOperationsControl_acdaf0c4624669ed6c711eb7e68e9e4df} 
+void Operations\+Control\+::if\+\_\+icmpgt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00204}{204}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_acdaf0c4624669ed6c711eb7e68e9e4df_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a8629fdebba9830bdc725710ffaa9847b}\index{OperationsControl@{OperationsControl}!if\_icmple@{if\_icmple}}
+\index{if\_icmple@{if\_icmple}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_icmple()}{if\_icmple()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a8629fdebba9830bdc725710ffaa9847b} 
+void Operations\+Control\+::if\+\_\+icmple (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00224}{224}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a8629fdebba9830bdc725710ffaa9847b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a5cf66dcdb07b3a440f53955a4f194293}\index{OperationsControl@{OperationsControl}!if\_icmplt@{if\_icmplt}}
+\index{if\_icmplt@{if\_icmplt}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_icmplt()}{if\_icmplt()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a5cf66dcdb07b3a440f53955a4f194293} 
+void Operations\+Control\+::if\+\_\+icmplt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00164}{164}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a5cf66dcdb07b3a440f53955a4f194293_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a8b0528e1f0d67286a45137cb1f327f1d}\index{OperationsControl@{OperationsControl}!if\_icmpne@{if\_icmpne}}
+\index{if\_icmpne@{if\_icmpne}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{if\_icmpne()}{if\_icmpne()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a8b0528e1f0d67286a45137cb1f327f1d} 
+void Operations\+Control\+::if\+\_\+icmpne (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00144}{144}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a8b0528e1f0d67286a45137cb1f327f1d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_aa8bf21102946b7bdddc8e0fc14d281ba}\index{OperationsControl@{OperationsControl}!ifeq@{ifeq}}
+\index{ifeq@{ifeq}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifeq()}{ifeq()}}
+{\footnotesize\ttfamily \label{classOperationsControl_aa8bf21102946b7bdddc8e0fc14d281ba} 
+void Operations\+Control\+::ifeq (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00014}{14}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_aa8bf21102946b7bdddc8e0fc14d281ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a0f78f191fbd787f46903622cc91e1823}\index{OperationsControl@{OperationsControl}!ifge@{ifge}}
+\index{ifge@{ifge}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifge()}{ifge()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a0f78f191fbd787f46903622cc91e1823} 
+void Operations\+Control\+::ifge (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00068}{68}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a0f78f191fbd787f46903622cc91e1823_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_ad732e8737e276737dbc8a22662d21e3f}\index{OperationsControl@{OperationsControl}!ifgt@{ifgt}}
+\index{ifgt@{ifgt}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifgt()}{ifgt()}}
+{\footnotesize\ttfamily \label{classOperationsControl_ad732e8737e276737dbc8a22662d21e3f} 
+void Operations\+Control\+::ifgt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00086}{86}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_ad732e8737e276737dbc8a22662d21e3f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_aa95e9ec4a9a5e6ee063bc0604507901e}\index{OperationsControl@{OperationsControl}!ifle@{ifle}}
+\index{ifle@{ifle}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifle()}{ifle()}}
+{\footnotesize\ttfamily \label{classOperationsControl_aa95e9ec4a9a5e6ee063bc0604507901e} 
+void Operations\+Control\+::ifle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00104}{104}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_aa95e9ec4a9a5e6ee063bc0604507901e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a6372e655c0b2baa7fb4dbcca53008ce9}\index{OperationsControl@{OperationsControl}!iflt@{iflt}}
+\index{iflt@{iflt}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{iflt()}{iflt()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a6372e655c0b2baa7fb4dbcca53008ce9} 
+void Operations\+Control\+::iflt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00050}{50}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a6372e655c0b2baa7fb4dbcca53008ce9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_ab2106b65d892b7423af060775aa3611b}\index{OperationsControl@{OperationsControl}!ifne@{ifne}}
+\index{ifne@{ifne}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifne()}{ifne()}}
+{\footnotesize\ttfamily \label{classOperationsControl_ab2106b65d892b7423af060775aa3611b} 
+void Operations\+Control\+::ifne (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00032}{32}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_ab2106b65d892b7423af060775aa3611b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a4945be1f40cccb83769df011d81e4734}\index{OperationsControl@{OperationsControl}!ifnonnull@{ifnonnull}}
+\index{ifnonnull@{ifnonnull}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifnonnull()}{ifnonnull()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a4945be1f40cccb83769df011d81e4734} 
+void Operations\+Control\+::ifnonnull (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00536}{536}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00041}{Value\+::object}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a4945be1f40cccb83769df011d81e4734_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a598bdb8b726f843185b7b00ad12ccd31}\index{OperationsControl@{OperationsControl}!ifnull@{ifnull}}
+\index{ifnull@{ifnull}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ifnull()}{ifnull()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a598bdb8b726f843185b7b00ad12ccd31} 
+void Operations\+Control\+::ifnull (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00518}{518}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00041}{Value\+::object}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a598bdb8b726f843185b7b00ad12ccd31_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_ac412b92b7428e7710545aaf6537e53d6}\index{OperationsControl@{OperationsControl}!ireturn@{ireturn}}
+\index{ireturn@{ireturn}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ireturn()}{ireturn()}}
+{\footnotesize\ttfamily \label{classOperationsControl_ac412b92b7428e7710545aaf6537e53d6} 
+void Operations\+Control\+::ireturn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00437}{437}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00028}{Pilha\+JVM\+::destroy\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_ac412b92b7428e7710545aaf6537e53d6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_acefffccd5faf407fe66bd130c609ce77}\index{OperationsControl@{OperationsControl}!jsr@{jsr}}
+\index{jsr@{jsr}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{jsr()}{jsr()}}
+{\footnotesize\ttfamily \label{classOperationsControl_acefffccd5faf407fe66bd130c609ce77} 
+void Operations\+Control\+::jsr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00299}{299}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}, \mbox{\hyperlink{BasicTypes_8h_source_l00040}{Value\+::return\+Address}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_acefffccd5faf407fe66bd130c609ce77_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a73e2b104b8713ece5b5300c81e8dddf3}\index{OperationsControl@{OperationsControl}!jsr\_w@{jsr\_w}}
+\index{jsr\_w@{jsr\_w}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{jsr\_w()}{jsr\_w()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a73e2b104b8713ece5b5300c81e8dddf3} 
+void Operations\+Control\+::jsr\+\_\+w (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00570}{570}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}, \mbox{\hyperlink{BasicTypes_8h_source_l00040}{Value\+::return\+Address}}, \mbox{\hyperlink{Frame_8cpp_source_l00166}{Frame\+::size\+Code()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a73e2b104b8713ece5b5300c81e8dddf3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_afbf5e1f15ff3ee9c3bfa8cf98be8d54b}\index{OperationsControl@{OperationsControl}!lookupswitch@{lookupswitch}}
+\index{lookupswitch@{lookupswitch}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{lookupswitch()}{lookupswitch()}}
+{\footnotesize\ttfamily \label{classOperationsControl_afbf5e1f15ff3ee9c3bfa8cf98be8d54b} 
+void Operations\+Control\+::lookupswitch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00391}{391}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_afbf5e1f15ff3ee9c3bfa8cf98be8d54b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a798c25a56bbeaad810e536aef8a5429f}\index{OperationsControl@{OperationsControl}!lreturn@{lreturn}}
+\index{lreturn@{lreturn}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{lreturn()}{lreturn()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a798c25a56bbeaad810e536aef8a5429f} 
+void Operations\+Control\+::lreturn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00450}{450}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00028}{Pilha\+JVM\+::destroy\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8cpp_source_l00081}{Frame\+::empilhar\+Operand\+Stack()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a798c25a56bbeaad810e536aef8a5429f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_accac16b38cfe72ccc84b1cb65c44ae36}\index{OperationsControl@{OperationsControl}!ret@{ret}}
+\index{ret@{ret}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{ret()}{ret()}}
+{\footnotesize\ttfamily \label{classOperationsControl_accac16b38cfe72ccc84b1cb65c44ae36} 
+void Operations\+Control\+::ret (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00316}{316}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{OperationsControl_8h_source_l00048}{\+\_\+is\+Wide}}, \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{Frame_8cpp_source_l00063}{Frame\+::obter\+Local\+Variable\+Value()}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}}, \mbox{\hyperlink{BasicTypes_8h_source_l00040}{Value\+::return\+Address}}, \mbox{\hyperlink{Frame_8cpp_source_l00162}{Frame\+::size\+Local\+Variables()}}, \mbox{\hyperlink{Frame_8cpp_source_l00072}{Frame\+::troca\+Local\+Variable()}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_accac16b38cfe72ccc84b1cb65c44ae36_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classOperationsControl_a5d14c06c8398858320abdde9d014cdf2}\index{OperationsControl@{OperationsControl}!tableswitch@{tableswitch}}
+\index{tableswitch@{tableswitch}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{tableswitch()}{tableswitch()}}
+{\footnotesize\ttfamily \label{classOperationsControl_a5d14c06c8398858320abdde9d014cdf2} 
+void Operations\+Control\+::tableswitch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8cpp_source_l00341}{341}} do ficheiro \mbox{\hyperlink{OperationsControl_8cpp_source}{Operations\+Control.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{Value\+::data}}, \mbox{\hyperlink{Frame_8cpp_source_l00085}{Frame\+::desempilha\+Operand\+Stack()}}, \mbox{\hyperlink{Frame_8cpp_source_l00104}{Frame\+::get\+Code()}}, \mbox{\hyperlink{PilhaJVM_8h_source_l00024}{Pilha\+JVM\+::get\+Instance()}}, \mbox{\hyperlink{PilhaJVM_8cpp_source_l00020}{Pilha\+JVM\+::get\+Top\+Frame()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00036}{Value\+::int\+Value}}, \mbox{\hyperlink{Frame_8h_source_l00115}{Frame\+::pc}} e \mbox{\hyperlink{BasicTypes_8h_source_l00030}{Value\+::type}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOperationsControl_a5d14c06c8398858320abdde9d014cdf2_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classOperationsControl_doc-variable-members}
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classOperationsControl_a53579afec8f180e0a2fc3a4ab66fada9}\index{OperationsControl@{OperationsControl}!\_isWide@{\_isWide}}
+\index{\_isWide@{\_isWide}!OperationsControl@{OperationsControl}}
+\doxysubsubsection{\texorpdfstring{\_isWide}{\_isWide}}
+{\footnotesize\ttfamily \label{classOperationsControl_a53579afec8f180e0a2fc3a4ab66fada9} 
+bool\& Operations\+Control\+::\+\_\+is\+Wide\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to shared \+\_\+is\+Wide state variable. 
+
+
+
+Definido na linha \mbox{\hyperlink{OperationsControl_8h_source_l00048}{48}} do ficheiro \mbox{\hyperlink{OperationsControl_8h_source}{Operations\+Control.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OperationsControl_8cpp_source_l00009}{Operations\+Control()}} e \mbox{\hyperlink{OperationsControl_8cpp_source_l00316}{ret()}}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{OperationsControl_8h}{Operations\+Control.\+h}}\item 
+src/\mbox{\hyperlink{OperationsControl_8cpp}{Operations\+Control.\+cpp}}\end{DoxyCompactItemize}

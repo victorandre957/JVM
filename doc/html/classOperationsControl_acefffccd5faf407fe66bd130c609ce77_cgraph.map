@@ -1,0 +1,13 @@
+<map id="OperationsControl::jsr" name="OperationsControl::jsr">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,169,112"/>
+<area shape="rect" id="Node000002" href="$classFrame.html#af2481010c4795fbe1cba48122609cf1e" title="Adiciona um operando na pilha de operandos." alt="" coords="217,5,436,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,81,216,43,244,35,246,40,218,48,121,86"/>
+<area shape="rect" id="Node000003" href="$classFrame.html#a6863584ef3a6f2e4b1f93fb0deb09f4b" title="Obtém o código do método a partir de um offset." alt="" coords="264,57,388,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,86,248,77,249,82,169,91"/>
+<area shape="rect" id="Node000004" href="$classPilhaJVM.html#a65763b14444559b443ab8bf550987d52" title="Obter a única instância da pilha." alt="" coords="245,109,408,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,104,230,110,229,116,169,109"/>
+<area shape="rect" id="Node000006" href="$classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718" title="Obtém o frame no topo da pilha da JVM." alt="" coords="241,161,412,189"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="122,110,218,146,246,154,245,160,216,151,120,115"/>
+<area shape="rect" id="Node000005" href="$classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="484,109,627,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="408,120,468,120,468,126,408,126"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="LeitorExibidor::operator=" name="LeitorExibidor::operator=">
+<area shape="rect" id="Node000001" title="Bloqueia atribuição." alt="" coords="5,5,191,33"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#a246be764c0b6895539f915cc0f813e7b" title="Construtor privado (singleton)" alt="" coords="239,5,448,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,16,223,16,223,22,191,22"/>
+<area shape="rect" id="Node000003" href="$classLeitorExibidor.html#ac8ff6248b6897d88bb5cf22ea987a6ab" title="Detecta a endianness do sistema." alt="" coords="496,5,706,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="448,16,481,16,481,22,448,22"/>
+</map>

@@ -1,0 +1,297 @@
+\doxysection{Referência à classe Utils}
+\hypertarget{classUtils}{}\label{classUtils}\index{Utils@{Utils}}
+
+
+Classe com funções utilitárias para formatação e conversão.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classUtils_a702dbed7dee69418ecddc86e17e6d703}{verificar\+Versao}} (const \mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}class\+File)
+\begin{DoxyCompactList}\small\item\em Mapeia a versão do arquivo .class para versão do JDK. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classUtils_a63daf33599b447a8f3b2ea5aef2815ce}{comparar\+Utf8\+String}} (\mbox{\hyperlink{structCONSTANT__Utf8__info}{CONSTANT\+\_\+\+Utf8\+\_\+info}} constant, const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Compara string C com conteúdo de \doxylink{structCONSTANT__Utf8__info}{CONSTANT\+\_\+\+Utf8\+\_\+info}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classUtils_a932c28783170c6aa53362fbd0c4ceefa}{imprint\+Tabs}} (FILE \texorpdfstring{$\ast$}{*}out, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Imprime tabs de indentação em arquivo. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classUtils_a2a13f135d652b68fae6f4b8a9b21464e}{exibe\+Tabs}} (uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Exibe tabs de indentação no console. \end{DoxyCompactList}\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUtils_abef6742f09f81fea5952454925325ea5}{converter\+Stream\+To\+CString}} (const stringstream \&ss)
+\begin{DoxyCompactList}\small\item\em Converte stringstream para string C-\/style. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classUtils_adab42646ff804e531410448b584e4c32}{exibe\+Tabs}} (FILE \texorpdfstring{$\ast$}{*}out, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Exibe tabs de indentação em arquivo (sobrecarga) \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classUtils_a7277a15116076dbfef0adaef520499cc}{verificar\+Versao\+Class}} (const \mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}class\+File)
+\begin{DoxyCompactList}\small\item\em Alternativa para mapear versão do arquivo .class. \end{DoxyCompactList}\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classUtils_a9f417939b31cec9a87e58080d692df04}{get\+Formatted\+Constant}} (\mbox{\hyperlink{structcp__info}{cp\+\_\+info}} \texorpdfstring{$\ast$}{*}constant\+Pool, \mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}} index)
+\item 
+static bool \mbox{\hyperlink{classUtils_aa70b3d26f8b094e4bb4bbf3e05a6bd63}{verificar\+This\+Class}} (string aux\+Filename, string aux\+Class)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com funções utilitárias para formatação e conversão. 
+
+Definido na linha \mbox{\hyperlink{Utils_8h_source_l00024}{24}} do ficheiro \mbox{\hyperlink{Utils_8h_source}{Utils.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classUtils_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classUtils_a63daf33599b447a8f3b2ea5aef2815ce}\index{Utils@{Utils}!compararUtf8String@{compararUtf8String}}
+\index{compararUtf8String@{compararUtf8String}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{compararUtf8String()}{compararUtf8String()}}
+{\footnotesize\ttfamily \label{classUtils_a63daf33599b447a8f3b2ea5aef2815ce} 
+bool Utils\+::comparar\+Utf8\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCONSTANT__Utf8__info}{CONSTANT\+\_\+\+Utf8\+\_\+info}}}]{constant}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compara string C com conteúdo de \doxylink{structCONSTANT__Utf8__info}{CONSTANT\+\_\+\+Utf8\+\_\+info}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em constant} & Entrada da constant pool do tipo UTF-\/8 \\
+\hline
+{\em str} & String C-\/style para comparação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se conteúdos forem iguais, false caso contrário 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00055}{55}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00169}{CONSTANT\+\_\+\+Utf8\+\_\+info\+::bytes}} e \mbox{\hyperlink{BasicTypes_8h_source_l00168}{CONSTANT\+\_\+\+Utf8\+\_\+info\+::length}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{Frame_8cpp_source_l00140}{Frame\+::encontrar\+Attributes()}} e \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00440}{Leitor\+Exibidor\+::get\+Attribute\+Info()}}.
+
+\Hypertarget{classUtils_abef6742f09f81fea5952454925325ea5}\index{Utils@{Utils}!converterStreamToCString@{converterStreamToCString}}
+\index{converterStreamToCString@{converterStreamToCString}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{converterStreamToCString()}{converterStreamToCString()}}
+{\footnotesize\ttfamily \label{classUtils_abef6742f09f81fea5952454925325ea5} 
+const char \texorpdfstring{$\ast$}{*} Utils\+::converter\+Stream\+To\+CString (\begin{DoxyParamCaption}\item[{const stringstream \&}]{ss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converte stringstream para string C-\/style. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ss} & Stream de entrada com conteúdo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+const char\texorpdfstring{$\ast$}{*} String alocada dinamicamente (caller deve liberar memória) 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00076}{76}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Utils_8cpp_source_l00085}{get\+Formatted\+Constant()}}.
+
+\Hypertarget{classUtils_adab42646ff804e531410448b584e4c32}\index{Utils@{Utils}!exibeTabs@{exibeTabs}}
+\index{exibeTabs@{exibeTabs}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{exibeTabs()}{exibeTabs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classUtils_adab42646ff804e531410448b584e4c32} 
+void Utils\+::exibe\+Tabs (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{uint8\+\_\+t}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Exibe tabs de indentação em arquivo (sobrecarga) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em out} & Arquivo de destino \\
+\hline
+{\em n} & Quantidade de tabs a exibir \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classUtils_a2a13f135d652b68fae6f4b8a9b21464e}\index{Utils@{Utils}!exibeTabs@{exibeTabs}}
+\index{exibeTabs@{exibeTabs}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{exibeTabs()}{exibeTabs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classUtils_a2a13f135d652b68fae6f4b8a9b21464e} 
+void Utils\+::exibe\+Tabs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Exibe tabs de indentação no console. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Quantidade de tabs a exibir \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00072}{72}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+\Hypertarget{classUtils_a9f417939b31cec9a87e58080d692df04}\index{Utils@{Utils}!getFormattedConstant@{getFormattedConstant}}
+\index{getFormattedConstant@{getFormattedConstant}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{getFormattedConstant()}{getFormattedConstant()}}
+{\footnotesize\ttfamily \label{classUtils_a9f417939b31cec9a87e58080d692df04} 
+const char \texorpdfstring{$\ast$}{*} Utils\+::get\+Formatted\+Constant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcp__info}{cp\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{constant\+Pool}{, }\item[{\mbox{\hyperlink{BasicTypes_8h_a732cde1300aafb73b0ea6c2558a7a54f}{u2}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00085}{85}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{BasicTypes_8h_source_l00149}{CONSTANT\+\_\+\+Float\+\_\+info\+::bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00145}{CONSTANT\+\_\+\+Integer\+\_\+info\+::bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00169}{CONSTANT\+\_\+\+Utf8\+\_\+info\+::bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00126}{CONSTANT\+\_\+\+Fieldref\+\_\+info\+::class\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00136}{CONSTANT\+\_\+\+Interface\+Methodref\+\_\+info\+::class\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00131}{CONSTANT\+\_\+\+Methodref\+\_\+info\+::class\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00175}{cp\+\_\+info\+::class\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00107}{CONSTANT\+\_\+\+Class}}, \mbox{\hyperlink{BasicTypes_8h_source_l00115}{CONSTANT\+\_\+\+Double}}, \mbox{\hyperlink{BasicTypes_8h_source_l00108}{CONSTANT\+\_\+\+Fieldref}}, \mbox{\hyperlink{BasicTypes_8h_source_l00113}{CONSTANT\+\_\+\+Float}}, \mbox{\hyperlink{BasicTypes_8h_source_l00112}{CONSTANT\+\_\+\+Integer}}, \mbox{\hyperlink{BasicTypes_8h_source_l00110}{CONSTANT\+\_\+\+Interface\+Methodref}}, \mbox{\hyperlink{BasicTypes_8h_source_l00114}{CONSTANT\+\_\+\+Long}}, \mbox{\hyperlink{BasicTypes_8h_source_l00109}{CONSTANT\+\_\+\+Methodref}}, \mbox{\hyperlink{BasicTypes_8h_source_l00116}{CONSTANT\+\_\+\+Name\+And\+Type}}, \mbox{\hyperlink{BasicTypes_8h_source_l00111}{CONSTANT\+\_\+\+String}}, \mbox{\hyperlink{BasicTypes_8h_source_l00117}{CONSTANT\+\_\+\+Utf8}}, \mbox{\hyperlink{Utils_8cpp_source_l00076}{converter\+Stream\+To\+CString()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00164}{CONSTANT\+\_\+\+Name\+And\+Type\+\_\+info\+::descriptor\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00183}{cp\+\_\+info\+::double\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00176}{cp\+\_\+info\+::fieldref\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00181}{cp\+\_\+info\+::float\+\_\+info}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{get\+Formatted\+Constant()}}, \mbox{\hyperlink{BasicTypes_8h_source_l00158}{CONSTANT\+\_\+\+Double\+\_\+info\+::high\+\_\+bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00153}{CONSTANT\+\_\+\+Long\+\_\+info\+::high\+\_\+bytes}}, \mbox{\hyperlink{structcp__info_aef2e974ef9200a71aa848d71b3e797c7}{cp\+\_\+info\+::info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00180}{cp\+\_\+info\+::integer\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00178}{cp\+\_\+info\+::interface\+Methodref\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00168}{CONSTANT\+\_\+\+Utf8\+\_\+info\+::length}}, \mbox{\hyperlink{BasicTypes_8h_source_l00182}{cp\+\_\+info\+::long\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00159}{CONSTANT\+\_\+\+Double\+\_\+info\+::low\+\_\+bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00154}{CONSTANT\+\_\+\+Long\+\_\+info\+::low\+\_\+bytes}}, \mbox{\hyperlink{BasicTypes_8h_source_l00177}{cp\+\_\+info\+::methodref\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00127}{CONSTANT\+\_\+\+Fieldref\+\_\+info\+::name\+\_\+and\+\_\+type\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00137}{CONSTANT\+\_\+\+Interface\+Methodref\+\_\+info\+::name\+\_\+and\+\_\+type\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00132}{CONSTANT\+\_\+\+Methodref\+\_\+info\+::name\+\_\+and\+\_\+type\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00122}{CONSTANT\+\_\+\+Class\+\_\+info\+::name\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00163}{CONSTANT\+\_\+\+Name\+And\+Type\+\_\+info\+::name\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00184}{cp\+\_\+info\+::name\+And\+Type\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00141}{CONSTANT\+\_\+\+String\+\_\+info\+::string\+\_\+index}}, \mbox{\hyperlink{BasicTypes_8h_source_l00179}{cp\+\_\+info\+::string\+\_\+info}}, \mbox{\hyperlink{BasicTypes_8h_source_l00173}{cp\+\_\+info\+::tag}} e \mbox{\hyperlink{BasicTypes_8h_source_l00185}{cp\+\_\+info\+::utf8\+\_\+info}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MethodArea_8cpp_source_l00065}{Method\+Area\+::add\+Class()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00915}{Operations\+Object\+::anewarray()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00991}{Operations\+Object\+::checkcast()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00256}{display\+Attribute()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00184}{display\+Byte\+Code()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00064}{display\+Constant\+Pool()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00788}{Operations\+Object\+::func\+\_\+new()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00191}{Operations\+Object\+::getfield()}}, \mbox{\hyperlink{Utils_8cpp_source_l00085}{get\+Formatted\+Constant()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00020}{Operations\+Object\+::getstatic()}}, \mbox{\hyperlink{InstanceClass_8cpp_source_l00009}{Instance\+Class\+::\+Instance\+Class()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01057}{Operations\+Object\+::instanceof()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00697}{Operations\+Object\+::invokeinterface()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00508}{Operations\+Object\+::invokespecial()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00610}{Operations\+Object\+::invokestatic()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00320}{Operations\+Object\+::invokevirtual()}}, \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l01134}{Operations\+Object\+::multianewarray()}}, \mbox{\hyperlink{Frame_8cpp_source_l00108}{Frame\+::obter\+Method\+Named()}}, \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{print\+Arquivo\+Class\+File()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00260}{Operations\+Object\+::putfield()}}, \mbox{\hyperlink{OperationsObject_8cpp_source_l00111}{Operations\+Object\+::putstatic()}}, \mbox{\hyperlink{StaticClass_8cpp_source_l00006}{Static\+Class\+::\+Static\+Class()}} e \mbox{\hyperlink{OperationsBase_8cpp_source_l00042}{Operations\+Base\+::verificar\+Metodo\+Existe()}}.
+
+Grafo de chamadas desta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUtils_a9f417939b31cec9a87e58080d692df04_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classUtils_a932c28783170c6aa53362fbd0c4ceefa}\index{Utils@{Utils}!imprintTabs@{imprintTabs}}
+\index{imprintTabs@{imprintTabs}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{imprintTabs()}{imprintTabs()}}
+{\footnotesize\ttfamily \label{classUtils_a932c28783170c6aa53362fbd0c4ceefa} 
+void Utils\+::imprint\+Tabs (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{uint8\+\_\+t}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Imprime tabs de indentação em arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em out} & Arquivo de destino \\
+\hline
+{\em n} & Quantidade de tabs a imprimir \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00068}{68}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+\Hypertarget{classUtils_aa70b3d26f8b094e4bb4bbf3e05a6bd63}\index{Utils@{Utils}!verificarThisClass@{verificarThisClass}}
+\index{verificarThisClass@{verificarThisClass}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{verificarThisClass()}{verificarThisClass()}}
+{\footnotesize\ttfamily \label{classUtils_aa70b3d26f8b094e4bb4bbf3e05a6bd63} 
+bool Utils\+::verificar\+This\+Class (\begin{DoxyParamCaption}\item[{string}]{aux\+Filename}{, }\item[{string}]{aux\+Class}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Imprime informações básicas dos atributos e as específicas de um dos 9 elementos da unios, onde Synthetic e Deprecated são ignorados por não possuirem informações extras. 
+\begin{DoxyParams}{Parâmetros}
+{\em attribute\+Info} & sctruct do atributo \\
+\hline
+{\em index} & é o índice do atributo \\
+\hline
+{\em constant\+Pool} & é um ponteiro para uma instância de struct \doxylink{classClassFile}{Class\+File}, que descreve toda a estrutura de um arquivo .class \\
+\hline
+{\em indentation} & é o número de tabs que deve ser imprimido na linha \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00191}{191}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Main_8cpp_source_l00018}{main()}}.
+
+\Hypertarget{classUtils_a702dbed7dee69418ecddc86e17e6d703}\index{Utils@{Utils}!verificarVersao@{verificarVersao}}
+\index{verificarVersao@{verificarVersao}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{verificarVersao()}{verificarVersao()}}
+{\footnotesize\ttfamily \label{classUtils_a702dbed7dee69418ecddc86e17e6d703} 
+double Utils\+::verificar\+Versao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}}]{class\+File}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mapeia a versão do arquivo .class para versão do JDK. 
+
+Conversão baseada na especificação\+:
+\begin{DoxyItemize}
+\item 52 = J2\+SE 8
+\item 51 = J2\+SE 7
+\item 50 = J2\+SE 6.\+0
+\item 49 = J2\+SE 5.\+0
+\item 48 = JDK 1.\+4
+\item 47 = JDK 1.\+3
+\item 46 = JDK 1.\+2
+\item 45 = JDK 1.\+1
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+File} & Ponteiro para a estrutura \doxylink{classClassFile}{Class\+File} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Versão equivalente do JDK (ex\+: 1.\+8 para major\+\_\+version=52) 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00006}{6}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{ClassFile_8h_source_l00037}{Class\+File\+::major\+\_\+version}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ClassVisao_8cpp_source_l00307}{print\+Arquivo\+Class\+File()}}.
+
+\Hypertarget{classUtils_a7277a15116076dbfef0adaef520499cc}\index{Utils@{Utils}!verificarVersaoClass@{verificarVersaoClass}}
+\index{verificarVersaoClass@{verificarVersaoClass}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{verificarVersaoClass()}{verificarVersaoClass()}}
+{\footnotesize\ttfamily \label{classUtils_a7277a15116076dbfef0adaef520499cc} 
+double Utils\+::verificar\+Versao\+Class (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classClassFile}{Class\+File}} \texorpdfstring{$\ast$}{*}}]{class\+File}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Alternativa para mapear versão do arquivo .class. 
+
+\begin{DoxyNote}{Nota}
+Parece ser duplicada de \doxylink{classUtils_a702dbed7dee69418ecddc86e17e6d703}{verificar\+Versao()}, pode ser consolidada
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+File} & Ponteiro para a estrutura \doxylink{classClassFile}{Class\+File} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Versão equivalente do JDK
+\end{DoxyReturn}
+Converte os dados de versão obtidos da struct class\+File para a convenção encontrada em \href{https://en.wikipedia.org/wiki/Java_class_file\#General_layout}{\texttt{https\+://en.\+wikipedia.\+org/wiki/\+Java\+\_\+class\+\_\+file\#\+General\+\_\+layout}}
+
+Não Tratados Java SE 14 = 58 Java SE 13 = 57 Java SE 12 = 56 Java SE 11 = 55 Java SE 10 = 54 Java SE 9 = 53
+
+Tratados J2\+SE 8 = 52 J2\+SE 7 = 51 J2\+SE 6.\+0 = 50 J2\+SE 5.\+0 = 49 JDK 1.\+4 = 48 JDK 1.\+3 = 47 JDK 1.\+2 = 46 JDK 1.\+1 = 45 \begin{DoxyReturn}{Retorna}
+O valor equivalente à versão lida em \texorpdfstring{$\ast$}{*}class\+File. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{Utils_8cpp_source_l00041}{41}} do ficheiro \mbox{\hyperlink{Utils_8cpp_source}{Utils.\+cpp}}.
+
+
+
+Referências \mbox{\hyperlink{ClassFile_8h_source_l00037}{Class\+File\+::major\+\_\+version}}.
+
+
+
+Referenciado por \mbox{\hyperlink{LeitorExibidor_8cpp_source_l00022}{Leitor\+Exibidor\+::read\+Class\+File()}}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Utils_8h}{Utils.\+h}}\item 
+src/\mbox{\hyperlink{Utils_8cpp}{Utils.\+cpp}}\end{DoxyCompactItemize}

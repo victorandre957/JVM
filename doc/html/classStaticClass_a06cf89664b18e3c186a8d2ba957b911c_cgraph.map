@@ -1,0 +1,14 @@
+<map id="StaticClass::StaticClass" name="StaticClass::StaticClass">
+<area shape="rect" id="Node000001" title="Copy constructor (deleted para evitar cópias desnecessárias)." alt="" coords="5,81,179,109"/>
+<area shape="rect" id="Node000002" href="$classStaticClass.html#a6c0e4d8842888a97160f1e815c8e6ac3" title="Construtor padrão." alt="" coords="227,81,400,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,92,211,92,211,98,179,98"/>
+<area shape="rect" id="Node000003" href="$classStaticClass.html#a49a8e8b0ed634056308ee572e93b1372" title="Inicializa um valor padrão baseado no tipo do campo." alt="" coords="448,5,655,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,78,447,43,476,35,477,40,449,48,351,83"/>
+<area shape="rect" id="Node000004" href="$classUtils.html#a9f417939b31cec9a87e58080d692df04" title=" " alt="" coords="449,81,654,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="400,92,433,92,433,98,400,98"/>
+<area shape="rect" id="Node000006" href="$classStaticClass.html#ae87d4a428ef84551219b9daa8280e774" title="Insere um valor no field estático informado." alt="" coords="460,133,643,178"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="372,107,446,126,445,131,370,112"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="511,82,504,72,510,63,526,57,552,55,580,57,595,64,593,68,578,62,552,60,527,62,513,67,510,72,515,79"/>
+<area shape="rect" id="Node000005" href="$classUtils.html#abef6742f09f81fea5952454925325ea5" title="Converte stringstream para string C&#45;style." alt="" coords="703,73,886,118"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="655,92,688,92,688,98,655,98"/>
+</map>

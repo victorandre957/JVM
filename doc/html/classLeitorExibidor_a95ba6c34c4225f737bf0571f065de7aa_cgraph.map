@@ -1,0 +1,10 @@
+<map id="LeitorExibidor::getAttributeLocalVariable" name="LeitorExibidor::getAttributeLocalVariable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,36,203,81"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#a4b4d4ae7d4d68d9b0869cf0141965a43" title=" " alt="" coords="251,5,425,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,43,235,38,236,44,203,48"/>
+<area shape="rect" id="Node000003" href="$classLeitorExibidor.html#aa801d28856915543cfd59fb787e59626" title="Lê 2 bytes (converte endianness)" alt="" coords="473,44,639,72"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="203,59,251,60,425,60,457,59,457,64,425,65,251,65,203,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,37,458,42,457,47,425,43"/>
+<area shape="rect" id="Node000004" href="$classLeitorExibidor.html#af679ae83326347418cd0d3c90776d7a3" title="Lê 1 byte." alt="" coords="687,44,854,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="640,56,672,56,672,61,640,61"/>
+</map>

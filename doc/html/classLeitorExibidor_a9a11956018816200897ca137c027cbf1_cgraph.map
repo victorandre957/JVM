@@ -1,0 +1,7 @@
+<map id="LeitorExibidor::setVersion" name="LeitorExibidor::setVersion">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,193,33"/>
+<area shape="rect" id="Node000002" href="$classLeitorExibidor.html#aa801d28856915543cfd59fb787e59626" title="Lê 2 bytes (converte endianness)" alt="" coords="241,5,407,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,16,225,16,225,22,193,22"/>
+<area shape="rect" id="Node000003" href="$classLeitorExibidor.html#af679ae83326347418cd0d3c90776d7a3" title="Lê 1 byte." alt="" coords="455,5,621,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,16,440,16,440,22,408,22"/>
+</map>

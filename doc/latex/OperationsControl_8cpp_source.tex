@@ -1,0 +1,594 @@
+\doxysection{Operations\+Control.\+cpp}
+\hypertarget{OperationsControl_8cpp_source}{}\label{OperationsControl_8cpp_source}\index{src/OperationsControl.cpp@{src/OperationsControl.cpp}}
+\mbox{\hyperlink{OperationsControl_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{OperationsControl_8h}{OperationsControl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Frame_8h}{Frame.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PilhaJVM_8h}{PilhaJVM.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00007}00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00009}\mbox{\hyperlink{classOperationsControl_a0d416230712edeeacc57514d7c378c0c}{00009}}\ \mbox{\hyperlink{classOperationsControl_a0d416230712edeeacc57514d7c378c0c}{OperationsControl::OperationsControl}}(\textcolor{keywordtype}{bool}\&\ isWide)\ :\ \mbox{\hyperlink{classOperationsControl_a53579afec8f180e0a2fc3a4ab66fada9}{\_isWide}}(isWide)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00012}00012\ \textcolor{comment}{//\ Single\ value\ conditional\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00014}\mbox{\hyperlink{classOperationsControl_aa8bf21102946b7bdddc8e0fc14d281ba}{00014}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_aa8bf21102946b7bdddc8e0fc14d281ba}{OperationsControl::ifeq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00019}00019\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00027}00027\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00032}\mbox{\hyperlink{classOperationsControl_ab2106b65d892b7423af060775aa3611b}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_ab2106b65d892b7423af060775aa3611b}{OperationsControl::ifne}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00037}00037\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00045}00045\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00050}\mbox{\hyperlink{classOperationsControl_a6372e655c0b2baa7fb4dbcca53008ce9}{00050}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a6372e655c0b2baa7fb4dbcca53008ce9}{OperationsControl::iflt}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00055}00055\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00063}00063\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00068}\mbox{\hyperlink{classOperationsControl_a0f78f191fbd787f46903622cc91e1823}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a0f78f191fbd787f46903622cc91e1823}{OperationsControl::ifge}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00069}00069\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00073}00073\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00081}00081\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00086}\mbox{\hyperlink{classOperationsControl_ad732e8737e276737dbc8a22662d21e3f}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_ad732e8737e276737dbc8a22662d21e3f}{OperationsControl::ifgt}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00091}00091\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{if}\ (value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00099}00099\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00104}\mbox{\hyperlink{classOperationsControl_aa95e9ec4a9a5e6ee063bc0604507901e}{00104}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_aa95e9ec4a9a5e6ee063bc0604507901e}{OperationsControl::ifle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00105}00105\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00108}00108\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00109}00109\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ <=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00117}00117\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00120}00120\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00122}00122\ \textcolor{comment}{//\ Integer\ comparison\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00124}\mbox{\hyperlink{classOperationsControl_a845463b701d3c302bdd78c23d0763984}{00124}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a845463b701d3c302bdd78c23d0763984}{OperationsControl::if\_icmpeq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00125}00125\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00126}00126\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00128}00128\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00129}00129\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00130}00130\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00131}00131\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ ==\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00139}00139\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00142}00142\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00144}\mbox{\hyperlink{classOperationsControl_a8b0528e1f0d67286a45137cb1f327f1d}{00144}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a8b0528e1f0d67286a45137cb1f327f1d}{OperationsControl::if\_icmpne}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00145}00145\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00146}00146\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00148}00148\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00149}00149\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00150}00150\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00151}00151\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ !=\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00159}00159\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00162}00162\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00164}\mbox{\hyperlink{classOperationsControl_a5cf66dcdb07b3a440f53955a4f194293}{00164}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a5cf66dcdb07b3a440f53955a4f194293}{OperationsControl::if\_icmplt}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00165}00165\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00166}00166\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00168}00168\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00170}00170\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00171}00171\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00173}00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ <\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00179}00179\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00181}00181\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00182}00182\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00184}\mbox{\hyperlink{classOperationsControl_a458ed5e059dc92f608e8e03d69cb14fa}{00184}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a458ed5e059dc92f608e8e03d69cb14fa}{OperationsControl::if\_icmpge}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00185}00185\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00186}00186\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00188}00188\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00189}00189\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00190}00190\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00191}00191\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ >=\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00199}00199\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00202}00202\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00204}\mbox{\hyperlink{classOperationsControl_acdaf0c4624669ed6c711eb7e68e9e4df}{00204}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_acdaf0c4624669ed6c711eb7e68e9e4df}{OperationsControl::if\_icmpgt}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00205}00205\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00206}00206\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00208}00208\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00209}00209\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00210}00210\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00211}00211\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ >\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00219}00219\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00221}00221\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00222}00222\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00224}\mbox{\hyperlink{classOperationsControl_a8629fdebba9830bdc725710ffaa9847b}{00224}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a8629fdebba9830bdc725710ffaa9847b}{OperationsControl::if\_icmple}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00225}00225\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00226}00226\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00228}00228\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00229}00229\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00230}00230\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00231}00231\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00233}00233\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}}\ <=\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00239}00239\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00241}00241\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00242}00242\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00244}00244\ \textcolor{comment}{//\ Reference\ comparison\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00246}\mbox{\hyperlink{classOperationsControl_a2ad4318d70171056b8b07405a092313d}{00246}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a2ad4318d70171056b8b07405a092313d}{OperationsControl::if\_acmpeq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00247}00247\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00248}00248\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00250}00250\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00251}00251\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00252}00252\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00253}00253\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00255}00255\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a39c8a4a3203f603f82f1c80561bc735b}{object}}\ ==\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a39c8a4a3203f603f82f1c80561bc735b}{object}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00257}00257\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00260}00260\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00261}00261\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00262}00262\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00263}00263\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00264}00264\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00266}\mbox{\hyperlink{classOperationsControl_afe0db4d451b52bb6b532b1de47e60241}{00266}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_afe0db4d451b52bb6b532b1de47e60241}{OperationsControl::if\_acmpne}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00267}00267\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00268}00268\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00270}00270\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value2\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00271}00271\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value1\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00272}00272\ \ \ \ \ assert(value1.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00273}00273\ \ \ \ \ assert(value2.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{if}\ (value1.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a39c8a4a3203f603f82f1c80561bc735b}{object}}\ !=\ value2.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a39c8a4a3203f603f82f1c80561bc735b}{object}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00278}00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00279}00279\ \ \ \ \ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00280}00280\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00281}00281\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00283}00283\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00284}00284\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00286}00286\ \textcolor{comment}{//\ Unconditional\ jump\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00288}\mbox{\hyperlink{classOperationsControl_a2e4b2b5c5c3943b8640ee4d9d0c71dfc}{00288}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a2e4b2b5c5c3943b8640ee4d9d0c71dfc}{OperationsControl::func\_goto}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00289}00289\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00290}00290\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00292}00292\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00293}00293\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00294}00294\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00295}00295\ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00296}00296\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00297}00297\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00299}\mbox{\hyperlink{classOperationsControl_acefffccd5faf407fe66bd130c609ce77}{00299}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_acefffccd5faf407fe66bd130c609ce77}{OperationsControl::jsr}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00300}00300\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00301}00301\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00303}00303\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00304}00304\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00305}00305\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00306}00306\ \ \ \ \ int16\_t\ branchOffset\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00308}00308\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnAddr;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00309}00309\ \ \ \ \ returnAddr.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ =\ ValueType::RETURN\_ADDR;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00310}00310\ \ \ \ \ returnAddr.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0ff202a46baf275595d520cf800f596e}{returnAddress}}\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00311}00311\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnAddr);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00313}00313\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00314}00314\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00316}\mbox{\hyperlink{classOperationsControl_accac16b38cfe72ccc84b1cb65c44ae36}{00316}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_accac16b38cfe72ccc84b1cb65c44ae36}{OperationsControl::ret}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00317}00317\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00318}00318\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00320}00320\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00321}00321\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];\ \textcolor{comment}{//\ índice\ do\ vetor\ de\ variáveis\ locais}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00322}00322\ \ \ \ \ uint16\_t\ index\ =\ (uint16\_t)\ byte1;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00324}00324\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classOperationsControl_a53579afec8f180e0a2fc3a4ab66fada9}{\_isWide}})\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00325}00325\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00326}00326\ \ \ \ \ \ \ \ \ index\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00327}00327\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00329}00329\ \ \ \ \ assert(((int16\_t\ )(topFrame-\/>\mbox{\hyperlink{classFrame_a2b65f6fa2195970fd25d69c17b5ca933}{sizeLocalVariables}}())\ >\ index));}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00330}00330\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ value\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_ae074652eb3b71fb4cb28afd1ba91885d}{obterLocalVariableValue}}(index);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00331}00331\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00332}00332\ \ \ \ \ assert(value.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::RETURN\_ADDR);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00333}00333\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_adfa57fa3049213f13beba10ba7152500}{trocaLocalVariable}}(value,\ index);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00335}00335\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ =\ value.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0ff202a46baf275595d520cf800f596e}{returnAddress}};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00336}00336\ \ \ \ \ \mbox{\hyperlink{classOperationsControl_a53579afec8f180e0a2fc3a4ab66fada9}{\_isWide}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00337}00337\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00339}00339\ \textcolor{comment}{//\ Switch\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00341}\mbox{\hyperlink{classOperationsControl_a5d14c06c8398858320abdde9d014cdf2}{00341}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a5d14c06c8398858320abdde9d014cdf2}{OperationsControl::tableswitch}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00342}00342\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00343}00343\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00345}00345\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}*\ code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00346}00346\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ padding\ =\ 4\ -\/\ (topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +\ 1)\ \%\ 4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00347}00347\ \ \ \ \ padding\ =\ (padding\ ==\ 4)\ ?\ 0\ :\ padding;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00348}00348\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00349}00349\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte1\ =\ code[padding\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00350}00350\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte2\ =\ code[padding\ +\ 2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00351}00351\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte3\ =\ code[padding\ +\ 3];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00352}00352\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte4\ =\ code[padding\ +\ 4];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00353}00353\ \ \ \ \ int32\_t\ defaultBytes\ =\ (defaultbyte1\ <<\ 24)\ |\ (defaultbyte2\ <<\ 16)\ |\ (defaultbyte3\ <<\ 8)\ |\ defaultbyte4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00354}00354\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00355}00355\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ lowbyte1\ =\ code[padding\ +\ 5];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00356}00356\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ lowbyte2\ =\ code[padding\ +\ 6];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00357}00357\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ lowbyte3\ =\ code[padding\ +\ 7];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00358}00358\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ lowbyte4\ =\ code[padding\ +\ 8];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00359}00359\ \ \ \ \ uint32\_t\ lowbytes\ =\ (lowbyte1\ <<\ 24)\ |\ (lowbyte2\ <<\ 16)\ |\ (lowbyte3\ <<\ 8)\ |\ lowbyte4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00360}00360\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00361}00361\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ highbyte1\ =\ code[padding\ +\ 9];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00362}00362\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ highbyte2\ =\ code[padding\ +\ 10];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00363}00363\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ highbyte3\ =\ code[padding\ +\ 11];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00364}00364\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ highbyte4\ =\ code[padding\ +\ 12];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00365}00365\ \ \ \ \ uint32\_t\ highbytes\ =\ (highbyte1\ <<\ 24)\ |\ (highbyte2\ <<\ 16)\ |\ (highbyte3\ <<\ 8)\ |\ highbyte4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00366}00366\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00367}00367\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ keyValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00368}00368\ \ \ \ \ assert(keyValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00369}00369\ \ \ \ \ int32\_t\ key\ =\ keyValue.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00371}00371\ \ \ \ \ uint32\_t\ i;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00372}00372\ \ \ \ \ uint32\_t\ baseIndex\ =\ padding\ +\ 13;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00373}00373\ \ \ \ \ int32\_t\ offsets\ =\ highbytes\ -\/\ lowbytes\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00374}00374\ \ \ \ \ \textcolor{keywordtype}{bool}\ matched\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00375}00375\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ (unsigned)\ offsets;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00376}00376\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{unsigned})\ key\ ==\ (\textcolor{keywordtype}{unsigned})\ lowbytes)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ offset\ =\ (code[baseIndex]\ <<\ 24)\ |\ (code[baseIndex\ +\ 1]\ <<\ 16)\ |\ (code[baseIndex\ +\ 2]\ <<\ 8)\ |\ code[baseIndex\ +\ 3];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ offset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ matched\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00381}00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00382}00382\ \ \ \ \ \ \ \ \ lowbytes++;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00383}00383\ \ \ \ \ \ \ \ \ baseIndex\ +=\ 4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00384}00384\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00385}00385\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00386}00386\ \ \ \ \ \textcolor{keywordflow}{if}\ (!matched)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00387}00387\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ defaultBytes;\ \textcolor{comment}{//\ salto\ default}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00388}00388\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00389}00389\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00391}\mbox{\hyperlink{classOperationsControl_afbf5e1f15ff3ee9c3bfa8cf98be8d54b}{00391}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_afbf5e1f15ff3ee9c3bfa8cf98be8d54b}{OperationsControl::lookupswitch}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00392}00392\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00393}00393\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00394}00394\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00395}00395\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}*\ code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00396}00396\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ padding\ =\ 4\ -\/\ (topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +\ 1)\ \%\ 4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00397}00397\ \ \ \ \ padding\ =\ (padding\ ==\ 4)\ ?\ 0\ :\ padding;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00398}00398\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00399}00399\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte1\ =\ code[padding\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00400}00400\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte2\ =\ code[padding\ +\ 2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00401}00401\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte3\ =\ code[padding\ +\ 3];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00402}00402\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ defaultbyte4\ =\ code[padding\ +\ 4];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00403}00403\ \ \ \ \ int32\_t\ defaultBytes\ =\ (defaultbyte1\ <<\ 24)\ |\ (defaultbyte2\ <<\ 16)\ |\ (defaultbyte3\ <<\ 8)\ |\ defaultbyte4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00404}00404\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00405}00405\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ npairs1\ =\ code[padding\ +\ 5];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00406}00406\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ npairs2\ =\ code[padding\ +\ 6];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00407}00407\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ npairs3\ =\ code[padding\ +\ 7];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00408}00408\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ npairs4\ =\ code[padding\ +\ 8];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00409}00409\ \ \ \ \ uint32\_t\ npairs\ =\ (npairs1\ <<\ 24)\ |\ (npairs2\ <<\ 16)\ |\ (npairs3\ <<\ 8)\ |\ npairs4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00411}00411\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ keyValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00412}00412\ \ \ \ \ assert(keyValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00413}00413\ \ \ \ \ int32\_t\ key\ =\ keyValue.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0a2a9c06ef5a473232b4349395fd68dd}{intValue}};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00414}00414\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00415}00415\ \ \ \ \ uint32\_t\ i;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00416}00416\ \ \ \ \ uint32\_t\ baseIndex\ =\ padding\ +\ 9;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00417}00417\ \ \ \ \ \textcolor{keywordtype}{bool}\ matched\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00418}00418\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ npairs;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00419}00419\ \ \ \ \ \ \ \ \ int32\_t\ match\ =\ (code[baseIndex]\ <<\ 24)\ |\ (code[baseIndex\ +\ 1]\ <<\ 16)\ |\ (code[baseIndex\ +\ 2]\ <<\ 8)\ |\ code[baseIndex\ +\ 3];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00420}00420\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00421}00421\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key\ ==\ match)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ offset\ =\ (code[baseIndex\ +\ 4]\ <<\ 24)\ |\ (code[baseIndex\ +\ 5]\ <<\ 16)\ |\ (code[baseIndex\ +\ 6]\ <<\ 8)\ |\ code[baseIndex\ +\ 7];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ offset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00424}00424\ \ \ \ \ \ \ \ \ \ \ \ \ matched\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00426}00426\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00427}00427\ \ \ \ \ \ \ \ \ baseIndex\ +=\ 8;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00428}00428\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00429}00429\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00430}00430\ \ \ \ \ \textcolor{keywordflow}{if}\ (!matched)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00431}00431\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ defaultBytes;\ \textcolor{comment}{//\ salto\ default}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00432}00432\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00433}00433\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00434}00434\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00435}00435\ \textcolor{comment}{//\ Return\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00437}\mbox{\hyperlink{classOperationsControl_ac412b92b7428e7710545aaf6537e53d6}{00437}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_ac412b92b7428e7710545aaf6537e53d6}{OperationsControl::ireturn}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00438}00438\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00439}00439\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00440}00440\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00441}00441\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00442}00442\ \ \ \ \ assert(returnValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::INT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00443}00443\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00444}00444\ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a8ae0ed77b894fa95e73ea4077ebdeea2}{destroyTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00446}00446\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *newTopFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00447}00447\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnValue);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00448}00448\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00449}00449\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00450}\mbox{\hyperlink{classOperationsControl_a798c25a56bbeaad810e536aef8a5429f}{00450}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a798c25a56bbeaad810e536aef8a5429f}{OperationsControl::lreturn}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00451}00451\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00452}00452\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00453}00453\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00454}00454\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00455}00455\ \ \ \ \ assert(returnValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::LONG);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00456}00456\ \ \ \ \ assert(topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}().\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::PADDING);\ \textcolor{comment}{//\ o\ debaixo\ precisa\ ser\ padding}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00458}00458\ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a8ae0ed77b894fa95e73ea4077ebdeea2}{destroyTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00459}00459\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00460}00460\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *newTopFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00461}00461\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ padding;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00462}00462\ \ \ \ \ padding.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ =\ ValueType::PADDING;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00463}00463\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(padding);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00464}00464\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnValue);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00465}00465\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00466}00466\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00467}\mbox{\hyperlink{classOperationsControl_aacdf98d1ecb68b0e2e778c9f0384ce68}{00467}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_aacdf98d1ecb68b0e2e778c9f0384ce68}{OperationsControl::freturn}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00468}00468\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00469}00469\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00470}00470\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00471}00471\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00472}00472\ \ \ \ \ assert(returnValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::FLOAT);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00473}00473\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00474}00474\ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a8ae0ed77b894fa95e73ea4077ebdeea2}{destroyTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00475}00475\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00476}00476\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *newTopFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00477}00477\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnValue);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00478}00478\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00479}00479\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00480}\mbox{\hyperlink{classOperationsControl_ae9ddd8bae64ee470956546646f81058f}{00480}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_ae9ddd8bae64ee470956546646f81058f}{OperationsControl::dreturn}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00481}00481\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00482}00482\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00483}00483\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00484}00484\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00485}00485\ \ \ \ \ assert(returnValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::DOUBLE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00486}00486\ \ \ \ \ assert(topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}().\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::PADDING);\ \textcolor{comment}{//\ o\ debaixo\ precisa\ ser\ padding}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00487}00487\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00488}00488\ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a8ae0ed77b894fa95e73ea4077ebdeea2}{destroyTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00490}00490\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *newTopFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00491}00491\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00492}00492\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ padding;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00493}00493\ \ \ \ \ padding.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ =\ ValueType::PADDING;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00494}00494\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(padding);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00495}00495\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnValue);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00496}00496\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00497}00497\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00498}\mbox{\hyperlink{classOperationsControl_a448301f5fae5f347270a9eaa4d0f79bc}{00498}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a448301f5fae5f347270a9eaa4d0f79bc}{OperationsControl::areturn}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00499}00499\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00500}00500\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00501}00501\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00502}00502\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00503}00503\ \ \ \ \ assert(returnValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00505}00505\ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a8ae0ed77b894fa95e73ea4077ebdeea2}{destroyTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00506}00506\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00507}00507\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *newTopFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00508}00508\ \ \ \ \ newTopFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnValue);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00509}00509\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00510}00510\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00511}\mbox{\hyperlink{classOperationsControl_a292e602f45ccac0f0bc5151245def9e8}{00511}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a292e602f45ccac0f0bc5151245def9e8}{OperationsControl::func\_return}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00512}00512\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00513}00513\ \ \ \ \ stackFrame.\mbox{\hyperlink{classPilhaJVM_a8ae0ed77b894fa95e73ea4077ebdeea2}{destroyTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00514}00514\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00515}00515\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00516}00516\ \textcolor{comment}{//\ Null\ reference\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00518}\mbox{\hyperlink{classOperationsControl_a598bdb8b726f843185b7b00ad12ccd31}{00518}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a598bdb8b726f843185b7b00ad12ccd31}{OperationsControl::ifnull}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00519}00519\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00520}00520\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00521}00521\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00522}00522\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ referenceValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00523}00523\ \ \ \ \ assert(referenceValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00524}00524\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00525}00525\ \ \ \ \ \textcolor{keywordflow}{if}\ (referenceValue.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a39c8a4a3203f603f82f1c80561bc735b}{object}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00526}00526\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00527}00527\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00528}00528\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00529}00529\ \ \ \ \ \ \ \ \ int16\_t\ branch\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00530}00530\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branch;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00531}00531\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00532}00532\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00533}00533\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00534}00534\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00535}00535\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00536}\mbox{\hyperlink{classOperationsControl_a4945be1f40cccb83769df011d81e4734}{00536}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a4945be1f40cccb83769df011d81e4734}{OperationsControl::ifnonnull}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00537}00537\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00538}00538\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00539}00539\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00540}00540\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ referenceValue\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a93c26ae659c3f1b11837a0e9942acb20}{desempilhaOperandStack}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00541}00541\ \ \ \ \ assert(referenceValue.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ ==\ ValueType::REFERENCE);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00542}00542\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00543}00543\ \ \ \ \ \textcolor{keywordflow}{if}\ (referenceValue.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a39c8a4a3203f603f82f1c80561bc735b}{object}}\ !=\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00544}00544\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00545}00545\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00546}00546\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00547}00547\ \ \ \ \ \ \ \ \ int16\_t\ branch\ =\ (byte1\ <<\ 8)\ |\ byte2;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00548}00548\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branch;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00549}00549\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00550}00550\ \ \ \ \ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ 3;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00551}00551\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00552}00552\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00553}00553\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00554}00554\ \textcolor{comment}{//\ Wide\ jump\ operations}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00555}00555\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00556}\mbox{\hyperlink{classOperationsControl_a0b60ccc78a8d3b7d323c57501b6e1c26}{00556}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a0b60ccc78a8d3b7d323c57501b6e1c26}{OperationsControl::goto\_w}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00557}00557\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00558}00558\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00559}00559\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00560}00560\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00561}00561\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00562}00562\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00563}00563\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte3\ =\ code[3];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00564}00564\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte4\ =\ code[4];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00565}00565\ \ \ \ \ int32\_t\ branchOffset\ =\ (byte1\ <<\ 24)\ |\ (byte2\ <<\ 16)\ |\ (byte3\ <<\ 8)\ |\ byte4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00566}00566\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00567}00567\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00568}00568\ \}}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00569}00569\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00570}\mbox{\hyperlink{classOperationsControl_a73e2b104b8713ece5b5300c81e8dddf3}{00570}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationsControl_a73e2b104b8713ece5b5300c81e8dddf3}{OperationsControl::jsr\_w}}()\ \{}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00571}00571\ \ \ \ \ \mbox{\hyperlink{classPilhaJVM}{PilhaJVM}}\ \&stackFrame\ =\ \mbox{\hyperlink{classPilhaJVM_a65763b14444559b443ab8bf550987d52}{PilhaJVM::getInstance}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00572}00572\ \ \ \ \ \mbox{\hyperlink{classFrame}{Frame}}\ *topFrame\ =\ stackFrame.\mbox{\hyperlink{classPilhaJVM_aa0e43da476df6147c86c8cc3d6899718}{getTopFrame}}();}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00573}00573\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00574}00574\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ *code\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_a6863584ef3a6f2e4b1f93fb0deb09f4b}{getCode}}(topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}});}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00575}00575\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte1\ =\ code[1];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00576}00576\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte2\ =\ code[2];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00577}00577\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte3\ =\ code[3];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00578}00578\ \ \ \ \ \mbox{\hyperlink{BasicTypes_8h_ad9f4cdb6757615aae2fad89dab3c5470}{u1}}\ byte4\ =\ code[4];}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00579}00579\ \ \ \ \ int32\_t\ branchOffset\ =\ (byte1\ <<\ 24)\ |\ (byte2\ <<\ 16)\ |\ (byte3\ <<\ 8)\ |\ byte4;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00580}00580\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00581}00581\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ returnAddr;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00582}00582\ \ \ \ \ returnAddr.\mbox{\hyperlink{structValue_ab45dfd167290d4324ba4832abcc4064d}{type}}\ =\ ValueType::RETURN\_ADDR;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00583}00583\ \ \ \ \ returnAddr.\mbox{\hyperlink{structValue_abca65ec3442f8b6db2242ea0cd6139f2}{data}}.\mbox{\hyperlink{structValue_a0ff202a46baf275595d520cf800f596e}{returnAddress}}\ =\ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +\ 5;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00584}00584\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_af2481010c4795fbe1cba48122609cf1e}{empilharOperandStack}}(returnAddr);}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00585}00585\ }
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00586}00586\ \ \ \ \ topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ +=\ branchOffset;}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00587}00587\ \ \ \ \ assert((int32\_t\ )topFrame-\/>\mbox{\hyperlink{classFrame_ada6a6cf76d00cbadf43a86a686dd026c}{pc}}\ <\ (int32\_t\ )topFrame-\/>\mbox{\hyperlink{classFrame_a3151aeb977a24c464ed8930c9100715d}{sizeCode}}());}
+\DoxyCodeLine{\Hypertarget{OperationsControl_8cpp_source_l00588}00588\ \}}
+
+\end{DoxyCode}

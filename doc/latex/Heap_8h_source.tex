@@ -1,0 +1,45 @@
+\doxysection{Heap.\+h}
+\hypertarget{Heap_8h_source}{}\label{Heap_8h_source}\index{include/Heap.h@{include/Heap.h}}
+\mbox{\hyperlink{Heap_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ Heap\_h}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ Heap\_h}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00009}00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00015}\mbox{\hyperlink{classHeap}{00015}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHeap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}}\ \{}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00021}\mbox{\hyperlink{classHeap_a0059fec336617084e6cbb49adc7a8d40}{00021}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classHeap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}}\&\ \mbox{\hyperlink{classHeap_a0059fec336617084e6cbb49adc7a8d40}{getInstance}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classHeap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}}\ instance;}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{classHeap_a734051272cbd0945d3916a1a89707ba2}{\string~Heap}}();}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_aa2a5f92b36abe24c83853feca936548e}{addObject}}(\mbox{\hyperlink{classObject}{Object}}\ *\textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00036}00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classHeap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}}();}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00042}\mbox{\hyperlink{classHeap_aac9a075f0c23c3923fabbf2093386089}{00042}}\ \ \ \ \ \mbox{\hyperlink{classHeap_aac9a075f0c23c3923fabbf2093386089}{Heap}}(\mbox{\hyperlink{classHeap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}}\ \textcolor{keyword}{const}\&);\ \textcolor{comment}{//\ não\ permitir\ implementação\ do\ construtor\ de\ cópia}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00043}\mbox{\hyperlink{classHeap_a2923f4b4b05267583815e185f2e28b7d}{00043}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHeap_a2923f4b4b05267583815e185f2e28b7d}{operator=}}(\mbox{\hyperlink{classHeap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}}\ \textcolor{keyword}{const}\&);\ \textcolor{comment}{//\ não\ permitir\ implementação\ do\ operador\ de\ igual}}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00048}\mbox{\hyperlink{classHeap_a79ae13d891ba0a94cccfdfdb3d805497}{00048}}\ \ \ \ \ \mbox{\hyperlink{classObject}{Object}}**\ \mbox{\hyperlink{classHeap_a79ae13d891ba0a94cccfdfdb3d805497}{\_objectArray}};}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00049}00049\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00053}\mbox{\hyperlink{classHeap_a245293c01203737d35ce03fa734b9a99}{00053}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHeap_a245293c01203737d35ce03fa734b9a99}{\_objectCount}};}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00058}\mbox{\hyperlink{classHeap_ad5a30eb38a8be63c077d10c1ef5cef6f}{00058}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHeap_ad5a30eb38a8be63c077d10c1ef5cef6f}{\_capacity}};}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00063}\mbox{\hyperlink{classHeap_a525cec852299bf4be75da57c8d191e64}{00063}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHeap_a525cec852299bf4be75da57c8d191e64}{INITIAL\_CAPACITY}}\ =\ 16;}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00064}00064\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00068}\mbox{\hyperlink{classHeap_aa2c6122e323c9d6dc94100492bd374d9}{00068}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHeap_aa2c6122e323c9d6dc94100492bd374d9}{GROWTH\_FACTOR}}\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00069}00069\ \};}
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{Heap_8h_source_l00071}00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ Heap\_h}}
+
+\end{DoxyCode}
