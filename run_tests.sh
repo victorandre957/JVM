@@ -2,6 +2,13 @@
 
 # Lista de arquivos a serem processados
 arquivos=(
+    "./tests/TestExceptions.class"
+    "./tests/TestInheritance.class"
+    "./tests/TestJava6Arrays.class"
+    "./tests/TestJava6Basic.class"
+    "./tests/TestStaticMembers.class"
+    "./tests/TestSwitchTypes.class"
+    "./tests/TestWrongMain.class"
     "./tests/Belote.class"
     "./tests/cafebabe.class"
     "./tests/Carta.class"
@@ -21,14 +28,13 @@ arquivos=(
     "./tests/Somar.class"
     "./tests/tableswitch.class"
     "./tests/vetor2.class"
-    "./tests/vetor_8.class"
 )
 
 # Executa o LeitorExibidor para cada arquivo
 
 for arq in "${arquivos[@]}"; do
     echo "Processando: $arq"
-    ./build/JVM -e "$arq"
+    ./build/THE_JVM -e "$arq"
     echo "----------------------------------------"
 done
 
@@ -36,7 +42,7 @@ done
 
 for arq in "${arquivos[@]}"; do
     echo "Processando: $arq"
-    ./build/JVM -i "$arq"
+    ./build/THE_JVM -i "$arq"
     echo "----------------------------------------"
 done
 
