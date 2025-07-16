@@ -100,6 +100,7 @@ void OperationsObject::getstatic() {
 	if (staticValue.type == ValueType::DOUBLE || staticValue.type == ValueType::LONG) {
 		Value paddingValue;
 		paddingValue.type = ValueType::PADDING;
+		paddingValue.printType = ValueType::PADDING;
 		topFrame->empilharOperandStack(paddingValue);
 	}
 
@@ -249,6 +250,7 @@ void OperationsObject::getfield() {
 	if (fieldValue.type == ValueType::DOUBLE || fieldValue.type == ValueType::LONG) {
 		Value paddingValue;
 		paddingValue.type = ValueType::PADDING;
+		paddingValue.printType = ValueType::PADDING;
 		topFrame->empilharOperandStack(paddingValue);
 	}
 
@@ -423,6 +425,7 @@ void OperationsObject::invokevirtual() {
 			Value result;
 			result.printType = ValueType::INT;
 			result.type = ValueType::INT;
+			result.printType = ValueType::INT;
 			if (str1->getString() == str2->getString()) {
 				result.data.intValue = 1;
 			} else {
@@ -439,6 +442,7 @@ void OperationsObject::invokevirtual() {
 			Value result;
 			result.printType = ValueType::INT;
 			result.type = ValueType::INT;
+			result.printType = ValueType::INT;
 			result.data.intValue = (str->getString()).size();
 			topFrame->empilharOperandStack(result);
 		} else {
@@ -814,6 +818,7 @@ void OperationsObject::func_new() {
 	Value objectref;
 	objectref.data.object = object;
 	objectref.type = ValueType::REFERENCE;
+	objectref.printType = ValueType::REFERENCE;
 	topFrame->empilharOperandStack(objectref);
 
 	topFrame->pc += 3;
@@ -838,6 +843,7 @@ void OperationsObject::newarray() {
 	Value padding;
 	UNUSED(padding);
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 
 	const u1 *code = topFrame->getCode(topFrame->pc);
 	switch (code[1]) { // argumento representa tipo do array
@@ -914,6 +920,7 @@ void OperationsObject::newarray() {
 
 	Value arrayref; // Referencia pro array na pilha de operandos
 	arrayref.type = ValueType::REFERENCE;
+	arrayref.printType = ValueType::REFERENCE;
 	arrayref.data.object = array;
 
 	topFrame->empilharOperandStack(arrayref);
@@ -956,11 +963,13 @@ void OperationsObject::anewarray() {
 	// criando objeto da classe instanciada
 	Value objectref;
 	objectref.type = ValueType::REFERENCE;
+	objectref.printType = ValueType::REFERENCE;
 	objectref.data.object = new ArrayObject(ValueType::REFERENCE);
 
 	// populando array com NULL
 	Value nullValue;
 	nullValue.type = ValueType::REFERENCE;
+	nullValue.printType = ValueType::REFERENCE;
 	nullValue.data.object = NULL;
 	for (int i = 0; i < count.data.intValue; i++) {
 		static_cast<ArrayObject *>(objectref.data.object)->pushValue(nullValue);
@@ -984,6 +993,7 @@ void OperationsObject::arraylength() {
 
 	Value length;
 	length.type = ValueType::INT;
+	length.printType = ValueType::INT;
 	length.data.intValue = static_cast<ArrayObject *>(arrayref.data.object)->getSize();
 
 	topFrame->empilharOperandStack(length);
@@ -1017,6 +1027,7 @@ void OperationsObject::checkcast() {
 
 	Value resultValue;
 	resultValue.type = ValueType::INT;
+	resultValue.printType = ValueType::INT;
 
 	if (objectrefValue.data.object == NULL) {
 		cerr << "ClassCastException" << endl;
@@ -1083,6 +1094,7 @@ void OperationsObject::instanceof() {
 
 	Value resultValue;
 	resultValue.type = ValueType::INT;
+	resultValue.printType = ValueType::INT;
 
 	if (objectrefValue.data.object == NULL) {
 		resultValue.data.intValue = 0;
@@ -1248,6 +1260,7 @@ void OperationsObject::multianewarray() {
 				// For deeper nesting, create null references
 				Value nullValue;
 				nullValue.type = ValueType::REFERENCE;
+				nullValue.printType = ValueType::REFERENCE;
 				nullValue.data.object = NULL;
 				for (int j = 0; j < subCurrCount; j++) {
 					subArray->pushValue(nullValue);
@@ -1256,6 +1269,7 @@ void OperationsObject::multianewarray() {
 			
 			Value subArrayValue;
 			subArrayValue.type = ValueType::REFERENCE;
+			subArrayValue.printType = ValueType::REFERENCE;
 			subArrayValue.data.object = subArray;
 			array->pushValue(subArrayValue);
 		}
@@ -1263,6 +1277,7 @@ void OperationsObject::multianewarray() {
 
 	Value arrayValue;
 	arrayValue.type = ValueType::REFERENCE;
+	arrayValue.printType = ValueType::REFERENCE;
 	arrayValue.data.object = array;
 
 	topFrame->empilharOperandStack(arrayValue);
