@@ -75,11 +75,13 @@ void Frame::trocaLocalVariable(Value variableValue, uint32_t index) {
 		exit(1);
 	}
 
-	_localVariables[index] = variableValue;
+        variableValue.printType = variableValue.type;
+        _localVariables[index] = variableValue;
 }
 
 void Frame::empilharOperandStack(Value operand) {
-	_operandStack->push(operand);
+        operand.printType = operand.type;
+        _operandStack->push(operand);
 }
 
 Value Frame::desempilhaOperandStack() {
