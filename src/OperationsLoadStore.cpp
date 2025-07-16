@@ -59,6 +59,7 @@ void OperationsLoadStore::lload() {
 
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 
 	topFrame->empilharOperandStack(padding);
 	topFrame->empilharOperandStack(value);
@@ -113,6 +114,7 @@ void OperationsLoadStore::dload() {
 
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 
 	topFrame->empilharOperandStack(padding);
 	topFrame->empilharOperandStack(value);
@@ -464,6 +466,7 @@ void OperationsLoadStore::laload() {
 
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 
 	topFrame->empilharOperandStack(padding);
 	topFrame->empilharOperandStack(array->getValue(index.data.intValue));
@@ -520,6 +523,7 @@ void OperationsLoadStore::daload() {
 
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 
 	topFrame->empilharOperandStack(padding);
 	topFrame->empilharOperandStack(array->getValue(index.data.intValue));
@@ -585,6 +589,7 @@ void OperationsLoadStore::baload() {
 		value.printType = ValueType::BYTE;
 	}
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 
 	topFrame->empilharOperandStack(value);
 	topFrame->pc += 1;
@@ -616,6 +621,7 @@ void OperationsLoadStore::caload() {
 	charValue.data.intValue = (uint32_t) charValue.data.charValue;
 	charValue.printType = ValueType::CHAR;
 	charValue.type = ValueType::INT;
+	charValue.printType = ValueType::INT;
 
 	topFrame->empilharOperandStack(charValue);
 	topFrame->pc += 1;
@@ -647,6 +653,7 @@ void OperationsLoadStore::saload() {
 	shortValue.data.intValue = (int32_t) shortValue.data.shortValue;
 	shortValue.printType = ValueType::SHORT;
 	shortValue.type = ValueType::INT;
+	shortValue.printType = ValueType::INT;
 
 	topFrame->empilharOperandStack(shortValue);
 	topFrame->pc += 1;
@@ -705,6 +712,7 @@ void OperationsLoadStore::lstore() {
 	topFrame->trocaLocalVariable(value, index);
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 	topFrame->trocaLocalVariable(padding, index + 1);
 }
 
@@ -759,6 +767,7 @@ void OperationsLoadStore::dstore() {
 	topFrame->trocaLocalVariable(value, index);
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 	topFrame->trocaLocalVariable(padding, index + 1);
 }
 
@@ -1265,6 +1274,7 @@ void OperationsLoadStore::castore() {
 	value.data.charValue = (uint8_t) value.data.intValue;
 	value.printType = ValueType::CHAR;
 	value.type = ValueType::CHAR;
+	value.printType = ValueType::CHAR;
 	array->changeValueAt(index.data.intValue, value);
 
 	topFrame->pc += 1;
@@ -1297,6 +1307,7 @@ void OperationsLoadStore::sastore() {
 	value.data.shortValue = (int16_t) value.data.intValue;
 	value.printType = ValueType::SHORT;
 	value.type = ValueType::SHORT;
+	value.printType = ValueType::SHORT;
 	array->changeValueAt(index.data.intValue, value);
 
 	topFrame->pc += 1;

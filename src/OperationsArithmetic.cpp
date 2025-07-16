@@ -190,6 +190,7 @@ void OperationsArithmetic::ladd() {
 
 	Value soma;
 	soma.type = ValueType::LONG;
+	soma.printType = ValueType::LONG;
 	soma.data.longValue = value_1.data.longValue + value_2.data.longValue;
 
 	topFrame->empilharOperandStack(soma);
@@ -206,6 +207,7 @@ void OperationsArithmetic::fadd() {
 
 	Value soma;
 	soma.type = ValueType::FLOAT;
+	soma.printType = ValueType::FLOAT;
 	soma.data.floatValue = value_1.data.floatValue + value_2.data.floatValue;
 
 	topFrame->empilharOperandStack(soma);
@@ -222,6 +224,7 @@ void OperationsArithmetic::dadd() {
 
 	Value soma;
 	soma.type = ValueType::DOUBLE;
+	soma.printType = ValueType::DOUBLE;
 	soma.data.doubleValue = value_1.data.doubleValue + value_2.data.doubleValue;
 
 	topFrame->empilharOperandStack(soma);
@@ -238,6 +241,7 @@ void OperationsArithmetic::isub() {
 
 	Value subtracao;
 	subtracao.type = ValueType::INT;
+	subtracao.printType = ValueType::INT;
 	subtracao.data.intValue = value_1.data.intValue - value_2.data.intValue;
 
 	topFrame->empilharOperandStack(subtracao);
@@ -254,6 +258,7 @@ void OperationsArithmetic::lsub() {
 
 	Value subtracao;
 	subtracao.type = ValueType::LONG;
+	subtracao.printType = ValueType::LONG;
 	subtracao.data.longValue = value_1.data.longValue - value_2.data.longValue;
 
 	topFrame->empilharOperandStack(subtracao);
@@ -270,6 +275,7 @@ void OperationsArithmetic::fsub() {
 
 	Value subtracao;
 	subtracao.type = ValueType::FLOAT;
+	subtracao.printType = ValueType::FLOAT;
 	subtracao.data.floatValue = value_1.data.floatValue - value_2.data.floatValue;
 
 	topFrame->empilharOperandStack(subtracao);
@@ -286,6 +292,7 @@ void OperationsArithmetic::dsub() {
 
 	Value subtracao;
 	subtracao.type = ValueType::DOUBLE;
+	subtracao.printType = ValueType::DOUBLE;
 	subtracao.data.doubleValue = value_1.data.doubleValue - value_2.data.doubleValue;
 
 	topFrame->empilharOperandStack(subtracao);
@@ -302,6 +309,7 @@ void OperationsArithmetic::imul() {
 
 	Value multiplicacao;
 	multiplicacao.type = ValueType::INT;
+	multiplicacao.printType = ValueType::INT;
 	multiplicacao.data.intValue = value_1.data.intValue * value_2.data.intValue;
 
 	topFrame->empilharOperandStack(multiplicacao);
@@ -318,6 +326,7 @@ void OperationsArithmetic::lmul() {
 
 	Value multiplicacao;
 	multiplicacao.type = ValueType::LONG;
+	multiplicacao.printType = ValueType::LONG;
 	multiplicacao.data.longValue = value_1.data.longValue * value_2.data.longValue;
 
 	topFrame->empilharOperandStack(multiplicacao);
@@ -334,6 +343,7 @@ void OperationsArithmetic::fmul() {
 
 	Value multiplicacao;
 	multiplicacao.type = ValueType::FLOAT;
+	multiplicacao.printType = ValueType::FLOAT;
 	multiplicacao.data.floatValue = value_1.data.floatValue * value_2.data.floatValue;
 
 	topFrame->empilharOperandStack(multiplicacao);
@@ -350,6 +360,7 @@ void OperationsArithmetic::dmul() {
 
 	Value multiplicacao;
 	multiplicacao.type = ValueType::DOUBLE;
+	multiplicacao.printType = ValueType::DOUBLE;
 	multiplicacao.data.doubleValue = value_1.data.doubleValue * value_2.data.doubleValue;
 
 	topFrame->empilharOperandStack(multiplicacao);
@@ -373,6 +384,7 @@ void OperationsArithmetic::idiv() {
 
 	Value divisao;
 	divisao.type = ValueType::INT;
+	divisao.printType = ValueType::INT;
 	divisao.data.intValue = value_1.data.intValue / value_2.data.intValue;
 
 	topFrame->empilharOperandStack(divisao);
@@ -394,6 +406,7 @@ void OperationsArithmetic::ldiv() {
 
 	Value divisao;
 	divisao.type = ValueType::LONG;
+	divisao.printType = ValueType::LONG;
 	divisao.data.longValue = value_1.data.longValue / value_2.data.longValue;
 
 	topFrame->empilharOperandStack(divisao);
@@ -410,6 +423,7 @@ void OperationsArithmetic::fdiv() {
 
 	Value divisao;
 	divisao.type = ValueType::FLOAT;
+	divisao.printType = ValueType::FLOAT;
 	divisao.data.floatValue = value_1.data.floatValue / value_2.data.floatValue;
 
 	topFrame->empilharOperandStack(divisao);
@@ -426,6 +440,7 @@ void OperationsArithmetic::ddiv() {
 
 	Value divisao;
 	divisao.type = ValueType::DOUBLE;
+	divisao.printType = ValueType::DOUBLE;
 	divisao.data.doubleValue = value_1.data.doubleValue / value_2.data.doubleValue;
 
 	topFrame->empilharOperandStack(divisao);
@@ -449,6 +464,7 @@ void OperationsArithmetic::irem() {
 
 	Value resto;
 	resto.type = ValueType::INT;
+	resto.printType = ValueType::INT;
 	resto.data.intValue = value_1.data.intValue % value_2.data.intValue;
 
 	topFrame->empilharOperandStack(resto);
@@ -470,6 +486,7 @@ void OperationsArithmetic::lrem() {
 
 	Value resto;
 	resto.type = ValueType::LONG;
+	resto.printType = ValueType::LONG;
 	resto.data.longValue = value_1.data.longValue % value_2.data.longValue;
 
 	topFrame->empilharOperandStack(resto);
@@ -486,6 +503,7 @@ void OperationsArithmetic::frem() {
 
 	Value resto;
 	resto.type = ValueType::FLOAT;
+	resto.printType = ValueType::FLOAT;
 	resto.data.floatValue = fmod(value_1.data.floatValue, value_2.data.floatValue);
 
 	topFrame->empilharOperandStack(resto);
@@ -502,6 +520,7 @@ void OperationsArithmetic::drem() {
 
 	Value resto;
 	resto.type = ValueType::DOUBLE;
+	resto.printType = ValueType::DOUBLE;
 	resto.data.doubleValue = fmod(value_1.data.doubleValue, value_2.data.doubleValue);
 
 	topFrame->empilharOperandStack(resto);
@@ -519,6 +538,7 @@ void OperationsArithmetic::ineg() {
 
 	Value negacao;
 	negacao.type = ValueType::INT;
+	negacao.printType = ValueType::INT;
 	negacao.data.intValue = -value.data.intValue;
 
 	topFrame->empilharOperandStack(negacao);
@@ -534,6 +554,7 @@ void OperationsArithmetic::lneg() {
 
 	Value negacao;
 	negacao.type = ValueType::LONG;
+	negacao.printType = ValueType::LONG;
 	negacao.data.longValue = -value.data.longValue;
 
 	topFrame->empilharOperandStack(negacao);
@@ -549,6 +570,7 @@ void OperationsArithmetic::fneg() {
 
 	Value negacao;
 	negacao.type = ValueType::FLOAT;
+	negacao.printType = ValueType::FLOAT;
 	negacao.data.floatValue = -value.data.floatValue;
 
 	topFrame->empilharOperandStack(negacao);
@@ -564,6 +586,7 @@ void OperationsArithmetic::dneg() {
 
 	Value negacao;
 	negacao.type = ValueType::DOUBLE;
+	negacao.printType = ValueType::DOUBLE;
 	negacao.data.doubleValue = -value.data.doubleValue;
 
 	topFrame->empilharOperandStack(negacao);
@@ -582,6 +605,7 @@ void OperationsArithmetic::ishl() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = value_1.data.intValue << (value_2.data.intValue & 0x1f);
 
 	topFrame->empilharOperandStack(resultado);
@@ -598,6 +622,7 @@ void OperationsArithmetic::lshl() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = value_1.data.longValue << (value_2.data.intValue & 0x3f);
 
 	topFrame->empilharOperandStack(resultado);
@@ -614,6 +639,7 @@ void OperationsArithmetic::ishr() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = value_1.data.intValue >> (value_2.data.intValue & 0x1f);
 
 	topFrame->empilharOperandStack(resultado);
@@ -630,6 +656,7 @@ void OperationsArithmetic::lshr() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = value_1.data.longValue >> (value_2.data.intValue & 0x3f);
 
 	topFrame->empilharOperandStack(resultado);
@@ -646,6 +673,7 @@ void OperationsArithmetic::iushr() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = (uint32_t)value_1.data.intValue >> (value_2.data.intValue & 0x1f);
 
 	topFrame->empilharOperandStack(resultado);
@@ -662,6 +690,7 @@ void OperationsArithmetic::lushr() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = (uint64_t)value_1.data.longValue >> (value_2.data.intValue & 0x3f);
 
 	topFrame->empilharOperandStack(resultado);
@@ -680,6 +709,7 @@ void OperationsArithmetic::iand() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = value_1.data.intValue & value_2.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -696,6 +726,7 @@ void OperationsArithmetic::land() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = value_1.data.longValue & value_2.data.longValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -712,6 +743,7 @@ void OperationsArithmetic::ior() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = value_1.data.intValue | value_2.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -728,6 +760,7 @@ void OperationsArithmetic::lor() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = value_1.data.longValue | value_2.data.longValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -744,6 +777,7 @@ void OperationsArithmetic::ixor() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = value_1.data.intValue ^ value_2.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -760,6 +794,7 @@ void OperationsArithmetic::lxor() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = value_1.data.longValue ^ value_2.data.longValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -802,6 +837,7 @@ void OperationsArithmetic::i2l() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = (int64_t)value.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -817,6 +853,7 @@ void OperationsArithmetic::i2f() {
 
 	Value resultado;
 	resultado.type = ValueType::FLOAT;
+	resultado.printType = ValueType::FLOAT;
 	resultado.data.floatValue = (float)value.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -832,6 +869,7 @@ void OperationsArithmetic::i2d() {
 
 	Value resultado;
 	resultado.type = ValueType::DOUBLE;
+	resultado.printType = ValueType::DOUBLE;
 	resultado.data.doubleValue = (double)value.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -847,6 +885,7 @@ void OperationsArithmetic::l2i() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = (int32_t)value.data.longValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -862,6 +901,7 @@ void OperationsArithmetic::l2f() {
 
 	Value resultado;
 	resultado.type = ValueType::FLOAT;
+	resultado.printType = ValueType::FLOAT;
 	resultado.data.floatValue = (float)value.data.longValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -877,6 +917,7 @@ void OperationsArithmetic::l2d() {
 
 	Value resultado;
 	resultado.type = ValueType::DOUBLE;
+	resultado.printType = ValueType::DOUBLE;
 	resultado.data.doubleValue = (double)value.data.longValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -892,6 +933,7 @@ void OperationsArithmetic::f2i() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = (int32_t)value.data.floatValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -907,6 +949,7 @@ void OperationsArithmetic::f2l() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = (int64_t)value.data.floatValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -922,6 +965,7 @@ void OperationsArithmetic::f2d() {
 
 	Value resultado;
 	resultado.type = ValueType::DOUBLE;
+	resultado.printType = ValueType::DOUBLE;
 	resultado.data.doubleValue = (double)value.data.floatValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -937,6 +981,7 @@ void OperationsArithmetic::d2i() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 	resultado.data.intValue = (int32_t)value.data.doubleValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -952,6 +997,7 @@ void OperationsArithmetic::d2l() {
 
 	Value resultado;
 	resultado.type = ValueType::LONG;
+	resultado.printType = ValueType::LONG;
 	resultado.data.longValue = (int64_t)value.data.doubleValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -967,6 +1013,7 @@ void OperationsArithmetic::d2f() {
 
 	Value resultado;
 	resultado.type = ValueType::FLOAT;
+	resultado.printType = ValueType::FLOAT;
 	resultado.data.floatValue = (float)value.data.doubleValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -982,6 +1029,7 @@ void OperationsArithmetic::i2b() {
 
 	Value resultado;
 	resultado.type = ValueType::BYTE;
+	resultado.printType = ValueType::BYTE;
 	resultado.data.byteValue = (int8_t)value.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -997,6 +1045,7 @@ void OperationsArithmetic::i2c() {
 
 	Value resultado;
 	resultado.type = ValueType::CHAR;
+	resultado.printType = ValueType::CHAR;
 	resultado.data.charValue = (uint8_t)value.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -1012,6 +1061,7 @@ void OperationsArithmetic::i2s() {
 
 	Value resultado;
 	resultado.type = ValueType::SHORT;
+	resultado.printType = ValueType::SHORT;
 	resultado.data.shortValue = (int16_t)value.data.intValue;
 
 	topFrame->empilharOperandStack(resultado);
@@ -1030,6 +1080,7 @@ void OperationsArithmetic::lcmp() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 
 	if (value_1.data.longValue > value_2.data.longValue) {
 		resultado.data.intValue = 1;
@@ -1053,6 +1104,7 @@ void OperationsArithmetic::fcmpl() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 
 	if (isnan(value_1.data.floatValue) || isnan(value_2.data.floatValue)) {
 		resultado.data.intValue = -1;
@@ -1078,6 +1130,7 @@ void OperationsArithmetic::fcmpg() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 
 	if (isnan(value_1.data.floatValue) || isnan(value_2.data.floatValue)) {
 		resultado.data.intValue = 1;
@@ -1103,6 +1156,7 @@ void OperationsArithmetic::dcmpl() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 
 	if (isnan(value_1.data.doubleValue) || isnan(value_2.data.doubleValue)) {
 		resultado.data.intValue = -1;
@@ -1128,6 +1182,7 @@ void OperationsArithmetic::dcmpg() {
 
 	Value resultado;
 	resultado.type = ValueType::INT;
+	resultado.printType = ValueType::INT;
 
 	if (isnan(value_1.data.doubleValue) || isnan(value_2.data.doubleValue)) {
 		resultado.data.intValue = 1;

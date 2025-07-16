@@ -307,6 +307,7 @@ void OperationsControl::jsr() {
 
 	Value returnAddr;
 	returnAddr.type = ValueType::RETURN_ADDR;
+	returnAddr.printType = ValueType::RETURN_ADDR;
 	returnAddr.data.returnAddress = topFrame->pc + 3;
 	topFrame->empilharOperandStack(returnAddr);
 
@@ -460,6 +461,7 @@ void OperationsControl::lreturn() {
 	Frame *newTopFrame = stackFrame.getTopFrame();
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 	newTopFrame->empilharOperandStack(padding);
 	newTopFrame->empilharOperandStack(returnValue);
 }
@@ -491,6 +493,7 @@ void OperationsControl::dreturn() {
 
 	Value padding;
 	padding.type = ValueType::PADDING;
+	padding.printType = ValueType::PADDING;
 	newTopFrame->empilharOperandStack(padding);
 	newTopFrame->empilharOperandStack(returnValue);
 }
@@ -580,6 +583,7 @@ void OperationsControl::jsr_w() {
 
 	Value returnAddr;
 	returnAddr.type = ValueType::RETURN_ADDR;
+	returnAddr.printType = ValueType::RETURN_ADDR;
 	returnAddr.data.returnAddress = topFrame->pc + 5;
 	topFrame->empilharOperandStack(returnAddr);
 

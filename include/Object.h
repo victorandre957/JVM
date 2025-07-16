@@ -173,8 +173,9 @@ inline ValueType ArrayObject::arrayContentType() {
 }
 
 inline void ArrayObject::pushValue(Value value) {
-	assert(value.type == _arrayType);
-	_elements.push_back(value);
+        assert(value.type == _arrayType);
+        value.printType = value.type;
+        _elements.push_back(value);
 }
 
 inline Value ArrayObject::removeAt(uint32_t index) { // @suppress("unused function")

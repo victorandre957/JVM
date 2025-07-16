@@ -13,6 +13,7 @@ void OperationsConstants::aconst_null() {
 
 	Value value;
 	value.type = ValueType::REFERENCE;
+	value.printType = ValueType::REFERENCE;
 	value.data.object = NULL;
 
 	topFrame->empilharOperandStack(value);
@@ -27,6 +28,7 @@ void OperationsConstants::iconst_m1() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = -1;
 
 	topFrame->empilharOperandStack(value);
@@ -41,6 +43,7 @@ void OperationsConstants::iconst_0() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = 0;
 
 	topFrame->empilharOperandStack(value);
@@ -55,6 +58,7 @@ void OperationsConstants::iconst_1() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = 1;
 
 	topFrame->empilharOperandStack(value);
@@ -69,6 +73,7 @@ void OperationsConstants::iconst_2() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = 2;
 
 	topFrame->empilharOperandStack(value);
@@ -83,6 +88,7 @@ void OperationsConstants::iconst_3() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = 3;
 
 	topFrame->empilharOperandStack(value);
@@ -97,6 +103,7 @@ void OperationsConstants::iconst_4() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = 4;
 
 	topFrame->empilharOperandStack(value);
@@ -111,6 +118,7 @@ void OperationsConstants::iconst_5() {
 	Value value;
 	value.printType = ValueType::INT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = 5;
 
 	topFrame->empilharOperandStack(value);
@@ -125,6 +133,7 @@ void OperationsConstants::lconst_0() {
 	Value value;
 	value.printType = ValueType::LONG;
 	value.type = ValueType::LONG;
+	value.printType = ValueType::LONG;
 	value.data.longValue = 0;
 
 	topFrame->empilharOperandStack(value);
@@ -139,6 +148,7 @@ void OperationsConstants::lconst_1() {
 	Value value;
 	value.printType = ValueType::LONG;
 	value.type = ValueType::LONG;
+	value.printType = ValueType::LONG;
 	value.data.longValue = 1;
 
 	topFrame->empilharOperandStack(value);
@@ -152,6 +162,7 @@ void OperationsConstants::fconst_0() {
 
 	Value value;
 	value.type = ValueType::FLOAT;
+	value.printType = ValueType::FLOAT;
 	value.data.floatValue = 0.0f;
 
 	topFrame->empilharOperandStack(value);
@@ -165,6 +176,7 @@ void OperationsConstants::fconst_1() {
 
 	Value value;
 	value.type = ValueType::FLOAT;
+	value.printType = ValueType::FLOAT;
 	value.data.floatValue = 1.0f;
 
 	topFrame->empilharOperandStack(value);
@@ -178,6 +190,7 @@ void OperationsConstants::fconst_2() {
 
 	Value value;
 	value.type = ValueType::FLOAT;
+	value.printType = ValueType::FLOAT;
 	value.data.floatValue = 2.0f;
 
 	topFrame->empilharOperandStack(value);
@@ -191,6 +204,7 @@ void OperationsConstants::dconst_0() {
 
 	Value value;
 	value.type = ValueType::DOUBLE;
+	value.printType = ValueType::DOUBLE;
 	value.data.doubleValue = 0.0;
 
 	topFrame->empilharOperandStack(value);
@@ -204,6 +218,7 @@ void OperationsConstants::dconst_1() {
 
 	Value value;
 	value.type = ValueType::DOUBLE;
+	value.printType = ValueType::DOUBLE;
 	value.data.doubleValue = 1.0;
 
 	topFrame->empilharOperandStack(value);
@@ -221,6 +236,7 @@ void OperationsConstants::bipush() {
 	Value value;
 	value.printType = ValueType::BYTE;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = (int32_t) (int8_t) byte; // convertendo para inteiro e estendendo o sinal
 
 	topFrame->empilharOperandStack(value);
@@ -240,6 +256,7 @@ void OperationsConstants::sipush() {
 	Value value;
 	value.printType = ValueType::SHORT;
 	value.type = ValueType::INT;
+	value.printType = ValueType::INT;
 	value.data.intValue = (int32_t) (int16_t) shortValue; // convertendo para inteiro e estendendo o sinal
 
 	topFrame->empilharOperandStack(value);
@@ -272,10 +289,12 @@ void OperationsConstants::ldc() {
 		utf8String[i] = '\0';
 
 		value.type = ValueType::REFERENCE;
+		value.printType = ValueType::REFERENCE;
 		value.data.object = new StringObject(utf8String);
 	} else if (entry.tag == CONSTANT_Integer) {
 		value.printType = ValueType::INT;
 		value.type = ValueType::INT;
+		value.printType = ValueType::INT;
 		value.data.intValue = (int32_t) entry.info.integer_info.bytes;
 	} else if (entry.tag == CONSTANT_Float) {
 		u4 floatBytes = entry.info.float_info.bytes;
@@ -285,6 +304,7 @@ void OperationsConstants::ldc() {
 
 		float number = s * m * pow(2, e - 150);
 		value.type = ValueType::FLOAT;
+		value.printType = ValueType::FLOAT;
 		value.data.floatValue = number;
 	} else {
 		cerr << "ldc tentando acessar um elemento da CP invalido: " << entry.tag << endl;
@@ -322,10 +342,12 @@ void OperationsConstants::ldc_w() {
 		utf8String[i] = '\0';
 
 		value.type = ValueType::REFERENCE;
+		value.printType = ValueType::REFERENCE;
 		value.data.object = new StringObject(utf8String);
 	} else if (entry.tag == CONSTANT_Integer) {
 		value.printType = ValueType::INT;
 		value.type = ValueType::INT;
+		value.printType = ValueType::INT;
 		value.data.intValue = entry.info.integer_info.bytes;
 	} else if (entry.tag == CONSTANT_Float) {
 		u4 floatBytes = entry.info.float_info.bytes;
@@ -335,6 +357,7 @@ void OperationsConstants::ldc_w() {
 
 		float number = s * m * pow(2, e - 150);
 		value.type = ValueType::FLOAT;
+		value.printType = ValueType::FLOAT;
 		value.data.floatValue = number;
 	} else {
 		cerr << "ldc_w tentando acessar um elemento da CP invalido: " << entry.tag << endl;
@@ -365,10 +388,12 @@ void OperationsConstants::ldc2_w() {
 
 		int64_t longNumber = ((int64_t) highBytes << 32) + lowBytes;
 		value.type = ValueType::LONG;
+		value.printType = ValueType::LONG;
 		value.data.longValue = longNumber;
 
 		Value padding;
 		padding.type = ValueType::PADDING;
+		padding.printType = ValueType::PADDING;
 
 		topFrame->empilharOperandStack(padding);
 	} else if (entry.tag == CONSTANT_Double) {
@@ -383,10 +408,12 @@ void OperationsConstants::ldc2_w() {
 
 		double doubleNumber = s * m * pow(2, e - 1075);
 		value.type = ValueType::DOUBLE;
+		value.printType = ValueType::DOUBLE;
 		value.data.doubleValue = doubleNumber;
 
 		Value padding;
 		padding.type = ValueType::PADDING;
+		padding.printType = ValueType::PADDING;
 
 		topFrame->empilharOperandStack(padding);
 	} else {
