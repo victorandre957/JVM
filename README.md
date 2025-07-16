@@ -88,3 +88,11 @@ Uso: ./JVM_B arquivo.class
 ==104227== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```
 
+
+Para a verficação do cppcheck, execute o seguinte comando no terminal:
+
+```
+  cppcheck --enable=all --suppress=missingIncludeSystem --std=c++11 --check-level=exhaustive -I include  --output-file=analysis.txt ./
+```
+E verifique o arquivo `analysis.txt` para os resultados.
+
