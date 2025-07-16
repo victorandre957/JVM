@@ -134,23 +134,20 @@ Como testar</h1>
 <p>Para executar os testes disponíveis, execute o seguinte comando no terminal:</p>
 <div class="fragment"><div class="line">chmod +x ./run_tests.sh           </div>
 <div class="line">./run_tests.sh</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Analisador de código estático Cppcheck</h1>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Analisador de código dinâmico Valgrind</h1>
-<p>Como o analisador trabalha encima de binários gerados pela compilação dos códigos, é necessário fazer a compilação de todos os códigos com as flags -g e -O0, sendo essas alterações feitas sobre o makefile.</p>
-<p>Em seguida, no terminal linke os binários .o em um binário principal executável com o comando:</p>
-<div class="fragment"><div class="line">g++ bin/*.o -o THE_JVM</div>
 </div><!-- fragment --><p>Para executar o programa com exibidor utilize, use o comando:</p>
 <div class="fragment"><div class="line">./THE_JVM -E arquivo.class</div>
 </div><!-- fragment --><p>Para executar o programa com interpretador, use o comando:</p>
 <div class="fragment"><div class="line">./THE_JVM -I arquivo.class</div>
-</div><!-- fragment --><p>Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:</p>
-<div class="fragment"><div class="line">valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./THE_JVM</div>
-</div><!-- fragment --><p>Para a verficação do cppcheck, execute o seguinte comando no terminal:</p>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Analisador de código estático Cppcheck</h1>
+<p>Para a verficação do cppcheck, execute o seguinte comando no terminal:</p>
 <div class="fragment"><div class="line">cppcheck --enable=all --suppress=missingIncludeSystem --std=c++11 --check-level=exhaustive -I include  --output-file=analysis.txt ./</div>
 </div><!-- fragment --><p> E verifique o arquivo <span class="tt">analysis.txt</span> para os resultados.</p>
-<p>Resultados:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Analisador de código dinâmico Valgrind</h1>
+<p>Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:</p>
+<div class="fragment"><div class="line">valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./THE_JVM</div>
+</div><!-- fragment --><p>Resultados:</p>
 <div class="fragment"><div class="line">==139868== Memcheck, a memory error detector</div>
 <div class="line">==139868== Copyright (C) 2002-2024, and GNU GPL&#39;d, by Julian Seward et al.</div>
 <div class="line">==139868== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info</div>
