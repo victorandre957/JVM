@@ -8,5 +8,12 @@ var searchData=
   ['classfile_5',['ClassFile',['../classClassFile.html#a47669d90346c9fa0db30ae582c74a199',1,'ClassFile']]],
   ['compararutf8string_6',['compararUtf8String',['../classUtils.html#a63daf33599b447a8f3b2ea5aef2815ce',1,'Utils']]],
   ['converterstreamtocstring_7',['converterStreamToCString',['../classUtils.html#abef6742f09f81fea5952454925325ea5',1,'Utils']]],
-  ['criarvalorpadrao_8',['criarValorPadrao',['../classStaticClass.html#a49a8e8b0ed634056308ee572e93b1372',1,'StaticClass']]]
+  ['createdoublevalue_8',['createDoubleValue',['../BasicTypes_8h.html#a1453f6acfaee13014c291c78bc386610',1,'BasicTypes.h']]],
+  ['createfloatvalue_9',['createFloatValue',['../BasicTypes_8h.html#aec2de3a541b78d8b1ed13cbfee4db517',1,'BasicTypes.h']]],
+  ['createintvalue_10',['createIntValue',['../BasicTypes_8h.html#a7077b02ce14ced5ce5b18e9a08b59b52',1,'BasicTypes.h']]],
+  ['createlongvalue_11',['createLongValue',['../BasicTypes_8h.html#ada1ec7e36b669c1daccf6a589bc3f544',1,'BasicTypes.h']]],
+  ['createpaddingvalue_12',['createPaddingValue',['../BasicTypes_8h.html#a2cfd08cd617ec8e2ea3571da47ea4f23',1,'BasicTypes.h']]],
+  ['createreferencevalue_13',['createReferenceValue',['../BasicTypes_8h.html#a629d911c12c7df643fcd58846529c22b',1,'BasicTypes.h']]],
+  ['createreturnaddrvalue_14',['createReturnAddrValue',['../BasicTypes_8h.html#ab23429be133939ca35241efcc0427331',1,'BasicTypes.h']]],
+  ['criarvalorpadrao_15',['criarValorPadrao',['../classStaticClass.html#a49a8e8b0ed634056308ee572e93b1372',1,'StaticClass']]]
 ];

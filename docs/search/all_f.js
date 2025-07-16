@@ -6,7 +6,7 @@ var searchData=
   ['object_2eh_3',['Object.h',['../Object_8h.html',1,'']]],
   ['objectops_4',['objectOps',['../classOperations.html#aebff78eb3cb1e4ce418ed0278dae93b0',1,'Operations']]],
   ['objecttype_5',['ObjectType',['../BasicTypes_8h.html#a842c5e2e69277690b064bf363c017980',1,'ObjectType:&#160;BasicTypes.h'],['../BasicTypes_8h.html#a06ae4e2ed34533f72218e1207aa28f18',1,'ObjectType:&#160;BasicTypes.h']]],
-  ['objecttype_6',['objectType',['../classInstanceClass.html#ae8570307f49cb95cc01fb8d6bda23763',1,'InstanceClass::objectType()'],['../classObject.html#a08cee945bc224fc81f4448086625183d',1,'Object::objectType()'],['../classArrayObject.html#a9f29b0c867a13a853d64a9e353a0eefa',1,'ArrayObject::objectType()'],['../classStringObject.html#a4757889f8b78eba719d5891658abe685',1,'StringObject::objectType()']]],
+  ['objecttype_6',['objectType',['../classInstanceClass.html#ad9ed3ea9b3d897a065d4a53e3beb1b4a',1,'InstanceClass::objectType()'],['../classObject.html#a08cee945bc224fc81f4448086625183d',1,'Object::objectType()'],['../classArrayObject.html#a9f29b0c867a13a853d64a9e353a0eefa',1,'ArrayObject::objectType()'],['../classStringObject.html#a4757889f8b78eba719d5891658abe685',1,'StringObject::objectType()']]],
   ['obterconstantpool_7',['obterConstantPool',['../classFrame.html#a77f9705e64bfbdfc68921b7de11a893f',1,'Frame']]],
   ['obterlocalvariablevalue_8',['obterLocalVariableValue',['../classFrame.html#ae074652eb3b71fb4cb28afd1ba91885d',1,'Frame']]],
   ['obtermethodnamed_9',['obterMethodNamed',['../classFrame.html#a9920bdecf44e07796b7feea5bc4f1a6c',1,'Frame']]],
@@ -31,6 +31,6 @@ var searchData=
   ['operationsobject_28',['OperationsObject',['../classOperationsObject.html',1,'OperationsObject'],['../classOperationsObject.html#ae8ec51323aa26fb17e25cda8e12cd376',1,'OperationsObject::OperationsObject()']]],
   ['operationsobject_2ecpp_29',['OperationsObject.cpp',['../OperationsObject_8cpp.html',1,'']]],
   ['operationsobject_2eh_30',['OperationsObject.h',['../OperationsObject_8h.html',1,'']]],
-  ['operator_3d_31',['operator=',['../classHeap.html#a2923f4b4b05267583815e185f2e28b7d',1,'Heap::operator=()'],['../classLeitorExibidor.html#ad273b8b4b3210bf1c246b1226bdaf1c8',1,'LeitorExibidor::operator=()'],['../classMethodArea.html#a02652b16a9bc28ceae405a9959cf4ee8',1,'MethodArea::operator=()'],['../classOperations.html#ab6deca5423e5767c3fffef4e5107b627',1,'Operations::operator=()'],['../classPilhaJVM.html#a636c01ded057b339aa00486003db9037',1,'PilhaJVM::operator=()'],['../classStaticClass.html#affbe2e5c1401bee9f1dcfa258be4f574',1,'StaticClass::operator=()']]],
+  ['operator_3d_31',['operator=',['../classFrame.html#a085a6061a154bee57d12c84844036271',1,'Frame::operator=()'],['../classHeap.html#a2923f4b4b05267583815e185f2e28b7d',1,'Heap::operator=()'],['../classLeitorExibidor.html#ad273b8b4b3210bf1c246b1226bdaf1c8',1,'LeitorExibidor::operator=()'],['../classMethodArea.html#a02652b16a9bc28ceae405a9959cf4ee8',1,'MethodArea::operator=()'],['../classOperations.html#ab6deca5423e5767c3fffef4e5107b627',1,'Operations::operator=()'],['../classPilhaJVM.html#a636c01ded057b339aa00486003db9037',1,'PilhaJVM::operator=()'],['../classStaticClass.html#affbe2e5c1401bee9f1dcfa258be4f574',1,'StaticClass::operator=()']]],
   ['outer_5fclass_5finfo_5findex_32',['outer_class_info_index',['../structClass.html#a57bc4e6c8f985b9ee267d190e612dca8',1,'Class']]]
 ];

@@ -1,5 +1,13 @@
 var NAVTREEINDEX2 =
 {
+"classOperations.html#ae5d28665a74411cbb880e3007c5405e8":[1,0,35,97],
+"classOperations.html#ae5f11d6a8ea22b30f316c47af914f05a":[1,0,35,167],
+"classOperations.html#ae6c6a8e3d75dec712e534434f85909ce":[1,0,35,165],
+"classOperations.html#aeb89677195b16d5c595ec9faaddc2c76":[1,0,35,148],
+"classOperations.html#aebff78eb3cb1e4ce418ed0278dae93b0":[1,0,35,211],
+"classOperations.html#aed3838c73d7febfcacab9f101e6946ad":[1,0,35,203],
+"classOperations.html#aed8436ead5dfcaef69b24e1b2fff7744":[1,0,35,92],
+"classOperations.html#aee9ee24acc934bcf51340dc54d6ed231":[1,0,35,95],
 "classOperations.html#aeec162356a6792b1d0ba385f75f443b1":[1,0,35,102],
 "classOperations.html#af1a4f99f0d99da0a7db7fc926932a3c8":[1,0,35,105],
 "classOperations.html#af2064cce9ba6f6a4be257354f21f537e":[1,0,35,157],
@@ -93,7 +101,7 @@ var NAVTREEINDEX2 =
 "classOperationsBase.html#a79ae2426fda99e49c082b9f89cf625f0":[1,0,37,2],
 "classOperationsBase.html#a89b34325309dda27c0071a4a76b38f02":[1,0,37,5],
 "classOperationsBase.html#acc99835b0edc368f38b946e75c204d4b":[1,0,37,6],
-"classOperationsBase.html#afb7d8812aacf31df17c79e625b021c95":[1,0,37,7],
+"classOperationsBase.html#ad5cae28f916cbcceb73f86800cda1add":[1,0,37,7],
 "classOperationsConstants.html":[1,0,38],
 "classOperationsConstants.html#a1a6eb2320dc1a9ab24bc955ae5897dee":[1,0,38,16],
 "classOperationsConstants.html#a1e27a1e2147cb06902915301ccfcf666":[1,0,38,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX2 =
 "classPilhaJVM.html#a051085f51d79d3333356c5d36bef4687":[1,0,42,2],
 "classPilhaJVM.html#a09290179ef6c914aa32297ab9dae94ed":[1,0,42,9],
 "classPilhaJVM.html#a22d7bcd7db598b00ae219c9c2efb2c88":[1,0,42,8],
-"classPilhaJVM.html#a636c01ded057b339aa00486003db9037":[1,0,42,7],
-"classPilhaJVM.html#a64d7185bc812d3c81e5270c54c212e07":[1,0,42,3],
-"classPilhaJVM.html#a65763b14444559b443ab8bf550987d52":[1,0,42,5],
-"classPilhaJVM.html#a7995ffc4e2ca9b149b83293cbbe0ea1b":[1,0,42,0],
-"classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf":[1,0,42,1],
-"classPilhaJVM.html#a8ae0ed77b894fa95e73ea4077ebdeea2":[1,0,42,4],
-"classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718":[1,0,42,6],
-"classStaticClass.html":[1,0,44],
-"classStaticClass.html#a06cf89664b18e3c186a8d2ba957b911c":[1,0,44,2]
+"classPilhaJVM.html#a636c01ded057b339aa00486003db9037":[1,0,42,7]
 };

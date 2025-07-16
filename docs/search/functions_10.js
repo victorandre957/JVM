@@ -14,8 +14,8 @@ var searchData=
   ['setmagic_11',['setMagic',['../classLeitorExibidor.html#a08d4a6ea1c0f054f6f2969afe96a1d99',1,'LeitorExibidor']]],
   ['setmethods_12',['setMethods',['../classLeitorExibidor.html#aa7ce00ed1b02c20c2eb7ff1b503563d5',1,'LeitorExibidor']]],
   ['setmethodscount_13',['setMethodsCount',['../classLeitorExibidor.html#a6292517ec3beae1ef6ff67678110e961',1,'LeitorExibidor']]],
-  ['setoperandstackfrombackup_14',['setOperandStackFromBackup',['../classFrame.html#afda87a144c907a9220ea2209ad3cd429',1,'Frame']]],
-  ['setstring_15',['setString',['../classStringObject.html#a96812d8ef025b1f897b09f816d0297f7',1,'StringObject']]],
+  ['setoperandstackfrombackup_14',['setOperandStackFromBackup',['../classFrame.html#ab63bcc78d71f0137e584eacf58dd2406',1,'Frame']]],
+  ['setstring_15',['setString',['../classStringObject.html#af3d3b5c9515730de2d0ebdbdef57e4fa',1,'StringObject']]],
   ['setsuperclass_16',['setSuperClass',['../classLeitorExibidor.html#af726ef535e88d9d86938a2d6aad6658c',1,'LeitorExibidor']]],
   ['setthisclass_17',['setThisClass',['../classLeitorExibidor.html#af0f402911ed326bd9e495eef93a43c24',1,'LeitorExibidor']]],
   ['setversion_18',['setVersion',['../classLeitorExibidor.html#a9a11956018816200897ca137c027cbf1',1,'LeitorExibidor']]],
@@ -24,6 +24,6 @@ var searchData=
   ['sizecode_21',['sizeCode',['../classFrame.html#a3151aeb977a24c464ed8930c9100715d',1,'Frame']]],
   ['sizelocalvariables_22',['sizeLocalVariables',['../classFrame.html#a2b65f6fa2195970fd25d69c17b5ca933',1,'Frame']]],
   ['staticclass_23',['StaticClass',['../classStaticClass.html#a6c0e4d8842888a97160f1e815c8e6ac3',1,'StaticClass::StaticClass(ClassFile *classFile)'],['../classStaticClass.html#a06cf89664b18e3c186a8d2ba957b911c',1,'StaticClass::StaticClass(const StaticClass &amp;)=delete']]],
-  ['stringobject_24',['StringObject',['../classStringObject.html#af29d58fcfbd76c7708e5c8689321ab32',1,'StringObject']]],
+  ['stringobject_24',['StringObject',['../classStringObject.html#ab5b70949fc6c0075a6bfb1fac9dc44e5',1,'StringObject']]],
   ['swap_25',['swap',['../classOperations.html#ad800d04ce11806455dd5b84a7ecd6144',1,'Operations::swap()'],['../classOperationsArithmetic.html#a78b38f50939b6e5e6a13c676a832739c',1,'OperationsArithmetic::swap()']]]
 ];

@@ -1,6 +1,6 @@
 var classOperations =
 [
-    [ "~Operations", "classOperations.html#acfd66736f28837cca7379254a6eb988c", null ],
+    [ "~Operations", "classOperations.html#a4212602c6496359ea5354a0f9f703f78", null ],
     [ "Operations", "classOperations.html#af344ca561c1a08118f686551abb08efb", null ],
     [ "Operations", "classOperations.html#a83982c91620aa947b25b106d78d51e90", null ],
     [ "aaload", "classOperations.html#a522dfa2224d54268008f3bec4ff2b388", null ],
@@ -206,7 +206,6 @@ var classOperations =
     [ "sipush", "classOperations.html#aed3838c73d7febfcacab9f101e6946ad", null ],
     [ "swap", "classOperations.html#ad800d04ce11806455dd5b84a7ecd6144", null ],
     [ "tableswitch", "classOperations.html#a72955f43cde98b73c503e1a8c1505352", null ],
-    [ "wide", "classOperations.html#ab1474dfc4eb5142361b00d185f0a4a2b", null ],
     [ "arithmeticOps", "classOperations.html#adf5cbac9a0b26ea8877423b6d5688a40", null ],
     [ "constantsOps", "classOperations.html#a30c22ffe460c913ebac3c4732bfa0acc", null ],
     [ "controlOps", "classOperations.html#a19e1f0abfd6879ac388a74e0a40b32ac", null ],

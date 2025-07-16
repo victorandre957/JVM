@@ -54,9 +54,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BasicTypes_8h.html",
-"classLeitorExibidor.html#a4b4d4ae7d4d68d9b0869cf0141965a43",
-"classOperations.html#aeec162356a6792b1d0ba385f75f443b1",
-"classStaticClass.html#a17b66d9db593f2a58f5bb72f359069f4"
+"classLeitorExibidor.html#a265f56dc5c7eb8cfc9471435735c2145",
+"classOperations.html#ae5d28665a74411cbb880e3007c5405e8",
+"classPilhaJVM.html#a64d7185bc812d3c81e5270c54c212e07"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';

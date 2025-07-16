@@ -109,12 +109,25 @@ Como compilar</h1>
 <ul>
 <li>Execute o comando abaixo para compilar o projeto:</li>
 </ul>
-<div class="fragment"><div class="line">g++ -MT bin/ClassFile.o -MMD -MP -MF dep/ClassFile.d -c -o bin/ClassFile.o src/ClassFile.cpp -std=c++11 -c -I include -Wall -Wextra</div>
-<div class="line">g++ -MT bin/ClassVisao.o -MMD -MP -MF dep/ClassVisao.d -c -o bin/ClassVisao.o src/ClassVisao.cpp -std=c++11 -c -I include -Wall -Wextra</div>
-<div class="line">g++ -MT bin/LeitorExibidor.o -MMD -MP -MF dep/LeitorExibidor.d -c -o bin/LeitorExibidor.o src/LeitorExibidor.cpp -std=c++11 -c -I include -Wall -Wextra</div>
-<div class="line">g++ -MT bin/Main.o -MMD -MP -MF dep/Main.d -c -o bin/Main.o src/Main.cpp -std=c++11 -c -I include -Wall -Wextra</div>
-<div class="line">g++ -MT bin/Utils.o -MMD -MP -MF dep/Utils.d -c -o bin/Utils.o src/Utils.cpp -std=c++11 -c -I include -Wall -Wextra</div>
-<div class="line">g++ -o build/LeitorExibidor bin/ClassFile.o bin/ClassVisao.o bin/LeitorExibidor.o bin/Main.o bin/Utils.o -lm</div>
+<div class="fragment"><div class="line">g++ -MT bin/ClassFile.o -MMD -MP -MF dep/ClassFile.d -c -o bin/ClassFile.o src/ClassFile.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/ClassVisao.o -MMD -MP -MF dep/ClassVisao.d -c -o bin/ClassVisao.o src/ClassVisao.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Frame.o -MMD -MP -MF dep/Frame.d -c -o bin/Frame.o src/Frame.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Heap.o -MMD -MP -MF dep/Heap.d -c -o bin/Heap.o src/Heap.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/InstanceClass.o -MMD -MP -MF dep/InstanceClass.d -c -o bin/InstanceClass.o src/InstanceClass.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/LeitorExibidor.o -MMD -MP -MF dep/LeitorExibidor.d -c -o bin/LeitorExibidor.o src/LeitorExibidor.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Main.o -MMD -MP -MF dep/Main.d -c -o bin/Main.o src/Main.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/MethodArea.o -MMD -MP -MF dep/MethodArea.d -c -o bin/MethodArea.o src/MethodArea.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/OperationsArithmetic.o -MMD -MP -MF dep/OperationsArithmetic.d -c -o bin/OperationsArithmetic.o src/OperationsArithmetic.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/OperationsBase.o -MMD -MP -MF dep/OperationsBase.d -c -o bin/OperationsBase.o src/OperationsBase.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/OperationsConstants.o -MMD -MP -MF dep/OperationsConstants.d -c -o bin/OperationsConstants.o src/OperationsConstants.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/OperationsControl.o -MMD -MP -MF dep/OperationsControl.d -c -o bin/OperationsControl.o src/OperationsControl.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Operations.o -MMD -MP -MF dep/Operations.d -c -o bin/Operations.o src/Operations.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/OperationsLoadStore.o -MMD -MP -MF dep/OperationsLoadStore.d -c -o bin/OperationsLoadStore.o src/OperationsLoadStore.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/OperationsObject.o -MMD -MP -MF dep/OperationsObject.d -c -o bin/OperationsObject.o src/OperationsObject.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/PilhaJVM.o -MMD -MP -MF dep/PilhaJVM.d -c -o bin/PilhaJVM.o src/PilhaJVM.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/StaticClass.o -MMD -MP -MF dep/StaticClass.d -c -o bin/StaticClass.o src/StaticClass.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -MT bin/Utils.o -MMD -MP -MF dep/Utils.d -c -o bin/Utils.o src/Utils.cpp -std=c++11 -c -g -O0 -I include -Wall -Wextra</div>
+<div class="line">g++ -o build/THE_JVM bin/ClassFile.o bin/ClassVisao.o bin/Frame.o bin/Heap.o bin/InstanceClass.o bin/LeitorExibidor.o bin/Main.o bin/MethodArea.o bin/OperationsArithmetic.o bin/OperationsBase.o bin/OperationsConstants.o bin/OperationsControl.o bin/Operations.o bin/OperationsLoadStore.o bin/OperationsObject.o bin/PilhaJVM.o bin/StaticClass.o bin/Utils.o -lm</div>
 </div><!-- fragment --><p>Depois de compilar, o executável será gerado na pasta <span class="tt">build</span>.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Como testar</h1>
@@ -127,25 +140,32 @@ Analisador de código estático Cppcheck</h1>
 Analisador de código dinâmico Valgrind</h1>
 <p>Como o analisador trabalha encima de binários gerados pela compilação dos códigos, é necessário fazer a compilação de todos os códigos com as flags -g e -O0, sendo essas alterações feitas sobre o makefile.</p>
 <p>Em seguida, no terminal linke os binários .o em um binário principal executável com o comando:</p>
-<div class="fragment"><div class="line">g++ bin/*.o -o JVM_B</div>
+<div class="fragment"><div class="line">g++ bin/*.o -o THE_JVM</div>
+</div><!-- fragment --><p>Para executar o programa com exibidor utilize, use o comando:</p>
+<div class="fragment"><div class="line">./THE_JVM -E arquivo.class</div>
+</div><!-- fragment --><p>Para executar o programa com interpretador, use o comando:</p>
+<div class="fragment"><div class="line">./THE_JVM -I arquivo.class</div>
 </div><!-- fragment --><p>Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:</p>
-<div class="fragment"><div class="line">valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./JVM_B</div>
-</div><!-- fragment --><p>Resultados:</p>
-<div class="fragment"><div class="line">  ==104227== Memcheck, a memory error detector</div>
-<div class="line">==104227== Copyright (C) 2002-2017, and GNU GPL&#39;d, by Julian Seward et al.</div>
-<div class="line">==104227== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info</div>
-<div class="line">==104227== Command: ./JVM_B</div>
-<div class="line">==104227==</div>
-<div class="line">Uso: ./JVM_B arquivo.class</div>
-<div class="line">==104227==</div>
-<div class="line">==104227== HEAP SUMMARY:</div>
-<div class="line">==104227==     in use at exit: 0 bytes in 0 blocks</div>
-<div class="line">==104227==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated</div>
-<div class="line">==104227==</div>
-<div class="line">==104227== All heap blocks were freed -- no leaks are possible</div>
-<div class="line">==104227==</div>
-<div class="line">==104227== For lists of detected and suppressed errors, rerun with: -s</div>
-<div class="line">==104227== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)</div>
+<div class="fragment"><div class="line">valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./THE_JVM</div>
+</div><!-- fragment --><p>Para a verficação do cppcheck, execute o seguinte comando no terminal:</p>
+<div class="fragment"><div class="line">cppcheck --enable=all --suppress=missingIncludeSystem --std=c++11 --check-level=exhaustive -I include  --output-file=analysis.txt ./</div>
+</div><!-- fragment --><p> E verifique o arquivo <span class="tt">analysis.txt</span> para os resultados.</p>
+<p>Resultados:</p>
+<div class="fragment"><div class="line">==139868== Memcheck, a memory error detector</div>
+<div class="line">==139868== Copyright (C) 2002-2024, and GNU GPL&#39;d, by Julian Seward et al.</div>
+<div class="line">==139868== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info</div>
+<div class="line">==139868== Command: ./build/THE_JVM</div>
+<div class="line">==139868== </div>
+<div class="line">Invalido, deve ser executado com: ./build/THE_JVM -exhibitor ou -interpreter arquivo.class</div>
+<div class="line">==139868== </div>
+<div class="line">==139868== HEAP SUMMARY:</div>
+<div class="line">==139868==     in use at exit: 0 bytes in 0 blocks</div>
+<div class="line">==139868==   total heap usage: 2 allocs, 2 frees, 74,752 bytes allocated</div>
+<div class="line">==139868== </div>
+<div class="line">==139868== All heap blocks were freed -- no leaks are possible</div>
+<div class="line">==139868== </div>
+<div class="line">==139868== For lists of detected and suppressed errors, rerun with: -s</div>
+<div class="line">==139868== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)</div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

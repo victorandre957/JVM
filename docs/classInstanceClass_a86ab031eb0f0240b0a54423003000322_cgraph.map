@@ -8,7 +8,7 @@
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,144,247,144,247,150,215,150"/>
 <area shape="rect" id="Node000006" href="$classHeap.html#a0059fec336617084e6cbb49adc7a8d40" title="Obter a única instância da Heap." alt="" coords="296,185,435,213"/>
 <area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="182,159,281,179,280,185,181,164"/>
-<area shape="rect" id="Node000008" href="$classInstanceClass.html#af445c2e244c91b6cce4bb2c2798a720c" title="Adiciona um valor no field de índice informado." alt="" coords="265,237,466,282"/>
+<area shape="rect" id="Node000008" href="$classInstanceClass.html#a606aceec8716eae043ce04f640565249" title="Adiciona um valor no field de índice informado." alt="" coords="265,237,466,282"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="138,159,195,190,264,222,279,228,277,233,262,227,192,194,135,164"/>
 <area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="324,134,317,124,323,115,339,109,365,107,394,109,409,116,407,120,392,114,365,112,340,114,326,119,323,124,329,131"/>
 <area shape="rect" id="Node000005" href="$classUtils.html#abef6742f09f81fea5952454925325ea5" title="Converte stringstream para string C&#45;style." alt="" coords="516,121,698,166"/>

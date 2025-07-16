@@ -1,0 +1,10 @@
+<map id="OperationsBase::verificarMetodoExiste" name="OperationsBase::verificarMetodoExiste">
+<area shape="rect" id="Node000001" title="Verifica se o método informado existe na classe atual." alt="" coords="5,36,191,80"/>
+<area shape="rect" id="Node000002" href="$classStaticClass.html#a8a0c621d79a360af4b96e9c7546daef2" title="Obtém a ClassFile associada." alt="" coords="251,5,432,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,40,235,33,236,39,191,46"/>
+<area shape="rect" id="Node000003" href="$classUtils.html#a9f417939b31cec9a87e58080d692df04" title=" " alt="" coords="239,81,444,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,69,232,76,231,81,191,75"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="300,82,293,72,299,63,315,57,341,55,370,57,385,64,383,68,368,62,341,60,316,62,302,67,299,72,305,79"/>
+<area shape="rect" id="Node000004" href="$classUtils.html#abef6742f09f81fea5952454925325ea5" title="Converte stringstream para string C&#45;style." alt="" coords="492,73,674,118"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="444,92,476,92,476,98,444,98"/>
+</map>

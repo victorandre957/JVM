@@ -1,7 +1,8 @@
 var classFrame =
 [
-    [ "Frame", "classFrame.html#a3318a2cfd762b3a31adc4f101cb006e6", null ],
-    [ "Frame", "classFrame.html#aa4ea414fba16a44e8c556bb0b9cfc831", null ],
+    [ "Frame", "classFrame.html#a76e7aeb9d3cd48a03151776c0c7678e0", null ],
+    [ "Frame", "classFrame.html#ae4432bd93fe73685da480fc2a8a3ff39", null ],
+    [ "Frame", "classFrame.html#a03ab6d488b74c9c16e1eff0aa4cb01a1", null ],
     [ "~Frame", "classFrame.html#abec8c7bccdfc88cb4da137caae9f73d6", null ],
     [ "backupOperandStack", "classFrame.html#a874ac5162f805570d944a807ebf2bd40", null ],
     [ "desempilhaOperandStack", "classFrame.html#a93c26ae659c3f1b11837a0e9942acb20", null ],
@@ -12,7 +13,8 @@ var classFrame =
     [ "obterConstantPool", "classFrame.html#a77f9705e64bfbdfc68921b7de11a893f", null ],
     [ "obterLocalVariableValue", "classFrame.html#ae074652eb3b71fb4cb28afd1ba91885d", null ],
     [ "obterMethodNamed", "classFrame.html#a9920bdecf44e07796b7feea5bc4f1a6c", null ],
-    [ "setOperandStackFromBackup", "classFrame.html#afda87a144c907a9220ea2209ad3cd429", null ],
+    [ "operator=", "classFrame.html#a085a6061a154bee57d12c84844036271", null ],
+    [ "setOperandStackFromBackup", "classFrame.html#ab63bcc78d71f0137e584eacf58dd2406", null ],
     [ "sizeCode", "classFrame.html#a3151aeb977a24c464ed8930c9100715d", null ],
     [ "sizeLocalVariables", "classFrame.html#a2b65f6fa2195970fd25d69c17b5ca933", null ],
     [ "trocaLocalVariable", "classFrame.html#adfa57fa3049213f13beba10ba7152500", null ],

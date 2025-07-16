@@ -37,7 +37,7 @@ var searchData=
   ['getobject_34',['getObject',['../classFrame.html#a3a386901b23a12c781d3253fbbb9ecc4',1,'Frame']]],
   ['getsize_35',['getSize',['../classArrayObject.html#af43b8f4106c2f15def7fecd3e3f6b239',1,'ArrayObject']]],
   ['getstatic_36',['getstatic',['../classOperations.html#a0514422a81aa3efa5cb8b3bd1a505a68',1,'Operations::getstatic()'],['../classOperationsObject.html#ae18c85827676ab907d378e6e35d919b5',1,'OperationsObject::getstatic()']]],
-  ['getstring_37',['getString',['../classStringObject.html#aedd2df1630c9b291ea17407b3f626573',1,'StringObject']]],
+  ['getstring_37',['getString',['../classStringObject.html#a13e68d5b3a8a2438ea3ebea70d1ac124',1,'StringObject']]],
   ['gettopframe_38',['getTopFrame',['../classPilhaJVM.html#aa0e43da476df6147c86c8cc3d6899718',1,'PilhaJVM']]],
   ['getutf8fromconstantpool_39',['getUtf8FromConstantPool',['../classLeitorExibidor.html#ad3299334f937507986cef571036b93c0',1,'LeitorExibidor']]],
   ['getvalue_40',['getValue',['../classArrayObject.html#a468341ed2c683c3152a0ea58b2094c0f',1,'ArrayObject']]],

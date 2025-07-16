@@ -97,5 +97,12 @@ var BasicTypes_8h =
       [ "RETURN_ADDR", "BasicTypes_8h.html#ad9971b6ef33e02ba2c75d19c1d2518a1a8cdcfd804fa5989360eff9bc8b1ac371", null ],
       [ "REFERENCE", "BasicTypes_8h.html#ad9971b6ef33e02ba2c75d19c1d2518a1a4dc014d38d8f5ea326043e8491cfb6a3", null ],
       [ "PADDING", "BasicTypes_8h.html#ad9971b6ef33e02ba2c75d19c1d2518a1a726ab5aae349157b48fa83e2cda28275", null ]
-    ] ]
+    ] ],
+    [ "createDoubleValue", "BasicTypes_8h.html#a1453f6acfaee13014c291c78bc386610", null ],
+    [ "createFloatValue", "BasicTypes_8h.html#aec2de3a541b78d8b1ed13cbfee4db517", null ],
+    [ "createIntValue", "BasicTypes_8h.html#a7077b02ce14ced5ce5b18e9a08b59b52", null ],
+    [ "createLongValue", "BasicTypes_8h.html#ada1ec7e36b669c1daccf6a589bc3f544", null ],
+    [ "createPaddingValue", "BasicTypes_8h.html#a2cfd08cd617ec8e2ea3571da47ea4f23", null ],
+    [ "createReferenceValue", "BasicTypes_8h.html#a629d911c12c7df643fcd58846529c22b", null ],
+    [ "createReturnAddrValue", "BasicTypes_8h.html#ab23429be133939ca35241efcc0427331", null ]
 ];

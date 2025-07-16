@@ -114,8 +114,8 @@ Membros públicos</h2></td></tr>
 <tr class="memdesc:a4d8fb0de7c8a378ac7770467859f1686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor padrão.  <br /></td></tr>
 <tr class="memitem:a79ae2426fda99e49c082b9f89cf625f0" id="r_a79ae2426fda99e49c082b9f89cf625f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79ae2426fda99e49c082b9f89cf625f0">executarMetodos</a> (<a class="el" href="classStaticClass.html">StaticClass</a> *classRuntime)</td></tr>
 <tr class="memdesc:a79ae2426fda99e49c082b9f89cf625f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia a Execution Engine com a classe passada.  <br /></td></tr>
-<tr class="memitem:afb7d8812aacf31df17c79e625b021c95" id="r_afb7d8812aacf31df17c79e625b021c95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb7d8812aacf31df17c79e625b021c95">verificarMetodoExiste</a> (<a class="el" href="classStaticClass.html">StaticClass</a> *classRuntime, string name, string descriptor)</td></tr>
-<tr class="memdesc:afb7d8812aacf31df17c79e625b021c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o método informado existe na classe atual.  <br /></td></tr>
+<tr class="memitem:ad5cae28f916cbcceb73f86800cda1add" id="r_ad5cae28f916cbcceb73f86800cda1add"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5cae28f916cbcceb73f86800cda1add">verificarMetodoExiste</a> (const <a class="el" href="classStaticClass.html">StaticClass</a> *classRuntime, const string &amp;name, const string &amp;descriptor)</td></tr>
+<tr class="memdesc:ad5cae28f916cbcceb73f86800cda1add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o método informado existe na classe atual.  <br /></td></tr>
 <tr class="memitem:acc99835b0edc368f38b946e75c204d4b" id="r_acc99835b0edc368f38b946e75c204d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc99835b0edc368f38b946e75c204d4b">populateMultiarray</a> (<a class="el" href="classArrayObject.html">ArrayObject</a> *array, <a class="el" href="BasicTypes_8h.html#ad9971b6ef33e02ba2c75d19c1d2518a1">ValueType</a> value, stack&lt; int &gt; count)</td></tr>
 <tr class="memdesc:acc99835b0edc368f38b946e75c204d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Popula os vetores de um multiarray.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -227,7 +227,7 @@ Atributos Protegidos</h2></td></tr>
 
 <p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00019">19</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
 
-<p class="reference">Referências <a class="el" href="PilhaJVM_8cpp_source.html#l00011">PilhaJVM::addFrame()</a>, <a class="el" href="structValue.html#abca65ec3442f8b6db2242ea0cd6139f2">Value::data</a>, <a class="el" href="#a3a981511ded74adb03b2e4d42ce0ee36">executeInstruction()</a>, <a class="el" href="Frame_8cpp_source.html#l00104">Frame::getCode()</a>, <a class="el" href="PilhaJVM_8h_source.html#l00024">PilhaJVM::getInstance()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">PilhaJVM::getTopFrame()</a>, <a class="el" href="BasicTypes_8h_source.html#l00041">Value::object</a>, <a class="el" href="Frame_8h_source.html#l00115">Frame::pc</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00040">PilhaJVM::size()</a>, <a class="el" href="BasicTypes_8h_source.html#l00030">Value::type</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00042">verificarMetodoExiste()</a>.</p>
+<p class="reference">Referências <a class="el" href="PilhaJVM_8cpp_source.html#l00011">PilhaJVM::addFrame()</a>, <a class="el" href="structValue.html#abca65ec3442f8b6db2242ea0cd6139f2">Value::data</a>, <a class="el" href="#a3a981511ded74adb03b2e4d42ce0ee36">executeInstruction()</a>, <a class="el" href="Frame_8cpp_source.html#l00106">Frame::getCode()</a>, <a class="el" href="PilhaJVM_8h_source.html#l00024">PilhaJVM::getInstance()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">PilhaJVM::getTopFrame()</a>, <a class="el" href="BasicTypes_8h_source.html#l00041">Value::object</a>, <a class="el" href="Frame_8h_source.html#l00125">Frame::pc</a>, <a class="el" href="BasicTypes_8h_source.html#l00029">Value::printType</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00040">PilhaJVM::size()</a>, <a class="el" href="BasicTypes_8h_source.html#l00030">Value::type</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00043">verificarMetodoExiste()</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="Main_8cpp_source.html#l00018">main()</a>.</p>
 <div class="dynheader">
@@ -248,7 +248,7 @@ Grafo de chamadas desta função:</div>
 <area shape="poly" title=" " alt="" coords="195,191,278,207,277,212,194,196"/>
 <area shape="rect" href="classPilhaJVM.html#a22d7bcd7db598b00ae219c9c2efb2c88" title="Obtém o tamanho da pilha da JVM." alt="" coords="312,265,424,293"/>
 <area shape="poly" title=" " alt="" coords="137,196,186,224,243,250,297,265,296,271,241,255,183,229,134,200"/>
-<area shape="rect" href="classOperationsBase.html#afb7d8812aacf31df17c79e625b021c95" title="Verifica se o método informado existe na classe atual." alt="" coords="275,317,460,362"/>
+<area shape="rect" href="classOperationsBase.html#ad5cae28f916cbcceb73f86800cda1add" title="Verifica se o método informado existe na classe atual." alt="" coords="275,317,460,362"/>
 <area shape="poly" title=" " alt="" coords="121,196,173,250,206,278,243,302,261,311,259,316,240,307,203,282,169,253,117,200"/>
 <area shape="rect" href="classPilhaJVM.html#a7f0451ca9cf124f5098d43928566fadf" title="Construtor padrão." alt="" coords="573,161,716,189"/>
 <area shape="poly" title=" " alt="" coords="450,172,558,172,558,178,450,178"/>
@@ -355,9 +355,9 @@ Grafo de chamadas desta função:</div>
 
 <p>Implementa a funcionalidade da instrução nop. </p>
 
-<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00088">88</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00089">89</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
 
-<p class="reference">Referências <a class="el" href="PilhaJVM_8h_source.html#l00024">PilhaJVM::getInstance()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">PilhaJVM::getTopFrame()</a> e <a class="el" href="Frame_8h_source.html#l00115">Frame::pc</a>.</p>
+<p class="reference">Referências <a class="el" href="PilhaJVM_8h_source.html#l00024">PilhaJVM::getInstance()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">PilhaJVM::getTopFrame()</a> e <a class="el" href="Frame_8h_source.html#l00125">Frame::pc</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="Operations_8cpp_source.html#l00015">Operations::initInstructions()</a>.</p>
 <div class="dynheader">
@@ -411,11 +411,11 @@ Grafo de chamadas desta função:</div>
   </dd>
 </dl>
 
-<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00061">61</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00062">62</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
 
-<p class="reference">Referências <a class="el" href="structValue.html#abca65ec3442f8b6db2242ea0cd6139f2">Value::data</a>, <a class="el" href="BasicTypes_8h_source.html#l00038">Value::longValue</a>, <a class="el" href="BasicTypes_8h_source.html#l00041">Value::object</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00061">populateMultiarray()</a>, <a class="el" href="BasicTypes_8h_source.html#l00029">Value::printType</a>, <a class="el" href="Object_8h_source.html#l00175">ArrayObject::pushValue()</a> e <a class="el" href="BasicTypes_8h_source.html#l00030">Value::type</a>.</p>
+<p class="reference">Referências <a class="el" href="structValue.html#abca65ec3442f8b6db2242ea0cd6139f2">Value::data</a>, <a class="el" href="BasicTypes_8h_source.html#l00038">Value::longValue</a>, <a class="el" href="BasicTypes_8h_source.html#l00041">Value::object</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00062">populateMultiarray()</a>, <a class="el" href="BasicTypes_8h_source.html#l00029">Value::printType</a>, <a class="el" href="Object_8h_source.html#l00175">ArrayObject::pushValue()</a> e <a class="el" href="BasicTypes_8h_source.html#l00030">Value::type</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="OperationsBase_8cpp_source.html#l00061">populateMultiarray()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="OperationsBase_8cpp_source.html#l00062">populateMultiarray()</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
@@ -430,8 +430,8 @@ Grafo de chamadas desta função:</div>
 
 </div>
 </div>
-<a id="afb7d8812aacf31df17c79e625b021c95" name="afb7d8812aacf31df17c79e625b021c95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb7d8812aacf31df17c79e625b021c95">&#9670;&#160;</a></span>verificarMetodoExiste()</h2>
+<a id="ad5cae28f916cbcceb73f86800cda1add" name="ad5cae28f916cbcceb73f86800cda1add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cae28f916cbcceb73f86800cda1add">&#9670;&#160;</a></span>verificarMetodoExiste()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -439,17 +439,17 @@ Grafo de chamadas desta função:</div>
         <tr>
           <td class="memname">bool OperationsBase::verificarMetodoExiste </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classStaticClass.html">StaticClass</a> *</td>          <td class="paramname"><span class="paramname"><em>classRuntime</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classStaticClass.html">StaticClass</a> *</td>          <td class="paramname"><span class="paramname"><em>classRuntime</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>descriptor</em></span>&#160;)</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>descriptor</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -465,16 +465,16 @@ Grafo de chamadas desta função:</div>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>Retorna <code>true</code> caso o método exista, ou <code>false</code> caso contrário. </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00042">42</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00043">43</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
 
-<p class="reference">Referências <a class="el" href="ClassFile_8h_source.html#l00039">ClassFile::constant_pool</a>, <a class="el" href="BasicTypes_8h_source.html#l00101">method_info::descriptor_index</a>, <a class="el" href="StaticClass_8cpp_source.html#l00032">StaticClass::getClassFile()</a>, <a class="el" href="Utils_8cpp_source.html#l00085">Utils::getFormattedConstant()</a>, <a class="el" href="ClassFile_8h_source.html#l00048">ClassFile::methods</a>, <a class="el" href="ClassFile_8h_source.html#l00047">ClassFile::methods_count</a> e <a class="el" href="BasicTypes_8h_source.html#l00100">method_info::name_index</a>.</p>
+<p class="reference">Referências <a class="el" href="ClassFile_8h_source.html#l00039">ClassFile::constant_pool</a>, <a class="el" href="BasicTypes_8h_source.html#l00157">method_info::descriptor_index</a>, <a class="el" href="StaticClass_8cpp_source.html#l00032">StaticClass::getClassFile()</a>, <a class="el" href="Utils_8cpp_source.html#l00085">Utils::getFormattedConstant()</a>, <a class="el" href="ClassFile_8h_source.html#l00048">ClassFile::methods</a>, <a class="el" href="ClassFile_8h_source.html#l00047">ClassFile::methods_count</a> e <a class="el" href="BasicTypes_8h_source.html#l00156">method_info::name_index</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="MethodArea_8cpp_source.html#l00016">MethodArea::carregarClassNamed()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00019">executarMetodos()</a> e <a class="el" href="Main_8cpp_source.html#l00018">main()</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
-<div class="center"><img src="classOperationsBase_afb7d8812aacf31df17c79e625b021c95_cgraph.png" border="0" usemap="#aclassOperationsBase_afb7d8812aacf31df17c79e625b021c95_cgraph" loading="lazy" alt=""/></div>
-<map name="aclassOperationsBase_afb7d8812aacf31df17c79e625b021c95_cgraph" id="aclassOperationsBase_afb7d8812aacf31df17c79e625b021c95_cgraph">
+<div class="center"><img src="classOperationsBase_ad5cae28f916cbcceb73f86800cda1add_cgraph.png" border="0" usemap="#aclassOperationsBase_ad5cae28f916cbcceb73f86800cda1add_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassOperationsBase_ad5cae28f916cbcceb73f86800cda1add_cgraph" id="aclassOperationsBase_ad5cae28f916cbcceb73f86800cda1add_cgraph">
 <area shape="rect" title="Verifica se o método informado existe na classe atual." alt="" coords="5,36,191,80"/>
 <area shape="rect" href="classStaticClass.html#a8a0c621d79a360af4b96e9c7546daef2" title="Obtém a ClassFile associada." alt="" coords="251,5,432,33"/>
 <area shape="poly" title=" " alt="" coords="191,40,235,33,236,39,191,46"/>
@@ -513,11 +513,11 @@ Grafo de chamadas desta função:</div>
 
 <p>Implementa a funcionalidade da instrução wide. </p>
 
-<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00094">94</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="OperationsBase_8cpp_source.html#l00095">95</a> do ficheiro <a class="el" href="OperationsBase_8cpp_source.html">OperationsBase.cpp</a>.</p>
 
-<p class="reference">Referências <a class="el" href="OperationsBase_8h_source.html#l00065">_isWide</a>, <a class="el" href="PilhaJVM_8h_source.html#l00024">PilhaJVM::getInstance()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">PilhaJVM::getTopFrame()</a> e <a class="el" href="Frame_8h_source.html#l00115">Frame::pc</a>.</p>
+<p class="reference">Referências <a class="el" href="OperationsBase_8h_source.html#l00065">_isWide</a>, <a class="el" href="PilhaJVM_8h_source.html#l00024">PilhaJVM::getInstance()</a>, <a class="el" href="PilhaJVM_8cpp_source.html#l00020">PilhaJVM::getTopFrame()</a> e <a class="el" href="Frame_8h_source.html#l00125">Frame::pc</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="Operations_8h_source.html#l00277">Operations::wide()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="Operations_8cpp_source.html#l00015">Operations::initInstructions()</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
@@ -559,7 +559,7 @@ Grafo de chamadas desta função:</div>
 
 <p class="definition">Definido na linha <a class="el" href="OperationsBase_8h_source.html#l00065">65</a> do ficheiro <a class="el" href="OperationsBase_8h_source.html">OperationsBase.h</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="Operations_8cpp_source.html#l00003">Operations::Operations()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00011">OperationsBase()</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00094">wide()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="Operations_8cpp_source.html#l00003">Operations::Operations()</a>, <a class="el" href="OperationsBase_8cpp_source.html#l00011">OperationsBase()</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00095">wide()</a>.</p>
 
 </div>
 </div>

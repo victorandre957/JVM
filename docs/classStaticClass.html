@@ -192,8 +192,8 @@ Membros públicos</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Membros públicos estáticos</h2></td></tr>
-<tr class="memitem:aa0dcab967f720db213f8591c67861a6e" id="r_aa0dcab967f720db213f8591c67861a6e"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0dcab967f720db213f8591c67861a6e">extrairNomeArquivo</a> (char *argv[])</td></tr>
-<tr class="memdesc:aa0dcab967f720db213f8591c67861a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrai o nome do arquivo sem extensão.  <br /></td></tr>
+<tr class="memitem:a730793b1bb3e026f66fd9154255c8a37" id="r_a730793b1bb3e026f66fd9154255c8a37"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a730793b1bb3e026f66fd9154255c8a37">extrairNomeArquivo</a> (const char *const argv[])</td></tr>
+<tr class="memdesc:a730793b1bb3e026f66fd9154255c8a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrai o nome do arquivo sem extensão.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Membros privados estáticos</h2></td></tr>
@@ -244,7 +244,7 @@ Atributos Privados</h2></td></tr>
 
 <p class="definition">Definido na linha <a class="el" href="StaticClass_8cpp_source.html#l00006">6</a> do ficheiro <a class="el" href="StaticClass_8cpp_source.html">StaticClass.cpp</a>.</p>
 
-<p class="reference">Referências <a class="el" href="StaticClass_8h_source.html#l00094">_classFile</a>, <a class="el" href="BasicTypes_8h_source.html#l00091">field_info::access_flags</a>, <a class="el" href="ClassFile_8h_source.html#l00039">ClassFile::constant_pool</a>, <a class="el" href="StaticClass_8cpp_source.html#l00076">criarValorPadrao()</a>, <a class="el" href="BasicTypes_8h_source.html#l00093">field_info::descriptor_index</a>, <a class="el" href="ClassFile_8h_source.html#l00046">ClassFile::fields</a>, <a class="el" href="ClassFile_8h_source.html#l00045">ClassFile::fields_count</a>, <a class="el" href="Utils_8cpp_source.html#l00085">Utils::getFormattedConstant()</a>, <a class="el" href="BasicTypes_8h_source.html#l00092">field_info::name_index</a> e <a class="el" href="StaticClass_8cpp_source.html#l00036">putValueIntoField()</a>.</p>
+<p class="reference">Referências <a class="el" href="StaticClass_8h_source.html#l00094">_classFile</a>, <a class="el" href="BasicTypes_8h_source.html#l00147">field_info::access_flags</a>, <a class="el" href="ClassFile_8h_source.html#l00039">ClassFile::constant_pool</a>, <a class="el" href="StaticClass_8cpp_source.html#l00076">criarValorPadrao()</a>, <a class="el" href="BasicTypes_8h_source.html#l00149">field_info::descriptor_index</a>, <a class="el" href="ClassFile_8h_source.html#l00046">ClassFile::fields</a>, <a class="el" href="ClassFile_8h_source.html#l00045">ClassFile::fields_count</a>, <a class="el" href="Utils_8cpp_source.html#l00085">Utils::getFormattedConstant()</a>, <a class="el" href="BasicTypes_8h_source.html#l00148">field_info::name_index</a> e <a class="el" href="StaticClass_8cpp_source.html#l00036">putValueIntoField()</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="#affbe2e5c1401bee9f1dcfa258be4f574">operator=()</a> e <a class="el" href="#a06cf89664b18e3c186a8d2ba957b911c">StaticClass()</a>.</p>
 <div class="dynheader">
@@ -383,8 +383,8 @@ Grafo de chamadas desta função:</div>
 
 </div>
 </div>
-<a id="aa0dcab967f720db213f8591c67861a6e" name="aa0dcab967f720db213f8591c67861a6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0dcab967f720db213f8591c67861a6e">&#9670;&#160;</a></span>extrairNomeArquivo()</h2>
+<a id="a730793b1bb3e026f66fd9154255c8a37" name="a730793b1bb3e026f66fd9154255c8a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730793b1bb3e026f66fd9154255c8a37">&#9670;&#160;</a></span>extrairNomeArquivo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +395,7 @@ Grafo de chamadas desta função:</div>
         <tr>
           <td class="memname">string StaticClass::extrairNomeArquivo </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]</td><td>)</td>
+          <td class="paramtype">const char *const</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]</td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -457,7 +457,7 @@ Grafo de chamadas desta função:</div>
 
 <p class="reference">Referências <a class="el" href="StaticClass_8h_source.html#l00099">_staticFields</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="OperationsObject_8cpp_source.html#l00020">OperationsObject::getstatic()</a>, <a class="el" href="#affbe2e5c1401bee9f1dcfa258be4f574">operator=()</a> e <a class="el" href="OperationsObject_8cpp_source.html#l00111">OperationsObject::putstatic()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="OperationsObject_8cpp_source.html#l00020">OperationsObject::getstatic()</a>, <a class="el" href="#affbe2e5c1401bee9f1dcfa258be4f574">operator=()</a> e <a class="el" href="OperationsObject_8cpp_source.html#l00112">OperationsObject::putstatic()</a>.</p>
 
 </div>
 </div>
@@ -491,7 +491,7 @@ Grafo de chamadas desta função:</div>
 
 <p class="reference">Referências <a class="el" href="StaticClass_8h_source.html#l00094">_classFile</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="MethodArea_8cpp_source.html#l00065">MethodArea::addClass()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00991">OperationsObject::checkcast()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00020">OperationsObject::getstatic()</a>, <a class="el" href="InstanceClass_8cpp_source.html#l00009">InstanceClass::InstanceClass()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01057">OperationsObject::instanceof()</a>, <a class="el" href="Main_8cpp_source.html#l00018">main()</a>, <a class="el" href="Frame_8cpp_source.html#l00108">Frame::obterMethodNamed()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00111">OperationsObject::putstatic()</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00042">OperationsBase::verificarMetodoExiste()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="MethodArea_8cpp_source.html#l00065">MethodArea::addClass()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01009">OperationsObject::checkcast()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00020">OperationsObject::getstatic()</a>, <a class="el" href="InstanceClass_8cpp_source.html#l00009">InstanceClass::InstanceClass()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l01076">OperationsObject::instanceof()</a>, <a class="el" href="Main_8cpp_source.html#l00018">main()</a>, <a class="el" href="Frame_8cpp_source.html#l00110">Frame::obterMethodNamed()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00112">OperationsObject::putstatic()</a> e <a class="el" href="OperationsBase_8cpp_source.html#l00043">OperationsBase::verificarMetodoExiste()</a>.</p>
 
 </div>
 </div>
@@ -601,7 +601,7 @@ Grafo de chamadas desta função:</div>
 <area shape="rect" title="Assignment operator (deleted para evitar cópias desnecessárias)." alt="" coords="5,171,173,199"/>
 <area shape="rect" href="classStaticClass.html#a49a8e8b0ed634056308ee572e93b1372" title="Inicializa um valor padrão baseado no tipo do campo." alt="" coords="481,103,688,131"/>
 <area shape="poly" title=" " alt="" coords="95,170,112,138,139,98,175,58,196,41,220,28,277,8,325,4,374,12,434,28,468,40,501,56,555,91,552,96,498,61,466,45,432,33,373,17,325,9,278,13,222,33,199,46,178,62,143,101,116,141,99,172"/>
-<area shape="rect" href="classStaticClass.html#aa0dcab967f720db213f8591c67861a6e" title="Extrai o nome do arquivo sem extensão." alt="" coords="235,43,418,87"/>
+<area shape="rect" href="classStaticClass.html#a730793b1bb3e026f66fd9154255c8a37" title="Extrai o nome do arquivo sem extensão." alt="" coords="235,43,418,87"/>
 <area shape="poly" title=" " alt="" coords="107,168,157,134,219,97,233,91,235,96,222,102,159,138,110,173"/>
 <area shape="rect" href="classStaticClass.html#ab542c00149953d1c470a6c6267143510" title="Verifica se o field informado existe." alt="" coords="243,111,411,139"/>
 <area shape="poly" title=" " alt="" coords="143,168,220,148,249,140,251,146,221,153,144,173"/>
@@ -657,7 +657,7 @@ Grafo de chamadas desta função:</div>
 
 <p class="reference">Referências <a class="el" href="StaticClass_8h_source.html#l00099">_staticFields</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="#affbe2e5c1401bee9f1dcfa258be4f574">operator=()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00111">OperationsObject::putstatic()</a> e <a class="el" href="StaticClass_8cpp_source.html#l00006">StaticClass()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="#affbe2e5c1401bee9f1dcfa258be4f574">operator=()</a>, <a class="el" href="OperationsObject_8cpp_source.html#l00112">OperationsObject::putstatic()</a> e <a class="el" href="StaticClass_8cpp_source.html#l00006">StaticClass()</a>.</p>
 
 </div>
 </div>
