@@ -20,8 +20,8 @@ OperationsObject::OperationsObject(bool &isWideRef) : _isWide(isWideRef) {
 void OperationsObject::getstatic() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -32,15 +32,15 @@ void OperationsObject::getstatic() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.descriptor_index);
 
 	// caso especial
 	if (className == "java/lang/System" && fieldDescriptor == "Ljava/io/PrintStream;") {
@@ -111,8 +111,8 @@ void OperationsObject::getstatic() {
 void OperationsObject::putstatic() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -123,15 +123,15 @@ void OperationsObject::putstatic() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.descriptor_index);
 
 	MethodArea &methodArea = MethodArea::getInstance();
 	StaticClass *classRuntime = methodArea.carregarClassNamed(className);
@@ -191,8 +191,8 @@ void OperationsObject::putstatic() {
 void OperationsObject::getfield() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -203,21 +203,21 @@ void OperationsObject::getfield() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.descriptor_index);
 
 	Value objectValue = topFrame->desempilhaOperandStack();
 	assert(objectValue.type == ValueType::REFERENCE);
 	Object *object = objectValue.data.object;
 	assert(object->objectType() == ObjectType::CLASS_INSTANCE);
-	InstanceClass *classInstance = (InstanceClass *) object;
+	InstanceClass *classInstance = static_cast<InstanceClass *>(object);
 
 	if (!classInstance->fieldExists(fieldName)) {
 		cerr << "NoSuchFieldError" << endl;
@@ -260,8 +260,8 @@ void OperationsObject::getfield() {
 void OperationsObject::putfield() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -272,15 +272,15 @@ void OperationsObject::putfield() {
 
 	CONSTANT_Fieldref_info fieldRef = fieldCP.info.fieldref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, fieldRef.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldRef.class_index);
 
 	cp_info nameAndTypeCP = constantPool[fieldRef.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info fieldNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string fieldName = Utils::getFormattedConstant(constantPool, fieldNameAndType.name_index);
-	string fieldDescriptor = Utils::getFormattedConstant(constantPool, fieldNameAndType.descriptor_index);
+	string fieldName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.name_index);
+	string fieldDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), fieldNameAndType.descriptor_index);
 
 	Value valueToBeInserted = topFrame->desempilhaOperandStack();
 	if (valueToBeInserted.type == ValueType::DOUBLE || valueToBeInserted.type == ValueType::LONG) {
@@ -310,7 +310,7 @@ void OperationsObject::putfield() {
 	assert(objectValue.type == ValueType::REFERENCE);
 	Object *object = objectValue.data.object;
 	assert(object->objectType() == ObjectType::CLASS_INSTANCE);
-	InstanceClass *classInstance = (InstanceClass *) object;
+	InstanceClass *classInstance = static_cast<InstanceClass *>(object);
 
 	classInstance->putValueIntoField(valueToBeInserted, fieldName);
 
@@ -323,8 +323,8 @@ void OperationsObject::invokevirtual() {
 
 	stack<Value> operandStackBackup = topFrame->backupOperandStack();
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -335,15 +335,15 @@ void OperationsObject::invokevirtual() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.descriptor_index);
 
 	if (className.find("java/") != string::npos) {
 		// simulando println ou print
@@ -385,7 +385,7 @@ void OperationsObject::invokevirtual() {
 						break;
 					case ValueType::REFERENCE:
 						assert(printValue.data.object->objectType() == ObjectType::STRING_INSTANCE);
-						printf("%s", ((StringObject *) printValue.data.object)->getString().c_str());
+						printf("%s", static_cast<StringObject *>(printValue.data.object)->getString().c_str());
 						break;
 					case ValueType::BOOLEAN:
 						printf("%s", printValue.data.booleanValue == 0 ? "false" : "true");
@@ -417,8 +417,8 @@ void OperationsObject::invokevirtual() {
 			assert(strValue1.data.object->objectType() == ObjectType::STRING_INSTANCE);
 			assert(strValue2.data.object->objectType() == ObjectType::STRING_INSTANCE);
 
-			StringObject *str1 = (StringObject*) strValue1.data.object;
-			StringObject *str2 = (StringObject*) strValue2.data.object;
+			const StringObject *str1 = static_cast<const StringObject*>(strValue1.data.object);
+			const StringObject *str2 = static_cast<const StringObject*>(strValue2.data.object);
 
 			Value result;
 			result.printType = ValueType::INT;
@@ -434,7 +434,7 @@ void OperationsObject::invokevirtual() {
 			assert(strValue.type == ValueType::REFERENCE);
 			assert(strValue.data.object->objectType() == ObjectType::STRING_INSTANCE);
 
-			StringObject *str = (StringObject*) strValue.data.object;
+			const StringObject *str = static_cast<const StringObject*>(strValue.data.object);
 
 			Value result;
 			result.printType = ValueType::INT;
@@ -485,7 +485,7 @@ void OperationsObject::invokevirtual() {
 
 		Object *object = objectValue.data.object;
 		assert(object->objectType() == ObjectType::CLASS_INSTANCE); // objeto precisa ser uma instância
-		InstanceClass *instance = (InstanceClass *) object;
+		InstanceClass *instance = static_cast<InstanceClass *>(object);
 
 		MethodArea &methodArea = MethodArea::getInstance();
 		StaticClass *classRuntime = methodArea.carregarClassNamed(className);
@@ -511,8 +511,8 @@ void OperationsObject::invokespecial() {
 
 	stack<Value> operandStackBackup = topFrame->backupOperandStack();
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -523,15 +523,15 @@ void OperationsObject::invokespecial() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.descriptor_index);
 
 	// casos especiais
 	if ((className == "java/lang/Object" || className == "java/lang/String") && methodName == "<init>") {
@@ -587,7 +587,7 @@ void OperationsObject::invokespecial() {
 
 		Object *object = objectValue.data.object;
 		assert(object->objectType() == ObjectType::CLASS_INSTANCE); // objeto precisa ser uma instância
-		InstanceClass *instance = (InstanceClass *) object;
+		InstanceClass *instance = static_cast<InstanceClass *>(object);
 
 		MethodArea &methodArea = MethodArea::getInstance();
 		StaticClass *classRuntime = methodArea.carregarClassNamed(className);
@@ -613,8 +613,8 @@ void OperationsObject::invokestatic() {
 
 	stack<Value> operandStackBackup = topFrame->backupOperandStack();
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -625,15 +625,15 @@ void OperationsObject::invokestatic() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.descriptor_index);
 
 	if (className == "java/lang/Object" && methodName == "registerNatives") {
 		topFrame->pc += 3;
@@ -700,8 +700,8 @@ void OperationsObject::invokeinterface() {
 
 	stack<Value> operandStackBackup = topFrame->backupOperandStack();
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -712,15 +712,15 @@ void OperationsObject::invokeinterface() {
 
 	CONSTANT_Methodref_info methodInfo = methodCP.info.methodref_info;
 
-	string className = Utils::getFormattedConstant(constantPool, methodInfo.class_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodInfo.class_index);
 
 	cp_info nameAndTypeCP = constantPool[methodInfo.name_and_type_index - 1];
 	assert(nameAndTypeCP.tag == CONSTANT_NameAndType); // precisa ser um nameAndType
 
 	CONSTANT_NameAndType_info methodNameAndType = nameAndTypeCP.info.nameAndType_info;
 
-	string methodName = Utils::getFormattedConstant(constantPool, methodNameAndType.name_index);
-	string methodDescriptor = Utils::getFormattedConstant(constantPool, methodNameAndType.descriptor_index);
+	string methodName = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.name_index);
+	string methodDescriptor = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), methodNameAndType.descriptor_index);
 
 	if (className.find("java/") != string::npos) {
 		cerr << "Tentando invocar metodo de interface invalido: " << methodName << endl;
@@ -765,7 +765,7 @@ void OperationsObject::invokeinterface() {
 
 		Object *object = objectValue.data.object;
 		assert(object->objectType() == ObjectType::CLASS_INSTANCE); // objeto precisa ser uma instância
-		InstanceClass *instance = (InstanceClass *) object;
+		InstanceClass *instance = static_cast<InstanceClass *>(object);
 
 		MethodArea &methodArea = MethodArea::getInstance();
 		methodArea.carregarClassNamed(className); // carregando a interface (caso ainda não foi carregada).
@@ -788,8 +788,8 @@ void OperationsObject::invokeinterface() {
 void OperationsObject::func_new() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -799,7 +799,7 @@ void OperationsObject::func_new() {
 	assert(classCP.tag == CONSTANT_Class);
 
 	CONSTANT_Class_info classInfo = classCP.info.class_info; // Formata nome da classe
-	string className = Utils::getFormattedConstant(constantPool, classInfo.name_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), classInfo.name_index);
 
 	Object *object;
 	if (className == "java/lang/String") {
@@ -839,11 +839,12 @@ void OperationsObject::newarray() {
 	UNUSED(padding);
 	padding.type = ValueType::PADDING;
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	switch (code[1]) { // argumento representa tipo do array
 	case 4:
 		array = new ArrayObject(ValueType::BOOLEAN);
 		value.type = ValueType::BOOLEAN;
+	value.printType = value.type;
 		value.printType = ValueType::BOOLEAN;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
@@ -852,6 +853,7 @@ void OperationsObject::newarray() {
 	case 5:
 		array = new ArrayObject(ValueType::CHAR);
 		value.type = ValueType::CHAR;
+	value.printType = value.type;
 		value.printType = ValueType::CHAR;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
@@ -860,6 +862,7 @@ void OperationsObject::newarray() {
 	case 6:
 		array = new ArrayObject(ValueType::FLOAT);
 		value.type = ValueType::FLOAT;
+	value.printType = value.type;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
 		}
@@ -867,6 +870,7 @@ void OperationsObject::newarray() {
 	case 7:
 		array = new ArrayObject(ValueType::DOUBLE);
 		value.type = ValueType::DOUBLE;
+	value.printType = value.type;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
 		}
@@ -874,6 +878,7 @@ void OperationsObject::newarray() {
 	case 8:
 		array = new ArrayObject(ValueType::BYTE);
 		value.type = ValueType::BYTE;
+	value.printType = value.type;
 		value.printType = ValueType::BYTE;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
@@ -882,6 +887,7 @@ void OperationsObject::newarray() {
 	case 9:
 		array = new ArrayObject(ValueType::SHORT);
 		value.type = ValueType::SHORT;
+	value.printType = value.type;
 		value.printType = ValueType::SHORT;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
@@ -890,6 +896,7 @@ void OperationsObject::newarray() {
 	case 10:
 		array = new ArrayObject(ValueType::INT);
 		value.type = ValueType::INT;
+	value.printType = value.type;
 		value.printType = ValueType::INT;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
@@ -898,6 +905,7 @@ void OperationsObject::newarray() {
 	case 11:
 		array = new ArrayObject(ValueType::LONG);
 		value.type = ValueType::LONG;
+	value.printType = value.type;
 		for (int i = 0; i < count.data.intValue; i++) {
 			array->pushValue(value);
 		}
@@ -923,8 +931,8 @@ void OperationsObject::anewarray() {
 		exit(1);
 	}
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 
@@ -933,7 +941,7 @@ void OperationsObject::anewarray() {
 	assert(classCP.tag == CONSTANT_Class);
 
 	CONSTANT_Class_info classInfo = classCP.info.class_info; // Formata nome da classe
-	string className = Utils::getFormattedConstant(constantPool, classInfo.name_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), classInfo.name_index);
 
 	if (className != "java/lang/String") {
 		int i = 0;
@@ -955,7 +963,7 @@ void OperationsObject::anewarray() {
 	nullValue.type = ValueType::REFERENCE;
 	nullValue.data.object = NULL;
 	for (int i = 0; i < count.data.intValue; i++) {
-		((ArrayObject *) objectref.data.object)->pushValue(nullValue);
+		static_cast<ArrayObject *>(objectref.data.object)->pushValue(nullValue);
 	}
 
 	topFrame->empilharOperandStack(objectref);
@@ -976,7 +984,7 @@ void OperationsObject::arraylength() {
 
 	Value length;
 	length.type = ValueType::INT;
-	length.data.intValue = ((ArrayObject *) arrayref.data.object)->getSize();
+	length.data.intValue = static_cast<ArrayObject *>(arrayref.data.object)->getSize();
 
 	topFrame->empilharOperandStack(length);
 	topFrame->pc += 1;
@@ -994,15 +1002,15 @@ void OperationsObject::checkcast() {
 
 	MethodArea &methodArea = MethodArea::getInstance();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 
 	u2 cpIndex = (byte1 << 8) | byte2;
-	cp_info *constantPool = *(topFrame->obterConstantPool());
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
 	cp_info cpElement = constantPool[cpIndex - 1];
 	assert(cpElement.tag == CONSTANT_Class);
-	string className = Utils::getFormattedConstant(constantPool, cpIndex);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), cpIndex);
 
 	Value objectrefValue = topFrame->desempilhaOperandStack();
 	assert(objectrefValue.type == ValueType::REFERENCE);
@@ -1017,7 +1025,7 @@ void OperationsObject::checkcast() {
 		Object *obj = objectrefValue.data.object;
 
 		if (obj->objectType() == ObjectType::CLASS_INSTANCE) {
-			InstanceClass *classInstance = (InstanceClass *) obj;
+			InstanceClass *classInstance = static_cast<InstanceClass *>(obj);
 			StaticClass *classRuntime = classInstance->getClassRuntime();
 
 			bool found = false;
@@ -1060,15 +1068,15 @@ void OperationsObject::instanceof() {
 
 	MethodArea &methodArea = MethodArea::getInstance();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 
 	u2 cpIndex = (byte1 << 8) | byte2;
-	cp_info *constantPool = *(topFrame->obterConstantPool());
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
 	cp_info cpElement = constantPool[cpIndex - 1];
 	assert(cpElement.tag == CONSTANT_Class);
-	string className = Utils::getFormattedConstant(constantPool, cpIndex);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), cpIndex);
 
 	Value objectrefValue = topFrame->desempilhaOperandStack();
 	assert(objectrefValue.type == ValueType::REFERENCE);
@@ -1082,7 +1090,7 @@ void OperationsObject::instanceof() {
 		Object *obj = objectrefValue.data.object;
 
 		if (obj->objectType() == ObjectType::CLASS_INSTANCE) {
-			InstanceClass *classInstance = (InstanceClass *) obj;
+			InstanceClass *classInstance = static_cast<InstanceClass *>(obj);
 			StaticClass *classRuntime = classInstance->getClassRuntime();
 
 			bool found = false;
@@ -1135,8 +1143,8 @@ void OperationsObject::multianewarray() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	u1 dimensions = code[3];
@@ -1147,7 +1155,7 @@ void OperationsObject::multianewarray() {
 	assert(classCP.tag == CONSTANT_Class);
 
 	CONSTANT_Class_info classInfo = classCP.info.class_info;
-	string className = Utils::getFormattedConstant(constantPool, classInfo.name_index);
+	string className = Utils::getFormattedConstant(const_cast<cp_info*>(constantPool), classInfo.name_index);
 
 	// obter o tipo dentro de className:
 	ValueType valueType;

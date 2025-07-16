@@ -11,7 +11,7 @@ public:
 	/**
 	 * @brief Constructor that takes a reference to the _isWide flag.
 	 */
-	OperationsObject(bool &isWideRef);
+	explicit OperationsObject(bool &isWideRef);
 
 	void getstatic();
 	void putstatic();

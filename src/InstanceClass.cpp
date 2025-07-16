@@ -87,7 +87,7 @@ StaticClass* InstanceClass::getClassRuntime() {
 	return _classRuntime;
 }
 
-void InstanceClass::putValueIntoField(Value value, string fieldName) {
+void InstanceClass::putValueIntoField(Value value, const string& fieldName) {
 	_fields[fieldName] = value;
 }
 

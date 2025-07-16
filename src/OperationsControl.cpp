@@ -19,7 +19,7 @@ void OperationsControl::ifeq() {
 	assert(value.type == ValueType::INT);
 
 	if (value.data.intValue == 0) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -37,7 +37,7 @@ void OperationsControl::ifne() {
 	assert(value.type == ValueType::INT);
 
 	if (value.data.intValue != 0) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -55,7 +55,7 @@ void OperationsControl::iflt() {
 	assert(value.type == ValueType::INT);
 
 	if (value.data.intValue < 0) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -73,7 +73,7 @@ void OperationsControl::ifge() {
 	assert(value.type == ValueType::INT);
 
 	if (value.data.intValue >= 0) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -91,7 +91,7 @@ void OperationsControl::ifgt() {
 	assert(value.type == ValueType::INT);
 
 	if (value.data.intValue > 0) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -109,7 +109,7 @@ void OperationsControl::ifle() {
 	assert(value.type == ValueType::INT);
 
 	if (value.data.intValue <= 0) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -131,7 +131,7 @@ void OperationsControl::if_icmpeq() {
 	assert(value2.type == ValueType::INT);
 
 	if (value1.data.intValue == value2.data.intValue) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -151,7 +151,7 @@ void OperationsControl::if_icmpne() {
 	assert(value2.type == ValueType::INT);
 
 	if (value1.data.intValue != value2.data.intValue) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -171,7 +171,7 @@ void OperationsControl::if_icmplt() {
 	assert(value2.type == ValueType::INT);
 
 	if (value1.data.intValue < value2.data.intValue) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -191,7 +191,7 @@ void OperationsControl::if_icmpge() {
 	assert(value2.type == ValueType::INT);
 
 	if (value1.data.intValue >= value2.data.intValue) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -211,7 +211,7 @@ void OperationsControl::if_icmpgt() {
 	assert(value2.type == ValueType::INT);
 
 	if (value1.data.intValue > value2.data.intValue) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -231,7 +231,7 @@ void OperationsControl::if_icmple() {
 	assert(value2.type == ValueType::INT);
 
 	if (value1.data.intValue <= value2.data.intValue) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -253,7 +253,7 @@ void OperationsControl::if_acmpeq() {
 	assert(value2.type == ValueType::REFERENCE);
 
 	if (value1.data.object == value2.data.object) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -273,7 +273,7 @@ void OperationsControl::if_acmpne() {
 	assert(value2.type == ValueType::REFERENCE);
 
 	if (value1.data.object != value2.data.object) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branchOffset = (byte1 << 8) | byte2;
@@ -289,7 +289,7 @@ void OperationsControl::func_goto() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	int16_t branchOffset = (byte1 << 8) | byte2;
@@ -300,7 +300,7 @@ void OperationsControl::jsr() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	int16_t branchOffset = (byte1 << 8) | byte2;
@@ -317,7 +317,7 @@ void OperationsControl::ret() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; // índice do vetor de variáveis locais
 	uint16_t index = (uint16_t) byte1;
 
@@ -342,7 +342,7 @@ void OperationsControl::tableswitch() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1* code = topFrame->getCode(topFrame->pc);
+	const u1* code = topFrame->getCode(topFrame->pc);
 	u1 padding = 4 - (topFrame->pc + 1) % 4;
 	padding = (padding == 4) ? 0 : padding;
 
@@ -392,7 +392,7 @@ void OperationsControl::lookupswitch() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1* code = topFrame->getCode(topFrame->pc);
+	const u1* code = topFrame->getCode(topFrame->pc);
 	u1 padding = 4 - (topFrame->pc + 1) % 4;
 	padding = (padding == 4) ? 0 : padding;
 
@@ -523,7 +523,7 @@ void OperationsControl::ifnull() {
 	assert(referenceValue.type == ValueType::REFERENCE);
 
 	if (referenceValue.data.object == NULL) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branch = (byte1 << 8) | byte2;
@@ -541,7 +541,7 @@ void OperationsControl::ifnonnull() {
 	assert(referenceValue.type == ValueType::REFERENCE);
 
 	if (referenceValue.data.object != NULL) {
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		u1 byte1 = code[1];
 		u1 byte2 = code[2];
 		int16_t branch = (byte1 << 8) | byte2;
@@ -557,7 +557,7 @@ void OperationsControl::goto_w() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	u1 byte3 = code[3];
@@ -571,7 +571,7 @@ void OperationsControl::jsr_w() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	u1 byte3 = code[3];

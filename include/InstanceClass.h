@@ -22,18 +22,18 @@ public:
 	 * @brief Construtor padrão.
 	 * @param classRuntime A classe correspondente ao objeto.
 	 */
-	InstanceClass(StaticClass *classRuntime);
+	explicit InstanceClass(StaticClass *classRuntime);
 
 	/**
 	 * @brief Destrutor padrão.
 	 */
-	~InstanceClass(); // @suppress("Class has a virtual method and non-virtual destructor")
+	~InstanceClass() override; // @suppress("Class has a virtual method and non-virtual destructor")
 
 	/**
 	 * @brief Método utilizado para declaração do tipo de objeto.
 	 * @return O tipo de objeto.
 	 */
-	ObjectType objectType();
+	ObjectType objectType() override;
 
 	/**
 	 * @brief Obtém a classe correspondente ao objeto.
@@ -48,7 +48,7 @@ public:
 	 * @param value O valor que será inserido no field.
 	 * @param fieldName O nome do field que será alterado.
 	 */
-	void putValueIntoField(Value value, string fieldName);
+	void putValueIntoField(Value value, const string& fieldName);
 
 	/**
 	 * @brief Obtém o valor contido em um field informado.

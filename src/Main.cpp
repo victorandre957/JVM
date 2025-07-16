@@ -17,7 +17,7 @@
 
 int main(int argc, char *argv[]) {
 	if (argc != 3) {
-		printf("Parametros invalidos, o programa deve ser executado com: %s -e ou -i arquivo.class\n", argv[0]);
+		printf("Invalido, deve ser executado com: %s -exhibitor ou -interpreter arquivo.class\n", argv[0]);
 		return 1;
 	}
 
@@ -48,8 +48,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	// Fim da verificação
-	if (argv[1][1] == 'e') { //exibidor
-		//const char *file_output = (argc < 3) ? NULL : argv[2];
+	if (argv[1][1] == 'E') {
 		string nome = StaticClass::extrairNomeArquivo(argv);
 		FILE *output = fopen(nome.append(".txt").c_str(), "w+");
 		if (output == NULL) {
@@ -59,7 +58,7 @@ int main(int argc, char *argv[]) {
 		printArquivoClassFile(classRuntime->getClassFile(), output);
 		exibeClassFile(classRuntime->getClassFile());
 		fclose(output);
-	} else if (argv[1][1] == 'i') { //interpretador
+	} else if (argv[1][1] == 'I') {
 
 		Operations &operations = Operations::getInstance();
 		bool existeMain = operations.verificarMetodoExiste(classRuntime, "main", "([Ljava/lang/String;)V");
@@ -71,7 +70,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	else {
-		printf("Parametros invalidos, o programa deve ser executado com: %s -e ou -i arquivo.class\n", argv[0]);
+		printf("Invalido, deve ser executado com: %s -E ou -I arquivo.class\n", argv[0]);
 		return 1;
 	}
 

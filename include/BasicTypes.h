@@ -43,6 +43,62 @@ struct Value {
 };
 typedef struct Value Value;
 
+// Helper functions to create properly initialized Value structs
+inline Value createIntValue(int32_t value) {
+    Value v;
+    v.type = ValueType::INT;
+    v.printType = ValueType::INT;
+    v.data.intValue = value;
+    return v;
+}
+
+inline Value createLongValue(int64_t value) {
+    Value v;
+    v.type = ValueType::LONG;
+    v.printType = ValueType::LONG;
+    v.data.longValue = value;
+    return v;
+}
+
+inline Value createFloatValue(float value) {
+    Value v;
+    v.type = ValueType::FLOAT;
+    v.printType = ValueType::FLOAT;
+    v.data.floatValue = value;
+    return v;
+}
+
+inline Value createDoubleValue(double value) {
+    Value v;
+    v.type = ValueType::DOUBLE;
+    v.printType = ValueType::DOUBLE;
+    v.data.doubleValue = value;
+    return v;
+}
+
+inline Value createPaddingValue() {
+    Value v;
+    v.type = ValueType::PADDING;
+    v.printType = ValueType::PADDING;
+    return v;
+}
+
+inline Value createReturnAddrValue(u4 address) {
+    Value v;
+    v.type = ValueType::RETURN_ADDR;
+    v.printType = ValueType::RETURN_ADDR;
+    v.data.returnAddress = address;
+    return v;
+}
+
+inline Value createReferenceValue(Object* obj) {
+    Value v;
+    v.type = ValueType::REFERENCE;
+    v.printType = ValueType::REFERENCE;
+    v.data.object = obj;
+    return v;
+}
+
 // Typedefs das estruturas de classe
 
 // ClassFile

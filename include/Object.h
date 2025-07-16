@@ -37,12 +37,12 @@ public:
 	 * @brief Construtor padrão.
 	 * @param type O tipo de dado que o array irá armazenar.
 	 */
-	ArrayObject(ValueType type);
+	explicit ArrayObject(ValueType type);
 
 	/**
 	 * @brief Destrutor padrão.
 	 */
-	~ArrayObject();
+	~ArrayObject() override;
 
 	/**
 	 * @brief Representa o tipo de objeto (ObjectType::ARRAY).
@@ -122,12 +122,12 @@ public:
 	 * @brief Construtor padrão.
 	 * @param s O valor inicial da string.
 	 */
-	StringObject(string s = "");
+	explicit StringObject(const string& s = "");
 
 	/**
 	 * @brief Destrutor padrão.
 	 */
-	~StringObject();
+	~StringObject() override;
 
 	/**
 	 * @brief Obtém o tipo do objeto (string).
@@ -139,13 +139,13 @@ public:
 	 * @brief Obtém a sequência de caracteres presente na string.
 	 * @return Retorna a string como uma std::string.
 	 */
-	string getString();
+	const string& getString() const;
 
 	/**
 	 * @brief Substitui o valor da string.
 	 * @param s O novo valor da string.
 	 */
-	void setString(string s);
+	void setString(const string& s);
 
 private:
 	/**
@@ -177,7 +177,7 @@ inline void ArrayObject::pushValue(Value value) {
 	_elements.push_back(value);
 }
 
-inline Value ArrayObject::removeAt(uint32_t index) {
+inline Value ArrayObject::removeAt(uint32_t index) { // @suppress("unused function")
 	assert(_elements.size() > 0);
 	assert(index < _elements.size());
 
@@ -186,7 +186,7 @@ inline Value ArrayObject::removeAt(uint32_t index) {
 	return value;
 }
 
-inline Value ArrayObject::removeLast() {
+inline Value ArrayObject::removeLast() { // @suppress("unused function")
 	assert(_elements.size() > 0);
 
 	Value value = _elements.back();
@@ -194,7 +194,7 @@ inline Value ArrayObject::removeLast() {
 	return value;
 }
 
-inline Value ArrayObject::removeFirst() {
+inline Value ArrayObject::removeFirst() { // @suppress("unused function")
 	assert(_elements.size() > 0);
 
 	Value value = _elements.front();
@@ -225,7 +225,7 @@ inline void ArrayObject::changeValueAt(uint32_t index, Value value) {
 // IMPLEMENTATION - StringObject
 // ============================================================================
 
-inline StringObject::StringObject(string s) : _internalString(s) {
+inline StringObject::StringObject(const string& s) : _internalString(s) {
 }
 
 inline StringObject::~StringObject() {
@@ -235,11 +235,11 @@ inline ObjectType StringObject::objectType() {
 	return ObjectType::STRING_INSTANCE;
 }
 
-inline string StringObject::getString() {
+inline const string& StringObject::getString() const {
 	return _internalString;
 }
 
-inline void StringObject::setString(string s) {
+inline void StringObject::setString(const string& s) { // @suppress("unused function")
 	_internalString = s;
 }
 

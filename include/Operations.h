@@ -31,7 +31,7 @@ public:
 	/**
 	 * @brief Destrutor padrão.
 	 */
-	~Operations();
+	~Operations() override;
 
 protected:
 	/**
@@ -274,7 +274,6 @@ private:
 	void monitorenter() { objectOps.monitorenter(); }
 	void monitorexit() { objectOps.monitorexit(); }
 	void multianewarray() { objectOps.multianewarray(); }
-	void wide() { OperationsBase::wide(); }
 };
 
 #endif /* executionengine_h */

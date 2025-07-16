@@ -72,7 +72,7 @@ public:
 	 * @param argv Array de argumentos da linha de comando.
 	 * @return Nome do arquivo sem a extensão .class.
 	 */
-	static string extrairNomeArquivo(char *argv[]);
+	static string extrairNomeArquivo(const char * const argv[]);
 
 	/**
 	 * @brief Obtém o número de campos estáticos.

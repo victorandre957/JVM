@@ -192,7 +192,7 @@ bool Utils::verificarThisClass(string auxFilename, string auxClass) {
 	int auxPos;
 
 	//remove extensao .class
-	auxFilename = auxFilename.substr(0, auxFilename.size() - 6);
+	auxFilename.resize(auxFilename.size() - 6);
 
 	//remove nomes de pastas no Windows
 	auxPos = auxFilename.find("\\");

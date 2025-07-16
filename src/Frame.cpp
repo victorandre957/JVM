@@ -4,10 +4,10 @@
 #include "MethodArea.h"
 #include "Utils.h"
 
-Frame::Frame(InstanceClass *object, StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments) :
+Frame::Frame(InstanceClass *object, StaticClass *classRuntime, const string& methodName, const string& methodDescriptor, const vector<Value>& arguments) :
 		pc(0), _object(object) {
 
-	method_info *method = obterMethodNamed(classRuntime, methodName, methodDescriptor);
+	const method_info *method = obterMethodNamed(classRuntime, methodName, methodDescriptor);
 	assert(method != NULL);
 	_method = *method;
 	assert((_method.access_flags & 0x0008) == 0); // o método não pode ser estático
@@ -27,10 +27,10 @@ Frame::Frame(InstanceClass *object, StaticClass *classRuntime, string methodName
 	_operandStack = new stack<Value>();
 }
 
-Frame::Frame(StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments) :
+Frame::Frame(StaticClass *classRuntime, const string& methodName, const string& methodDescriptor, const vector<Value>& arguments) :
 		pc(0), _object(NULL) {
 
-	method_info *method = obterMethodNamed(classRuntime, methodName, methodDescriptor);
+	const method_info *method = obterMethodNamed(classRuntime, methodName, methodDescriptor);
 	assert(method != NULL);
 	_method = *method;
 	assert((_method.access_flags & 0x0008) != 0); // o método precisa ser estático
@@ -97,7 +97,7 @@ stack<Value> Frame::backupOperandStack() {
 	return *_operandStack; // Retorna cópia da pilha
 }
 
-void Frame::setOperandStackFromBackup(stack<Value> backup) {
+void Frame::setOperandStackFromBackup(const stack<Value>& backup) {
 	*_operandStack = backup; // Atribui cópia da pilha de backup
 }
 

@@ -9,7 +9,7 @@ StaticClass::StaticClass(ClassFile *classFile) : _classFile(classFile) {
 		exit(1);
 	}
 
-	field_info *fields = classFile->fields;
+	const field_info *fields = classFile->fields;
 	const u2 STATIC_FLAG = 0x0008;
 	const u2 FINAL_FLAG = 0x0010;
 
@@ -51,7 +51,7 @@ bool StaticClass::fieldExists(const string& fieldName) const noexcept {
 	return _staticFields.find(fieldName) != _staticFields.end();
 }
 
-string StaticClass::extrairNomeArquivo(char *argv[]) {
+string StaticClass::extrairNomeArquivo(const char * const argv[]) {
 	if (!argv || !argv[2]) {
 		cerr << "Erro: Argumentos inválidos fornecidos" << endl;
 		exit(1);

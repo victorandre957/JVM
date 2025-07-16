@@ -62,6 +62,18 @@ Em seguida, no terminal linke os binários .o em um binário principal executáv
   g++ bin/*.o -o THE_JVM
 ```
 
+Para executar o programa com exibidor utilize, use o comando:
+
+```
+  ./THE_JVM -E arquivo.class
+```
+
+Para executar o programa com interpretador, use o comando:
+
+```
+  ./THE_JVM -I arquivo.class
+```
+
 Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:
 
 ```

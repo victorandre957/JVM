@@ -173,6 +173,7 @@ void OperationsArithmetic::iadd() {
 
 	Value soma;
 	soma.type = ValueType::INT;
+	soma.printType = ValueType::INT;
 	soma.data.intValue = value_1.data.intValue + value_2.data.intValue;
 
 	topFrame->empilharOperandStack(soma);
@@ -772,7 +773,7 @@ void OperationsArithmetic::iinc() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 index, constant;
 
 	if (_isWide) {

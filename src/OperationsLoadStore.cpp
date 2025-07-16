@@ -14,7 +14,7 @@ void OperationsLoadStore::iload() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -39,7 +39,7 @@ void OperationsLoadStore::lload() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -69,7 +69,7 @@ void OperationsLoadStore::fload() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -93,7 +93,7 @@ void OperationsLoadStore::dload() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; // índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -123,7 +123,7 @@ void OperationsLoadStore::aload() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; // índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -425,7 +425,7 @@ void OperationsLoadStore::iaload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -451,7 +451,7 @@ void OperationsLoadStore::laload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -481,7 +481,7 @@ void OperationsLoadStore::faload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -507,7 +507,7 @@ void OperationsLoadStore::daload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -537,7 +537,7 @@ void OperationsLoadStore::aaload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -563,7 +563,7 @@ void OperationsLoadStore::baload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -601,7 +601,7 @@ void OperationsLoadStore::caload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -632,7 +632,7 @@ void OperationsLoadStore::saload() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -662,7 +662,7 @@ void OperationsLoadStore::istore() {
 	Value value = topFrame->desempilhaOperandStack();
 	assert(value.type == ValueType::INT);
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -688,7 +688,7 @@ void OperationsLoadStore::lstore() {
 	assert(value.type == ValueType::LONG);
 	topFrame->desempilhaOperandStack(); //padding
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -716,7 +716,7 @@ void OperationsLoadStore::fstore() {
 	Value value = topFrame->desempilhaOperandStack();
 	assert(value.type == ValueType::FLOAT);
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -742,7 +742,7 @@ void OperationsLoadStore::dstore() {
 	assert(value.type == ValueType::DOUBLE);
 	topFrame->desempilhaOperandStack(); //padding
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -770,7 +770,7 @@ void OperationsLoadStore::astore() {
 	Value value = topFrame->desempilhaOperandStack();
 	assert(value.type == ValueType::REFERENCE);
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1]; //índice do vetor de variáveis locais
 	int16_t index = (int16_t) byte1;
 
@@ -1056,7 +1056,7 @@ void OperationsLoadStore::iastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -1090,7 +1090,7 @@ void OperationsLoadStore::lastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -1120,7 +1120,7 @@ void OperationsLoadStore::fastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -1152,7 +1152,7 @@ void OperationsLoadStore::dastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -1182,7 +1182,7 @@ void OperationsLoadStore::aastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -1211,7 +1211,7 @@ void OperationsLoadStore::bastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 	assert(array->arrayContentType() == ValueType::BOOLEAN || array->arrayContentType() == ValueType::BYTE);
 
 	if (array == NULL) {
@@ -1251,7 +1251,7 @@ void OperationsLoadStore::castore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;
@@ -1283,7 +1283,7 @@ void OperationsLoadStore::sastore() {
 	assert(arrayref.type == ValueType::REFERENCE);
 	assert((arrayref.data.object)->objectType() == ObjectType::ARRAY);
 
-	array = (ArrayObject *) arrayref.data.object;
+	array = static_cast<ArrayObject *>(arrayref.data.object);
 
 	if (array == NULL) {
 		cerr << "NullPointerException" << endl;

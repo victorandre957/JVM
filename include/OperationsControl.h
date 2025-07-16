@@ -12,7 +12,7 @@ public:
 	 * @brief Constructor that takes a reference to the _isWide state variable.
 	 * @param isWide Reference to the shared _isWide state variable.
 	 */
-	OperationsControl(bool& isWide);
+	explicit OperationsControl(bool& isWide);
 
 	void ifeq();
 	void ifne();

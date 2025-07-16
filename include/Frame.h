@@ -30,7 +30,7 @@ public:
 	 * @param methodDescriptor O descritor do método referente ao frame atual.
 	 * @param arguments Os argumentos do método.
 	 */
-	Frame(InstanceClass *object, StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments);
+	Frame(InstanceClass *object, StaticClass *classRuntime, const string& methodName, const string& methodDescriptor, const vector<Value>& arguments);
 
 	/**
 	 * @brief Construtor utilizado quando o frame está associado a um método estático.
@@ -39,7 +39,17 @@ public:
 	 * @param methodDescriptor O descritor do método referente ao frame atual.
 	 * @param arguments Os argumentos do método.
 	 */
-	Frame(StaticClass *classRuntime, string methodName, string methodDescriptor, vector<Value> arguments = vector<Value>());
+	Frame(StaticClass *classRuntime, const string& methodName, const string& methodDescriptor, const vector<Value>& arguments = vector<Value>());
+
+	/**
+	 * @brief Copy constructor.
+	 */
+	Frame(const Frame& other);
+
+	/**
+	 * @brief Assignment operator.
+	 */
+	Frame& operator=(const Frame& other);
 
 	/**
 	 * @brief Destrutor padrão - Libera recursos associados (se houver), garantindo limpeza correta. .
@@ -94,7 +104,7 @@ public:
 	 * @brief Troca a pilha de operandos atual por uma nova.
 	 * @param backup Uma nova pilha de operandos do Frame.
 	 */
-	void setOperandStackFromBackup(stack<Value> backup);
+	void setOperandStackFromBackup(const stack<Value>& backup);
 
 	/**
 	 * @brief Obtém o objeto associado ao frame, quando existir.

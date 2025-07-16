@@ -22,6 +22,7 @@ void OperationsBase::executarMetodos(StaticClass *classRuntime) {
 	vector<Value> arguments;
 	Value commandLineArgs;
 	commandLineArgs.type = ValueType::REFERENCE;
+	commandLineArgs.printType = ValueType::REFERENCE;
 	commandLineArgs.data.object = new ArrayObject(ValueType::REFERENCE);
 	arguments.push_back(commandLineArgs);
 
@@ -33,13 +34,13 @@ void OperationsBase::executarMetodos(StaticClass *classRuntime) {
 
 	while (pilhaJVM.size() > 0) {
 		Frame *topFrame = pilhaJVM.getTopFrame();
-		u1 *code = topFrame->getCode(topFrame->pc);
+		const u1 *code = topFrame->getCode(topFrame->pc);
 		// cerr << "codigo : " << (int)code[0] << " " << endl;
 		executeInstruction(code[0]);
 	}
 }
 
-bool OperationsBase::verificarMetodoExiste(StaticClass *classRuntime, string name, string descriptor) {
+bool OperationsBase::verificarMetodoExiste(const StaticClass *classRuntime, const string& name, const string& descriptor) {
 	ClassFile *classFile = classRuntime->getClassFile();
 
 	bool found = false;
@@ -76,10 +77,10 @@ void OperationsBase::populateMultiarray(ArrayObject *array, ValueType valueType,
 		for (int i = 0; i < currCount; i++) {
 			ArrayObject *subarray = new ArrayObject(arrayType);
 			populateMultiarray(subarray, valueType, count);
-
-			Value subarrayValue;
-			subarrayValue.type = ValueType::REFERENCE;
-			subarrayValue.data.object = subarray;
+		Value subarrayValue;
+		subarrayValue.type = ValueType::REFERENCE;
+		subarrayValue.printType = ValueType::REFERENCE;
+		subarrayValue.data.object = subarray;
 			array->pushValue(subarrayValue);
 		}
 	}

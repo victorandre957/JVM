@@ -11,7 +11,7 @@ public:
 	/**
 	 * @brief Constructor that takes reference to isWide flag
 	 */
-	OperationsLoadStore(bool& isWide) : _isWide(isWide) {}
+	explicit OperationsLoadStore(bool& isWide) : _isWide(isWide) {}
 
 private:
 	bool& _isWide;  // Reference to the _isWide flag from main Operations class

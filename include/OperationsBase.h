@@ -43,7 +43,7 @@ public:
 	 * @param descriptor O descritor do método.
 	 * @return Retorna \c true caso o método exista, ou \c false caso contrário.
 	 */
-	bool verificarMetodoExiste(StaticClass *classRuntime, string name, string descriptor);
+	bool verificarMetodoExiste(const StaticClass *classRuntime, const string& name, const string& descriptor);
 
 	/**
 	 * @brief Popula os vetores de um multiarray

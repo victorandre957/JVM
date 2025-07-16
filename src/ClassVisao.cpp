@@ -183,7 +183,7 @@ static void displayConstantPool(ClassFile* classFile, FILE* output) {
 // Function to display bytecode
 static void displayByteCode(const Code_attribute& code, cp_info* constantPool, FILE* output) {
     u4 code_length = code.code_length;
-    u1* codeData = code.code;
+    const u1* codeData = code.code;
     
     fprintf(output, "\t\tBytecode:\n");
     
@@ -194,7 +194,7 @@ static void displayByteCode(const Code_attribute& code, cp_info* constantPool, F
         printTabs(output, 3);
         
         u1 opcode = codeData[i];
-        fprintf(output, "%d: %d ", lineNumber++, i);
+        fprintf(output, "%u: %u ", lineNumber++, i);
         
         if (opcode < 202) { // Valid instruction range
             fprintf(output, "%s", INSTRUCTION_NAMES[opcode]);
@@ -238,11 +238,11 @@ static void displayByteCode(const Code_attribute& code, cp_info* constantPool, F
             i += 3;
         } else if (opcode >= 0x99 && opcode <= 0xa6) { // conditional jumps
             int16_t offset = (codeData[i + 1] << 8) | codeData[i + 2];
-            fprintf(output, " %d (%+d)", i + offset, offset);
+            fprintf(output, " %u (%+d)", (unsigned)(i + offset), offset);
             i += 3;
         } else if (opcode == 0xa7 || opcode == 0xa8) { // goto, jsr
             int16_t offset = (codeData[i + 1] << 8) | codeData[i + 2];
-            fprintf(output, " %d (%+d)", i + offset, offset);
+            fprintf(output, " %u (%+d)", (unsigned)(i + offset), offset);
             i += 3;
         } else {
             i += 1;
@@ -261,7 +261,7 @@ static void displayAttribute(const attribute_info& attr, cp_info* constantPool, 
     printTabs(output, indentation + 1);
     fprintf(output, "Attribute name index: cp_info #%d\n", attr.attribute_name_index);
     printTabs(output, indentation + 1);
-    fprintf(output, "Attribute length: %d\n", attr.attribute_length);
+    fprintf(output, "Attribute length: %u\n", attr.attribute_length);
 
     CONSTANT_Utf8_info attributeUtf8 = constantPool[attr.attribute_name_index - 1].info.utf8_info;
     

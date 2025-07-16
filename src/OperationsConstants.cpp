@@ -214,7 +214,7 @@ void OperationsConstants::dconst_1() {
 void OperationsConstants::bipush() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte = code[1];
 
@@ -231,7 +231,7 @@ void OperationsConstants::bipush() {
 void OperationsConstants::sipush() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
@@ -251,10 +251,10 @@ void OperationsConstants::ldc() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 index = code[1];
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
 	cp_info entry = constantPool[index - 1];
 
 	Value value;
@@ -263,7 +263,7 @@ void OperationsConstants::ldc() {
 		cp_info utf8Entry = constantPool[entry.info.string_info.string_index - 1];
 		assert(utf8Entry.tag == CONSTANT_Utf8);
 
-		u1* bytes = utf8Entry.info.utf8_info.bytes;
+		const u1* bytes = utf8Entry.info.utf8_info.bytes;
 		char utf8String[utf8Entry.info.utf8_info.length + 1];
 		int i;
 		for (i = 0; i < utf8Entry.info.utf8_info.length; i++) {
@@ -299,12 +299,12 @@ void OperationsConstants::ldc_w() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	u2 index = (byte1 << 8) | byte2;
 
-	cp_info *constantPool = *(topFrame->obterConstantPool());
+	const cp_info *constantPool = *(topFrame->obterConstantPool());
 	cp_info entry = constantPool[index - 1];
 
 	Value value;
@@ -313,7 +313,7 @@ void OperationsConstants::ldc_w() {
 		cp_info utf8Entry = constantPool[entry.info.string_info.string_index - 1];
 		assert(utf8Entry.tag == CONSTANT_Utf8);
 
-		u1* bytes = utf8Entry.info.utf8_info.bytes;
+		const u1* bytes = utf8Entry.info.utf8_info.bytes;
 		char utf8String[utf8Entry.info.utf8_info.length + 1];
 		int i;
 		for (i = 0; i < utf8Entry.info.utf8_info.length; i++) {
@@ -349,12 +349,12 @@ void OperationsConstants::ldc2_w() {
 	PilhaJVM &stackFrame = PilhaJVM::getInstance();
 	Frame *topFrame = stackFrame.getTopFrame();
 
-	u1 *code = topFrame->getCode(topFrame->pc);
+	const u1 *code = topFrame->getCode(topFrame->pc);
 	u1 byte1 = code[1];
 	u1 byte2 = code[2];
 	u2 index = (byte1 << 8) | byte2;
 
-	cp_info *classFile = *(topFrame->obterConstantPool());
+	const cp_info *classFile = *(topFrame->obterConstantPool());
 	cp_info entry = classFile[index - 1];
 
 	Value value;
@@ -377,7 +377,7 @@ void OperationsConstants::ldc2_w() {
 
 		int64_t longNumber = ((int64_t) highBytes << 32) + lowBytes;
 
-		int32_t s = ((longNumber >> 63) == 0) ? 1 : -1;
+		int32_t s = (((uint64_t)longNumber >> 63) == 0) ? 1 : -1;
 		int32_t e = (int32_t) ((longNumber >> 52) & 0x7ffL);
 		int64_t m = (e == 0) ? (longNumber & 0xfffffffffffffL) << 1 : (longNumber & 0xfffffffffffffL) | 0x10000000000000L;
 
