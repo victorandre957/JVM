@@ -80,31 +80,31 @@ Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:
   valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./THE_JVM
 ```
 
-Resultados:
-
-```
-  ==104227== Memcheck, a memory error detector
-==104227== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==104227== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==104227== Command: ./JVM_B
-==104227==
-Uso: ./JVM_B arquivo.class
-==104227==
-==104227== HEAP SUMMARY:
-==104227==     in use at exit: 0 bytes in 0 blocks
-==104227==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
-==104227==
-==104227== All heap blocks were freed -- no leaks are possible
-==104227==
-==104227== For lists of detected and suppressed errors, rerun with: -s
-==104227== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-```
-
-
 Para a verficação do cppcheck, execute o seguinte comando no terminal:
 
 ```
   cppcheck --enable=all --suppress=missingIncludeSystem --std=c++11 --check-level=exhaustive -I include  --output-file=analysis.txt ./
 ```
 E verifique o arquivo `analysis.txt` para os resultados.
+
+
+Resultados:
+
+```
+==139868== Memcheck, a memory error detector
+==139868== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==139868== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info
+==139868== Command: ./build/THE_JVM
+==139868== 
+Invalido, deve ser executado com: ./build/THE_JVM -exhibitor ou -interpreter arquivo.class
+==139868== 
+==139868== HEAP SUMMARY:
+==139868==     in use at exit: 0 bytes in 0 blocks
+==139868==   total heap usage: 2 allocs, 2 frees, 74,752 bytes allocated
+==139868== 
+==139868== All heap blocks were freed -- no leaks are possible
+==139868== 
+==139868== For lists of detected and suppressed errors, rerun with: -s
+==139868== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
 
