@@ -50,18 +50,6 @@ Para executar os testes disponíveis, execute o seguinte comando no terminal:
   ./run_tests.sh
 ```
 
-## Analisador de código estático Cppcheck
-
-## Analisador de código dinâmico Valgrind
-
-Como o analisador trabalha encima de binários gerados pela compilação dos códigos, é necessário fazer a compilação de todos os códigos com as flags -g e -O0, sendo essas alterações feitas sobre o makefile.
-
-Em seguida, no terminal linke os binários .o em um binário principal executável com o comando:
-
-```
-  g++ bin/*.o -o THE_JVM
-```
-
 Para executar o programa com exibidor utilize, use o comando:
 
 ```
@@ -74,11 +62,8 @@ Para executar o programa com interpretador, use o comando:
   ./THE_JVM -I arquivo.class
 ```
 
-Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:
 
-```
-  valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./THE_JVM
-```
+## Analisador de código estático Cppcheck
 
 Para a verficação do cppcheck, execute o seguinte comando no terminal:
 
@@ -87,6 +72,13 @@ Para a verficação do cppcheck, execute o seguinte comando no terminal:
 ```
 E verifique o arquivo `analysis.txt` para os resultados.
 
+## Analisador de código dinâmico Valgrind
+
+Assim, é possível rodar o Valgrind para fazer as análises dinâmicas:
+
+```
+  valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./THE_JVM
+```
 
 Resultados:
 
